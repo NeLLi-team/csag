@@ -1,0 +1,66 @@
+{
+  "id": "examples/prior-art",
+  "status": "released",
+  "redistribution_policy": "Only entries in released_fixture_subset are redistributed. Each entry has explicit open-license evidence and includes only the files named in its example manifest. Papers without documented redistribution rights are cited rather than included.",
+  "released_fixture_subset": [
+    {
+      "slug": "ciccarese2013_pav_ontology",
+      "topic": "PAV",
+      "example_dir": "ciccarese2013_pav_ontology",
+      "license": "Creative Commons Attribution 2.0 Generic",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "license_evidence_url": "https://link.springer.com/article/10.1186/2041-1480-4-37",
+      "included_files": [
+        "2041-1480-4-37.pdf",
+        "ciccarese2013_pav_ontology.md",
+        "ciccarese2013_pav_ontology.section_audit.json",
+        "ciccarese2013_pav_ontology.article.json",
+        "paper_extraction.json",
+        "paper_extraction.validation.json",
+        "paper_extraction.quality.json",
+        "example_manifest.json",
+        "README.md"
+      ],
+      "interpretation": "PAV is represented as a compact provenance vocabulary that complements PROV-O by recording authorship, creation, derivation, and versioning for web resources."
+    },
+    {
+      "slug": "soilandreyes2022_rocrate",
+      "topic": "RO-Crate",
+      "example_dir": "soilandreyes2022_rocrate",
+      "license": "Creative Commons Attribution 4.0 International",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_evidence_url": "https://journals.sagepub.com/doi/abs/10.3233/DS-210053",
+      "included_files": [
+        "soilandreyes2022_rocrate.md",
+        "soilandreyes2022_rocrate.section_audit.json",
+        "soilandreyes2022_rocrate.article.json",
+        "paper_extraction.json",
+        "paper_extraction.validation.json",
+        "paper_extraction.quality.json",
+        "example_manifest.json",
+        "README.md"
+      ],
+      "interpretation": "RO-Crate is represented as a lightweight package for research artifacts, JSON-LD metadata, aggregation, and preservation-oriented provenance."
+    },
+    {
+      "slug": "stocker2025_machine_readable",
+      "topic": "Machine-readable findings",
+      "example_dir": "stocker2025_machine_readable",
+      "license": "Creative Commons Attribution 4.0 International",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_evidence_url": "https://www.nature.com/articles/s41597-025-04905-0",
+      "included_files": [
+        "s41597-025-04905-0.pdf",
+        "stocker2025_machine_readable.md",
+        "stocker2025_machine_readable.section_audit.json",
+        "stocker2025_machine_readable.article.json",
+        "paper_extraction.json",
+        "paper_extraction.validation.json",
+        "paper_extraction.quality.json",
+        "example_manifest.json",
+        "README.md"
+      ],
+      "interpretation": "The article is represented as an argument for structured publication of scholarly findings linked to narrative articles, provenance, and community review."
+    }
+  ]
+}

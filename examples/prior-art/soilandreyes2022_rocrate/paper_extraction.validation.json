@@ -1,0 +1,41 @@
+{
+  "ok": true,
+  "profile": "paper_local",
+  "strictness_profile": "paper_local",
+  "profile_modules": [
+    "core"
+  ],
+  "validator_version": "1.0.0",
+  "extraction_json": "paper_extraction.json",
+  "inputs": {
+    "extraction": {
+      "path": "paper_extraction.json",
+      "sha256": "68a1a6da6da4cd8ecb0c1c8b073a62ce8142727713efca7426cf6f276f8a7b66",
+      "size_bytes": 76607
+    },
+    "source_markdown": {
+      "path": "soilandreyes2022_rocrate.md",
+      "sha256": "7a72d93b80d86435f7a06887ecba5e698a8ea6c9ee67332854c740ed5a40d7fd",
+      "size_bytes": 152851
+    },
+    "article_json": {
+      "path": "soilandreyes2022_rocrate.article.json",
+      "sha256": "c9c5ea63643d1f6b06dda766466240e9c3bd91e6db780b18c18b49d4aabcbe6a",
+      "size_bytes": 149315
+    }
+  },
+  "errors": [],
+  "structured_errors": [],
+  "error_summary": {},
+  "warnings": [],
+  "repair_actions": [],
+  "metrics": {
+    "assertions": 12,
+    "assertions_with_criticality": 12,
+    "assertions_with_falsification_criteria": 11,
+    "evidence_items": 11,
+    "evidence_links": 16,
+    "artifacts": 5,
+    "datasets": 2
+  }
+}

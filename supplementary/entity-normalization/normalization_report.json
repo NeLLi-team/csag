@@ -1,0 +1,61 @@
+{
+  "source_document": "pmid:35150280",
+  "source_extraction": "examples/pmid35150280/paper_extraction.json",
+  "profile": "csag:entity-normalization-profile/biomedical-default/v1",
+  "entity_count": 5,
+  "mention_count": 5,
+  "normalized_entity_count": 2,
+  "local_or_unresolved_entity_count": 3,
+  "namespace_coverage": {
+    "NCBITaxon": 2,
+    "csag.local": 3
+  },
+  "unmapped_entities": [
+    {
+      "csag_entity_id": "csag:entity/pmid35150280/EN0001",
+      "label": "viractin",
+      "reason": "Author-named viral actin-like protein; no external protein accession recorded in the CSAG example."
+    },
+    {
+      "csag_entity_id": "csag:entity/pmid35150280/EN0003",
+      "label": "actin/actin-related proteins (ARPs)",
+      "reason": "Broad protein-family phrase; requires curator decision before mapping to PR, GO, or family database terms."
+    },
+    {
+      "csag_entity_id": "csag:entity/pmid35150280/EN0005",
+      "label": "protoeukaryotes",
+      "reason": "Conceptual evolutionary group rather than a stable taxon in the example extraction."
+    }
+  ],
+  "ambiguous_mappings": [
+    {
+      "label": "actin/actin-related proteins (ARPs)",
+      "candidate_namespaces": [
+        "PR",
+        "GO",
+        "UniProtKB"
+      ],
+      "decision": "kept as csag.local pending curator review"
+    }
+  ],
+  "ontology_versions": {
+    "NCBITaxon": "queried via NCBI E-utilities on 2026-05-13",
+    "Biolink": "profile-level class mapping; exact Biolink release not pinned"
+  },
+  "extraction_tools": [
+    {
+      "tool": "manual supplement from CSAG example entities",
+      "version": "0.6.0"
+    }
+  ],
+  "curator_review_status": {
+    "human_verified": 2,
+    "needs_review": 3,
+    "human_corrected": 0,
+    "rejected": 0
+  },
+  "notes": [
+    "Mention offsets are inherited from the existing PMID 35150280 CSAG entity text spans because the released example does not redistribute canonical Markdown.",
+    "The supplement is intentionally separate from the core CSAG graph so downstream consumers can use BioC/PubTator-style mention tables without changing argument-graph semantics."
+  ]
+}

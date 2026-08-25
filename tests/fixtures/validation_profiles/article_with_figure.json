@@ -1,0 +1,13 @@
+{
+  "title": "Toy Plastid Claim Manuscript",
+  "authors": "Bikash Example and Crysten Curator",
+  "affiliations": "",
+  "abstract": "Toy algae grown under blue light accumulated more plastid pigment than matched dark controls.",
+  "main": "## Results\n\nBlue-light cultures measured 2.1 absorbance units of plastid pigment.",
+  "methods": "## Methods\n\nTwo toy algal cultures were grown for 24 hours.",
+  "figure_legends": [
+    "Figure 1. Toy pigment absorbance values."
+  ],
+  "figure_interpretation": "",
+  "references": []
+}

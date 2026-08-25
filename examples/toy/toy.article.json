@@ -1,0 +1,11 @@
+{
+  "title": "Toy Plastid Claim Manuscript",
+  "authors": "Bikash Example and Crysten Curator",
+  "affiliations": "",
+  "abstract": "Toy algae grown under blue light accumulated more plastid pigment than matched dark controls. The observation supports the claim that blue light increases plastid pigment accumulation in this toy system.",
+  "main": "## Results\n\nBlue-light cultures measured 2.1 absorbance units of plastid pigment, while dark controls measured 1.0 absorbance unit.\n\n## Discussion\n\nThese data suggest that blue light increases plastid pigment accumulation in the toy algal system. A larger replicate series would be needed to estimate the effect precisely.",
+  "methods": "## Methods\n\nTwo toy algal cultures were grown for 24 hours. One culture received blue light and the matched control was kept in darkness.",
+  "figure_legends": [],
+  "figure_interpretation": "",
+  "references": []
+}

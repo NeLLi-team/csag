@@ -1,0 +1,44 @@
+{
+  "ok": false,
+  "profile": "benchmark_key",
+  "strictness_profile": "benchmark_key",
+  "profile_modules": [
+    "core",
+    "benchmark"
+  ],
+  "validator_version": "1.0.0",
+  "extraction_json": "../benchmark_key.invalid_weak_core.json",
+  "inputs": {
+    "extraction": {
+      "path": "../benchmark_key.invalid_weak_core.json",
+      "sha256": "7c960562725cfd8ae47fdda315bbb29902e7e32c510915ed2f9eb96a86771ec9",
+      "size_bytes": 9672
+    }
+  },
+  "errors": [
+    "object=csag:assertion/csag:doc/toy_plastid_claim/A0002; field=evidence_links[].strength; reason=core or major assertion has no moderate-or-strong decisive evidence; suggested_fix=Add a decisive EvidenceLink with strength moderate, strong, or very_strong, or lower the assertion criticality if justified."
+  ],
+  "structured_errors": [
+    {
+      "object_id": "csag:assertion/csag:doc/toy_plastid_claim/A0002",
+      "field_path": "evidence_links[].strength",
+      "reason": "core or major assertion has no moderate-or-strong decisive evidence",
+      "suggested_fix": "Add a decisive EvidenceLink with strength moderate, strong, or very_strong, or lower the assertion criticality if justified.",
+      "code": "core_or_major_assertion_has_no_moderate_or_strong_decisive_evidence"
+    }
+  ],
+  "error_summary": {
+    "core_or_major_assertion_has_no_moderate_or_strong_decisive_evidence": 1
+  },
+  "warnings": [],
+  "repair_actions": [],
+  "metrics": {
+    "assertions": 2,
+    "assertions_with_criticality": 2,
+    "assertions_with_falsification_criteria": 2,
+    "evidence_items": 2,
+    "evidence_links": 2,
+    "artifacts": 0,
+    "datasets": 1
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "ok": true,
+  "profile": "paper_local",
+  "strictness_profile": "paper_local",
+  "profile_modules": [
+    "core"
+  ],
+  "validator_version": "1.0.0",
+  "extraction_json": "paper_extraction.json",
+  "inputs": {
+    "extraction": {
+      "path": "paper_extraction.json",
+      "sha256": "d2fec429bf28cd4096f576f161ba04ff1642873386c1dea0a84999b4b7ff7384",
+      "size_bytes": 102829
+    },
+    "source_markdown": {
+      "path": "ciccarese2013_pav_ontology.md",
+      "sha256": "8bf1ccedfc2ad6f7beba0b27a27226c5de4161aa8fbd389842d78234f5325b0f",
+      "size_bytes": 108364
+    },
+    "article_json": {
+      "path": "ciccarese2013_pav_ontology.article.json",
+      "sha256": "af75703c8bf2c0fa79c8df77f05ca3e5675656e17a66f8b02bbf5c49d71333bb",
+      "size_bytes": 105639
+    }
+  },
+  "errors": [],
+  "structured_errors": [],
+  "error_summary": {},
+  "warnings": [],
+  "repair_actions": [],
+  "metrics": {
+    "assertions": 11,
+    "assertions_with_criticality": 11,
+    "assertions_with_falsification_criteria": 11,
+    "evidence_items": 12,
+    "evidence_links": 18,
+    "artifacts": 8,
+    "datasets": 4
+  }
+}

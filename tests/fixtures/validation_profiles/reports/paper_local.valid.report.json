@@ -1,0 +1,31 @@
+{
+  "ok": true,
+  "profile": "paper_local",
+  "strictness_profile": "paper_local",
+  "profile_modules": [
+    "core"
+  ],
+  "validator_version": "1.0.0",
+  "extraction_json": "../paper_local.valid.json",
+  "inputs": {
+    "extraction": {
+      "path": "../paper_local.valid.json",
+      "sha256": "bca4bdf09d0a6b7db4862b05b4cdbb36891513e6c2b1bde8df1e16acdf230adc",
+      "size_bytes": 9487
+    }
+  },
+  "errors": [],
+  "structured_errors": [],
+  "error_summary": {},
+  "warnings": [],
+  "repair_actions": [],
+  "metrics": {
+    "assertions": 2,
+    "assertions_with_criticality": 2,
+    "assertions_with_falsification_criteria": 2,
+    "evidence_items": 2,
+    "evidence_links": 2,
+    "artifacts": 0,
+    "datasets": 1
+  }
+}

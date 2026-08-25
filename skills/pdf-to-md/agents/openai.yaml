@@ -1,0 +1,4 @@
+interface:
+  display_name: "Paper to Markdown"
+  short_description: "Convert manuscripts to CSAG Markdown inputs"
+  default_prompt: "Use $pdf-to-md to convert this manuscript into canonical Markdown and article sidecars."

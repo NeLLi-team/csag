@@ -1,0 +1,43 @@
+{
+  "ok": false,
+  "profile": "promoted_claim",
+  "strictness_profile": "promoted_claim",
+  "profile_modules": [
+    "core"
+  ],
+  "validator_version": "1.0.0",
+  "extraction_json": "../promoted_claim.invalid_missing_rationale.json",
+  "inputs": {
+    "extraction": {
+      "path": "../promoted_claim.invalid_missing_rationale.json",
+      "sha256": "bd27c4fa5e32e9372bd97f9ca8935292b913f1fef365d2d23bdcb990683a968f",
+      "size_bytes": 9580
+    }
+  },
+  "errors": [
+    "object=csag:elink/csag:doc/toy_plastid_claim/L0001; field=evidence_links[].rationale; reason=missing rationale; suggested_fix=Explain why this evidence supports, refutes, or qualifies the assertion."
+  ],
+  "structured_errors": [
+    {
+      "object_id": "csag:elink/csag:doc/toy_plastid_claim/L0001",
+      "field_path": "evidence_links[].rationale",
+      "reason": "missing rationale",
+      "suggested_fix": "Explain why this evidence supports, refutes, or qualifies the assertion.",
+      "code": "missing_rationale"
+    }
+  ],
+  "error_summary": {
+    "missing_rationale": 1
+  },
+  "warnings": [],
+  "repair_actions": [],
+  "metrics": {
+    "assertions": 2,
+    "assertions_with_criticality": 2,
+    "assertions_with_falsification_criteria": 2,
+    "evidence_items": 2,
+    "evidence_links": 2,
+    "artifacts": 0,
+    "datasets": 1
+  }
+}

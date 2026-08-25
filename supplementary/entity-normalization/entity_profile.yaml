@@ -1,0 +1,169 @@
+profile_id: csag:entity-normalization-profile/biomedical-default/v1
+profile_version: "0.1.0"
+source_document: pmid:35150280
+description: >
+  Biomedical entity-normalization defaults for CSAG supplements. The core CSAG
+  graph keeps argument structure; this profile defines how biological entities
+  are aligned to external identifier systems and mention tables.
+required_entity_catalog_fields:
+  - csag_entity_id
+  - label
+  - entity_category
+  - biolink_class
+  - canonical_curie
+  - confidence
+  - curation_status
+  - source_document
+required_entity_mention_fields:
+  - mention_id
+  - csag_entity_id
+  - document_id
+  - section_type
+  - start_char
+  - end_char
+  - exact_text
+  - mention_type
+  - confidence
+  - extractor
+  - needs_review
+allowed_namespaces:
+  - NCBITaxon
+  - GTDB
+  - NCBIGene
+  - HGNC
+  - MGI
+  - RGD
+  - Ensembl
+  - UniProtKB
+  - PR
+  - dbSNP
+  - ClinVar
+  - HGVS
+  - SO
+  - MONDO
+  - DOID
+  - OMIM
+  - Orphanet
+  - MeSH
+  - UMLS
+  - HP
+  - MP
+  - PATO
+  - CL
+  - UBERON
+  - FMA
+  - BTO
+  - GO
+  - CHEBI
+  - PubChem
+  - ChEMBL
+  - DrugBank
+  - HMDB
+  - Reactome
+  - KEGG
+  - WikiPathways
+  - OBI
+  - EFO
+  - EDAM
+  - NCIT
+  - ENVO
+  - ECO
+  - csag.local
+category_mappings:
+  organism:
+    biolink_class: biolink:OrganismTaxon
+    preferred_namespaces: [NCBITaxon]
+    fallback_namespaces: [GTDB, csag.local]
+  strain:
+    biolink_class: biolink:OrganismTaxon
+    preferred_namespaces: [NCBITaxon]
+    fallback_namespaces: [GTDB, csag.local]
+  gene:
+    biolink_class: biolink:Gene
+    preferred_namespaces: [NCBIGene, HGNC, Ensembl]
+    fallback_namespaces: [MGI, RGD, csag.local]
+  transcript:
+    biolink_class: biolink:Transcript
+    preferred_namespaces: [Ensembl, NCBIGene]
+    fallback_namespaces: [csag.local]
+  protein:
+    biolink_class: biolink:Protein
+    preferred_namespaces: [UniProtKB, PR]
+    fallback_namespaces: [csag.local]
+  variant:
+    biolink_class: biolink:SequenceVariant
+    preferred_namespaces: [dbSNP, ClinVar, HGVS, SO]
+    fallback_namespaces: [csag.local]
+  disease:
+    biolink_class: biolink:Disease
+    preferred_namespaces: [MONDO]
+    fallback_namespaces: [DOID, OMIM, Orphanet, MeSH, UMLS]
+  phenotype:
+    biolink_class: biolink:PhenotypicFeature
+    preferred_namespaces: [HP]
+    fallback_namespaces: [MP, PATO]
+  cell_type:
+    biolink_class: biolink:Cell
+    preferred_namespaces: [CL]
+    fallback_namespaces: [csag.local]
+  tissue:
+    biolink_class: biolink:AnatomicalEntity
+    preferred_namespaces: [UBERON]
+    fallback_namespaces: [FMA, BTO]
+  anatomical_structure:
+    biolink_class: biolink:AnatomicalEntity
+    preferred_namespaces: [UBERON]
+    fallback_namespaces: [FMA, BTO]
+  biological_process:
+    biolink_class: biolink:BiologicalProcess
+    preferred_namespaces: [GO]
+    fallback_namespaces: [csag.local]
+  molecular_function:
+    biolink_class: biolink:MolecularActivity
+    preferred_namespaces: [GO]
+    fallback_namespaces: [csag.local]
+  cellular_component:
+    biolink_class: biolink:CellularComponent
+    preferred_namespaces: [GO]
+    fallback_namespaces: [csag.local]
+  chemical:
+    biolink_class: biolink:ChemicalEntity
+    preferred_namespaces: [CHEBI, PubChem, ChEMBL]
+    fallback_namespaces: [DrugBank, HMDB, csag.local]
+  drug:
+    biolink_class: biolink:Drug
+    preferred_namespaces: [CHEBI, ChEMBL, DrugBank]
+    fallback_namespaces: [PubChem, csag.local]
+  metabolite:
+    biolink_class: biolink:ChemicalEntity
+    preferred_namespaces: [CHEBI, HMDB]
+    fallback_namespaces: [PubChem, csag.local]
+  pathway:
+    biolink_class: biolink:Pathway
+    preferred_namespaces: [Reactome, WikiPathways]
+    fallback_namespaces: [KEGG, csag.local]
+  assay:
+    biolink_class: biolink:Procedure
+    preferred_namespaces: [OBI, EFO]
+    fallback_namespaces: [NCIT, csag.local]
+  method:
+    biolink_class: biolink:Procedure
+    preferred_namespaces: [OBI, EDAM, EFO]
+    fallback_namespaces: [NCIT, csag.local]
+  environment:
+    biolink_class: biolink:EnvironmentalFeature
+    preferred_namespaces: [ENVO]
+    fallback_namespaces: [csag.local]
+  dataset:
+    biolink_class: biolink:Dataset
+    preferred_namespaces: [csag.local]
+    fallback_namespaces: []
+  other:
+    biolink_class: biolink:NamedThing
+    preferred_namespaces: [csag.local]
+    fallback_namespaces: []
+mention_exchange:
+  compatible_with:
+    - BioC
+    - PubTator
+  offset_basis: character offsets into the canonical CSAG source Markdown when available

@@ -1,0 +1,935 @@
+# scientific data
+
+## OPEN ARTICLE
+
+### Rethinking the production and publication of machine-readable expressions of research findings
+
+**Markus Stocker**${}^{1,2}$, **Lauren Snyder**${}^{1}$, **Matthew Anfuso**${}^{2}$, **Oliver Ludwig**${}^{2}$, **Freya Thießen**${}^{1}$, **Kheir Eddine Farfar**${}^{1}$, **Muhammad Haris**${}^{1}$, **Allard Oelen**${}^{1}$ & **Mohamad Yaser Jaradeh**${}^{3}$
+
+Scientific literature is the primary expression of scientific knowledge and an important source of research data. However, scientific knowledge expressed in narrative text documents is not inherently machine readable. To facilitate knowledge reuse, knowledge must be extracted from articles and organized into databases post-publication. The high time costs and inaccuracies associated with completing these activities manually has driven the development of techniques that automate knowledge extraction. Tackling the problem with a different mindset, we propose a pre-publication approach, known as *reborn*, that ensures scientific knowledge is born readable, i.e. produced in a machine-readable format with formal data syntax during knowledge production. We implement the approach using the Open Research Knowledge Graph infrastructure for FAIR scientific knowledge organization. With a focus on statistical research findings, we test the approach with three use cases in soil science, computer science, and agroecology. Our results suggest that the proposed approach is superior compared to classical manual and semi-automated post-publication extraction techniques in terms of knowledge accuracy, richness, and reproducibility as well as technological simplicity.
+
+---
+
+## Introduction
+
+Articles have been the primary expression of research work and findings ever since Le Journal des sçavans${}^{1}$ and the Philosophical Transactions of the Royal Society${}^{2}$ - two of the earliest published scientific journals - started operations in 1665. The fact that the article persists in the digital era of the 21st century arguably speaks for the usefulness of this expression in communicating research work from experts to experts.
+
+However, when expressed solely in narrative text documents, scientific knowledge is not inherently machine readable. In other words, it lacks formal (i.e. machine readable) syntax and semantics, preventing us from leveraging digital tools that could streamline research workflows${}^{3}$. In this work, we use the term scientific knowledge to refer to the expressions of research findings found in academic articles. For the purpose here, we may also call these expressions semantic information or *final* (research) data. Indeed, these expressions are highly contextualized semantic information, i.e. truthful, meaningful, and well-formed data${}^{4}$.
+
+Published scientific knowledge is routinely “buried” in documents${}^{5}$ and currently relies (largely) on manual knowledge extraction activities${}^{6}$ to make it ready for machine-supported processing. For instance, conducting synthesis research in the form of a meta-analysis or systematic review requires manually extracting data from tens or sometimes hundreds of text-based articles and organizing this data into a new database, which is a time-consuming and error-prone process. One study estimated that completing a systematic review takes between six to 12 months of full-time work, with roughly half of this time devoted to pre-analysis literature search, data retrieval, and database development${}^{7}$.
+
+To facilitate the efficient transfer, reuse, and synthesis of scientific knowledge, there is a growing movement to ensure knowledge expressed in scientific articles is produced in a manner that is findable, accessible, interoperable, and reusable (FAIR) for humans, and also for machines${}^{8}$. Creating machine-readable expressions of scientific knowledge plays a key role in FAIR data practices as it improves the capacity of machines to autonomously discover and utilize scientific knowledge, thereby facilitating its reuse by human researchers${}^{9,10}$. Yet,
+
+---
+
+${}^{1}$TIB – Leibniz Information Centre for Science and Technology, 30167, Hannover, Germany. ${}^{2}$Leibniz University Hannover, Institute of Data Science, 30167, Hannover, Germany. ${}^{3}$L3S Research Center, 30167, Hannover, Germany.  
+✉e-mail: markus.stocker@tib.eu
+
+---
+
+SCIENTIFIC DATA | (2025) 12:677 | https://doi.org/10.1038/s41597-025-04905-0
+
+1
+
+www.nature.com/scientificdata
+
+Check for updates
+
+www.nature.com/scientificdata/
+
+<div style="text-align: center;">
+  ![image](image_1.png)
+</div>
+
+**Fig. 1** Scientific knowledge expressed in articles is produced as machine-readable data in computing environments during the data analysis phase of the research lifecycle. Machine-readable scientific knowledge is deposited in a data repository as reborn data of the article and interlinked with the article in DOI metadata. Finally, to support reuse, e.g. for synthesis research, machine-readable scientific knowledge is collected and organized in aggregation systems, such as knowledge graphs.
+
+while organizing scientific knowledge (only) as a collection of articles has been challenged for some time and the development of approaches for more advanced scientific knowledge organization has received considerable attention $^{(11–20)}$, the systematic production of machine-readable scientific knowledge remains elusive.
+
+An obvious class of approaches centers on extracting knowledge from published articles, which can occur manually (by human experts) or semi-automatically (with computer assistance). Manual approaches to producing machine-readable scientific knowledge can be supported by specialized user interfaces$^{21,22}$. While high-quality data can be achieved, manual production is challenged by scalability. Wikidata and OpenStreetMap are examples where collaborative, (largely) manual structured data production at scale was achieved. For specialized systems, such as UniProtKB, expert curation has also been shown to be viable$^{23}$. A comparable system for scientific knowledge more generally does, however, not exist. Given the appeal of automation, the application of Natural Language Processing (NLP), Machine Learning (ML), Text Mining (TM), or similar techniques that allow machines to process human language in narrative text articles for information extraction continues to receive substantial attention in the literature$^{24–28}$ and research communities (e.g. the 2021 NIH/NCATS LitCoin NLP Challenge). These efforts are also fueled by recent developments in generative AI and Large Language Models (LLM)$^{29}$, which have already been equipped with capabilities to retrieve specialized content with the aim to augment generation and improve overall system performance$^{30}$. However, human attention in these processes remains critical at all levels, from training data construction to extraction quality assurance. For example, with performance ranging from approximately 10%$^{31}$ to 20%$^{32}$, the relatively simple extraction of TDMS (Task, Dataset, Metric, Score) tuples from articles in ML relies on considerable human curation. In comparison, with a performance of over 90%$^{33}$, the easier task of TDM extraction (without score) is closer to reaching automation. LLM-based approaches have also been proposed and the most comparable experimental setups suggest performances ranging 15%$^{34}$ to 40%$^{35}$ for the TDMS extraction task. More generally, scientific knowledge extraction tasks are considerably more challenging than TDM(S) extraction tasks because scientific knowledge typically has a more complex structure and the presentation of scalar values in tables typical for TDMS reporting in articles is a special case; more generally, data presented in articles are matrices and are often displayed in figures, meaning that extraction is multimodal.
+
+In contrast to post-publication methods for knowledge extraction, approaches that center on producing machine-readable scientific knowledge pre-publication, i.e. before the related manuscript(s) is/are published, have been less pursued, but could offer a number of advantages to researchers, editors, and publishers. For instance, SciKGTeX$^{36}$ is an example of a system that integrates with LaTeX manuscript editing environments to support the production of machine-readable scientific knowledge through annotations of narrative text documents. As an additional example, dokieli$^{37}$ is a document authoring environment with built-in support for annotations encoded as structured data.
+
+Here, we use a series of use cases to present and test a novel pre-publication approach, known as *reborn*, that integrates with computing environments for (statistical) data analysis, ensuring scientific knowledge is born-readable (i.e. expressed in a machine-readable format upon production). Grounding in earlier phases of the research lifecycle, we propose an end-to-end distributed system that spans machine-readable scientific knowledge production, deposition/publishing, and collection in aggregation systems that support more efficient knowledge reuse (Fig. 1). Thus, the present work addresses the following research question: How can we support the production of machine-readable expressions of research findings in the data analysis phase of the research lifecycle?
+
+Specifically, we propose an interoperable distributed system that enables the pre-publication production of machine-readable scientific knowledge in (statistical) computing environments (e.g. RStudio or Jupyter and the languages R and Python); the publishing of such expressions as reborn data (e.g. R or Python scripting files, CSV data files, image files) that are interlinked with articles in publisher digital libraries or data repositories (e.g. Zenodo, Dryad); and the automated discovery and collection of such content, and content reuse (e.g. for synthesis research). For data collection, we leverage the Open Research Knowledge Graph$^{38}$ (ORKG), a digital scholarship infrastructure that supports the production, curation, and reuse of machine-readable scientific
+
+SCIENTIFIC DATA | (2025) 12:677 | https://doi.org/10.1038/s41597-025-04905-0
+2
+
+www.nature.com/scientificdata/
+
+knowledge as FAIR research data. We present *reborn* in three use cases involving three articles published in journals or conference proceedings by different publishers and demonstrate that this approach is ready for immediate implementation by authors.
+
+We contrast the approach with classical knowledge extraction and discuss possible implications for the review process, science reproducibility and transparency, and synthesis research. While we evaluate *reborn* primarily on quantitative (statistical) scientific knowledge, we suggest that it is broadly applicable to arbitrary (scientific) knowledge types for which it is possible to develop a schema. Indeed, by applying *reborn* to the present article (see data and code availability statements), we provide a use case demonstrating its application to qualitative knowledge. Finally, we also remark that while the approach is conceived for future research, the use cases show that it can also be applied retroactively to already published articles.
+
+Our focus here is on machine-readability and, specifically, formal syntax of the scientific knowledge published in articles, which represents one key factor and challenge for FAIR final research data and knowledge reuse. We acknowledge that data and knowledge reuse relies on many additional and equally important technical, legal, and social factors$^{39}$. For instance, in addition to formal syntax, formal data semantics is also a key factor for advanced machine-based scientific knowledge processing. These are, however, outside the scope of the present work as our goal is to introduce one tool to the scientific community that supports an important technical step towards FAIR final research data.
+
+## Results
+
+Fig. 1 provides a high-level overview of the proposed approach. It consists of three stages: (1) The production of machine-readable scientific knowledge in computing environments during the data analysis phase of the research lifecycle; (2) the deposition of machine-readable scientific knowledge as reborn data interlinked with the published article; (3) the collection of deposited machine-readable scientific knowledge in aggregation systems such as knowledge graphs$^{40}$. In this section, we describe *reborn* along these stages and how we applied the approach in three use cases. A more detailed technical account of the implementation is provided below in the Methods section.
+
+### Production
+
+Scientific knowledge expressed in articles, also known as final data, is often produced in the (statistical) data analysis phase of the research lifecycle. With *reborn*, we ensure that scientific knowledge is also produced machine readable, i.e. scientific knowledge is born readable. This is achieved by extending the implementation of data analysis with additional instructions that implement the production of machine-readable final data, i.e. machine-readable expressions of knowledge production processes, including their input and output data items. At the core of these additional instructions is the integration of data type schemata that guide researchers in describing their findings in a structured manner (further details provided in the Methods section). This promotes a standard representation of research findings and enhances the comparability of findings across articles. The resulting machine-readable expressions are then conceptualized as reborn data of the manuscript prepared later in the research lifecycle, where data items are presented as results as well as materials and methods.
+
+For instance, as a doctoral student, Nafas Darya uses RStudio to perform a Student’s t-test to compare the means of control and treatment groups for a dependent variable of interest. She reports her results as plotted observations and a p-value in her manuscript. In Nafas Darya’s work, the plotted observations and the p-value (i.e. the input and output data, respectively, in the Student’s t-test) are final data. Fatemeh, a postdoctoral researcher in the same group, is already familiar with the *reborn* approach and suggests extending her R script with the required additional instructions to describe the conducted Student’s t-test as a machine-readable expression of the research finding (see Listing 1). These additional instructions in the R script produce reborn data.
+
+### Deposition
+
+Upon manuscript finalization, Nafas Darya submits the reborn data expressing machine-readable scientific knowledge together with her manuscript to the journal or conference of choice. Alternatively, Nafas Darya may also deposit the reborn data in the preferred data repository (e.g. Zenodo or comparable). Either approach ensures the reborn data enters the review and publication workflow. Journal editors and conference chairs may make the reborn data available to reviewers to support the review process, including verifying the correctness of final data reported in the manuscript.
+
+Upon article publication, the publisher ensures permanent (open) access to the reborn data as well as data discoverability. Discoverability (for machines) can be supported by interlinking reborn data and the article in DOI metadata. With the so-called “related identifiers” metadata attribute, metadata schemata by Crossref and DataCite already implement an appropriate mechanism for such interlinking. Given the widespread implementation of automated link information exchange among scholarly infrastructures, such links are also easily discoverable in systems such as DataCite Commons (commons.datacite.org), OpenAIRE Research Graph (graph.openaire.eu), or similar.
+
+### Collection
+
+Given the article’s DOI, aggregation systems can discover and collect machine-readable scientific knowledge. In our work, we utilize the ORKG as an aggregation system. A key role of such systems is the provision of value-added services, in particular for efficient access, processing, and visualization of scientific knowledge required, e.g. for synthesis research. The interlinking of the original article with the corresponding machine-readable expression of the research findings published in the article is a simple example for such a service. Another example are ORKG Comparisons, which juxtapose research findings published in different articles along shared characteristics such as quantitative results, study location and population, and methods. State of
+
+SCIENTIFIC DATA | (2025) 12:677 | https://doi.org/10.1038/s41597-025-04905-0
+3
+
+www.nature.com/scientificdata/
+
+**Listing 1.** Integration of templates in a Python script, here shown for the Student’s t-test template with resource ID R12002 exemplified with the Iris dataset. Note that for the sake of simplicity we illustrate this step with a popular dataset and statistical method, rather than with our running example in soil science. Furthermore, we omit some details on Iris dataset processing.
+
+python
+from orkg import ORKG
+from sklearn import datasets
+from scipy.stats import ttest_ind
+
+# Load Iris dataset and select x,y vectors (versicolor and virginica petal length)
+iris = datasets.load_iris()
+
+tt = ttest_ind(x, y, equal_var=False)
+pvalue = tt.pvalue
+
+orkg = ORKG(host="https://orkg.org")
+orkg.templates.materialize_template("R12002")
+tp = orkg.templates
+
+tp.students_ttest(
+    label="Statistically significant hypothesis test for petal length of iris species",
+    has_dependent_variable="http://purl.obolibrary.org/obo/TO_0002605",
+    has_specified_input=(iris, "the Iris dataset"),
+    has_specified_output=tp.pvalue("the p-value",
+        tp.scalar_value_specification(pvalue)
+    )
+).serialize_to_file("article.contribution.1.json", format="json-ld")
+```
+
+the art overviews as provided by paperswithcode.com are another excellent example of a value-added service that leverages a database managing research findings published in articles, specifically in machine learning. As the present work focuses on the production and publication of machine-readable scientific knowledge, a more detailed exploration of value-added services for knowledge reuse is not the focus of this article.
+
+**Use cases.** We now present how we tested *reborn* in three use cases involving articles published in journals or proceedings by different publishers. For each use case, we describe the results along the three stages. Further technical details are provided in the Methods section using the first use case in soil science as a running example.
+
+**Use case in soil science.** The use case in soil science centers around the paper by Gentsch *et al.*$^{41}$ titled “Cover crops improve soil structure and change organic carbon distribution in macroaggregate fractions” published in the journal SOIL by Copernicus Publications. Fig. 2 in this article illustrates the result of executing the proposed approach for this use case. Readers can view and interact with the reborn data (e.g. download data as a CSV file) in the ORKG$^{42}$.
+
+**Production.** Gentsch *et al.* implemented their data analysis in R. We focus the use case on the main research findings, presented in Fig. 1, Table 1, Fig. 2a) and b), and 3 of the original article by Gentsch *et al.* These elements each result in some form of statistical computation. Fig. 1 presents descriptive statistics using radar charts. The data presented in Table 1 and Fig. 2b) are a result of linear mixed effects model (LMM) fittings. Fig. 2a is a result of pairwise t-tests. Finally, Fig. 3 is a result of structural equation modeling. For each of these statistical methods, we created ORKG Templates (i.e. schemata that specify data structures; for details, we refer readers to the Methods section) to support the description of data analysis activities, in particular input data and implementation as R script snippet, as well as output data, visualization, a human-readable statement, and a (statistical) model description (if applicable). We then integrated these templates with the original R scripts to support the programmatic production of machine-readable expressions of the research findings as reborn data. The reborn data were produced in close collaboration with Norman Gentsch, the first author of the work, before manuscript submission to the journal.
+
+**Deposition and Collection.** To streamline the process and ensure a quality publication, including the reproducibility of research findings, we implemented data deposition ourselves$^{43}$. In addition to depositing the reborn data, we interlinked the data deposition with the article in data DOI metadata. Given the article DOI, aggregating systems such as the ORKG can discover the interlinked reborn data and collect the published machine-readable scientific knowledge, organize it in databases, and make knowledge available for efficient reuse.
+
+**Highlight.** In this first use case, we highlight the potential of interlinking script snippets used to produce research findings, described in the ORKG as research contributions. Fig. 2 expands on such a script snippet for the research finding presented in Fig. 1 of the original article by Gentsch *et al.* Assuming the input data required for the analysis are published and accessible online, we can interlink the input data in the script to support a more frictionless reuse of data and code, for instance to easily reproduce and verify the correctness of the published results. Such possibilities could be enabled specifically for reviewers during the manuscript review phase, but are useful to research more broadly, in particular for synthesis research. Furthermore, in collaboration with Copernicus Publications, we achieved the interlinking of the machine-readable expressions of the research
+
+SCIENTIFIC DATA | (2025) 12:677 | https://doi.org/10.1038/s41597-025-04905-0
+4
+
+# Cover crops improve soil structure and change organic carbon distribution in macroaggregate fractions
+
+**February 2024**
+- Soil Science
+- Norman Gentsch
+- Florin Laura Riechers
+- Jens Boy
+- Dörte Schweneker
+- Ulf Feuerstein
+- Diana Heuermann
+- Georg Guggenberger
+
+Published in: SOIL
+
+DOI: https://doi.org/10.5194/soil-10-139-2024
+
+## Descriptive statistical calculation for relat...
+
+### has output figure
+
+![image](image_1.png)
+
+### has output statement
+
+The variability of organic carbon distribution is large between and within cover crop treatments.
+
+### has output dataset
+
+Relative proportion of organic carbon in different percentage of fallow level
+
+### has input dataset
+
+https://service.tib.eu/ldmservice/dataset/6a58493f800e49/resource/c5042e8b-16f5-4cb50fa5e34cb08/download/df-radar.csv
+
+### has implementation
+
+r
+# R version: 4.3.2
+# Requirements: tidyverse==2.0.0
+
+library(tidyverse)
+
+...
+Show all
+```
+
+## LMM fitting with MWD as response, CC ...
+
+```r
+library(tidyverse)
+
+COL1 <- c("Fallow" = "black", "Mustard" = "red3", "Clover" = "OliveDr", "Phacelia" = "SteelBlue", "Mix4" = "orchid3", "Mix12" = "or")
+
+theme_myBW <- theme(axis.title.x = element_text(size = 10, color = "b"), axis.title.y = element_text(angle = 90, vjust = 0), axis.text.x = element_text(size = 10, color = "b"), axis.text.y = element_text(size = 10, color = "b"), axis.ticks = element_line(colour = "black"), strip.text.x = element_text(size = 10, color = "b"), strip.background = element_blank(), panel.border = element_rect(colour = "black", fill = "black"), panel.grid.major = element_blank(), panel.grid.minor = element_blank(), plot.title = element_text(size = 12, hjust = 0.5), legend.text = element_text(size = 10), legend.text.align = 0, legend.title = element_text(size = 10), legend.key = element_rect(colour = "white", fill = "white"), legend.key.size = unit(5, "mm"), legend.background = element_blank(), legend.position = "bottom")
+
+se <- function(x) sqrt(var(x, na.rm = TRUE) / length(na.omit(x)))
+
+coord_radar <- function(theta = "x", start = 0, direction = 1, clip = 1, theta <- match.arg(theta, c("x", "y")))
+r <- if (theta == "x") "y" else "x"
+
+ggproto("CordRadar", CoordPolar, theta = theta, r = r, start = start, direction = sign(direction), clip = clip, is_linear = function(coord) TRUE)
+
+df.radar <- read.csv("https://service.tib.eu/ldmservice/dataset/6a85a58493f800e49/resource/c5042e8b-16f5-4cb50fa5e34cb08/download/df-radar.csv")
+
+df.radar$Fraction <- factor(df.radar$Fraction, levels = c("<1", "2-1"))
+
+df.radar.m <- df.radar %>%
+  filter(cc_variant != "Fallow") %>%
+  group_by(cc_variant, depth, Fraction) %>%
+  summarise(OC_ratio.m = mean(OC_ratio.pc),
+            OC_ratio.se = se(OC_ratio.pc),
+            OC_Frac_pc = mean(OC_Frac_pc),
+            OC_Frac_pc.fal = mean(OC_Frac_pc.fal),
+            OC_ratio.fal = mean(OC_ratio.fal))
+
+df.radar.F <- df.radar %>%
+  filter(cc_variant != "Fallow") %>%
+  group_by(cc_variant, depth, Fraction) %>%
+  summarise(OC_ratio.m = 100)
+```
+
+## Fig. 2 Display of the research finding published by Gentsch et al. in their Fig. 1 as a research contribution in the ORKG. The overlay expands on the interlinked R script snippet used to implement the respective data analysis. Readers can view and interact with the reborn data (e.g. download data as a CSV file) in the ORKG here: https://doi.org/10.48366/R664252.
+
+findings by Gentsch et al. in the ORKG as a data set asset of the original article, a relation that human experts can discover on the article landing page (soil.copernicus.org/articles/10/139/2024/soil-10-139-2024-assets.html) and machines in Crossref DOI metadata (api.crossref.org/works/10.5194/soil-10-139-2024).
+
+Use case in computer science. The use case in computer science centers around the paper by Thießen et al. titled “Probing Large Language Models for Scientific Synonyms” published in the proceedings of the 2nd NLP4KGC workshop by CEUR Workshop Proceedings. This work falls into the broad category of research in Machine Learning (ML) whereby the goal is to develop and evaluate the performance of models for some ML task using suitable benchmark datasets and metrics. The main research findings are thus the performance scores
+
+SCIENTIFIC DATA | (2025) 12:677 | https://doi.org/10.1038/s41597-025-04905-0
+```
+
+# www.nature.com/scientificdata/
+
+## Benchmark | Semantic Similarity [Synonym Discovery] on SciERC synonyms
+
+### Research problem: Semantic Similarity [Synonym Discovery]
+
+#### Dataset: SciERC synonyms
+
+### Performance trend
+
+![image](image_1.png)
+
+- F1 score @ Layer 1
+- Linear trendline
+
+### Papers | Data imported from paperswithcode.com
+
+<table>
+  <thead>
+    <tr>
+      <th>Paper Title</th>
+      <th>Model</th>
+      <th>Score</th>
+      <th>Metric</th>
+      <th>Code</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Probing Large Language Models for Scientific Synonyms</td>
+      <td>SciBERT</td>
+      <td>0.713</td>
+      <td>F1 score @ Layer 1</td>
+      <td>![image](image_2.png)</td>
+    </tr>
+    <tr>
+      <td>Probing Large Language Models for Scientific Synonyms</td>
+      <td>BART</td>
+      <td>0.668</td>
+      <td>F1 score @ Layer 1</td>
+      <td>![image](image_3.png)</td>
+    </tr>
+    <tr>
+      <td>Probing Large Language Models for Scientific Synonyms</td>
+      <td>Roberta</td>
+      <td>0.657</td>
+      <td>F1 score @ Layer 1</td>
+      <td>![image](image_4.png)</td>
+    </tr>
+  </tbody>
+</table>
+
+**Fig. 3** Display of a Leaderboard showing the performance Scores (Metric F1 score @ Layer 1) of the three models evaluated using the SciERC Dataset for the machine learning Task of “Synonym Discovery” as published by Thießen *et al.*
+
+and the most salient data are for so-called TDMS-tuples (Task, Dataset, Metric, Score). In the work by Thießen *et al.*, the Task is “Synonym Discovery” and the developed models are evaluated using a number of benchmark Datasets and Metrics. The machine-readable expression of the published research findings is available in the ORKG $^{45}$ .
+
+**Production.** Based on several evaluation datasets, the research findings by Thießen *et al.* consist of F1 scores for the performance of different Large Language Models in identifying synonyms. The production of machine-readable expressions of TDMS-tuples was supported by integrating the ORKG Leaderboard template in the Python script that implemented data analysis. The Leaderbord template captures TDMS-tuples in a schema that, in the ORKG, is shared across articles that also evaluate the performance of models for some ML task. In this use case, the article was submitted and published before we created the reborn data as presented here.
+
+**Deposition and Collection.** We use the same deposition and collection approach already described in the first use case. The reborn data deposition is available online $^{46}$ . Since the article was published by CEUR-WS, we were unable to interlink reborn data with the article in DOI metadata. This is because CEUR-WS does not identify published articles with DOI; the articles are merely linked by their URL on a landing page for the volume representing the workshop proceedings. Given these constraints, we used a file-based, rather than an article DOI-based, collection in the ORKG (see the Methods section for more details).
+
+**Highlight.** An interesting aspect of this type of research is that TDMS-tuples aggregate to so-called Leaderboards frequently found in ML research communities to visualize the state of the art in model development for a given ML task as well as model performance trends over time for the task. Papers with Code (paperswithcode.com) is arguably the most well-known aggregator system for such scientific knowledge and a pioneer in developing services that enable access to the state of the art in a large research community. In the ORKG, data structured according to the ORKG Leaderboard template are automatically used in the construction of such Leaderboards. For the ML task “Synonym Discovery” and the SciERC dataset, Fig. 3 plots the performance in terms of applicable metric and score of models as they were published by Thießen *et al.* in September 2023. This is an example of a value-added service by an aggregation system, here the ORKG automatically producing a derivative data product for TDMS data with common task. Another interesting aspect highlighted by this use case is shown in Fig. 5, where a Microsoft Word Add-in automatically displays the reborn data of the use case in a format suitable for a manuscript, namely as a set of tables summarizing model performance for each dataset in the evaluation. This showcases the possibility of using the machine-readable scientific knowledge produced in data analysis during the manuscript writing phase of the research lifecycle.
+
+---
+
+SCIENTIFIC DATA | (2025) 12:677 | https://doi.org/10.1038/s41597-025-04905-0
+
+6
+
+www.nature.com/scientificdata/
+
+# Contrasting effects of landscape composition on crop yield mediated by specialist herbivores
+
+2018 28 citations Ecology and Evolutionary Biology Ricardo Perez-Alvarez Brian A. Nault Katja Poveda
+
+Published in: Ecological Applications
+
+DOI: https://doi.org/10.1002/eap.1695
+
+---
+
+**Aphid incidence in experimental farm pL...** Flea beetle abundance in experimental f... Lepidoptera incidence
+
+---
+
+**Applied templates: LMM Planned Process, Contribution**
+
+has anova
+
+ANOVA to attain F-values for Intercept, Mead_250 (proportion of meadows within a 250 meter radius of the field plot) and Year (sampling year)
+
+has implementation
+
+# R version: 4.0.4
+# Requirements: nlm...
+
+# Contrasting effects
+...
+
+Show all
+
+has linear regression
+
+A linear regression (LR) with dependent variable and a radius of the experimental variable, grouped by year
+
+has lmm fitting
+
+A linear mixed model (LMM) response variable, study, a 250 meter radius of the effects, and farm (Farm ID)
+
+has lmm prediction
+
+Prediction using the fitted variable, and Year and mead_250
+
+has lmm significance testing
+
+Significance testing to attain p-values for Intercept, Mead_250 (proportion of meadows within a 250 meter radius of the field plot) and Year
+
+---
+
+**Preferences**
+
+Add to comparison
+
+Provenance Timeline
+
+Added on 28 Feb 2024
+
+Added by Ricardo Perez Alvarez
+
+---
+
+**Applied template: Linear Regression**
+
+has dependent variable Aphids incidence in an agricultural experimental plot
+
+Has independent variable Meadow proportion in a region with 250 m radius
+
+has input dataset Raw field data on aphid incidence
+
+has output dataset Results of LR with Aphid incidence as the dependent variable and mead_250 as the independent variable
+
+---
+
+**Back** **Apr** **New linear regression → A linear regression (LR) w...**
+
+---
+
+**Year** 2014 2015
+
+Proportion of plants infested by aphids
+
+Proportion of meadows at 250-m
+
+---
+
+**Back** **Apr** **New input dataset → Raw field data on aphid inc...**
+
+---
+
+**Full screen** **Support as CSV**
+
+---
+
+<table>
+  <thead>
+    <tr>
+      <th>mead_250</th>
+      <th>Aphid_incidence</th>
+      <th>Plot_ID</th>
+      <th>Farm_ID</th>
+      <th>Year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>0.5</td>
+      <td>0.033333333</td>
+      <td>1</td>
+      <td>A</td>
+      <td>2015</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>0.279411765</td>
+      <td>0.166666667</td>
+      <td>2</td>
+      <td>A</td>
+      <td>2015</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>0.286432161</td>
+      <td>0.133333333</td>
+      <td>3</td>
+      <td>B</td>
+      <td>2015</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>0.193277311</td>
+      <td>0.166666667</td>
+      <td>4</td>
+      <td>B</td>
+      <td>2015</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>0.27</td>
+      <td>0.1</td>
+      <td>5</td>
+      <td>C</td>
+      <td>2015</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>0.253623188</td>
+      <td>0.1</td>
+      <td>6</td>
+      <td>C</td>
+      <td>2015</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>0.293577982</td>
+      <td>0.433333333</td>
+      <td>8</td>
+      <td>D</td>
+      <td>2015</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>0.181818182</td>
+      <td>0.433333333</td>
+      <td>9</td>
+      <td>E</td>
+      <td>2015</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>0.035971223</td>
+      <td>0.1</td>
+      <td>10</td>
+      <td>E</td>
+      <td>2015</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>0.376884422</td>
+      <td>0.6</td>
+      <td>11</td>
+      <td>F</td>
+      <td>2015</td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+**Page 1** Show 10
+
+---
+
+Fig. 4 Display of the research finding published by Perez-Alvarez et al. in their Fig. 4 (a) as a research contribution in the ORKG. The two overlays illustrate detailed information in the form of visualizations and tabular data. Readers can view and interact with the reborn data (e.g. download data as a CSV file) in the ORKG here: https://doi.org/10.48366/R689181.
+
+---
+
+Use case in agroecology. The use case in agroecology centers around the paper by Perez-Alvarez et al.$^{47}$ titled “Contrasting effects of landscape composition on crop yield mediated by specialist herbivores” published in the journal Ecological Applications by Wiley. Fig. 4 in this article illustrates the result of executing the proposed approach for this use case. Readers can view and interact with the reborn data (e.g. download data as a CSV file)
+
+---
+
+SCIENTIFIC DATA | (2025) 12:677 | https://doi.org/10.1038/s41597-025-04905-0
+
+7
+
+www.nature.com/scientificdata/
+
+![image](image_1.png)
+
+Fig. 5 ORKG Word Add-in display of the reborn data in our use case in computer science for model performance for each dataset in the evaluation. Users provide the JSON-LD reborn data produced in model performance evaluation and the Add-in automatically renders such TDMS-data as tables, one for each evaluated model.
+
+in the ORKG$^{48}$. We present this third use case in a succinct manner in this paper as it will be described in further detail in a forthcoming manuscript by Snyder et al.
+
+Perez-Alvarez et al. implemented their data analysis in R and used linear mixed effects model (LMM) fittings, among other statistical methods. As the article by Perez-Alvarez et al. was published in 2018, we achieved the retroactive production and deposition of the reborn data in close collaboration with Ricardo Perez-Alvarez, the first author of the work. As with the first use case, metadata interlinking enabled the ORKG to automatically discover and collect reborn data$^{49}$ given the DOI of the article by Perez-Alvarez et al. The result of this stage is illustrated in Fig. 4.
+
+**Highlight.** In this third use case, we highlight how *reborn* supports expressing rich scientific knowledge, including complex tabular data, in machine-readable form.
+
+## Discussion
+
+As its primary goal, the present work proposes an approach that supports the production of machine-readable expressions of research findings in the data analysis phase of the research lifecycle. Additionally, the work presents how these expressions can enter the manuscript submission, review, and article publication phases as interlinked reborn data, collectable by aggregation systems that support their reuse in research. Having presented a high-level overview of the *reborn* approach, we evaluated its practical viability in three use cases. In the Methods section, we describe our reference implementation for the proposed approach and the distributed system along its main supported activities.
+
+Our work is motivated by the fact that the traditional expression of research work as narrative text documents is hindering the efficient use of the scientific knowledge expressed in the scholarly record. This is particularly evident in synthesis research, where researchers routinely manually extract relevant data from articles, an
+
+SCIENTIFIC DATA | (2025) 12:677 | https://doi.org/10.1038/s41597-025-04905-0
+8
+
+www.nature.com/scientificdata/
+
+<table>
+  <thead>
+    <tr>
+      <th>Approach</th>
+      <th>Accuracy</th>
+      <th>Richness</th>
+      <th>Simplicity</th>
+      <th>Scalability</th>
+      <th>Coverage</th>
+      <th>Legacy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Post-publication extraction, manually</td>
+      <td>✓</td>
+      <td>✗</td>
+      <td>✓</td>
+      <td>✗</td>
+      <td>✓</td>
+      <td>✓</td>
+    </tr>
+    <tr>
+      <td>Post-publication extraction, automatically</td>
+      <td>✗</td>
+      <td>✗✗</td>
+      <td>✗✗</td>
+      <td>✓✓</td>
+      <td>✓✓</td>
+      <td>✓✓</td>
+    </tr>
+    <tr>
+      <td>Pre-publication production</td>
+      <td>✓✓</td>
+      <td>✓✓</td>
+      <td>✓✓</td>
+      <td>✗</td>
+      <td>✓</td>
+      <td>✗</td>
+    </tr>
+  </tbody>
+</table>
+
+**Table 1.** Overview of the pros and cons of classical post-publication extraction in contrast to the proposed pre-publication production, compared along important dimensions.
+
+activity that is not only time consuming, but often also inaccurate (e.g. because data are approximated or visualized). More generally speaking, the scholarly infrastructure supports finding and accessing documents, but is unable to further assist researcher information needs and information processing. As a result, a researcher in machine learning can find articles possibly relevant to their research in image classification, but the infrastructure is unable to inform which model currently represents the state of the art.
+
+**Comparing approaches.** The systematic production of rich and accurate machine-readable expressions of scientific knowledge at scale presents a formidable obstacle towards FAIR scientific knowledge. In Table 1, we compare manual and automated post-publication extraction of scientific knowledge with the proposed pre-publication production approach along several dimensions. By excelling in accuracy and richness, the overview makes evident that *reborn* addresses important dimensions that remain a challenge for post-publication extraction. Moreover, the overview also suggests that the proposed approach is competitive in several other dimensions.
+
+**Accuracy.** In terms of accuracy, the extraction of scientific knowledge from published articles continues to challenge automation. Automated approaches can achieve above 90–95% accuracy, but only for the simplest of tasks$^{50}$. For example, authors report an accuracy of ~ 90% for the extraction of TDM (Task, Dataset, Metric, without Score) tuples from papers in machine learning$^{33}$. As another example, using a well-engineered set of prompts, a new conversational LLM approach to post-publication data extraction achieved 91.6% accuracy extracting materials data as (Material, Unit, Value) tuples from articles$^{51}$. In a further experiment in materials science, the authors concluded that even advanced LLMs struggle to extract all required information from articles$^{52}$. With performances of approximately 60%, 40%, and 30% accuracy, respectively, the more general tasks of keyphrase identification, keyphrase classification, and relation extraction between keyphrases further underscore the difficulty of automating increasingly difficult tasks$^{53}$. In contrast to automated post-publication extraction, with manual post-publication extraction it is possible to capture more detailed information with higher accuracy, as human experts can perform complicated data extraction tasks with a higher accuracy than machines. The chance of human error in manually copying or transforming data is, however, not negligible$^{54,55}$. Post-publication extraction also suffers from the problem that data in articles may be approximate. Examples include an approximate p-value or plotted data where data extraction tools are used to estimate the underlying quantitative values. In contrast, pre-publication production as proposed in the present work also benefits from direct access to input and output data, say the CSV data and p-value that are input and output to a statistical hypothesis test. By embedding with data analysis, *reborn* also avoids copying errors as it can leverage the passing of variables in scripts.
+
+**Richness or granularly.** This dimension is particularly interesting to contrast between post-publication extraction and pre-publication production. Both manual and automated approaches struggle to extract rich or highly granular, machine-readable expressions of scientific knowledge from articles. Manually, the task simply requires too much effort from individual researchers. Moreover, we argue that there is currently little or no evidence that collaboration may alleviate the problem. While crowd-based collaboration has succeeded in some projects, for instance for encyclopedic knowledge (e.g. Wikipedia) or spatial information (e.g. OpenStreetMaps), applying crowdsourcing to scientific knowledge can be challenging even for relatively simple data structures$^{56}$ and grows considerably more challenging as the knowledge becomes more complex. As the works cited earlier suggest, automated approaches currently similarly fail to extract rich, highly granular, knowledge from articles. The main hindrance is the overall complexity of the task as scientific knowledge is, in general, a complex data type involving numerous, highly-related entities. To make matters worse, related data are often presented in text as well as figures, tables, listings, or similar. In contrast, by embedding expressive data type schemata into data analysis, *reborn* facilitates the production of rich machine-readable expressions of scientific knowledge.
+
+**Technological simplicity.** In this context, we use the term technological simplicity to describe the software and hardware required by the technical system to implement the task of producing accurate and rich machine-readable expressions of scientific knowledge published in the literature. In comparison, post-publication automated extraction is the more technologically complex class of approaches. This is particularly the case when algorithmic information extraction from articles relies on quality training data, the construction and evaluation of models, as well as model deployment into production infrastructure. These activities are often task specific: The extraction of a quantity value with confidence interval may be best implemented using rules (regular expressions) while the extraction of TDMS-tuples (Task, Dataset, Metric, Score) from articles in machine learning may be best implemented using NER (Named-Entity Recognition) or a language model. In contrast, both post-publication manual extraction and pre-publication production are technologically easier, as they rely primarily on software development (e.g. user-friendly frontend or software libraries) and also have lower requirements on hardware, especially compared to latest generation approaches involving large language models. This is a clear, but sometimes neglected, advantage
+
+SCIENTIFIC DATA | (2025) 12:677 | https://doi.org/10.1038/s41597-025-04905-0 9
+
+for the practical viability of a system. Notably, *reborn* excels particularly in its ability to produce *accurate and rich* machine-readable expressions of scientific knowledge in a technologically simple manner.
+
+**Scalability.** Assuming a very good algorithmic performance, the ability to efficiently scale to millions of articles is, unsurprisingly, a characteristic of automated approaches. Relying on some level of manual activity, both post-publication manual extraction and pre-publication production inherently underperform on this aspect. The fact that these classes of approaches also rely on awareness and training in research communities further complicates their scalability.
+
+**Coverage.** Given automation, the potential to cover the literature of individual research communities, in disciplines or in research more generally, is highest with post-publication automated extraction. Again, very good algorithmic performance is a precondition. However, assuming broad adoption and participation, it is arguably possible to achieve good coverage also with manual post-publication extraction and pre-publication production. This is particularly the case for specific research communities or research fields, which is made evident by numerous projects including Papers with Code in Machine Learning (paperswithcode.com), Hi Knowledge in Invasion Biology (hi-knowledge.org), and Plazi in Biodiversity (plazi.org).
+
+**Legacy.** The ability to consider already published articles, decades or even centuries ago, is a characteristic of post-publication extraction. Here, too, automation surely helps scaling to the millions of articles that have been published over the past centuries. However, on born-analogue, scanned articles, an OCR (Optical Character Recognition) step further complicates post-publication extraction. Overall, the feasibility of manually extracting information from articles is the same for recently published and long-ago published articles. In contrast, pre-publication production is a class of approaches that relies on integration in the research lifecycle and is thus designed for future research. However, assuming data and scripts are interlinked with already published articles, *reborn* can in principle be performed also post-publication. This was indeed the case for our second and third use cases presented earlier. Unfortunately, the systematic publishing of data and scripts as supplementary data to articles is not yet common practice, which severely limits the retroactive application of our approach.
+
+**Impact.** Before we briefly reflect on the potential impact of *reborn*, we underscore that its greatest potential impact applies primarily to research to be conducted in the future, and is limited for research conducted in the past. This focus on future research is, however, not a strong limitation. The production of scientific knowledge and its publication in scholarly literature has increased ever since the first journals began publishing scientific findings in the 17th century. Since 1950, science has grown exponentially, with a doubling time of 14 years$^{57}$. This shows that while millions of articles have been published, only a few decades are (likely) required for future research to be more voluminous than past research. Furthermore, as the state of the art is of primary relevance to future research, past research arguably has a tendency to depreciate. Hence, any time is a good time to begin with disruptive approaches; if we implement more efficient pre-publication approaches now, we predict reliance on post-publication extraction will likely decrease in the coming decades, and possibly become largely obsolete in the second half of the century.
+
+Given its technological simplicity and wide applicability to scientific knowledge formalized by means of data types, we argue that the most important factor determining future impact of the approach is the readiness of researchers to adopt it in their research. The readiness of researchers to publish data and scripts related to articles is a related practice with lower requirements that would enable the proposed approach and is nowadays widely considered to be best practice for open and reproducible science and state-of-the-art research data management. As awareness and implementation of such practices percolates through disciplines and research communities, we expect an increase in articles that are interlinked with data and scripts as supplementary data. This is encouraging because such practices lay the foundations for implementing *reborn*, as anyone with access to the article and the supporting data could in principle apply the proposed approach to create machine-readable expressions of the published scientific knowledge, independently from the original authors.
+
+Adoption of the presented approach will arguably be slower than adopting the practice of publishing supporting data and scripts related to articles. This is because, compared to simply collecting related files and submitting them as a package, the proposed approach comes with an overhead cost for researchers, especially in the form of time required to master and implement the technique. A key next step is to quantify the overhead costs associated with *reborn* and to identify and address remaining pain points to reduce costs and increase efficiency. This will largely be achieved by developing infrastructure that can take over tasks that are currently completed manually, making the mechanics of *reborn* data production increasingly invisible to users. One possibility in this regard is to modify functions in computing environments, e.g. `t.test()` in R, so that they automatically describe their outputs upon execution in a structured manner (i.e. according to a data type schema).
+
+However, embedding the production of machine-readable expressions of research findings in data analysis may have important advantages, also in terms of efficiency. Indeed, *reborn* is, broadly speaking, an important contribution to ensuring FAIR research data. Computing environments and languages such as Python and R harbor considerable potential for ensuring research data are FAIR, and this potential surely remains underexploited. The proposed approach is an excellent example demonstrating the potential of ensuring research data are created FAIR at production, by design of infrastructure, leveraging the power of computing environments and the established publication procedures in scholarly communication.
+
+Hence, as research communities continue to strive towards best practices in open and reproducible science, we expect that *reborn* or comparable approaches will gain traction and be important drivers in the production of machine-readable expressions of research findings. As a result, the share of data produced pre-publication will increase and may ultimately overtake the share of data produced via post-publication manual or automated extraction, especially high-quality data reflecting rich machine-readable expressions of research findings.
+
+---
+
+SCIENTIFIC DATA | (2025) 12:677 | https://doi.org/10.1038/s41597-025-04905-0 10
+
+www.nature.com/scientificdata/
+
+A quick analysis of approximately 90K Zenodo records showed that about 5K (~5%) contain either Python or R files and are interlinked (in metadata) to about 8K published articles. While 8K articles are a very small fraction of the millions of articles published each year⁵⁸, the Zenodo data does suggest that in the course of a few years, hundreds, and in the longer run thousands, of articles could be interlinked with machine-readable expressions of the research findings published therein, an important impact and impulse for the future of digital scholarship and the efficient reuse of scientific knowledge as FAIR research data.
+
+Finally, reborn data can strengthen the peer-review process, as reviewers of manuscripts may derive several benefits from structured expressions of research findings. First, the more granular structuring may increase clarity compared to the more compact presentation of the same information in manuscripts. Second, the interlinking of data can support verifying the correctness of data visualized as figures in manuscripts. Third, the interlinking of scripts can support validating the published results as well as their reproducibility.
+
+**Limitations.** The presented work and the proposed approach have limitations, which we discuss in more detail. The proposed approach integrates with data analysis conducted in statistical computing environments. While much of scientific knowledge is quantitative and statistical, not all scientific knowledge is. The approach has so far not been tested on qualitative or other kinds of scientific knowledge, e.g. formulae, proofs, arguments, etc. While untested, we suggest that assuming a knowledge type can be structured and specified with a template, then *reborn* should be transferable, possibly with adaptations (e.g. if a certain kind of knowledge is not produced in a computing environment).
+
+We developed and evaluated the approach for R as a statistical computing language, and support the same also for Python. It is arguably possible to extend to other open or proprietary scripting languages, such as Julia or Matlab. More challenging is integrating the approach with statistical computing environments that lack scripting support or that are primarily used via a graphical user interface. Even more challenging are commercial solutions, such as SPSS, GraphPad Prism, Stata, which, according to some studies⁵⁹, continue to be not only top ranked but also dominate the market. Given reliance on software companies, integration in commercial applications seems a remote possibility from today’s vantage point. However, there is little reason to believe that such an integration is technologically considerably harder compared to integration in open statistical computing environments with support for scripting.
+
+Our evaluation is limited, both in number of cases as well as in diversity of research. While we aim to address this limitation in future work, the main objective of the present work is to introduce the approach and provide evidence for its viability. However, based on the provided evidence, it seems promising that the proposed approach can be applied to scientific knowledge produced in statistical data analysis in research more generally.
+
+The ORKG-specific syntax of the data produced using ORKG libraries and templates in Python- or R-based statistical computing environments is a further limitation. This is due to the fact that the templates integrated into scripts are created in the ORKG and, naturally, use ORKG terminology. Furthermore, ORKG libraries produce JSON-LD formatted data optimized for consumption by the ORKG. This tight integration with the ORKG has simplified the development of the *reborn* approach at this stage. However, since the data are produced and published in a distributed manner and can in principle be consumed by systems other than the ORKG, we suggest that the published machine-readable expressions of research findings should conform to a more widely accepted syntax and terminology.
+
+ORKG Templates also present limitations. First, templates are only able to capture scientific knowledge to the extent of the specified schema. Well designed templates should capture the most salient aspects, but are at the same time limited to the specified aspects. For instance, a template specifying group comparisons in statistical data analysis (e.g. t-tests) may capture the salient aspects including input data, a p-value as data output, and a dependent variable, but this specification would not be able to capture additional data outputs (e.g. the value of the t-statistic). Second, the inability of ORKG Templates to encode formal semantics, i.e. the meaning of terms, is another limitation. ORKG Templates merely specify data syntax, i.e. the structure of data types. This means that reasoning, as supported in classical knowledge bases, is presently not supported by the proposed approach. Moreover, it also implies that template-compliant reborn data are unable to meet the requirements of FAIR sub-principles, especially on interoperability, where formal semantics is essential for reaching the principles’ full potential. Aligning ORKG Templates with ontology classes and properties by means of mappings with, e.g. the Ontology of Statistical Methods (STATO, stato-ontology.org), translating reborn data into semantic data conforming with, e.g. Recommendations of the W3C Semantic Web / Data Activity (w3.org/2013/data), and managing translated data in classical knowledge bases could enable such capabilities. However, ensuring logical consistency and scalable reasoning is non-trivial in practice, from both computational and curational perspectives.
+
+Finally, the reliance on authors may present some limitations. Authors drive the usefulness of the proposed system by deciding which results to express in machine-readable format. Naturally, the usefulness of the system increases as the number of reborn results increases. Capturing only the most salient results with reborn limits the usefulness of the system as not all results are expressed. Another concern is the possibility that authors may not capture all of the key results or results authors may consider trivial may be important for others. Moreover, relying on authors to use the approach is a limitation because, never mind how easy an approach is, it is generally challenging to motivate adoption of new practices.
+
+**Methods**
+
+In this section, we present the proposed system in more detail. We begin with an architectural overview of the distributed system, its components, exchanged data, and interactions. Next, we present our reference implementation of the proposed system architecture.
+
+SCIENTIFIC DATA | (2025) 12:677 | https://doi.org/10.1038/s41597-025-04905-0 11
+
+www.nature.com/scientificdata/
+
+![image](image_1.png)
+
+Fig. 6 Architectural overview of the proposed distributed system, its components and relations, including the (statistical) computing environment with specialized library, data type registry, publisher, data repository, and aggregation system; machine-readable scientific knowledge as the primary exchanged data; and system-system as well as system-data relations.
+
+---
+
+**Architectural overview.** Fig. 6 illustrates the architecture of the proposed distributed system. By supporting the production of scientific knowledge, the (statistical) Computing Environment is central to this system. Examples for such environments include the languages Python and R as well as the related systems Jupyter and R Studio. This environment is extended with a Library that provides users with functionality to produce and consume machine-readable scientific knowledge. The computing environment may run on a personal computer or in the cloud.
+
+Many researchers use (statistical) computing environments to implement the data analysis they require to produce the scientific knowledge expressed in articles (aka final data). It is within these environments that, supported by associated libraries, researchers ensure that scientific knowledge is also produced machine readable. This production is guided by data types specified by a Data Type Registry. Ideally, the development of such data types is guided by existing conceptualizations, e.g. ontologies. For instance, the development of a knowledge type for Student’s t-test is guided by a formalization of the concept in, e.g. the Ontology for Biomedical Investigations (OBI, purl.obolibrary.org/obo/OBI_00007399).
+
+By extending their scripts, authors can thus ensure that the (most salient) results are expressed in machine-readable form. These data are submitted to the preferred journal or conference proceeding as reborn data of the manuscript. This can happen in* several ways. One, upon acceptance, the publisher ensures the publication of the article and also deposits the reborn data in a data repository that is specific to the publisher or that is supported by a third-party (e.g. Dryad, Zenodo, or similar). An alternate option is for the authors to directly deposit the data on a third-party repository, a practice that is increasingly required or requested by publishers as best practice, and pass along the repository information to the publisher. Regardless of who handles the data deposition (i.e. publisher or author), it is important that the data repository supports persistent URLs to individual files. A (persistent) identification only of the deposited collection as a whole is not sufficient. If deposited independently, authors are encouraged to ensure a high quality data publication that enables discovery via inverse interlinking, from reborn data to published article, as well as reproducibility (if code snippets are interlinked). Scholarly infrastructures such as Crossref (crossref.org), DataCite (datacite.org), and OpenAIRE Graph (graph.openaire.eu) are meanwhile able to resolve direct and inverse links independently of which is created first.
+
+Given an article DOI, Aggregation Systems collect deposited machine-readable scientific knowledge and make these data accessible for efficient use. In addition to collecting data, aggregation systems provide value-added services, e.g. for scientific knowledge integration or visualization.
+
+To support research, the machine-readable scientific knowledge made available by aggregation systems can be consumed in (statistical) computing environments, thus closing the production-consumption loop. This interaction is particularly interesting for synthesis research, e.g. systematic reviews or meta-analyses.
+
+**Reference implementation.** Having presented the architecture of the proposed distributed system, we now turn to our reference implementation. In this implementation, the ORKG acts as the Aggregation System and also implements the Data Type Registry as a Template Registry. Furthermore, Jupyter and the Python language act as the (statistical) Computing Environment. Consequently, the ORKG Python library takes the role of the Library associated with the statistical computing environment. We describe the reference implementation by detailing the proposed distributed system along its main supported activities. Note that code listings shown here are subject to change as we further develop *reborn*. Future changes will be reflected on our help center article available online at orkg.org/help-center/article/47/reborn_articles.
+
+**Creating templates.** The ORKG supports the creation of templates and maintains a template registry (orkg.org/templates). Users can thus search for existing templates and, assuming a suitable template is found, they can
+
+SCIENTIFIC DATA | (2025) 12:677 | https://doi.org/10.1038/s41597-025-04905-0 12
+
+www.nature.com/scientificdata/
+
+directly use templates to guide the production of machine-readable scientific knowledge. Each template is identified by an ORKG Resource ID and is accessible via a unique URL. The main purpose of templates is to ensure that knowledge of the same type is represented in the same way. This supports knowledge integration.
+
+While any ORKG user can create templates, in general this is a task for experts, who, in the ORKG, organize themselves in the context of ORKG Observatories. Users who create templates should be experienced with developing schemata and know how to use ontologies to guide template creation. Ideally, the creation of templates is a collaborative effort and the resulting template specification reflects a community's consensus. Only with such consensus can we ensure that templates are highly reusable in varying contexts.
+
+Given that template creation is an activity driven by experts, most users should primarily use existing templates, and not be involved in their creation. We argue that the number of templates required to describe much of scientific knowledge is probably relatively small, especially if constrained to scientific knowledge that results in statistical data analysis. While there is a large number of statistical methods, it is possible that a relatively small number of methods is extensively used in research. Student's t-test, ANOVA, and linear regressions are good examples. Hence, we expect to see the need for template creation diminish as users will increasingly find the required templates in the registry.
+
+Integration of templates in data analysis. In the ORKG, templates were originally designed and developed to support the manual description of research contributions using the ORKG frontend at orkg.org. In the context of the present work, we have extended the application of templates in data analysis implemented in computing environments. This is supported by corresponding libraries: for a Python-based statistical computing environment, it is the ORKG Python library (orkg.readthedocs.io). Among other features, this library supports the integration of ORKG Templates in Python scripts that implement statistical data analysis activities that underlie the results published in articles. A corresponding library is also available for environments employing the R language. The templates integrated by the Python and R libraries are identical, and are what allow the approach to be deployed consistently across computing environments and libraries. We refer readers to the code availability statement below for more information on how to access these libraries.
+
+Listing 1 illustrates how ORKG Templates are integrated into Python scripts, for simplicity exemplified on a Student's t-test (e.g. petal length for two Iris species) using the well-known Iris dataset. Having imported libraries, including the ORKG library, at line 6, we first load the Iris dataset, which is then also processed (not shown). At line 8, we perform the t-test and obtain the computed p-value on the following line. The integration of ORKG Templates into scripts is shown on the following lines. At line 11, we connect to the ORKG production system at orkg.org. At line 12, we materialize a template by its ORKG Resource ID, here R12002, which is the ORKG Template for Student's t-tests. Finally, at line 13, we create an object that provides access to the materialized template.
+
+The materialization step is interesting because it dynamically creates a function-based native API based on the template specification. As ORKG Templates can be nested, the materialization step recursively materializes all templates that are nested in the template addressed by ID.
+
+Lines 15–21 illustrate the use of the dynamically created API to instantiate the template with data; here, to describe the conducted Student's t-test. Following the template, a Student's t-test has a label, a dependent variable, an input dataset, and an output p-value. Notably, the input dataset is a Python data frame, and we can simply pass the variable already created in reading/processing the input data, e.g. from a local CSV file. Moreover, the p-value results from the statistical hypothesis test and is also passed as a variable. Finally, at line 22, we instruct the library to write the data expressing the conducted t-test in machine-readable form to a file in JSON-LD format.
+
+Depositing reborn data. The JSON-LD data files produced in data analysis are first stored in the user's computing environment (e.g. on their personal computer). These data files and related data files, including script snippets or figures, are later submitted as reborn data together with the manuscript to the co-authors' preferred journal for manuscript review. At this point, the reborn data enters the review and publication process, and journals or
+
+Listing 2. Data-to-article interlinking in DataCite DOI metadata using the IsSupplementTo and HasPart relations (see also: api.datacite.org/dois/10.57702/yztrbsd4).
+
+"relatedIdentifiers": [
+    {
+        "relationType": "IsSupplementTo",
+        "relatedIdentifier": "10.5194/soil-10-139-2024",
+        "resourceTypeGeneral":"JournalArticle",
+        "relatedIdentifierType":"DOI",
+    },
+    {
+        "relationType":"HasPart",
+        "relatedIdentifier":"https://service.tib.eu/.../contribution-1.json",
+        "resourceTypeGeneral":"Dataset",
+        "relatedIdentifierType":"URL"
+    },
+    ...
+]
+
+SCIENTIFIC DATA | (2025) 12:677 | https://doi.org/10.1038/s41597-025-04905-0
+
+www.nature.com/scientificdata/
+
+**Listing 3. Optional article-to-data interlinking in Crossref DOI metadata using the is-supplemented-by relation.**
+
+json
+"relation": {
+  "is-supplemented-by": [
+    {
+      "id-type": "doi",
+      "id": "10.57702/yztrbsd4"
+    }
+  ]
+}
+```
+
+**Listing 4. Discovery of reborn data by article DOI using the DataCite REST API.**
+
+```
+https://api.datacite.org/dois?query=
+relatedIdentifiers.relatedIdentifier:10.5194/soil-10-139-2024
+AND relatedIdentifiers.relationType:IsSupplementTo
+```
+
+**Listing 5. Harvesting reborn data into the ORKG with Python using its DOI and directory-based harvesting approaches.**
+
+```python
+from orkg import ORKG
+
+orkg.harvesters.doi_harvest(
+    doi="https://doi.org/10.5194/soil-10-139-2024",
+    orkg_rf="Soil Science"
+)
+
+orkg.harvesters.directory_harvest(
+    directory="data",
+    research_field="Soil Science",
+    title="Cover crops improve soil structure and change organic carbon distribution in macroaggregate fractions",
+    authors=["Norman Gentsch", "Florin Laura Riechers", "Jens Boy", "Dörte Schwenecker", "Ulf Feuerstein", "Diana Heuermann", "Georg Guggenberger"],
+    publication_year=2024,
+    publication_month=9,
+    published_in="SOIL"
+)
+```
+
+**Listing 6. Retrieving ORKG tabular data as a data frame in Python.**
+
+```python
+from orkg import ORKG
+
+orkg = ORKG(host="https://orkg.org")
+df = orkg.resources.by_id(id="R662664").as_dataframe()
+df.head()
+```
+
+conference chairs may consider using the reborn data to support the review process. While authors and publishers may publish the reborn data themselves, in our reference implementation we use the TIB Leibniz Data Manager$^{60}$ as a default data repository. Centralizing the publication of the reborn data may be (at least for the time being) the most efficient approach, as TIB has the data stewardship expertise required to ensure high quality publishing in terms of identification, metadata, persistence, interlinking, and reproducibility. The curation overhead incurred to ensure quality data publication is substantial, but the routine tasks can be carried out by data stewards with basic skills in research data management. The overhead is caused primarily by the fact that curation is currently largely manual, which is something that can be addressed with the development of specialized tooling.
+
+**Interlinking reborn data in metadata.** To enable DOI-based discovery of harvestable reborn data by machines, we support the interlinking of assets in DOI metadata. We follow two approaches: data-to-article and (optionally) article-to-data interlinking. Listing 2 exemplifies data-to-article interlinking, which is the primary approach. We interlink the article DOI in dataset DOI metadata using the IsSupplementTo relation. Furthermore, we use the HasPart relation to link explicitly to JSON-LD reborn data. In addition, publishers may (optionally) implement article-to-data interlinking with the is-supplemented-by (or similar) relation in Crossref DOI metadata according to the pattern illustrated in Listing 3. Listing 4 exemplifies the discovery of reborn JSON-LD data given the article DOI using the DataCite REST API.
+
+SCIENTIFIC DATA | (2025) 12:677 | https://doi.org/10.1038/s41597-025-04905-0 14
+
+www.nature.com/scientificdata/
+
+Collecting reborn data in aggregation systems. Given reborn data interlinked in DOI metadata about the article, aggregation systems only need the article DOI to discover harvestable data. For the ORKG, its Python library also supports DOI- and directory-based harvesting of data into the ORKG. Listing 5 illustrates this feature with an example. Python-based harvesting, e.g. on the command line, is particularly useful for work published in articles not identified by a DOI or to ingest into the ORKG reborn data for manuscripts in review. Authors or publishers can perform such harvesting, and, in the ORKG, harvesting may be into sandbox or production systems. Note that reborn data produced with templates on ORKG sandbox (sandbox.orkg.org) are in general not compatible with ORKG production (orkg.org). This is because templates on sandbox and on production may have the same structure, but the properties and classes used in the respective templates have different IDs.
+
+Integrating aggregation systems in data analysis. Closing the loop for the production and consumption of machine-readable scientific knowledge in statistical computing environments, the ORKG Python and R libraries support the retrieval of ORKG tabular data into data frames native to the respective languages. This enables a more frictionless machine-based reuse of scientific knowledge, e.g. in synthesis research. Listing 6 illustrates this feature with an example. As this work focuses on the production and publication of machine-readable scientific knowledge, we do not further explore the possibilities of reuse here and defer this aspect to future articles.
+
+Data availability
+
+The reborn data for the three use cases are published in the ORKG^42,45,48^. We applied *reborn* to the present article and expressed the most salient aspects of the three use cases in structured form^61^. Using the ORKG Comparison feature, it is possible to juxtapose the three use cases in a tabular form^62^. The data constituting the use cases presented in this article are Open Data published by the ORKG under the CC0 1.0 Universal license. In addition to the ORKG Frontend, the data can be accessed via numerous APIs, including REST and SPARQL. Information about ORKG data access is available at orkg.org/data. Reborn data depositions in the TIB Leibniz Data Manager are published under CC0 1.0 Universal license.
+
+Code availability
+
+The ORKG and its components are released Open Source under the MIT license. The source code for the ORKG and its components, including the Python and R libraries, are available at gitlab.com/TIBHannover/orkg. The ORKG Python library supporting the production of the reborn data files in JSON-LD format is available at pypi.org/project/orkg and can be installed using the pip package installer for Python. The corresponding ORKG R library can be installed using devtools from gitlab.com/TIBHannover/orkg/orkg-r. As we develop the approach further, we advise users to refer to online resources for latest updates, specifically at reborn.orkg.org.
+
+Received: 31 May 2024; Accepted: 26 March 2025;
+
+Published online: 30 April 2025
+
+References
+
+1. de Sallo, D. Le Journal des scavans. *Le Journal des scavans* https://n2t.net/ark:/12148/bpt6k56523g/f1.item (1665).
+
+2. Oldenburg, H. Epistle dedicatory. *Philosophical Transactions of the Royal Society of London* 1, https://doi.org/10.1098/rstl.1665.0001 (1665).
+
+3. Shotton, D. Semantic publishing: the coming revolution in scientific journal publishing. *Learned Publishing* 22, 85–94, https://doi.org/10.1087/2009202 (2009).
+
+4. Floridi, L. *The Philosophy of Information* (Oxford University Press, 2011).
+
+5. Mons, B. Which gene did you mean? *BMC Bioinformatics* 6, https://doi.org/10.1186/1471-2105-6-142 (2005).
+
+6. Higgins, J. *et al.* Cochrane Handbook for Systematic Reviews of Interventions version 6.4 (updated August 2023), https://training.cochrane.org/handbook (2023).
+
+7. Allen, I. Estimating Time to Conduct a Meta-analysis From Number of Citations Retrieved. *JAMA: The Journal of the American Medical Association* 282, 634–635, https://doi.org/10.1001/jama.282.7.634 (1999).
+
+8. Wilkinson, M. D. *et al.* The FAIR Guiding Principles for scientific data management and stewardship. *Scientific Data* 3, https://doi.org/10.1038/sdata.2016.18 (2016).
+
+9. Attwood, T. K. *et al.* Calling International Rescue: knowledge lost in literature and data landslide! *Biochemical Journal* 424, 317–333, https://doi.org/10.1042/bj20091474 (2009).
+
+10. Auer, S. *et al.* Improving access to scientific literature with knowledge graphs. *Bibliothek Forschung und Praxis* 44, 516–529, https://doi.org/10.1515/bfp-2020-2042 (2020).
+
+11. Hars, A. Designing Scientific Knowledge Infrastructures: The Contribution of Epistemology. *Information Systems Frontiers* 3, 63–73, https://doi.org/10.1023/a:1011401704862 (2001).
+
+12. Bourne, P. Will a Biological Database Be Different from a Biological Journal? *PLoS Computational Biology* 1, e34, https://doi.org/10.1371/journal.pcbi.0010034 (2005).
+
+13. Seringhaus, M. R. & Gerstein, M. B. Publishing perishing? Towards tomorrow’s information architecture. *BMC Bioinformatics* 8, https://doi.org/10.1186/1471-2105-8-17 (2007).
+
+14. Waard, A. *et al.* Hypotheses, evidence and relationships: The HypER approach for representing scientific knowledge claims. In *Proceedings of the Workshop on Semantic Web Applications in Scientific Discourse (SWASD 2009)*, collocated with the 8th International Semantic Web Conference (ISWC-2009), https://ceur-ws.org/Vol-523/ (CEUR-WS, Washington DC, USA, 2009).
+
+15. Shotton, D., Portwin, K., Klyne, G. & Miles, A. Adventures in Semantic Publishing: Exemplar Semantic Enhancements of a Research Article. *PLoS Computational Biology* 5, e1000361, https://doi.org/10.1371/journal.pcbi.1000361 (2009).
+
+16. Leitner, F. *et al.* The FEBS Letters/BioCreative II.5 experiment: making biological information accessible. *Nature Biotechnology* 28, 897–899, https://doi.org/10.1038/nbt0910-897 (2010).
+
+17. Groth, P., Gibson, A. & Velterop, J. The anatomy of a nanopublication. *Information Services & Use* 30, 51–56, https://doi.org/10.3233/isu-2010-0613 (2010).
+
+SCIENTIFIC DATA | (2025) 12:677 | https://doi.org/10.1038/s41597-025-04905-0
+
+www.nature.com/scientificdata/
+
+18. Iorio, A. D., Lange, C., Dimou, A. & Vahdati, S. Semantic Publishing Challenge – Assessing the Quality of Scientific Output by Information Extraction and Interlinking. *Semantic Web Evaluation Challenges* 65–80, https://doi.org/10.1007/978-3-319-25518-7_6 (2015).
+
+19. Spadaro, G. *et al.* The Cooperation Databank: Machine-Readable Science Accelerates Research Synthesis. *Perspectives on Psychological Science* 17, 1472–1489, https://doi.org/10.1177/17456916211053319 (2022).
+
+20. Bucur, C.-I. & Kuhn, T. Special Issue on Semantic Publishing with Formalization Papers, https://doi.org/10.3233/ds-220055 (2022).
+
+21. Kuhn, T. *et al.* Semantic micro-contributions with decentralized nanopublication services. *PeerJ Computer Science* 7, e387, https://doi.org/10.7717/peerj-cs.387 (2021).
+
+22. Jaradeh, M. Y. *et al.* Open Research Knowledge Graph: Next Generation Infrastructure for Semantic Scholarly Knowledge. In *Proceedings of the 10th International Conference on Knowledge Capture*, https://doi.org/10.1145/3360901.3364435 (ACM, 2019).
+
+23. Poux, S. *et al.* On expert curation and scalability: UniProtKB/Swiss-Prot as a case study. *Bioinformatics* 33, 3454–3460, https://doi.org/10.1093/bioinformatics/btx439 (2017).
+
+24. Agrawal, K., Mittal, A. & Pudi, V. Scalable, Semi-Supervised Extraction of Structured Information from Scientific Literature. In *Proceedings of the Workshop on Extracting Structured Knowledge from Scientific Publications*, https://doi.org/10.18653/v1/w19-2602 (Association for Computational Linguistics, 2019).
+
+25. Hong, Z., Ward, L., Chard, K., Blaiszik, B. & Foster, I. Challenges and Advances in Information Extraction from Scientific Literature: a Review. *JOM* 73, 3383–3400, https://doi.org/10.1007/s11837-021-04902-9 (2021).
+
+26. Groth, P., Lauruhn, M., Scerri, A. & Daniel Jr, R. Open Information Extraction on Scientific Text: An Evaluation. In *Proceedings of the 27th International Conference on Computational Linguistics*, 3414–3423, https://aclanthology.org/C18-1289 (Association for Computational Linguistics, Santa Fe, New Mexico, USA, 2018).
+
+27. Nasar, Z., Jaffry, S. W. & Malik, M. K. Information extraction from scientific articles: a survey. *Scientometrics* 117, 1931–1990, https://doi.org/10.1007/s11192-018-2921-5 (2018).
+
+28. Salloum, S. A., Al-Emran, M., Monem, A. A. & Shaalan, K. Using Text Mining Techniques for Extracting Information from Research Articles. *Intelligent Natural Language Processing: Trends and Applications* 373–397, https://doi.org/10.1007/978-3-319-67056-0_18 (2017).
+
+29. Dagdelen, J. *et al.* Structured information extraction from scientific text with large language models. *Nature Communications* 15, https://doi.org/10.1038/s41467-024-45563-x (2024).
+
+30. Jin, Q., Yang, Y., Chen, Q. & Lu, Z. GeneGPT: augmenting large language models with domain tools for improved access to biomedical information. *Bioinformatics* 40, https://doi.org/10.1093/bioinformatics/btae075 (2024).
+
+31. Hou, Y., Jochim, C., Gleize, M., Bonin, F. & Ganguly, D. Identification of Tasks, Datasets, Evaluation Metrics, and Numeric Scores for Scientific Leaderboards Construction. In *Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics*, https://doi.org/10.18653/v1/p19-1513 (Association for Computational Linguistics, 2019).
+
+32. Kardas, M. *et al.* AxCell: Automatic Extraction of Results from Machine Learning Papers. In *Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)*, https://doi.org/10.18653/v1/2020.emnlp-main.692 (Association for Computational Linguistics, 2020).
+
+33. Kabongo, S., D’Souza, J. & Auer, S. Automated Mining of Leaderboards for Empirical AI Research. *Lecture Notes in Computer Science* 453–470, https://doi.org/10.1007/978-3-030-91669-5_35 (2021).
+
+34. Kabongo, S., D’Souza, J. & Auer, S. Exploring the Latest LLMs for Leaderboard Extraction. In *CLEF 2024: Conference and Labs of the Evaluation Forum*, https://ceur-ws.org/Vol-3740 (CEUR-WS, Grenoble, France, 2024).
+
+35. Şahinuç, F. *et al.* Efficient Performance Tracking: Leveraging Large Language Models for Automated Construction of Scientific Leaderboards. In *Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing*, 7963–7977, https://doi.org/10.18653/v1/2024.emnlp-main.453 (Association for Computational Linguistics, 2024).
+
+36. Bless, C., Baimuratov, I. & Karras, O. SciKGTeX - A LATEX Package to Semantically Annotate Contributions in Scientific Publications. In *2023 ACM/IEEE Joint Conference on Digital Libraries (JCDL)*, https://doi.org/10.1109/jcdl57899.2023.00030 (IEEE, 2023).
+
+37. Capadisli, S. *et al.* Decentralised Authoring, Annotations and Notifications for a Read-Write Web with dokieli. *Lecture Notes in Computer Science* 469–481, https://doi.org/10.1007/978-3-319-60131-1_33 (2017).
+
+38. Stocker, M. *et al.* FAIR scientific information with the Open Research Knowledge Graph. *FAIR Connect* 1, 19–21, https://doi.org/10.3233/fc-221513 (2023).
+
+39. Borgman, C. L. & Groth, P. T. From Data Creator to Data Reuser: Distance Matters, https://doi.org/10.48550/ARXIV.2402.07926 (2024).
+
+40. Hogan, A. *et al.* Knowledge Graphs, https://doi.org/10.1145/3447772 (2021).
+
+41. Gentsch, N. *et al.* Cover crops improve soil structure and change organic carbon distribution in macroaggregate fractions. *SOIL* 10, 139–150, https://doi.org/10.5194/soil-10-139-2024 (2024).
+
+42. Gentsch, N. Cover crops improve soil structure and change organic carbon distribution in macroaggregate fractions [ORKG], https://doi.org/10.48366/R664252 (2024).
+
+43. Gentsch, N. gentsch-2023-1, https://doi.org/10.57702/YZTRBSD4 (2023).
+
+44. Thießen, F., D’Souza, J. & Stocker, M. Probing Large Language Models for Scientific Synonyms. In *Joint Workshop Proceedings of the 5th International Workshop on A Semantic Data Space For Transport (Sem4Tra) and 2nd NLP4KGC: Natural Language Processing for Knowledge Graph Construction co-located with the 19th International Conference on Semantic Systems (SEMANTiCS 2023)*, https://ceur-ws.org/Vol-3510/ (CEUR-WS, Leipzig, Germany, 2023).
+
+45. Thießen, F. & Stocker, M. Probing Large Language Models for Scientific Synonyms [ORKG], https://doi.org/10.48366/R661500 (2024).
+
+46. Thießen, F. thiessen-2023-1, https://doi.org/10.57702/9ZHUUBZ9 (2023).
+
+47. Perez-Alvarez, R., Nault, B. A. & Poveda, K. Contrasting effects of landscape composition on crop yield mediated by specialist herbivores. *Ecological Applications* 28, 842–853, https://doi.org/10.1002/eap.1695 (2018).
+
+48. Perez-Alvarez, R. Contrasting effects of landscape composition on crop yield mediated by specialist herbivores [ORKG], https://doi.org/10.48366/R689181 (2024).
+
+49. Perez-Alvarez, R. perez-alvarez-2018-1, https://doi.org/10.57702/EYFF90IC (2023).
+
+50. Jonnalagadda, S. R., Goyal, P. & Huffman, M. D. Automating data extraction in systematic reviews: a systematic review. *Systematic Reviews* 4, https://doi.org/10.1186/s13643-015-0066-7 (2015).
+
+51. Polak, M. P. & Morgan, D. Extracting accurate materials data from research papers with conversational language models and prompt engineering. *Nature Communications* 15, https://doi.org/10.1038/s41467-024-45914-8 (2024).
+
+52. Khalighinejad, G., Circi, D., Brinson, L. C. & Dhingra, B. Extracting Polymer Nanocomposite Samples from Full-Length Documents, https://doi.org/10.48550/arxiv.2403.00260 (2024).
+
+53. Augenstein, I., Das, M., Riedel, S., Vikraman, L. & McCallum, A. SemEval 2017 Task 10: ScienceIE - Extracting Keyphrases and Relations from Scientific Publications. In *Proceedings of the 11th International Workshop on Semantic Evaluation (SemEval-2017)*, https://doi.org/10.18653/v1/s17-2091 (Association for Computational Linguistics, 2017).
+
+54. Mathes, T., Klaßen, P. & Pieper, D. Frequency of data extraction errors and methods to increase data extraction quality: a methodological review. *BMC Medical Research Methodology* 17, https://doi.org/10.1186/s12874-017-0431-4 (2017).
+
+SCIENTIFIC DATA | (2025) 12:677 | https://doi.org/10.1038/s41597-025-04905-0
+
+16
+
+www.nature.com/scientificdata/
+
+55. Gøtzsche, P. C., Hróbjartsson, A., Marić, K. & Tendal, B. Data Extraction Errors in Meta-analyses That Use Standardized Mean Differences, https://doi.org/10.1001/jama.298.4.430 (2007).
+
+56. Burger, J. D. et al. Hybrid curation of gene–mutation relations combining automated extraction and crowdsourcing. *Database* 2014, https://doi.org/10.1093/database/bau094 (2014).
+
+57. Bornmann, L., Haunschild, R. & Mutz, R. Growth rates of modern science: a latent piecewise growth curve approach to model publication numbers from established and new literature databases. *Humanities and Social Sciences Communications* 8, https://doi.org/10.1057/s41599-021-00903-w (2021).
+
+58. Johnson, R., Watkinson, A. & Mabe, M. The STM Report: An overview of scientific and scholarly publishing. Tech. Rep., STM: International Association of Scientific, Technical and Medical Publishers, The Hague, The Netherlands (2018). https://www.stm-assoc.org/2018_10_04_STM_Report_2018.pdf.
+
+59. Masuadi, E. et al. Trends in the Usage of Statistical Software and Their Associated Study Designs in Health Sciences Research: A Bibliometric Analysis. *Cureus* https://doi.org/10.7759/cureus.12639 (2021).
+
+60. Beer, A., Brunet, M., Srivastava, V. & Vidal, M.-E. Leibniz Data Manager – A Research Data Management System. *The Semantic Web: ESWC 2022 Satellite Events* 73–77, https://doi.org/10.1007/978-3-031-11609-4_14 (2022).
+
+61. Stocker, M. Rethinking the production and publication of machine-readable expressions of research findings [ORKG], https://doi.org/10.48366/R1362623 (2025).
+
+62. Stocker, M. Comparison of the use cases presented in the paper introducing the reborn approach, https://doi.org/10.48366/R1362628 (2025).
+
+## Acknowledgements
+
+The authors greatly appreciate the support provided by Norman Gentsch and Ricardo Perez-Alvarez, first authors of the original works constituting the respective use cases underlying this article. We thank our colleagues Olga Lezhnina for supporting the ORKG R package, Lars Vogt for supporting the conceptualization of templates, Qurat-ul Ain Aftab for maintaining the ORKG Word Add-in, Manuel Prinz for related ORKG backend developments, and Salomon Kabongo for extensive discussions on TDMS extraction research. We thank Chris Mavergames and Wiley as well as Johannes Wagner and Copernicus Publications for their support of this work. We greatly appreciate the time and effort that went into reviewing this manuscript and thank the reviewers for their thoughtful comments and suggestions. Parts of the work described in this article have been co-funded by the European Research Council (ERC) project ScienceGRAPH (GA: 819536), the German Research Foundation (DFG) project NFDI4DS (PN: 460234259), and the Leibniz University Hannover (LUH) Flexible Funds (PN: FlexFunds-2022-05). This research has been supported by the Leibniz-Lab “Systemic Sustainability” (GA no. LL-2024-SYSTAIN) funded by the Leibniz Association and the Leibniz Research Network “Earth & Societies”.
+
+## Author contributions
+
+Author contributions according to the CRediT taxonomy: Conceptualization (M.S.); Data curation (M.S., L.S., M.A., F.T.); Formal Analysis (N/A); Funding acquisition (M.S., L.S.); Investigation (M.S., L.S., M.A., F.T.); Methodology (M.S., L.S., O.L., K.E.F., M.H., A.O., M.Y.J.); Project administration (M.S., L.S.); Resources (M.S., L.S., M.A., F.T.); Software (M.S., M.A., O.L., F.T., K.E.F., M.H., A.O., M.Y.J.); Supervision (M.S., L.S.); Validation (M.S., L.S., M.A., F.T.); Visualization (M.S.); Writing – original draft (M.S., L.S.); Writing – review & editing (M.S., L.S., M.A., O.L., F.T., K.E.F., M.H., A.O., M.Y.J.). The authors did not use generative AI technology such as AI chatbots to assist activities related to this research, including the writing of this article.
+
+## Funding
+
+Open Access funding enabled and organized by Projekt DEAL.
+
+## Competing interests
+
+The authors declare no competing interests.
+
+## Additional information
+
+**Correspondence** and requests for materials should be addressed to M.S.
+
+**Reprints and permissions information** is available at www.nature.com/reprints.
+
+**Publisher’s note** Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.
+
+<div style="display: flex; align-items: center; gap: 8px;">
+  ![image](image_1.png)
+  <strong>Open Access</strong> This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or other third party material in this article are included in the article’s Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article’s Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit http://creativecommons.org/licenses/by/4.0/.
+</div>
+
+© The Author(s) 2025
+
+---
+
+SCIENTIFIC DATA | (2025) 12:677 | https://doi.org/10.1038/s41597-025-04905-0
+
+17

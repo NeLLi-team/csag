@@ -1,0 +1,271 @@
+{
+  "id": "csag:doc/toy_plastid_claim",
+  "title": "Toy Plastid Claim Manuscript",
+  "schema_version": "1.0.0",
+  "validator_version": "1.0.0",
+  "doi": "",
+  "pmid": "",
+  "authors": [
+    {
+      "label": "Bikash Example",
+      "id": "csag:author/csag:doc/toy_plastid_claim/AU0001"
+    },
+    {
+      "label": "Crysten Curator",
+      "id": "csag:author/csag:doc/toy_plastid_claim/AU0002"
+    }
+  ],
+  "abstract": "Toy algae grown under blue light accumulated more plastid pigment than matched dark controls. The observation supports the claim that blue light increases plastid pigment accumulation in this toy system.",
+  "datasets": [
+    {
+      "id": "csag:dataset/csag:doc/toy_plastid_claim/D0001",
+      "label": "Toy pigment measurements",
+      "repository": "CSAG repository",
+      "dataset_url": "file:examples/toy/toy_measurements.tsv",
+      "text_spans": [
+        {
+          "document_id": "csag:doc/toy_plastid_claim",
+          "section_type": "other",
+          "start_char": 771,
+          "end_char": 859,
+          "exact_text": "Toy measurements are available in the repository file examples/toy/toy_measurements.tsv.",
+          "id": "csag:span/csag:doc/toy_plastid_claim/S0001"
+        }
+      ]
+    }
+  ],
+  "assertions": [
+    {
+      "id": "csag:assertion/csag:doc/toy_plastid_claim/A0001",
+      "assertion_text": "The toy manuscript evaluates whether blue light increases plastid pigment accumulation in toy algae.",
+      "claim_role": "objective",
+      "assertion_type": "methodological",
+      "normalization_status": "raw",
+      "criticality": "supporting",
+      "falsification_criteria": [
+        "The manuscript would not test this objective if blue-light and dark-control cultures were absent."
+      ],
+      "contexts": [
+        {
+          "id": "csag:context/csag:doc/toy_plastid_claim/C0001",
+          "label": "toy algal culture system",
+          "context_facet": "model_system"
+        }
+      ],
+      "text_spans": [
+        {
+          "document_id": "csag:doc/toy_plastid_claim",
+          "section_type": "abstract",
+          "start_char": 81,
+          "end_char": 174,
+          "exact_text": "Toy algae grown under blue light accumulated more plastid pigment than matched dark controls.",
+          "id": "csag:span/csag:doc/toy_plastid_claim/S0002"
+        }
+      ]
+    },
+    {
+      "id": "csag:assertion/csag:doc/toy_plastid_claim/A0002",
+      "assertion_text": "Blue light increases plastid pigment accumulation in the toy algal system.",
+      "claim_role": "conclusion",
+      "assertion_type": "causal",
+      "normalization_status": "raw",
+      "criticality": "core",
+      "falsification_criteria": [
+        "A replicated experiment showing no pigment difference, or lower pigment under blue light, would weaken the claim."
+      ],
+      "contexts": [
+        {
+          "id": "csag:context/csag:doc/toy_plastid_claim/C0002",
+          "label": "24-hour toy algal cultures",
+          "context_facet": "model_system"
+        }
+      ],
+      "text_spans": [
+        {
+          "document_id": "csag:doc/toy_plastid_claim",
+          "section_type": "discussion",
+          "start_char": 573,
+          "end_char": 671,
+          "exact_text": "These data suggest that blue light increases plastid pigment accumulation in the toy algal system.",
+          "id": "csag:span/csag:doc/toy_plastid_claim/S0003"
+        }
+      ],
+      "curation_status": "human_verified"
+    }
+  ],
+  "evidence_items": [
+    {
+      "id": "csag:evidence/csag:doc/toy_plastid_claim/E0001",
+      "evidence_type": "experimental_result",
+      "evidence_text": "Blue-light cultures measured 2.1 absorbance units of plastid pigment, while dark controls measured 1.0 absorbance unit.",
+      "contexts": [
+        {
+          "id": "csag:context/csag:doc/toy_plastid_claim/C0003",
+          "label": "blue-light versus dark-control cultures",
+          "context_facet": "model_system"
+        }
+      ],
+      "text_spans": [
+        {
+          "document_id": "csag:doc/toy_plastid_claim",
+          "section_type": "results",
+          "start_char": 437,
+          "end_char": 556,
+          "exact_text": "Blue-light cultures measured 2.1 absorbance units of plastid pigment, while dark controls measured 1.0 absorbance unit.",
+          "id": "csag:span/csag:doc/toy_plastid_claim/S0004"
+        }
+      ]
+    },
+    {
+      "id": "csag:evidence/csag:doc/toy_plastid_claim/E0002",
+      "evidence_type": "observational_data",
+      "evidence_text": "The abstract states that toy algae grown under blue light accumulated more plastid pigment than matched dark controls.",
+      "contexts": [
+        {
+          "id": "csag:context/csag:doc/toy_plastid_claim/C0004",
+          "label": "abstract-level toy study summary",
+          "context_facet": "model_system"
+        }
+      ],
+      "text_spans": [
+        {
+          "document_id": "csag:doc/toy_plastid_claim",
+          "section_type": "abstract",
+          "start_char": 81,
+          "end_char": 174,
+          "exact_text": "Toy algae grown under blue light accumulated more plastid pigment than matched dark controls.",
+          "id": "csag:span/csag:doc/toy_plastid_claim/S0005"
+        }
+      ]
+    }
+  ],
+  "evidence_links": [
+    {
+      "id": "csag:elink/csag:doc/toy_plastid_claim/L0001",
+      "evidence_item": "csag:evidence/csag:doc/toy_plastid_claim/E0001",
+      "assertion": "csag:assertion/csag:doc/toy_plastid_claim/A0002",
+      "polarity": "supports",
+      "strength": "moderate",
+      "rationale": "The measured pigment value is higher in the blue-light culture than in the matched dark control.",
+      "text_spans": [
+        {
+          "document_id": "csag:doc/toy_plastid_claim",
+          "section_type": "results",
+          "start_char": 437,
+          "end_char": 556,
+          "exact_text": "Blue-light cultures measured 2.1 absorbance units of plastid pigment, while dark controls measured 1.0 absorbance unit.",
+          "id": "csag:span/csag:doc/toy_plastid_claim/S0006"
+        }
+      ],
+      "curation_status": "human_verified"
+    },
+    {
+      "id": "csag:elink/csag:doc/toy_plastid_claim/L0002",
+      "evidence_item": "csag:evidence/csag:doc/toy_plastid_claim/E0002",
+      "assertion": "csag:assertion/csag:doc/toy_plastid_claim/A0001",
+      "polarity": "supports",
+      "strength": "moderate",
+      "rationale": "The abstract states the study comparison that motivates the objective assertion.",
+      "text_spans": [
+        {
+          "document_id": "csag:doc/toy_plastid_claim",
+          "section_type": "abstract",
+          "start_char": 81,
+          "end_char": 174,
+          "exact_text": "Toy algae grown under blue light accumulated more plastid pigment than matched dark controls.",
+          "id": "csag:span/csag:doc/toy_plastid_claim/S0007"
+        }
+      ],
+      "curation_status": "human_verified"
+    }
+  ],
+  "inferences": [
+    {
+      "id": "csag:inference/csag:doc/toy_plastid_claim/I0001",
+      "input_assertions": [
+        "csag:assertion/csag:doc/toy_plastid_claim/A0001"
+      ],
+      "input_evidence_links": [
+        "csag:elink/csag:doc/toy_plastid_claim/L0001"
+      ],
+      "output_assertion": "csag:assertion/csag:doc/toy_plastid_claim/A0002",
+      "inference_method": "qualitative_interpretation",
+      "inference_rationale": "The conclusion interprets a simple treatment-control difference as support for a blue-light effect."
+    }
+  ],
+  "critiques": [
+    {
+      "id": "csag:critique/csag:doc/toy_plastid_claim/Q0001",
+      "critique_type": "statistical_conclusion_validity",
+      "risk_domain": "data_quality",
+      "severity": "moderate",
+      "impacted_assertions": [
+        "csag:assertion/csag:doc/toy_plastid_claim/A0002"
+      ],
+      "impacted_evidence_items": [
+        "csag:evidence/csag:doc/toy_plastid_claim/E0001"
+      ],
+      "text_spans": [
+        {
+          "document_id": "csag:doc/toy_plastid_claim",
+          "section_type": "discussion",
+          "start_char": 672,
+          "end_char": 747,
+          "exact_text": "A larger replicate series would be needed to estimate the effect precisely.",
+          "id": "csag:span/csag:doc/toy_plastid_claim/S0008"
+        }
+      ]
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "id": "csag:gap/csag:doc/toy_plastid_claim/G0001",
+      "gap_type": "replication_needed",
+      "severity": "moderate",
+      "related_assertions": [
+        "csag:assertion/csag:doc/toy_plastid_claim/A0002"
+      ],
+      "suggested_actions": [
+        "Repeat the experiment with more biological replicates."
+      ],
+      "text_spans": [
+        {
+          "document_id": "csag:doc/toy_plastid_claim",
+          "section_type": "discussion",
+          "start_char": 672,
+          "end_char": 747,
+          "exact_text": "A larger replicate series would be needed to estimate the effect precisely.",
+          "id": "csag:span/csag:doc/toy_plastid_claim/S0009"
+        }
+      ]
+    }
+  ],
+  "qa_items": [],
+  "extraction_activities": [
+    {
+      "id": "csag:activity/csag:doc/toy_plastid_claim/X0001",
+      "activity_type": "manual toy extraction and human review",
+      "tool_name": "csag example fixture",
+      "tool_version": "0.7.0",
+      "run_id": "toy-example",
+      "parameters": [
+        {
+          "key": "doi_status",
+          "value": "unresolved"
+        },
+        {
+          "key": "pmid_status",
+          "value": "unresolved"
+        },
+        {
+          "key": "schema_version",
+          "value": "0.7.0"
+        },
+        {
+          "key": "validator_version",
+          "value": "0.7.0"
+        }
+      ]
+    }
+  ]
+}

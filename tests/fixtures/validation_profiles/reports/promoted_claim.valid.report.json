@@ -1,0 +1,31 @@
+{
+  "ok": true,
+  "profile": "promoted_claim",
+  "strictness_profile": "promoted_claim",
+  "profile_modules": [
+    "core"
+  ],
+  "validator_version": "1.0.0",
+  "extraction_json": "../promoted_claim.valid.json",
+  "inputs": {
+    "extraction": {
+      "path": "../promoted_claim.valid.json",
+      "sha256": "60a2fbba41e0e643b3f798d5b9839691849f99ce9e2bfb077ceec320ad129c98",
+      "size_bytes": 9676
+    }
+  },
+  "errors": [],
+  "structured_errors": [],
+  "error_summary": {},
+  "warnings": [],
+  "repair_actions": [],
+  "metrics": {
+    "assertions": 2,
+    "assertions_with_criticality": 2,
+    "assertions_with_falsification_criteria": 2,
+    "evidence_items": 2,
+    "evidence_links": 2,
+    "artifacts": 0,
+    "datasets": 1
+  }
+}

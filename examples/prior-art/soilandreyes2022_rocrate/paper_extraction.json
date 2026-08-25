@@ -1,0 +1,1706 @@
+{
+  "id": "doi:10.3233/DS-210053",
+  "title": "Packaging research artefacts with RO-Crate",
+  "abstract": "An increasing number of researchers support reproducibility by including pointers to and descriptions of datasets, software and methods in their publications. However, scientific articles may be ambiguous, incomplete and difficult to process by automated systems. In this paper we introduce RO-Crate, an open, community-driven, and lightweight approach to packaging research artefacts along with their metadata in a machine readable manner. RO-Crate is based on Schema.org annotations in JSON-LD, aiming to establish best practices to formally describe metadata in an accessible and practical way for their use in a wide variety of situations. An RO-Crate is a structured archive of all the items that contributed to a research outcome, including their identifiers, provenance, relations and annotations. As a general purpose packaging approach for data and their metadata, RO-Crate is used across multiple areas, including bioinformatics, digital humanities and regulatory sciences. By applying \"just enough\" Linked Data standards, RO-Crate simplifies the process of making research outputs FAIR while also enhancing research reproducibility.",
+  "doi": "10.3233/DS-210053",
+  "journal": "Data Science",
+  "publication_date": "2022-01-01",
+  "full_text_url": "https://doi.org/10.3233/DS-210053",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "keywords": [
+    "Data publishing",
+    "data packaging",
+    "FAIR",
+    "Linked Data",
+    "metadata",
+    "reproducibility",
+    "research object"
+  ],
+  "notes": "Methods/Results sections are absent in this conceptual/specification paper; extraction focuses on the introduced specification, its design rationale, the demonstrated profiles of use, and explicitly stated future work and limitations. No PMID exists (not indexed in PubMed).",
+  "extraction_activities": [
+    {
+      "id": "csag:activity/doi:10.3233/DS-210053/ACT0001",
+      "activity_type": "structured_extraction",
+      "tool_name": "csag-extraction",
+      "tool_version": "0.7.0",
+      "run_id": "20260511T210800Z",
+      "run_datetime": "2026-05-11T21:08:00+00:00",
+      "agent_uri": "local:csag-curator",
+      "parameters": [
+        {
+          "key": "target_doc",
+          "value": "soilandreyes2022_rocrate"
+        },
+        {
+          "key": "extraction_scope",
+          "value": "full-paper"
+        },
+        {
+          "key": "doi_status",
+          "value": "resolved"
+        },
+        {
+          "key": "pmid_status",
+          "value": "unresolved"
+        }
+      ]
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "csag:artifact/doi:10.3233/DS-210053/F0001",
+      "artifact_type": "figure",
+      "artifact_label": "Figure 1",
+      "caption": "Fig. 1. Conceptual overview of RO-Crate. A Persistent Identifier (PID) points to a Research Object (RO), which may be archived using different packaging approaches like BagIt, OCFL, git or ZIP. The RO is described within a RO-Crate Metadata File, providing identifiers for authors using ORCID, organisations using Research Organization Registry (ROR) and licences such as Creative Commons using SPDX identifiers. The RO-Crate content is further described with additional metadata following a Linked Data approach. Data can be embedded files and directories, as well as links to external Web resources, PIDs and nested RO-Crates.",
+      "origin": "author_stated",
+      "confidence_score": 0.95,
+      "text_spans": [
+        {
+          "document_id": "doi:10.3233/DS-210053",
+          "section_type": "figure_caption",
+          "section_heading": "2.2. Conceptual definition",
+          "start_char": 13386,
+          "end_char": 14037,
+          "exact_text": "Fig. 1. Conceptual overview of RO-Crate. A Persistent Identifier (PID) [86] points to a Research Object (RO), which may be archived using different packaging approaches like BagIt [74], OCFL [96], git or ZIP. The RO is described within a RO-Crate Metadata File, providing identifiers for authors using ORCID, organisations using Research Organization Registry (ROR) [79] and licences such as Creative Commons using SPDX identifiers. The RO-Crate content is further described with additional metadata following a Linked Data approach. Data can be embedded files and directories, as well as links to external Web resources, PIDs and nested RO-Crates.",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.3233/DS-210053/S0001"
+        }
+      ]
+    },
+    {
+      "id": "csag:artifact/doi:10.3233/DS-210053/F0002",
+      "artifact_type": "figure",
+      "artifact_label": "Figure 2",
+      "caption": "Fig. 2. Simplified UML class diagram of RO-Crate. The RO-Crate Metadata File conforms to a version of the specification; and contains a JSON-LD graph that describes the entities that make up the RO-Crate. The RO-Crate Root Data Entity represent the Research Object as a dataset. The RO-Crate aggregates data entities (hasPart) which are further described using contextual entities. Multiple types and relations from Schema.org allow annotations to be more specific, including figures, nested datasets, computational workflows, people, organisations, instruments and places.",
+      "origin": "author_stated",
+      "confidence_score": 0.95,
+      "text_spans": [
+        {
+          "document_id": "doi:10.3233/DS-210053",
+          "section_type": "figure_caption",
+          "section_heading": "2.2.3. Data entities are described using contextual entities",
+          "start_char": 20063,
+          "end_char": 20854,
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.3233/DS-210053/S0002"
+        }
+      ]
+    },
+    {
+      "id": "csag:artifact/doi:10.3233/DS-210053/F0003",
+      "artifact_type": "figure",
+      "artifact_label": "Figure 3",
+      "caption": "Fig. 3. Separation of Concerns in BCO RO-Crate. BioCompute Object (IEEE2791) is a JSON file that structurally explains the purpose and implementation of a computational workflow, for instance implemented in Common Workflow Language (CWL). RO-Crate gathers all these local and external resources, relating them and giving individual descriptions, for instance permanent DOI identifiers for reused datasets accessed from Zenodo, but also adding external identifiers to attribute authors using ORCID or to identify which licences apply to individual resources.",
+      "origin": "author_stated",
+      "confidence_score": 0.95,
+      "text_spans": [
+        {
+          "document_id": "doi:10.3233/DS-210053",
+          "section_type": "figure_caption",
+          "section_heading": "4.2. Regulatory sciences",
+          "start_char": 64834,
+          "end_char": 65763,
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.3233/DS-210053/S0003"
+        }
+      ]
+    },
+    {
+      "id": "csag:artifact/doi:10.3233/DS-210053/F0004",
+      "artifact_type": "figure",
+      "artifact_label": "Figure 4",
+      "caption": "Fig. 4. One aspect of Harvard Data Commons. Automatic encapsulation and deposit of artefacts from data management tools used during active research at the Harvard Dataverse repository.",
+      "origin": "author_stated",
+      "confidence_score": 0.95,
+      "text_spans": [
+        {
+          "document_id": "doi:10.3233/DS-210053",
+          "section_type": "figure_caption",
+          "section_heading": "4.5. Institutional data repositories \u2013 Harvard Data Commons",
+          "start_char": 74446,
+          "end_char": 74629,
+          "exact_text": "Fig. 4. One aspect of Harvard Data Commons. Automatic encapsulation and deposit of artefacts from data management tools used during active research at the Harvard Dataverse repository.",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.3233/DS-210053/S0004"
+        }
+      ]
+    },
+    {
+      "id": "csag:artifact/doi:10.3233/DS-210053/T0001",
+      "artifact_type": "table",
+      "artifact_label": "Table 1",
+      "caption": "Table 1. Applications and libraries implementing RO-Crate, targeting different types of users across multiple programming languages. Status is indicative as assessed by this work (Alpha < Beta < Release Candidate (RC) < Release).",
+      "origin": "author_stated",
+      "confidence_score": 0.92,
+      "text_spans": [
+        {
+          "document_id": "doi:10.3233/DS-210053",
+          "section_type": "table_caption",
+          "section_heading": "3. RO-Crate tooling",
+          "start_char": 46958,
+          "end_char": 47198,
+          "origin": "author_stated",
+          "confidence_score": 0.92,
+          "id": "csag:span/doi:10.3233/DS-210053/S0005"
+        }
+      ]
+    }
+  ],
+  "datasets": [
+    {
+      "id": "csag:dataset/doi:10.3233/DS-210053/D0001",
+      "label": "RO-Crate for this article (Zenodo deposit)",
+      "description": "The companion RO-Crate of this article, archived on Zenodo, illustrating the very approach the paper introduces.",
+      "accession": "10.5281/zenodo.5146227",
+      "repository": "Zenodo",
+      "dataset_url": "https://doi.org/10.5281/zenodo.5146227",
+      "origin": "author_stated",
+      "confidence_score": 0.95,
+      "text_spans": [
+        {
+          "document_id": "doi:10.3233/DS-210053",
+          "section_type": "abstract",
+          "section_heading": "Abstract",
+          "start_char": 4350,
+          "end_char": 4432,
+          "exact_text": "An RO-Crate for this article$^{1}$ is archived at https://doi.org/10.5281/zenodo.5146227.",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.3233/DS-210053/S0006"
+        }
+      ]
+    },
+    {
+      "id": "csag:dataset/doi:10.3233/DS-210053/D0002",
+      "label": "RO-Crate 1.1 specification (versioned)",
+      "description": "Versioned specification document for RO-Crate 1.1, referenced via w3id.org PID, governing the metadata syntax/structure introduced in this paper.",
+      "repository": "w3id.org / GitHub",
+      "dataset_url": "https://w3id.org/ro/crate/1.1",
+      "origin": "author_stated",
+      "confidence_score": 0.9,
+      "text_spans": [
+        {
+          "document_id": "doi:10.3233/DS-210053",
+          "section_type": "other",
+          "section_heading": "2.2.4. Guide through recommended practices",
+          "start_char": 22120,
+          "end_char": 22475,
+          "origin": "author_stated",
+          "confidence_score": 0.9,
+          "id": "csag:span/doi:10.3233/DS-210053/S0007"
+        }
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "id": "csag:entity/doi:10.3233/DS-210053/EN0001",
+      "label": "RO-Crate",
+      "description": "Research Object Crate: a community-driven, lightweight approach to packaging research artefacts with metadata using Schema.org JSON-LD.",
+      "entity_category": "method",
+      "origin": "author_stated",
+      "confidence_score": 0.99,
+      "text_spans": [
+        {
+          "document_id": "doi:10.3233/DS-210053",
+          "section_type": "abstract",
+          "section_heading": "Abstract",
+          "start_char": 3461,
+          "end_char": 3692,
+          "origin": "author_stated",
+          "confidence_score": 0.98,
+          "id": "csag:span/doi:10.3233/DS-210053/S0008"
+        }
+      ]
+    },
+    {
+      "id": "csag:entity/doi:10.3233/DS-210053/EN0002",
+      "label": "Research Object",
+      "description": "A semantically rich aggregation of (potentially distributed) resources providing a structured layer over a research study.",
+      "entity_category": "method",
+      "origin": "author_stated",
+      "confidence_score": 0.95,
+      "text_spans": [
+        {
+          "document_id": "doi:10.3233/DS-210053",
+          "section_type": "introduction",
+          "section_heading": "1. Introduction",
+          "start_char": 5760,
+          "end_char": 6028,
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.3233/DS-210053/S0009"
+        }
+      ]
+    },
+    {
+      "id": "csag:entity/doi:10.3233/DS-210053/EN0003",
+      "label": "FAIR principles",
+      "description": "Findable, Accessible, Interoperable and Reusable: agreed-upon principles for research data sharing.",
+      "entity_category": "other",
+      "origin": "author_stated",
+      "confidence_score": 0.95,
+      "text_spans": [
+        {
+          "document_id": "doi:10.3233/DS-210053",
+          "section_type": "introduction",
+          "section_heading": "1. Introduction",
+          "start_char": 5022,
+          "end_char": 5115,
+          "exact_text": "FAIR principles [123]; namely, that they are Findable, Accessible, Interoperable and Reusable",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.3233/DS-210053/S0010"
+        }
+      ]
+    },
+    {
+      "id": "csag:entity/doi:10.3233/DS-210053/EN0004",
+      "label": "Schema.org / JSON-LD",
+      "description": "A widely deployed Linked Data vocabulary on the Web, serialised as JSON-LD; chosen as the technical foundation of RO-Crate.",
+      "entity_category": "method",
+      "origin": "author_stated",
+      "confidence_score": 0.95,
+      "text_spans": [
+        {
+          "document_id": "doi:10.3233/DS-210053",
+          "section_type": "abstract",
+          "section_heading": "Abstract",
+          "start_char": 3638,
+          "end_char": 3692,
+          "exact_text": "RO-Crate is based on Schema.org annotations in JSON-LD",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.3233/DS-210053/S0011"
+        }
+      ]
+    },
+    {
+      "id": "csag:entity/doi:10.3233/DS-210053/EN0005",
+      "label": "WorkflowHub",
+      "description": "European cross-domain registry of computational workflows; uses RO-Crate as packaging mechanism.",
+      "entity_category": "other",
+      "origin": "author_stated",
+      "confidence_score": 0.9,
+      "text_spans": [
+        {
+          "document_id": "doi:10.3233/DS-210053",
+          "section_type": "other",
+          "section_heading": "4.1. Bioinformatics workflows",
+          "start_char": 53761,
+          "end_char": 54036,
+          "origin": "author_stated",
+          "confidence_score": 0.9,
+          "id": "csag:span/doi:10.3233/DS-210053/S0012"
+        }
+      ]
+    },
+    {
+      "id": "csag:entity/doi:10.3233/DS-210053/EN0006",
+      "label": "BioCompute Object (BCO)",
+      "description": "IEEE 2791-2020 standard for describing computational workflows submitted to biomedical regulators; wrapped with RO-Crate in BCO RO-Crate.",
+      "entity_category": "other",
+      "origin": "author_stated",
+      "confidence_score": 0.92,
+      "text_spans": [
+        {
+          "document_id": "doi:10.3233/DS-210053",
+          "section_type": "other",
+          "section_heading": "4.2. Regulatory sciences",
+          "start_char": 61955,
+          "end_char": 62454,
+          "origin": "author_stated",
+          "confidence_score": 0.92,
+          "id": "csag:span/doi:10.3233/DS-210053/S0013"
+        }
+      ]
+    },
+    {
+      "id": "csag:entity/doi:10.3233/DS-210053/EN0007",
+      "label": "PARADISEC",
+      "description": "Pacific And Regional Archive for Digital Sources in Endangered Cultures; uses Modern PARADISEC's RO-Crate-based update for long-term preservation.",
+      "entity_category": "other",
+      "origin": "author_stated",
+      "confidence_score": 0.92,
+      "text_spans": [
+        {
+          "document_id": "doi:10.3233/DS-210053",
+          "section_type": "other",
+          "section_heading": "4.3. Digital humanities: Cultural heritage",
+          "start_char": 67243,
+          "end_char": 67426,
+          "origin": "author_stated",
+          "confidence_score": 0.92,
+          "id": "csag:span/doi:10.3233/DS-210053/S0014"
+        }
+      ]
+    },
+    {
+      "id": "csag:entity/doi:10.3233/DS-210053/EN0008",
+      "label": "FAIR Digital Objects (FDO)",
+      "description": "Conceptual framework providing PID-identified, type-described, operation-enabled digital resources; RO-Crate is positioned to play a role in FDO infrastructure.",
+      "entity_category": "other",
+      "origin": "author_stated",
+      "confidence_score": 0.9,
+      "text_spans": [
+        {
+          "document_id": "doi:10.3233/DS-210053",
+          "section_type": "discussion",
+          "section_heading": "5.2. FAIR Digital Objects",
+          "start_char": 80993,
+          "end_char": 81471,
+          "origin": "author_stated",
+          "confidence_score": 0.9,
+          "id": "csag:span/doi:10.3233/DS-210053/S0015"
+        }
+      ]
+    },
+    {
+      "id": "csag:entity/doi:10.3233/DS-210053/EN0009",
+      "label": "Wf4Ever Research Object Model",
+      "description": "Earlier general-purpose research artefact description framework using multiple ontologies; cited as harder to adopt and a motivator for the simpler RO-Crate.",
+      "entity_category": "other",
+      "origin": "author_stated",
+      "confidence_score": 0.9,
+      "text_spans": [
+        {
+          "document_id": "doi:10.3233/DS-210053",
+          "section_type": "discussion",
+          "section_heading": "5.1. Bundling and packaging digital research artefacts",
+          "start_char": 79653,
+          "end_char": 80037,
+          "origin": "author_stated",
+          "confidence_score": 0.88,
+          "id": "csag:span/doi:10.3233/DS-210053/S0016"
+        }
+      ]
+    }
+  ],
+  "assertions": [
+    {
+      "id": "csag:assertion/doi:10.3233/DS-210053/A0001",
+      "assertion_text": "Traditional scientific articles are ambiguous, incomplete, and difficult for automated systems to process, motivating a machine-readable approach for packaging research artefacts and their metadata.",
+      "claim_role": "research_question",
+      "assertion_type": "descriptive",
+      "criticality": "major",
+      "normalization_status": "raw",
+      "falsification_criteria": [
+        "Demonstration that existing scholarly articles plus their supplements already provide sufficient machine-readable, structured metadata for downstream automated reuse without additional packaging."
+      ],
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.3233/DS-210053/C0001",
+          "label": "scholarly communication and reproducibility",
+          "context_facet": "unspecified",
+          "environment_description": "Reuse and reproducibility of research artefacts (software, data, workflows) shared alongside publications.",
+          "origin": "author_stated",
+          "confidence_score": 0.85
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.9,
+      "text_spans": [
+        {
+          "document_id": "doi:10.3233/DS-210053",
+          "section_type": "abstract",
+          "section_heading": "Abstract",
+          "start_char": 3183,
+          "end_char": 3459,
+          "exact_text": "**Abstract.** An increasing number of researchers support reproducibility by including pointers to and descriptions of datasets, software and methods in their publications. However, scientific articles may be ambiguous, incomplete and difficult to process by automated systems.",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.3233/DS-210053/S0017"
+        }
+      ]
+    },
+    {
+      "id": "csag:assertion/doi:10.3233/DS-210053/A0002",
+      "assertion_text": "RO-Crate is introduced as an open, community-driven, lightweight approach to packaging research artefacts and their metadata in a machine-readable manner using Schema.org annotations in JSON-LD.",
+      "claim_role": "objective",
+      "assertion_type": "descriptive",
+      "criticality": "core",
+      "normalization_status": "raw",
+      "falsification_criteria": [
+        "Show that RO-Crate is not actually open or community-driven (e.g., controlled by a closed governance), or that its serialisation does not use Schema.org JSON-LD as specified."
+      ],
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.3233/DS-210053/C0002",
+          "label": "this paper / RO-Crate 1.1 specification",
+          "context_facet": "unspecified",
+          "environment_description": "Specification paper introducing RO-Crate version 1.1 and its associated tooling and community processes.",
+          "origin": "author_stated",
+          "confidence_score": 0.9
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.97,
+      "text_spans": [
+        {
+          "document_id": "doi:10.3233/DS-210053",
+          "section_type": "abstract",
+          "section_heading": "Abstract",
+          "start_char": 3461,
+          "end_char": 3805,
+          "exact_text": "In this paper we introduce RO-Crate, an open, community-driven, and lightweight approach to packaging research artefacts along with their metadata in a machine readable manner. RO-Crate is based on Schema.org annotations in JSON-LD, aiming to establish best practices to formally describe metadata",
+          "origin": "author_stated",
+          "confidence_score": 0.97,
+          "id": "csag:span/doi:10.3233/DS-210053/S0018"
+        }
+      ]
+    },
+    {
+      "id": "csag:assertion/doi:10.3233/DS-210053/A0003",
+      "assertion_text": "RO-Crate is designed around four explicit principles: conceptual simplicity for developers, strong easy tooling, an opinionated guide of current best practices, and adoption of de-facto Web standards.",
+      "claim_role": "method_claim",
+      "assertion_type": "methodological",
+      "criticality": "major",
+      "normalization_status": "raw",
+      "falsification_criteria": [
+        "Documented examples where the specification mandates non-de-facto or unusual Web standards, or where the tooling is shown to be inaccessible for typical Web developers."
+      ],
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.3233/DS-210053/C0003",
+          "label": "RO-Crate specification design rationale",
+          "context_facet": "unspecified",
+          "environment_description": "Design philosophy of the RO-Crate 1.1 specification as stated in Section 2.",
+          "origin": "author_stated",
+          "confidence_score": 0.9
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.95,
+      "text_spans": [
+        {
+          "document_id": "doi:10.3233/DS-210053",
+          "section_type": "other",
+          "section_heading": "2. RO-Crate",
+          "start_char": 10383,
+          "end_char": 10715,
+          "exact_text": "RO-Crate seeks to address this complexity by:\n\n1. being conceptually simple and easy to understand for developers;\n2. providing strong, easy tooling for integration into community projects;\n3. providing a strong and opinionated guide regarding current best practices;\n4. adopting de-facto standards that are widely used on the Web.",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.3233/DS-210053/S0019"
+        }
+      ]
+    },
+    {
+      "id": "csag:assertion/doi:10.3233/DS-210053/A0004",
+      "assertion_text": "RO-Crate's underlying data structure, although conceptually a graph, is representable as a depth-limited tree, and this boundedness separates Data Entities (hasPart) from external Contextual Entities (mentions).",
+      "claim_role": "result_claim",
+      "assertion_type": "descriptive",
+      "criticality": "supporting",
+      "normalization_status": "raw",
+      "falsification_criteria": [
+        "Provide a valid RO-Crate that cannot be represented as a depth-limited tree under the formal definition (Appendix A), or where the hasPart/mentions distinction breaks down."
+      ],
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.3233/DS-210053/C0004",
+          "label": "Formal definition (Appendix A)",
+          "context_facet": "unspecified",
+          "environment_description": "First-Order Logic formalisation of the RO-Crate concept in Appendix A.",
+          "origin": "author_stated",
+          "confidence_score": 0.85
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.9,
+      "text_spans": [
+        {
+          "document_id": "doi:10.3233/DS-210053",
+          "section_type": "other",
+          "section_heading": "2.2.5. Ensuring simplicity",
+          "start_char": 24277,
+          "end_char": 24830,
+          "exact_text": "we have formalised the RO-Crate definition (see Appendix A). An important result of this exercise is that the underlying data structure of RO-Crate, although conceptually a graph, is represented as a depth-limited tree. This formalisation also emphasises the *boundedness* of the structure",
+          "origin": "author_stated",
+          "confidence_score": 0.9,
+          "id": "csag:span/doi:10.3233/DS-210053/S0020"
+        }
+      ]
+    },
+    {
+      "id": "csag:assertion/doi:10.3233/DS-210053/A0005",
+      "assertion_text": "RO-Crate has been adopted across diverse domains - bioinformatics workflows (WorkflowHub), regulatory science (BCO RO-Crate), cultural heritage (Modern PARADISEC), data management plans, and institutional repositories (Harvard Data Commons) - through domain-specific profiles.",
+      "claim_role": "result_claim",
+      "assertion_type": "descriptive",
+      "criticality": "core",
+      "normalization_status": "raw",
+      "falsification_criteria": [
+        "Show that the cited adoptions (WorkflowHub, BCO RO-Crate, PARADISEC, Harvard Data Commons, RDA maDMP mappers) do not in fact use RO-Crate or use only an incompatible derivative."
+      ],
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.3233/DS-210053/C0005",
+          "label": "Real-world RO-Crate use across domains",
+          "context_facet": "unspecified",
+          "environment_description": "Section 4 case studies covering five RO-Crate profile applications.",
+          "origin": "author_stated",
+          "confidence_score": 0.93
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.95,
+      "text_spans": [
+        {
+          "document_id": "doi:10.3233/DS-210053",
+          "section_type": "abstract",
+          "section_heading": "Abstract",
+          "start_char": 3805,
+          "end_char": 4181,
+          "exact_text": "An RO-Crate is a structured archive of all the items that contributed to a research outcome, including their identifiers, provenance, relations and annotations. As a general purpose packaging approach for data and their metadata, RO-Crate is used across multiple areas, including bioinformatics, digital humanities and regulatory sciences.",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.3233/DS-210053/S0021"
+        }
+      ]
+    },
+    {
+      "id": "csag:assertion/doi:10.3233/DS-210053/A0006",
+      "assertion_text": "WorkflowHub adopted RO-Crate as the packaging mechanism for cross-domain workflows, marking up workflow language and constituent files, and this co-development helped shape both the Bioschemas Computational Workflow profile and the RO-Crate 1.1 workflows specification.",
+      "claim_role": "result_claim",
+      "assertion_type": "descriptive",
+      "criticality": "major",
+      "normalization_status": "raw",
+      "falsification_criteria": [
+        "Documentation that WorkflowHub uses a different packaging mechanism, or that the Bioschemas ComputationalWorkflow profile and RO-Crate workflows spec were developed independently."
+      ],
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.3233/DS-210053/C0006",
+          "label": "WorkflowHub bioinformatics workflow registry",
+          "context_facet": "model_system",
+          "environment_description": "Section 4.1 - cross-domain workflow registry supported by ELIXIR/EOSC-Life using RO-Crate for workflow exchange.",
+          "origin": "author_stated",
+          "confidence_score": 0.93
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.93,
+      "text_spans": [
+        {
+          "document_id": "doi:10.3233/DS-210053",
+          "section_type": "other",
+          "section_heading": "4.1.1. Profile for describing workflows",
+          "start_char": 55057,
+          "end_char": 56265,
+          "origin": "author_stated",
+          "confidence_score": 0.93,
+          "id": "csag:span/doi:10.3233/DS-210053/S0022"
+        }
+      ]
+    },
+    {
+      "id": "csag:assertion/doi:10.3233/DS-210053/A0007",
+      "assertion_text": "The Modern PARADISEC demonstrator uses RO-Crate to capture metadata of more than 500,000 endangered-language items in a portable, platform-independent way that supports long-term preservation and SPARQL-queryable corpora.",
+      "claim_role": "result_claim",
+      "assertion_type": "descriptive",
+      "criticality": "major",
+      "normalization_status": "raw",
+      "falsification_criteria": [
+        "Evidence that Modern PARADISEC does not in fact use RO-Crate, or that the portability claim breaks down (e.g., metadata cannot be reused outside PARADISEC tooling)."
+      ],
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.3233/DS-210053/C0007",
+          "label": "Cultural heritage / endangered languages",
+          "context_facet": "model_system",
+          "environment_description": "Section 4.3 case study - Modern PARADISEC update to 18-year-old infrastructure using RO-Crate over OCFL.",
+          "origin": "author_stated",
+          "confidence_score": 0.9
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.92,
+      "text_spans": [
+        {
+          "document_id": "doi:10.3233/DS-210053",
+          "section_type": "other",
+          "section_heading": "4.3. Digital humanities: Cultural heritage",
+          "start_char": 67243,
+          "end_char": 68334,
+          "origin": "author_stated",
+          "confidence_score": 0.9,
+          "id": "csag:span/doi:10.3233/DS-210053/S0023"
+        }
+      ]
+    },
+    {
+      "id": "csag:assertion/doi:10.3233/DS-210053/A0008",
+      "assertion_text": "RO-Crate can serve as a Metadata FDO and provide a predictable, extensible serialisation of structured metadata for FAIR Digital Object ecosystems.",
+      "claim_role": "conclusion",
+      "assertion_type": "mechanistic",
+      "criticality": "major",
+      "normalization_status": "raw",
+      "falsification_criteria": [
+        "Show that RO-Crate's JSON-LD serialization cannot fulfil the FDO requirements (PIDs, metadata, type registration), or that a FAIR-profiled RO-Crate is incompatible with the FDO Framework."
+      ],
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.3233/DS-210053/C0008",
+          "label": "FAIR Digital Object infrastructure",
+          "context_facet": "unspecified",
+          "environment_description": "Discussion of RO-Crate's positioning in relation to FAIR Digital Objects (Section 5.2).",
+          "origin": "author_stated",
+          "confidence_score": 0.85
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.88,
+      "text_spans": [
+        {
+          "document_id": "doi:10.3233/DS-210053",
+          "section_type": "discussion",
+          "section_heading": "5.2. FAIR Digital Objects",
+          "start_char": 82082,
+          "end_char": 82516,
+          "exact_text": "RO-Crate can play an important role for FDOs:\n\n1. By providing a predictable and extensible serialisation of structured metadata.\n2. By formalising how to aggregate digital objects as collections (and adding their context).\n3. By providing a natural Metadata FDO in the form of the RO-Crate Metadata File.\n4. By being based on Linked Data and the Schema.org vocabulary, meaning that PIDs already exist for common types and properties.",
+          "origin": "author_stated",
+          "confidence_score": 0.9,
+          "id": "csag:span/doi:10.3233/DS-210053/S0024"
+        }
+      ]
+    },
+    {
+      "id": "csag:assertion/doi:10.3233/DS-210053/A0009",
+      "assertion_text": "RO-Crate is not merely a packaging container but functions as a multimodal scholarly knowledge graph that helps FAIRify and combine metadata of existing resources.",
+      "claim_role": "conclusion",
+      "assertion_type": "descriptive",
+      "criticality": "major",
+      "normalization_status": "raw",
+      "falsification_criteria": [
+        "Show that consumers can only treat RO-Crate as a flat archive without leveraging the cross-referenced Linked Data graph (e.g., by demonstrating that the graph features are not actually used in practice)."
+      ],
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.3233/DS-210053/C0009",
+          "label": "Conclusion of the paper",
+          "context_facet": "unspecified",
+          "environment_description": "Section 6 - authors' summary interpretation of what RO-Crate is and what it enables.",
+          "origin": "author_stated",
+          "confidence_score": 0.88
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.9,
+      "text_spans": [
+        {
+          "document_id": "doi:10.3233/DS-210053",
+          "section_type": "conclusion",
+          "section_heading": "6. Conclusion",
+          "start_char": 90250,
+          "end_char": 90802,
+          "exact_text": "The use of structured metadata with a rich base vocabulary can cover general-purpose contextual relations, with a Linked Data foundation that ensures extensibility to domain- and application-specific uses. We can therefore consider an RO-Crate not just as a structured data archive, but as a multimodal scholarly knowledge graph that can help \"FAIRify\" and combine metadata of existing resources.",
+          "origin": "author_stated",
+          "confidence_score": 0.92,
+          "id": "csag:span/doi:10.3233/DS-210053/S0025"
+        }
+      ]
+    },
+    {
+      "id": "csag:assertion/doi:10.3233/DS-210053/A0010",
+      "assertion_text": "There is an unresolved tradeoff between flexibility (richness/applicability) and strictness (ease of producing and consuming) of metadata models, and RO-Crate addresses this by combining a flexible core with domain-specific profiles.",
+      "claim_role": "limitation",
+      "assertion_type": "other",
+      "criticality": "supporting",
+      "normalization_status": "raw",
+      "falsification_criteria": [
+        "Empirical demonstration that domain-specific RO-Crate profiles are not actually adopted, or that the core specification is strict enough to be consumed reliably without profiles."
+      ],
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.3233/DS-210053/C0010",
+          "label": "Strictness vs flexibility tradeoff",
+          "context_facet": "unspecified",
+          "environment_description": "Section 6.1 - authors' explicit discussion of the flexibility/strictness tension.",
+          "origin": "author_stated",
+          "confidence_score": 0.85
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.88,
+      "text_spans": [
+        {
+          "document_id": "doi:10.3233/DS-210053",
+          "section_type": "discussion",
+          "section_heading": "6.1. Strictness vs flexibility",
+          "start_char": 91418,
+          "end_char": 92200,
+          "exact_text": "There is always a tradeoff between flexibility and strictness [116] when deciding on semantics of metadata models. Strict requirements make it easier for users and code to consume and populate a model, by reducing choices and having mandated \"slots\" to fill in. But such rigidity can also restrict richness and applicability of the model, as it in turn enforce the initial assumptions about what can be described.\n\nRO-Crate attempts to strike a balance between these tensions, and provides a common metadata framework that encourages extensions. However, just like the RO-Crate specification can be thought of as a core profile of Schema.org in JSON-LD, we cannot stress the importance of also establishing domain-specific RO-Crate profiles",
+          "origin": "author_stated",
+          "confidence_score": 0.92,
+          "id": "csag:span/doi:10.3233/DS-210053/S0026"
+        }
+      ]
+    },
+    {
+      "id": "csag:assertion/doi:10.3233/DS-210053/A0011",
+      "assertion_text": "Most current RO-Crate tools are still in Beta (or earlier) stages, but their maturity is increasing now that the RO-Crate 1.1 specification has stabilised.",
+      "claim_role": "limitation",
+      "assertion_type": "descriptive",
+      "criticality": "supporting",
+      "normalization_status": "raw",
+      "falsification_criteria": [
+        "Evidence that the listed tools have not progressed past Alpha despite the 1.1 stabilisation, or that the specification continues to break tool compatibility in production."
+      ],
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.3233/DS-210053/C0011",
+          "label": "RO-Crate tooling landscape (Section 3)",
+          "context_facet": "unspecified",
+          "environment_description": "Survey of tools implementing RO-Crate at time of writing (late 2021), summarised in Table 1.",
+          "origin": "author_stated",
+          "confidence_score": 0.88
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.9,
+      "text_spans": [
+        {
+          "document_id": "doi:10.3233/DS-210053",
+          "section_type": "other",
+          "section_heading": "3. RO-Crate tooling",
+          "start_char": 45628,
+          "end_char": 46175,
+          "exact_text": "While the development of these tools is promising, our analysis of their maturity status shows that the majority of them are in the Beta stage. This is partly due to the fact that the RO-Crate specification itself only recently reached 1.0 status, in November 2019 [105]. Now that there is a fixed point of reference: With version 1.1 (October 2020) [107] RO-Crate has stabilised based on feedback from application development, and now we are seeing a further increase in the maturity of these tools, along with the creation of new ones.",
+          "origin": "author_stated",
+          "confidence_score": 0.92,
+          "id": "csag:span/doi:10.3233/DS-210053/S0027"
+        }
+      ]
+    },
+    {
+      "id": "csag:assertion/doi:10.3233/DS-210053/A0012",
+      "assertion_text": "Future RO-Crate work, governed by the community, will include profile formalisation in version 1.2, training material, exploration of new entity types (workflow runs, containers, software packages), and alignment with related efforts (CodeMeta, Science-on-Schema.org, FDO).",
+      "claim_role": "future_work",
+      "assertion_type": "descriptive",
+      "criticality": "supporting",
+      "normalization_status": "raw",
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.3233/DS-210053/C0012",
+          "label": "Future work plan",
+          "context_facet": "unspecified",
+          "environment_description": "Section 7 - explicit author-stated future work items for the RO-Crate community.",
+          "origin": "author_stated",
+          "confidence_score": 0.9
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.93,
+      "text_spans": [
+        {
+          "document_id": "doi:10.3233/DS-210053",
+          "section_type": "discussion",
+          "section_heading": "7. Future work",
+          "start_char": 92644,
+          "end_char": 95849,
+          "origin": "author_stated",
+          "confidence_score": 0.92,
+          "id": "csag:span/doi:10.3233/DS-210053/S0028"
+        }
+      ]
+    }
+  ],
+  "evidence_items": [
+    {
+      "id": "csag:evidence/doi:10.3233/DS-210053/E0001",
+      "evidence_type": "expert_opinion",
+      "evidence_text": "Authors state that experience with prior bundling/packaging approaches showed greater emphasis on artefact interconnection was needed and that previous Research Object implementations require a large technology stack inaccessible to typical users.",
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.3233/DS-210053/C0013",
+          "label": "scholarly communication and reproducibility",
+          "context_facet": "unspecified",
+          "origin": "author_stated",
+          "confidence_score": 0.85
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.85,
+      "text_spans": [
+        {
+          "document_id": "doi:10.3233/DS-210053",
+          "section_type": "introduction",
+          "section_heading": "1. Introduction",
+          "start_char": 5310,
+          "end_char": 6724,
+          "origin": "author_stated",
+          "confidence_score": 0.9,
+          "id": "csag:span/doi:10.3233/DS-210053/S0029"
+        }
+      ]
+    },
+    {
+      "id": "csag:evidence/doi:10.3233/DS-210053/E0002",
+      "evidence_type": "expert_opinion",
+      "evidence_text": "Authors explicitly state the four design principles of RO-Crate as: conceptually simple, strong easy tooling, opinionated best-practice guide, and adoption of de-facto Web standards.",
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.3233/DS-210053/C0014",
+          "label": "RO-Crate specification design rationale",
+          "context_facet": "unspecified",
+          "origin": "author_stated",
+          "confidence_score": 0.92
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.95,
+      "text_spans": [
+        {
+          "document_id": "doi:10.3233/DS-210053",
+          "section_type": "other",
+          "section_heading": "2. RO-Crate",
+          "start_char": 10383,
+          "end_char": 10715,
+          "exact_text": "RO-Crate seeks to address this complexity by:\n\n1. being conceptually simple and easy to understand for developers;\n2. providing strong, easy tooling for integration into community projects;\n3. providing a strong and opinionated guide regarding current best practices;\n4. adopting de-facto standards that are widely used on the Web.",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.3233/DS-210053/S0030"
+        }
+      ]
+    },
+    {
+      "id": "csag:evidence/doi:10.3233/DS-210053/E0003",
+      "evidence_type": "computational_model",
+      "evidence_text": "First-Order Logic formalisation of RO-Crate in Appendix A establishes that RO-Crate is representable as a depth-limited tree with bounded structure, and supports forward-chained production rules to generate JSON-LD.",
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.3233/DS-210053/C0015",
+          "label": "Formal definition (Appendix A)",
+          "context_facet": "unspecified",
+          "origin": "author_stated",
+          "confidence_score": 0.88
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.92,
+      "text_spans": [
+        {
+          "document_id": "doi:10.3233/DS-210053",
+          "section_type": "supplementary",
+          "section_heading": "Appendix A. Formalizing RO-Crate in First Order Logic",
+          "start_char": 99332,
+          "end_char": 100533,
+          "origin": "author_stated",
+          "confidence_score": 0.9,
+          "id": "csag:span/doi:10.3233/DS-210053/S0031"
+        }
+      ]
+    },
+    {
+      "id": "csag:evidence/doi:10.3233/DS-210053/E0004",
+      "evidence_type": "observational_data",
+      "evidence_text": "Table 1 enumerates 15+ RO-Crate tools across multiple programming languages (Python, JavaScript, Ruby, Java, PHP) and platforms, used by developers, data managers, and end users.",
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.3233/DS-210053/C0016",
+          "label": "RO-Crate tooling landscape (Section 3)",
+          "context_facet": "unspecified",
+          "origin": "author_stated",
+          "confidence_score": 0.9
+        }
+      ],
+      "associated_artifacts": [
+        "csag:artifact/doi:10.3233/DS-210053/T0001"
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.95,
+      "text_spans": [
+        {
+          "document_id": "doi:10.3233/DS-210053",
+          "section_type": "table_caption",
+          "section_heading": "3. RO-Crate tooling",
+          "start_char": 46958,
+          "end_char": 51937,
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.3233/DS-210053/S0032"
+        }
+      ]
+    },
+    {
+      "id": "csag:evidence/doi:10.3233/DS-210053/E0005",
+      "evidence_type": "observational_data",
+      "evidence_text": "Documented use of RO-Crate at WorkflowHub - a cross-domain workflow registry supported by ELIXIR and EOSC-Life - including dedicated Workflow RO-Crate, Workflow Run, and Workflow Testing profiles. Co-development informed the Bioschemas ComputationalWorkflow profile.",
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.3233/DS-210053/C0017",
+          "label": "WorkflowHub bioinformatics workflow registry",
+          "context_facet": "model_system",
+          "origin": "author_stated",
+          "confidence_score": 0.92
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.93,
+      "text_spans": [
+        {
+          "document_id": "doi:10.3233/DS-210053",
+          "section_type": "other",
+          "section_heading": "4.1. Bioinformatics workflows",
+          "start_char": 53761,
+          "end_char": 56556,
+          "origin": "author_stated",
+          "confidence_score": 0.92,
+          "id": "csag:span/doi:10.3233/DS-210053/S0033"
+        }
+      ]
+    },
+    {
+      "id": "csag:evidence/doi:10.3233/DS-210053/E0006",
+      "evidence_type": "observational_data",
+      "evidence_text": "BCO RO-Crate, part of the BioCompute Object user guides, defines a profile for wrapping BCO/workflow regulatory submissions inside an RO-Crate (illustrated in Fig. 3).",
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.3233/DS-210053/C0018",
+          "label": "Real-world RO-Crate use across domains",
+          "context_facet": "unspecified",
+          "origin": "author_stated",
+          "confidence_score": 0.9
+        }
+      ],
+      "associated_artifacts": [
+        "csag:artifact/doi:10.3233/DS-210053/F0003"
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.92,
+      "text_spans": [
+        {
+          "document_id": "doi:10.3233/DS-210053",
+          "section_type": "other",
+          "section_heading": "4.2. Regulatory sciences",
+          "start_char": 63618,
+          "end_char": 65763,
+          "origin": "author_stated",
+          "confidence_score": 0.9,
+          "id": "csag:span/doi:10.3233/DS-210053/S0034"
+        }
+      ]
+    },
+    {
+      "id": "csag:evidence/doi:10.3233/DS-210053/E0007",
+      "evidence_type": "observational_data",
+      "evidence_text": "Modern PARADISEC demonstrator captures more than 500,000 files documenting endangered languages in RO-Crates over OCFL, exposing them through a Web portal independent of the original platform.",
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.3233/DS-210053/C0019",
+          "label": "Cultural heritage / endangered languages",
+          "context_facet": "model_system",
+          "origin": "author_stated",
+          "confidence_score": 0.9
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.92,
+      "text_spans": [
+        {
+          "document_id": "doi:10.3233/DS-210053",
+          "section_type": "other",
+          "section_heading": "4.3. Digital humanities: Cultural heritage",
+          "start_char": 67243,
+          "end_char": 69280,
+          "origin": "author_stated",
+          "confidence_score": 0.9,
+          "id": "csag:span/doi:10.3233/DS-210053/S0035"
+        }
+      ]
+    },
+    {
+      "id": "csag:evidence/doi:10.3233/DS-210053/E0008",
+      "evidence_type": "observational_data",
+      "evidence_text": "Harvard Data Commons, integrating Harvard Research Computing with Harvard Dataverse (over 120K datasets, 1.3M files), is adopting RO-Crate to make multiple institutional research artefacts FAIR (illustrated in Fig. 4).",
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.3233/DS-210053/C0020",
+          "label": "Real-world RO-Crate use across domains",
+          "context_facet": "unspecified",
+          "origin": "author_stated",
+          "confidence_score": 0.9
+        }
+      ],
+      "associated_artifacts": [
+        "csag:artifact/doi:10.3233/DS-210053/F0004"
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.9,
+      "text_spans": [
+        {
+          "document_id": "doi:10.3233/DS-210053",
+          "section_type": "other",
+          "section_heading": "4.5. Institutional data repositories \u2013 Harvard Data Commons",
+          "start_char": 71447,
+          "end_char": 75727,
+          "origin": "author_stated",
+          "confidence_score": 0.9,
+          "id": "csag:span/doi:10.3233/DS-210053/S0036"
+        }
+      ]
+    },
+    {
+      "id": "csag:evidence/doi:10.3233/DS-210053/E0009",
+      "evidence_type": "literature_citation",
+      "evidence_text": "Prior Research Object framework (Wf4Ever) is cited as harder to adopt due to its reliance on multiple overlapping vocabularies and Semantic Web development choices, motivating the simpler RO-Crate approach.",
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.3233/DS-210053/C0021",
+          "label": "scholarly communication and reproducibility",
+          "context_facet": "unspecified",
+          "origin": "author_stated",
+          "confidence_score": 0.85
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.88,
+      "text_spans": [
+        {
+          "document_id": "doi:10.3233/DS-210053",
+          "section_type": "discussion",
+          "section_heading": "5.1. Bundling and packaging digital research artefacts",
+          "start_char": 79653,
+          "end_char": 80444,
+          "origin": "author_stated",
+          "confidence_score": 0.9,
+          "id": "csag:span/doi:10.3233/DS-210053/S0037"
+        }
+      ]
+    },
+    {
+      "id": "csag:evidence/doi:10.3233/DS-210053/E0010",
+      "evidence_type": "observational_data",
+      "evidence_text": "RO-Crate community comprised more than 50 members at time of writing (October 2021), with monthly calls, Slack channel, mailing list, and engagement with EU projects (ELIXIR, EOSC-Life, FAIRplus, BY-COVID).",
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.3233/DS-210053/C0022",
+          "label": "this paper / RO-Crate 1.1 specification",
+          "context_facet": "unspecified",
+          "origin": "author_stated",
+          "confidence_score": 0.9
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.92,
+      "text_spans": [
+        {
+          "document_id": "doi:10.3233/DS-210053",
+          "section_type": "other",
+          "section_heading": "2.4. RO-Crate community",
+          "start_char": 44585,
+          "end_char": 44777,
+          "exact_text": "RO-Crate Community$^{47}$ is open for anyone to join, to equally participate under a code of conduct, and as of October 2021 has more than 50 members (see Appendix B).",
+          "origin": "author_stated",
+          "confidence_score": 0.92,
+          "id": "csag:span/doi:10.3233/DS-210053/S0038"
+        }
+      ]
+    },
+    {
+      "id": "csag:evidence/doi:10.3233/DS-210053/E0011",
+      "evidence_type": "expert_opinion",
+      "evidence_text": "Authors note that the goal of FDO is broader than RO-Crate, requiring PIDs for every element and active operations, but argue a FAIR-profiled RO-Crate fits within an FDO ecosystem.",
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.3233/DS-210053/C0023",
+          "label": "FAIR Digital Object infrastructure",
+          "context_facet": "unspecified",
+          "origin": "author_stated",
+          "confidence_score": 0.85
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.86,
+      "text_spans": [
+        {
+          "document_id": "doi:10.3233/DS-210053",
+          "section_type": "discussion",
+          "section_heading": "5.2. FAIR Digital Objects",
+          "start_char": 82518,
+          "end_char": 83248,
+          "origin": "author_stated",
+          "confidence_score": 0.88,
+          "id": "csag:span/doi:10.3233/DS-210053/S0039"
+        }
+      ]
+    }
+  ],
+  "evidence_links": [
+    {
+      "id": "csag:elink/doi:10.3233/DS-210053/L0001",
+      "evidence_item": "csag:evidence/doi:10.3233/DS-210053/E0001",
+      "assertion": "csag:assertion/doi:10.3233/DS-210053/A0001",
+      "polarity": "supports",
+      "strength": "moderate",
+      "rationale": "Authors' own framing in the Introduction directly motivates the need addressed by RO-Crate.",
+      "origin": "author_stated",
+      "confidence_score": 0.85
+    },
+    {
+      "id": "csag:elink/doi:10.3233/DS-210053/L0002",
+      "evidence_item": "csag:evidence/doi:10.3233/DS-210053/E0002",
+      "assertion": "csag:assertion/doi:10.3233/DS-210053/A0003",
+      "polarity": "supports",
+      "strength": "strong",
+      "rationale": "Direct enumeration of the four design principles in the text of Section 2 supports the stated principles claim.",
+      "origin": "author_stated",
+      "confidence_score": 0.95
+    },
+    {
+      "id": "csag:elink/doi:10.3233/DS-210053/L0003",
+      "evidence_item": "csag:evidence/doi:10.3233/DS-210053/E0003",
+      "assertion": "csag:assertion/doi:10.3233/DS-210053/A0004",
+      "polarity": "supports",
+      "strength": "strong",
+      "rationale": "Appendix A FOL formalisation provides the analytical basis for the depth-limited tree / boundedness claim.",
+      "origin": "author_stated",
+      "confidence_score": 0.9
+    },
+    {
+      "id": "csag:elink/doi:10.3233/DS-210053/L0004",
+      "evidence_item": "csag:evidence/doi:10.3233/DS-210053/E0004",
+      "assertion": "csag:assertion/doi:10.3233/DS-210053/A0011",
+      "polarity": "supports",
+      "strength": "strong",
+      "rationale": "Table 1 lists the tool inventory and statuses that ground the claim that most tools are still in Beta.",
+      "origin": "author_stated",
+      "confidence_score": 0.9
+    },
+    {
+      "id": "csag:elink/doi:10.3233/DS-210053/L0005",
+      "evidence_item": "csag:evidence/doi:10.3233/DS-210053/E0005",
+      "assertion": "csag:assertion/doi:10.3233/DS-210053/A0006",
+      "polarity": "supports",
+      "strength": "strong",
+      "rationale": "Section 4.1 details WorkflowHub's adoption and the co-development with Bioschemas, directly supporting the assertion.",
+      "origin": "author_stated",
+      "confidence_score": 0.93
+    },
+    {
+      "id": "csag:elink/doi:10.3233/DS-210053/L0006",
+      "evidence_item": "csag:evidence/doi:10.3233/DS-210053/E0005",
+      "assertion": "csag:assertion/doi:10.3233/DS-210053/A0005",
+      "polarity": "supports",
+      "strength": "strong",
+      "rationale": "WorkflowHub adoption is one of the principal cross-domain adoptions cited by the cross-domain-adoption claim.",
+      "origin": "author_stated",
+      "confidence_score": 0.9
+    },
+    {
+      "id": "csag:elink/doi:10.3233/DS-210053/L0007",
+      "evidence_item": "csag:evidence/doi:10.3233/DS-210053/E0006",
+      "assertion": "csag:assertion/doi:10.3233/DS-210053/A0005",
+      "polarity": "supports",
+      "strength": "strong",
+      "rationale": "BCO RO-Crate is the explicit regulatory-science use case for cross-domain adoption.",
+      "origin": "author_stated",
+      "confidence_score": 0.9
+    },
+    {
+      "id": "csag:elink/doi:10.3233/DS-210053/L0008",
+      "evidence_item": "csag:evidence/doi:10.3233/DS-210053/E0007",
+      "assertion": "csag:assertion/doi:10.3233/DS-210053/A0007",
+      "polarity": "supports",
+      "strength": "strong",
+      "rationale": "The PARADISEC scale numbers and reuse pattern directly support the cultural-heritage adoption claim.",
+      "origin": "author_stated",
+      "confidence_score": 0.92
+    },
+    {
+      "id": "csag:elink/doi:10.3233/DS-210053/L0009",
+      "evidence_item": "csag:evidence/doi:10.3233/DS-210053/E0007",
+      "assertion": "csag:assertion/doi:10.3233/DS-210053/A0005",
+      "polarity": "supports",
+      "strength": "strong",
+      "rationale": "PARADISEC is one of the digital-humanities adoption cases enumerated.",
+      "origin": "author_stated",
+      "confidence_score": 0.9
+    },
+    {
+      "id": "csag:elink/doi:10.3233/DS-210053/L0010",
+      "evidence_item": "csag:evidence/doi:10.3233/DS-210053/E0008",
+      "assertion": "csag:assertion/doi:10.3233/DS-210053/A0005",
+      "polarity": "supports",
+      "strength": "moderate",
+      "rationale": "Harvard Data Commons adoption is a documented institutional use case for RO-Crate.",
+      "origin": "author_stated",
+      "confidence_score": 0.85
+    },
+    {
+      "id": "csag:elink/doi:10.3233/DS-210053/L0011",
+      "evidence_item": "csag:evidence/doi:10.3233/DS-210053/E0009",
+      "assertion": "csag:assertion/doi:10.3233/DS-210053/A0002",
+      "polarity": "supports",
+      "strength": "moderate",
+      "rationale": "Comparison with prior Wf4Ever RO model motivates RO-Crate's simpler positioning that the abstract states.",
+      "origin": "extractor_inferred",
+      "confidence_score": 0.82
+    },
+    {
+      "id": "csag:elink/doi:10.3233/DS-210053/L0012",
+      "evidence_item": "csag:evidence/doi:10.3233/DS-210053/E0010",
+      "assertion": "csag:assertion/doi:10.3233/DS-210053/A0002",
+      "polarity": "supports",
+      "strength": "moderate",
+      "rationale": "Documented community membership and engagement supports the 'open, community-driven' framing of RO-Crate.",
+      "origin": "author_stated",
+      "confidence_score": 0.88
+    },
+    {
+      "id": "csag:elink/doi:10.3233/DS-210053/L0013",
+      "evidence_item": "csag:evidence/doi:10.3233/DS-210053/E0011",
+      "assertion": "csag:assertion/doi:10.3233/DS-210053/A0008",
+      "polarity": "supports",
+      "strength": "moderate",
+      "rationale": "Authors explicitly argue RO-Crate fits within FDO ecosystems while noting FDO's broader requirements.",
+      "origin": "author_stated",
+      "confidence_score": 0.85
+    },
+    {
+      "id": "csag:elink/doi:10.3233/DS-210053/L0014",
+      "evidence_item": "csag:evidence/doi:10.3233/DS-210053/E0011",
+      "assertion": "csag:assertion/doi:10.3233/DS-210053/A0008",
+      "polarity": "mixed",
+      "strength": "moderate",
+      "rationale": "While FDO compatibility is argued, the authors acknowledge that the FDO goal is broader, qualifying any strong RO-Crate-as-Metadata-FDO claim.",
+      "origin": "extractor_inferred",
+      "confidence_score": 0.78
+    },
+    {
+      "id": "csag:elink/doi:10.3233/DS-210053/L0015",
+      "evidence_item": "csag:evidence/doi:10.3233/DS-210053/E0004",
+      "assertion": "csag:assertion/doi:10.3233/DS-210053/A0005",
+      "polarity": "supports",
+      "strength": "moderate",
+      "rationale": "Cross-language, cross-platform tool inventory demonstrates breadth of adoption underpinning the multi-domain claim.",
+      "origin": "extractor_inferred",
+      "confidence_score": 0.82
+    },
+    {
+      "id": "csag:elink/doi:10.3233/DS-210053/L0016",
+      "evidence_item": "csag:evidence/doi:10.3233/DS-210053/E0002",
+      "assertion": "csag:assertion/doi:10.3233/DS-210053/A0009",
+      "polarity": "supports",
+      "strength": "moderate",
+      "rationale": "The Linked-Data and Schema.org-based design enumerated in the principles underpins the 'knowledge graph' conclusion.",
+      "origin": "extractor_inferred",
+      "confidence_score": 0.8
+    }
+  ],
+  "inferences": [
+    {
+      "id": "csag:inference/doi:10.3233/DS-210053/I0001",
+      "input_assertions": [
+        "csag:assertion/doi:10.3233/DS-210053/A0006",
+        "csag:assertion/doi:10.3233/DS-210053/A0007"
+      ],
+      "input_evidence_links": [
+        "csag:elink/doi:10.3233/DS-210053/L0006",
+        "csag:elink/doi:10.3233/DS-210053/L0007",
+        "csag:elink/doi:10.3233/DS-210053/L0008",
+        "csag:elink/doi:10.3233/DS-210053/L0010"
+      ],
+      "output_assertion": "csag:assertion/doi:10.3233/DS-210053/A0005",
+      "inference_method": "qualitative_interpretation",
+      "inference_rationale": "Authors aggregate the four domain case studies (workflows, regulatory, cultural heritage, institutional) into the generalised claim of broad adoption across multiple research domains.",
+      "origin": "author_stated",
+      "confidence_score": 0.9,
+      "text_spans": [
+        {
+          "document_id": "doi:10.3233/DS-210053",
+          "section_type": "other",
+          "section_heading": "4. Profiles of RO-Crate in use",
+          "start_char": 46479,
+          "end_char": 47198,
+          "origin": "author_stated",
+          "confidence_score": 0.9,
+          "id": "csag:span/doi:10.3233/DS-210053/S0040"
+        }
+      ]
+    },
+    {
+      "id": "csag:inference/doi:10.3233/DS-210053/I0002",
+      "input_assertions": [
+        "csag:assertion/doi:10.3233/DS-210053/A0003",
+        "csag:assertion/doi:10.3233/DS-210053/A0004"
+      ],
+      "input_evidence_links": [
+        "csag:elink/doi:10.3233/DS-210053/L0002",
+        "csag:elink/doi:10.3233/DS-210053/L0003"
+      ],
+      "output_assertion": "csag:assertion/doi:10.3233/DS-210053/A0009",
+      "inference_method": "qualitative_interpretation",
+      "inference_rationale": "Authors combine the simplicity-driven design principles with the Linked-Data formalisation to argue RO-Crate is more than a packaging container - it functions as a multimodal scholarly knowledge graph.",
+      "origin": "author_stated",
+      "confidence_score": 0.85,
+      "text_spans": [
+        {
+          "document_id": "doi:10.3233/DS-210053",
+          "section_type": "conclusion",
+          "section_heading": "6. Conclusion",
+          "start_char": 89851,
+          "end_char": 90802,
+          "origin": "author_stated",
+          "confidence_score": 0.9,
+          "id": "csag:span/doi:10.3233/DS-210053/S0041"
+        }
+      ]
+    }
+  ],
+  "assertion_relations": [
+    {
+      "id": "csag:arel/doi:10.3233/DS-210053/RL0001",
+      "from_assertion": "csag:assertion/doi:10.3233/DS-210053/A0010",
+      "to_assertion": "csag:assertion/doi:10.3233/DS-210053/A0002",
+      "relation_type": "qualifies",
+      "relation_rationale": "The acknowledged flexibility-vs-strictness tradeoff qualifies the strength of the introductory claim that RO-Crate is uniformly usable across situations.",
+      "origin": "author_stated",
+      "confidence_score": 0.85,
+      "text_spans": [
+        {
+          "document_id": "doi:10.3233/DS-210053",
+          "section_type": "discussion",
+          "section_heading": "6.1. Strictness vs flexibility",
+          "start_char": 91418,
+          "end_char": 92200,
+          "origin": "author_stated",
+          "confidence_score": 0.9,
+          "id": "csag:span/doi:10.3233/DS-210053/S0042"
+        }
+      ]
+    },
+    {
+      "id": "csag:arel/doi:10.3233/DS-210053/RL0002",
+      "from_assertion": "csag:assertion/doi:10.3233/DS-210053/A0011",
+      "to_assertion": "csag:assertion/doi:10.3233/DS-210053/A0005",
+      "relation_type": "qualifies",
+      "relation_rationale": "Most tools being still in Beta qualifies how mature the cross-domain adoption story actually is.",
+      "origin": "extractor_inferred",
+      "confidence_score": 0.8,
+      "text_spans": [
+        {
+          "document_id": "doi:10.3233/DS-210053",
+          "section_type": "other",
+          "section_heading": "3. RO-Crate tooling",
+          "start_char": 45628,
+          "end_char": 46175,
+          "origin": "author_stated",
+          "confidence_score": 0.88,
+          "id": "csag:span/doi:10.3233/DS-210053/S0043"
+        }
+      ]
+    }
+  ],
+  "critiques": [
+    {
+      "id": "csag:critique/doi:10.3233/DS-210053/R0001",
+      "label": "Tooling maturity limitation",
+      "critique_type": "construct_validity",
+      "risk_domain": "data_quality",
+      "severity": "moderate",
+      "impacted_assertions": [
+        "csag:assertion/doi:10.3233/DS-210053/A0005",
+        "csag:assertion/doi:10.3233/DS-210053/A0011"
+      ],
+      "impacted_evidence_items": [
+        "csag:evidence/doi:10.3233/DS-210053/E0004"
+      ],
+      "mitigation_suggestions": [
+        "Track tool maturation against the stabilised 1.1 spec; require feature parity tests across RC/Release implementations before promoting interop claims."
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.88,
+      "text_spans": [
+        {
+          "document_id": "doi:10.3233/DS-210053",
+          "section_type": "other",
+          "section_heading": "3. RO-Crate tooling",
+          "start_char": 45628,
+          "end_char": 46175,
+          "origin": "author_stated",
+          "confidence_score": 0.9,
+          "id": "csag:span/doi:10.3233/DS-210053/S0044"
+        }
+      ]
+    },
+    {
+      "id": "csag:critique/doi:10.3233/DS-210053/R0002",
+      "label": "Flexibility-vs-strictness tradeoff",
+      "critique_type": "construct_validity",
+      "risk_domain": "other",
+      "severity": "moderate",
+      "impacted_assertions": [
+        "csag:assertion/doi:10.3233/DS-210053/A0002",
+        "csag:assertion/doi:10.3233/DS-210053/A0008",
+        "csag:assertion/doi:10.3233/DS-210053/A0009"
+      ],
+      "mitigation_suggestions": [
+        "Explicitly publish and require domain-specific RO-Crate profiles with machine-readable schemas so that consumers know what to expect."
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.88,
+      "text_spans": [
+        {
+          "document_id": "doi:10.3233/DS-210053",
+          "section_type": "discussion",
+          "section_heading": "6.1. Strictness vs flexibility",
+          "start_char": 91418,
+          "end_char": 92200,
+          "origin": "author_stated",
+          "confidence_score": 0.9,
+          "id": "csag:span/doi:10.3233/DS-210053/S0045"
+        }
+      ]
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "id": "csag:gap/doi:10.3233/DS-210053/G0001",
+      "label": "Formalised profile mechanism (RO-Crate 1.2)",
+      "gap_type": "missing_experiment",
+      "severity": "moderate",
+      "related_assertions": [
+        "csag:assertion/doi:10.3233/DS-210053/A0005",
+        "csag:assertion/doi:10.3233/DS-210053/A0012"
+      ],
+      "suggested_actions": [
+        "Deliver and validate the formal profile mechanism planned for RO-Crate 1.2, including Profile Crates with machine-readable schemas."
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.9,
+      "text_spans": [
+        {
+          "document_id": "doi:10.3233/DS-210053",
+          "section_type": "discussion",
+          "section_heading": "7. Future work",
+          "start_char": 94586,
+          "end_char": 95849,
+          "origin": "author_stated",
+          "confidence_score": 0.9,
+          "id": "csag:span/doi:10.3233/DS-210053/S0046"
+        }
+      ]
+    },
+    {
+      "id": "csag:gap/doi:10.3233/DS-210053/G0002",
+      "label": "Support for additional entity types (workflow runs, containers, software, tabular)",
+      "gap_type": "missing_mechanism",
+      "severity": "moderate",
+      "related_assertions": [
+        "csag:assertion/doi:10.3233/DS-210053/A0012"
+      ],
+      "suggested_actions": [
+        "Integrate additional vocabularies (CodeMeta, Science-on-Schema.org, Frictionless Data) or add linked metadata files for entity types not well-matched by Schema.org."
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.88,
+      "text_spans": [
+        {
+          "document_id": "doi:10.3233/DS-210053",
+          "section_type": "discussion",
+          "section_heading": "7. Future work",
+          "start_char": 94655,
+          "end_char": 95849,
+          "origin": "author_stated",
+          "confidence_score": 0.9,
+          "id": "csag:span/doi:10.3233/DS-210053/S0047"
+        }
+      ]
+    },
+    {
+      "id": "csag:gap/doi:10.3233/DS-210053/G0003",
+      "label": "Empirical evaluation of community adoption and tooling maturation",
+      "gap_type": "data_missing",
+      "severity": "moderate",
+      "related_assertions": [
+        "csag:assertion/doi:10.3233/DS-210053/A0005",
+        "csag:assertion/doi:10.3233/DS-210053/A0011"
+      ],
+      "suggested_actions": [
+        "Run targeted user studies, including with EOSC Bring-your-own-Data events, and quantitatively measure profile uptake and tool maturity over time."
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.85,
+      "text_spans": [
+        {
+          "document_id": "doi:10.3233/DS-210053",
+          "section_type": "discussion",
+          "section_heading": "7. Future work",
+          "start_char": 93396,
+          "end_char": 93861,
+          "origin": "author_stated",
+          "confidence_score": 0.88,
+          "id": "csag:span/doi:10.3233/DS-210053/S0048"
+        }
+      ]
+    }
+  ],
+  "qa_items": [
+    {
+      "id": "csag:qa/doi:10.3233/DS-210053/Q0001",
+      "question_text": "What evidence supports the claim that RO-Crate has been adopted across multiple research domains?",
+      "query_assertion": "csag:assertion/doi:10.3233/DS-210053/A0005",
+      "normalized_query": "CSAG_QA_02_EVIDENCE_SUPPORT",
+      "expected_answer_type": "list",
+      "answers": [
+        {
+          "id": "csag:answer/doi:10.3233/DS-210053/ANS0001",
+          "answer_type": "list",
+          "answer_text": "The four detailed case studies (WorkflowHub for bioinformatics, BCO RO-Crate for regulatory, Modern PARADISEC for digital humanities/cultural heritage, Harvard Data Commons for institutional repositories) plus the Table 1 inventory of tools across languages directly support cross-domain adoption.",
+          "supporting_assertions": [
+            "csag:assertion/doi:10.3233/DS-210053/A0005",
+            "csag:assertion/doi:10.3233/DS-210053/A0006",
+            "csag:assertion/doi:10.3233/DS-210053/A0007"
+          ],
+          "supporting_evidence_links": [
+            "csag:elink/doi:10.3233/DS-210053/L0006",
+            "csag:elink/doi:10.3233/DS-210053/L0007",
+            "csag:elink/doi:10.3233/DS-210053/L0008",
+            "csag:elink/doi:10.3233/DS-210053/L0009",
+            "csag:elink/doi:10.3233/DS-210053/L0010",
+            "csag:elink/doi:10.3233/DS-210053/L0015"
+          ],
+          "answer_confidence": 0.92,
+          "origin": "extractor_inferred"
+        }
+      ],
+      "origin": "extractor_inferred",
+      "confidence_score": 0.9
+    },
+    {
+      "id": "csag:qa/doi:10.3233/DS-210053/Q0002",
+      "question_text": "What is the evidence status for the claim that RO-Crate functions as a multimodal scholarly knowledge graph?",
+      "query_assertion": "csag:assertion/doi:10.3233/DS-210053/A0009",
+      "normalized_query": "CSAG_QA_01_STATUS",
+      "expected_answer_type": "categorical",
+      "answers": [
+        {
+          "id": "csag:answer/doi:10.3233/DS-210053/ANS0002",
+          "answer_type": "categorical",
+          "answer_text": "supports",
+          "supporting_assertions": [
+            "csag:assertion/doi:10.3233/DS-210053/A0003",
+            "csag:assertion/doi:10.3233/DS-210053/A0004",
+            "csag:assertion/doi:10.3233/DS-210053/A0009"
+          ],
+          "supporting_evidence_links": [
+            "csag:elink/doi:10.3233/DS-210053/L0002",
+            "csag:elink/doi:10.3233/DS-210053/L0003",
+            "csag:elink/doi:10.3233/DS-210053/L0016"
+          ],
+          "answer_confidence": 0.82,
+          "origin": "extractor_inferred"
+        }
+      ],
+      "origin": "extractor_inferred",
+      "confidence_score": 0.82
+    },
+    {
+      "id": "csag:qa/doi:10.3233/DS-210053/Q0003",
+      "question_text": "What limitations could weaken the claim that RO-Crate is currently a mature, production-ready solution across all domains?",
+      "query_assertion": "csag:assertion/doi:10.3233/DS-210053/A0005",
+      "normalized_query": "CSAG_QA_10_LIMITATIONS",
+      "expected_answer_type": "list",
+      "answers": [
+        {
+          "id": "csag:answer/doi:10.3233/DS-210053/ANS0003",
+          "answer_type": "list",
+          "answer_text": "Tooling is mostly in Beta status, the flexibility-vs-strictness tradeoff is unresolved without formalised profiles, and several requested entity types (workflow runs, containers) have no good Schema.org match yet.",
+          "supporting_assertions": [
+            "csag:assertion/doi:10.3233/DS-210053/A0010",
+            "csag:assertion/doi:10.3233/DS-210053/A0011"
+          ],
+          "supporting_evidence_links": [
+            "csag:elink/doi:10.3233/DS-210053/L0004"
+          ],
+          "answer_confidence": 0.88,
+          "origin": "extractor_inferred"
+        }
+      ],
+      "origin": "extractor_inferred",
+      "confidence_score": 0.88
+    },
+    {
+      "id": "csag:qa/doi:10.3233/DS-210053/Q0004",
+      "question_text": "What knowledge gaps remain after this paper for the broader vision of using RO-Crate as part of FAIR Digital Object infrastructure?",
+      "query_assertion": "csag:assertion/doi:10.3233/DS-210053/A0008",
+      "normalized_query": "CSAG_QA_11_GAPS",
+      "expected_answer_type": "list",
+      "answers": [
+        {
+          "id": "csag:answer/doi:10.3233/DS-210053/ANS0004",
+          "answer_type": "list",
+          "answer_text": "Formalisation of profiles (planned for RO-Crate 1.2), integration of additional entity types via CodeMeta/Frictionless Data, and empirical validation of profile uptake and tool maturity all remain open.",
+          "supporting_assertions": [
+            "csag:assertion/doi:10.3233/DS-210053/A0008",
+            "csag:assertion/doi:10.3233/DS-210053/A0012"
+          ],
+          "supporting_evidence_links": [
+            "csag:elink/doi:10.3233/DS-210053/L0013",
+            "csag:elink/doi:10.3233/DS-210053/L0014"
+          ],
+          "answer_confidence": 0.86,
+          "origin": "extractor_inferred"
+        }
+      ],
+      "origin": "extractor_inferred",
+      "confidence_score": 0.86
+    },
+    {
+      "id": "csag:qa/doi:10.3233/DS-210053/Q0005",
+      "question_text": "Under what contexts is the claim 'RO-Crate is an open, community-driven, lightweight approach to packaging research artefacts' evaluated in this paper?",
+      "query_assertion": "csag:assertion/doi:10.3233/DS-210053/A0002",
+      "normalized_query": "CSAG_QA_07_CONTEXT_LIST",
+      "expected_answer_type": "list",
+      "answers": [
+        {
+          "id": "csag:answer/doi:10.3233/DS-210053/ANS0005",
+          "answer_type": "list",
+          "answer_text": "The claim is evaluated in the abstract specification context, then exemplified through bioinformatics workflows (WorkflowHub), regulatory science (BCO RO-Crate), digital humanities (PARADISEC), and institutional repositories (Harvard Data Commons).",
+          "supporting_assertions": [
+            "csag:assertion/doi:10.3233/DS-210053/A0002",
+            "csag:assertion/doi:10.3233/DS-210053/A0005",
+            "csag:assertion/doi:10.3233/DS-210053/A0006",
+            "csag:assertion/doi:10.3233/DS-210053/A0007"
+          ],
+          "supporting_evidence_links": [
+            "csag:elink/doi:10.3233/DS-210053/L0011",
+            "csag:elink/doi:10.3233/DS-210053/L0012"
+          ],
+          "answer_confidence": 0.88,
+          "origin": "extractor_inferred"
+        }
+      ],
+      "origin": "extractor_inferred",
+      "confidence_score": 0.88
+    },
+    {
+      "id": "csag:qa/doi:10.3233/DS-210053/Q0006",
+      "question_text": "Are there conflicting or qualifying statements in this paper about the readiness of RO-Crate?",
+      "query_assertion": "csag:assertion/doi:10.3233/DS-210053/A0002",
+      "normalized_query": "CSAG_QA_12_CONFLICTS",
+      "expected_answer_type": "categorical",
+      "answers": [
+        {
+          "id": "csag:answer/doi:10.3233/DS-210053/ANS0006",
+          "answer_type": "categorical",
+          "answer_text": "yes",
+          "supporting_assertions": [
+            "csag:assertion/doi:10.3233/DS-210053/A0010",
+            "csag:assertion/doi:10.3233/DS-210053/A0011"
+          ],
+          "answer_confidence": 0.88,
+          "origin": "extractor_inferred"
+        }
+      ],
+      "origin": "extractor_inferred",
+      "confidence_score": 0.88
+    }
+  ],
+  "schema_version": "1.0.0",
+  "validator_version": "1.0.0"
+}

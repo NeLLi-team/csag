@@ -1,0 +1,1856 @@
+{
+  "id": "doi:10.1186/2041-1480-4-37",
+  "title": "PAV ontology: provenance, authoring and versioning",
+  "abstract": "Background: Provenance is a critical ingredient for establishing trust of published scientific content. Existing vocabularies such as Dublin Core Terms (DC Terms) and the W3C Provenance Ontology (PROV-O) are domain-independent and general-purpose; PROV-O provides a basic methodology but not specific classes/properties for distinguishing between agent roles such as author, contributor and curator. Results: We present the Provenance, Authoring and Versioning ontology (PAV, namespace http://purl.org/pav/): a lightweight ontology for capturing \"just enough\" descriptions essential for tracking the provenance, authoring and versioning of web resources. PAV distinguishes between contributors, authors and curators of content and creators of representations, in addition to the provenance of originating resources. We explore five projects/communities that have adopted PAV and present mappings showing how PAV extends PROV-O. Method: The initial design of PAV was driven by requirements from the AlzSWAN project, expanded by later projects. The authors strove to keep PAV lightweight by including only pragmatically useful terms. Discussion: We analyze PAV alongside Provenance Vocabulary (PRV), DC Terms and BIBFRAME, specify SKOS mappings aligning PAV with DC Terms, and close with remarks on PAV's applicability.",
+  "doi": "10.1186/2041-1480-4-37",
+  "pmid": "24330769",
+  "journal": "Journal of Biomedical Semantics",
+  "publication_date": "2013-11-22",
+  "authors": [
+    {
+      "id": "orcid:0000-0002-5156-2703",
+      "label": "Paolo Ciccarese",
+      "affiliation": "Department of Neurology, Massachusetts General Hospital; Harvard Medical School"
+    },
+    {
+      "id": "orcid:0000-0001-9842-9718",
+      "label": "Stian Soiland-Reyes",
+      "affiliation": "School of Computer Science, University of Manchester"
+    },
+    {
+      "id": "orcid:0000-0001-6938-0820",
+      "label": "Khalid Belhajjame",
+      "affiliation": "School of Computer Science, University of Manchester"
+    },
+    {
+      "id": "orcid:0000-0002-5711-4872",
+      "label": "Alasdair JG Gray",
+      "affiliation": "School of Computer Science, University of Manchester"
+    },
+    {
+      "id": "orcid:0000-0003-1219-2137",
+      "label": "Carole Goble",
+      "affiliation": "School of Computer Science, University of Manchester"
+    },
+    {
+      "id": "orcid:0000-0003-4060-7360",
+      "label": "Tim Clark",
+      "affiliation": "Department of Neurology, Massachusetts General Hospital; Harvard Medical School; School of Computer Science, University of Manchester"
+    }
+  ],
+  "keywords": [
+    "Provenance",
+    "Authoring",
+    "Versioning",
+    "Annotation",
+    "Semantic web",
+    "Attribution"
+  ],
+  "full_text_url": "http://www.jbiomedsem.com/content/4/1/37",
+  "license": "http://creativecommons.org/licenses/by/2.0",
+  "notes": "Full-paper CSAG extraction. The PAV ontology paper has no wet-lab data; evidence is conceptual/methodological (described use-cases, ontology mappings, comparative analyses) rather than statistical. Adopters listed in the paper (SWAN/AlzSWAN, Annotation Ontology/Domeo, Nanopublications, Open PHACTS, Wf4Ever Research Objects, Elsevier Satellite) are treated as observational/citational evidence of uptake. No accession-style biological datasets; included Dataset entries point at the ontology release and adopter-specification artifacts that the paper makes 'available at' published URLs.",
+  "extraction_activities": [
+    {
+      "id": "csag:activity/doi:10.1186/2041-1480-4-37/ACT0001",
+      "activity_type": "structured_extraction",
+      "tool_name": "csag-extraction",
+      "tool_version": "1.0",
+      "run_id": "20260511T000000Z",
+      "run_datetime": "2026-05-11T00:00:00+00:00",
+      "agent_uri": "local:csag-curator",
+      "parameters": [
+        {
+          "key": "target_doi",
+          "value": "10.1186/2041-1480-4-37"
+        },
+        {
+          "key": "extraction_scope",
+          "value": "full-paper"
+        },
+        {
+          "key": "include_full_text",
+          "value": "true"
+        },
+        {
+          "key": "doi_status",
+          "value": "resolved"
+        },
+        {
+          "key": "pmid_status",
+          "value": "resolved"
+        }
+      ]
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "csag:artifact/doi:10.1186/2041-1480-4-37/F0001",
+      "artifact_type": "figure",
+      "artifact_label": "Figure 1",
+      "caption": "Depiction of the AlzSWAN knowledge creation and publishing process.",
+      "origin": "author_stated",
+      "confidence_score": 0.95,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "figure_caption",
+          "section_heading": "Original use case: SWAN platform",
+          "start_char": 10325,
+          "end_char": 10401,
+          "exact_text": "Figure 1 Depiction of the AlzSWAN knowledge creation and publishing process.",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0001"
+        }
+      ]
+    },
+    {
+      "id": "csag:artifact/doi:10.1186/2041-1480-4-37/F0002",
+      "artifact_type": "figure",
+      "artifact_label": "Figure 2",
+      "caption": "A claim published in the AlzSWAN knowledge base, authored by the human agent 'Golde T.' and curated on the indicated date by the human agent 'Wong G'. The artifact has been created by a human agent 'Wu E.' with the AlzSWAN Workbench and published by the 'AlzSWAN Team'.",
+      "origin": "author_stated",
+      "confidence_score": 0.95,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "figure_caption",
+          "section_heading": "Authoring",
+          "start_char": 27081,
+          "end_char": 27359,
+          "exact_text": "Figure 2 A claim published in the AlzSWAN knowledge base, authored by the human agent \u2018Golde T.\u2019 and curated on the indicated date by the human agent \u2018Wong G\u2019. The artifact has been created by a human agent \u2018Wu E.\u2019 with the AlzSWAN Workbench and published by the \u2018AlzSWAN Team\u2019.",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0002"
+        }
+      ]
+    },
+    {
+      "id": "csag:artifact/doi:10.1186/2041-1480-4-37/T0001",
+      "artifact_type": "table",
+      "artifact_label": "Table 1",
+      "caption": "PAV authoring properties: pav:authoredBy, pav:authoredOn, pav:curatedBy, pav:curatedOn, pav:contributedBy, pav:contributedOn.",
+      "origin": "author_stated",
+      "confidence_score": 0.94,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "table_caption",
+          "section_heading": "Authoring",
+          "start_char": 20398,
+          "end_char": 20430,
+          "exact_text": "### Table 1 PAV authoring proper",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0003"
+        }
+      ]
+    },
+    {
+      "id": "csag:artifact/doi:10.1186/2041-1480-4-37/T0002",
+      "artifact_type": "table",
+      "artifact_label": "Table 2",
+      "caption": "PAV provenance properties: pav:createdBy, pav:createdOn, pav:createdWith, pav:createdAt, pav:retrievedFrom, pav:retrievedBy, pav:retrievedOn, pav:importedFrom, pav:importedBy, pav:importedOn, pav:lastRefreshedOn, pav:providedBy, pav:sourceAccessedAt, pav:sourceAccessedBy, pav:sourceAccessedOn, pav:sourceLastAccessedOn.",
+      "origin": "author_stated",
+      "confidence_score": 0.94,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "table_caption",
+          "section_heading": "Provenance",
+          "start_char": 27478,
+          "end_char": 27510,
+          "exact_text": "## Table 2 PAV provenance proper",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0004"
+        }
+      ]
+    },
+    {
+      "id": "csag:artifact/doi:10.1186/2041-1480-4-37/T0003",
+      "artifact_type": "table",
+      "artifact_label": "Table 3",
+      "caption": "PAV versioning properties: pav:version, pav:previousVersion, pav:derivedFrom, pav:lastUpdateOn.",
+      "origin": "author_stated",
+      "confidence_score": 0.94,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "table_caption",
+          "section_heading": "Versioning and evolution",
+          "start_char": 39510,
+          "end_char": 39542,
+          "exact_text": "## Table 3 PAV versioning proper",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0005"
+        }
+      ]
+    },
+    {
+      "id": "csag:artifact/doi:10.1186/2041-1480-4-37/T0004",
+      "artifact_type": "table",
+      "artifact_label": "Table 4",
+      "caption": "Mapping from PAV to PROV-O: pav:createdBy/pav:createdWith/pav:contributedBy/pav:authoredBy/pav:curatedBy/pav:importedBy/pav:retrievedBy as subproperties of prov:wasAttributedTo; pav:importedFrom/pav:retrievedFrom under prov:wasDerivedFrom & prov:alternateOf; pav:derivedFrom under prov:wasDerivedFrom; pav:previousVersion under prov:wasRevisionOf; pav:sourceAccessedAt under prov:wasInfluencedBy.",
+      "origin": "author_stated",
+      "confidence_score": 0.95,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "table_caption",
+          "section_heading": "PROV-O and PAV mapping",
+          "start_char": 58818,
+          "end_char": 58850,
+          "exact_text": "## Table 4 Mapping from PAV to P",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0006"
+        }
+      ]
+    },
+    {
+      "id": "csag:artifact/doi:10.1186/2041-1480-4-37/T0005",
+      "artifact_type": "table",
+      "artifact_label": "Table 5",
+      "caption": "SKOS mappings of applicable PAV terms to Dublin Core Terms.",
+      "origin": "author_stated",
+      "confidence_score": 0.94,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "table_caption",
+          "section_heading": "Dublin core terms",
+          "start_char": 74647,
+          "end_char": 74708,
+          "exact_text": "Table 5 SKOS mappings of applicable PAV terms to Dublin core ",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0007"
+        }
+      ]
+    },
+    {
+      "id": "csag:artifact/doi:10.1186/2041-1480-4-37/F0007",
+      "artifact_type": "figure",
+      "artifact_label": "Figure 7",
+      "caption": "Relationships between the PAV ontology, the PROV ontology and all the projects listed in this article making use of PAV.",
+      "origin": "author_stated",
+      "confidence_score": 0.93,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "figure_caption",
+          "section_heading": "Who is using PAV",
+          "start_char": 48792,
+          "end_char": 48921,
+          "exact_text": "Figure 7 Relationships between the PAV ontology, the PROV ontology and all the projects listed in this article making use of PAV.",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0008"
+        }
+      ]
+    }
+  ],
+  "datasets": [
+    {
+      "id": "csag:dataset/doi:10.1186/2041-1480-4-37/D0001",
+      "label": "PAV OWL ontology (release 2.2)",
+      "description": "Authoritative OWL ontology release for PAV 2.2, available at the purl.org/pav/2.2 URL with the latest version resolving at http://purl.org/pav/.",
+      "repository": "purl.org / W3C PURL",
+      "dataset_url": "http://purl.org/pav/2.2",
+      "origin": "author_stated",
+      "confidence_score": 0.92,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "introduction",
+          "section_heading": "PAV Ontology",
+          "start_char": 17611,
+          "end_char": 17902,
+          "exact_text": "The *pav*: prefix indicates the namespace http://purl.org/pav/ [14], which also resolves to the latest version of the PAV ontology as OWL. PAV is currently in version 2.2 (OWL importable from http://purl.org/pav/2.2 [15]). Further details of versions and changes are listed on the wiki [16].",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0009"
+        }
+      ]
+    },
+    {
+      "id": "csag:dataset/doi:10.1186/2041-1480-4-37/D0002",
+      "label": "Open PHACTS dataset descriptions specification",
+      "description": "Open PHACTS Working Draft 'Dataset Descriptions for the Open Pharmacological Space' (2013-09-19), an adopter specification that recommends PAV properties for dataset provenance.",
+      "repository": "Open PHACTS / W3C-style Working Draft",
+      "dataset_url": "http://www.openphacts.org/specs/2013/WD-datadesc-20130912/",
+      "origin": "author_stated",
+      "confidence_score": 0.9,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "other",
+          "section_heading": "References",
+          "start_char": 98235,
+          "end_char": 98506,
+          "exact_text": "28. Gray AJG, Brenninkmeijer C, Evelo C, Goble C, Harland L, Stevens R, Waagmeester A, Willighagen E: Dataset Descriptions for the Open Pharmacological Space. In , Open PHACTS Working Draft. Published 2013-09-19. Accessed 2013-10-09 [http://www.openphacts.org/specs/2013/",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0010"
+        }
+      ]
+    },
+    {
+      "id": "csag:dataset/doi:10.1186/2041-1480-4-37/D0003",
+      "label": "SKOS mapping from PAV to Dublin Core Terms",
+      "description": "Auxiliary SKOS mapping file (v0.2.1, Turtle) aligning applicable PAV terms with Dublin Core Terms, published at purl.org/pav/mapping/dcterms and used as the basis for Table 5.",
+      "repository": "purl.org / W3C PURL",
+      "dataset_url": "http://purl.org/pav/mapping/dcterms",
+      "origin": "author_stated",
+      "confidence_score": 0.88,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "other",
+          "section_heading": "References",
+          "start_char": 104039,
+          "end_char": 104213,
+          "exact_text": "54. Soiland-Reyes S: SKOS mapping of PAV to Dublin Core terms v0.2.1. SKOS mapping in Turtle. Published 2013-03-01. Accessed 2013-10-09. [http://purl.org/pav/mapping/dcterms]",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0011"
+        }
+      ]
+    },
+    {
+      "id": "csag:dataset/doi:10.1186/2041-1480-4-37/D0004",
+      "label": "Taverna workflow for PAV->PROV-O visualization",
+      "description": "Taverna 2 workflow that combines the Pellet OWL reasoner with ProvToolbox to materialize PROV-O statements from PAV statements and visualize the resulting provenance graph (used to produce Figure 14).",
+      "repository": "myExperiment",
+      "dataset_url": "http://www.myexperiment.org/packs/418",
+      "origin": "author_stated",
+      "confidence_score": 0.86,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "other",
+          "section_heading": "References",
+          "start_char": 103332,
+          "end_char": 103502,
+          "exact_text": "50. Soiland-Reyes S: Visualize PAV provenance as SVG. Taverna 2 workflow, myExperiment. Published 2013-05-01. Accessed 2013-10-09. [http://www.myexperiment.org/packs/418]",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0012"
+        }
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "id": "csag:entity/doi:10.1186/2041-1480-4-37/EN0001",
+      "label": "PAV ontology",
+      "description": "Provenance, Authoring and Versioning ontology, a lightweight OWL vocabulary defined by this paper.",
+      "entity_category": "other",
+      "origin": "author_stated",
+      "confidence_score": 0.98,
+      "xrefs": [
+        "http://purl.org/pav/"
+      ],
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "abstract",
+          "section_heading": "Abstract",
+          "start_char": 1344,
+          "end_char": 1504,
+          "exact_text": "We present the Provenance, Authoring and Versioning ontology (PAV, namespace http://purl.org/pav/): a lightweight ontology for capturing \u201cjust enough\u201d descripti",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0013"
+        }
+      ]
+    },
+    {
+      "id": "csag:entity/doi:10.1186/2041-1480-4-37/EN0002",
+      "label": "PROV-O",
+      "description": "W3C Provenance Ontology, a generic OWL provenance vocabulary that PAV extends and maps to.",
+      "entity_category": "other",
+      "origin": "author_stated",
+      "confidence_score": 0.97,
+      "xrefs": [
+        "http://www.w3.org/TR/2013/REC-prov-o-20130430/"
+      ],
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "introduction",
+          "section_heading": "Existing provenance vocabularies",
+          "start_char": 13416,
+          "end_char": 13694,
+          "exact_text": "PROV-O is a generic provenance data model, which can be extended to give domain-specific provenance, for instance by subclasses of prov:Activity or subproperties of prov:wasAttributedTo. PROV-O does not itself provide any distinctions between authors, curators, contributors or ",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0014"
+        }
+      ]
+    },
+    {
+      "id": "csag:entity/doi:10.1186/2041-1480-4-37/EN0003",
+      "label": "Dublin Core Terms (DC Terms)",
+      "description": "DCMI Metadata Terms vocabulary used for catalogue metadata.",
+      "entity_category": "other",
+      "origin": "author_stated",
+      "confidence_score": 0.95,
+      "xrefs": [
+        "http://dublincore.org/documents/2012/06/14/dcmi-terms/"
+      ],
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "introduction",
+          "section_heading": "Existing provenance vocabularies",
+          "start_char": 10872,
+          "end_char": 11086,
+          "exact_text": "we argue that they conflate what we consider as the distinct roles of contributor/author/curator and creator of the representation. For instance, a person who converts a web page from HTML 3 to HTML 5 could be said",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0015"
+        }
+      ]
+    },
+    {
+      "id": "csag:entity/doi:10.1186/2041-1480-4-37/EN0004",
+      "label": "Provenance Vocabulary (PRV)",
+      "description": "Hartig & Zhao PROV-based vocabulary describing provenance as detailed activity chains.",
+      "entity_category": "other",
+      "origin": "author_stated",
+      "confidence_score": 0.92,
+      "xrefs": [
+        "http://purl.org/net/provenance/ns-20120314"
+      ],
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "discussion",
+          "section_heading": "Provenance vocabulary",
+          "start_char": 78880,
+          "end_char": 79178,
+          "exact_text": "PRV was conceived in 2009, and has been adapted to describe provenance of a range of internet resources, from OpenStreetMap [62] and readings in sensor networks [63] to reified RDF statements [64] and Facebook posts [65]. Here we explore the last case, which presents a browser extension and a REST",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0016"
+        }
+      ]
+    },
+    {
+      "id": "csag:entity/doi:10.1186/2041-1480-4-37/EN0005",
+      "label": "Open Provenance Model (OPM)",
+      "description": "Predecessor process-oriented provenance model that PROV-O largely subsumed.",
+      "entity_category": "other",
+      "origin": "author_stated",
+      "confidence_score": 0.9,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "introduction",
+          "section_heading": "Existing provenance vocabularies",
+          "start_char": 14974,
+          "end_char": 15196,
+          "exact_text": "The Open Provenance Model [4] predates PROV-O, and has a very similar approach to modeling provenance by relating agents, artifacts and processes. By and large, the concepts of OPM are covered by equivalent PROV-O concepts",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0017"
+        }
+      ]
+    },
+    {
+      "id": "csag:entity/doi:10.1186/2041-1480-4-37/EN0006",
+      "label": "AlzSWAN / SWAN platform",
+      "description": "Semantic Web Applications in Neuromedicine collaborative platform whose AlzSWAN knowledge base motivated the original PAV design.",
+      "entity_category": "method",
+      "origin": "author_stated",
+      "confidence_score": 0.95,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "introduction",
+          "section_heading": "Original use case: SWAN platform",
+          "start_char": 5446,
+          "end_char": 5784,
+          "exact_text": "The Semantic Web Applications in Neuromedicine (SWAN) web-based collaborative platform [6] is an example of an application that embodies many of the above requirements. SWAN aims to organize and annotate scientific knowledge regarding neurodegenerative disorders and to facilitate the formation, development and testing of hypotheses. In ",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0018"
+        }
+      ]
+    },
+    {
+      "id": "csag:entity/doi:10.1186/2041-1480-4-37/EN0007",
+      "label": "BIBFRAME",
+      "description": "Library of Congress Bibliographic Framework Transition Initiative; bibliographic linked-data model compared with PAV.",
+      "entity_category": "other",
+      "origin": "author_stated",
+      "confidence_score": 0.9,
+      "xrefs": [
+        "http://bibframe.org/"
+      ],
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "discussion",
+          "section_heading": "BIBFRAME",
+          "start_char": 72185,
+          "end_char": 72484,
+          "exact_text": "Library of Congress officially launched its Bibliographic Framework Transition Initiative (BIBFRAME) [55,56] initiative in May 2011. The initiative aims to re-envision the current standard for bibliographic exchange (MARC 21) [57] and implement a new bibliographic environment for libraries that mak",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0019"
+        }
+      ]
+    },
+    {
+      "id": "csag:entity/doi:10.1186/2041-1480-4-37/EN0008",
+      "label": "Nanopublications specification",
+      "description": "Open PHACTS Nanopublications specification (Schultes et al., 2012) that recommends PAV for nanopublication attribution.",
+      "entity_category": "other",
+      "origin": "author_stated",
+      "confidence_score": 0.9,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "results",
+          "section_heading": "Nanopublications",
+          "start_char": 48146,
+          "end_char": 48399,
+          "exact_text": "Nanopublication specification [25] recommend the use of PAV and Open Provenance Model (OPM) [4]. For instances, the examples of nanopublications advertised on the\n\n```text\n<http://example.com/report.html> pav:authoredBy <http://example.com/committee> ;\n",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0020"
+        }
+      ]
+    },
+    {
+      "id": "csag:entity/doi:10.1186/2041-1480-4-37/EN0009",
+      "label": "Wf4Ever Research Object model",
+      "description": "Wf4Ever project's Research Object model that uses PAV to track attribution and replication of bundled research artifacts.",
+      "entity_category": "other",
+      "origin": "author_stated",
+      "confidence_score": 0.9,
+      "xrefs": [
+        "http://purl.org/wf4ever/model"
+      ],
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "results",
+          "section_heading": "Research objects",
+          "start_char": 50907,
+          "end_char": 51251,
+          "exact_text": "The notion of \u201cResearch Object\u201d [29] was coined by the Wf4Ever project as an abstraction for the management of containers of sets of objects. In Wf4Ever, research objects bundle investigation-related resources such as documents, presentations, workflows, datasets, etc. Research Objects, their constituent resources, and their relationships, ar",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0021"
+        }
+      ]
+    },
+    {
+      "id": "csag:entity/doi:10.1186/2041-1480-4-37/EN0010",
+      "label": "Annotation Ontology (AO) and Domeo",
+      "description": "AO web annotation vocabulary and Domeo annotation toolkit; both use PAV for authorship/creation provenance.",
+      "entity_category": "other",
+      "origin": "author_stated",
+      "confidence_score": 0.9,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "results",
+          "section_heading": "Annotation ontology and Domeo annotation tool",
+          "start_char": 44719,
+          "end_char": 45070,
+          "exact_text": "PAV is used extensively by many of the applications making use of the Annotation Ontology (AO) [23] for anchoring annotations to online resources. One such application is the Domeo Web Annotation Toolkit [24], a collection of software components that provides a rich set of features including:\n\n- semantically annotating online HTML and XML documents;",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0022"
+        }
+      ]
+    },
+    {
+      "id": "csag:entity/doi:10.1186/2041-1480-4-37/EN0011",
+      "label": "Elsevier Satellite annotation format",
+      "description": "Elsevier ancillary-information format that uses PAV 1.2 alongside DC Terms for metadata-container provenance.",
+      "entity_category": "other",
+      "origin": "author_stated",
+      "confidence_score": 0.88,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "results",
+          "section_heading": "Elsevier satellite",
+          "start_char": 50073,
+          "end_char": 50473,
+          "exact_text": "PAV has been used, in conjunction with DC Terms, as the provenance ontology in the Elsevier Satellite annotation format [30]. The Satellite format is a linked data compliant data format to capture, store and expose metadata objects using open standards based metadata frameworks e.g. SKOS [43], DCMI and SWAN. Satellite format uses PAV 1.2 as originally specified in the SWAN suite of ontologies [9].",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0023"
+        }
+      ]
+    },
+    {
+      "id": "csag:entity/doi:10.1186/2041-1480-4-37/EN0012",
+      "label": "Open PHACTS dataset description specification",
+      "description": "Open PHACTS specification that uses PAV (via VoID) to describe drug-discovery dataset provenance.",
+      "entity_category": "other",
+      "origin": "author_stated",
+      "confidence_score": 0.9,
+      "xrefs": [
+        "http://www.openphacts.org/specs/2013/WD-datadesc-20130912/"
+      ],
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "results",
+          "section_heading": "Open PHACTS dataset descriptions",
+          "start_char": 46922,
+          "end_char": 47265,
+          "exact_text": "Open PHACTS dataset specification, which uses a specialization of VoID, also specifies patterns of recording provenance, but from the provenance-related terms of DC Terms, only uses dct:publisher and dct:issued, and primarily recommends the PAV properties: pav:version, pav:previousVersion, pav:retrievedFrom, pav:importedFrom, pav:importedOn,",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0024"
+        }
+      ]
+    }
+  ],
+  "assertions": [
+    {
+      "id": "csag:assertion/doi:10.1186/2041-1480-4-37/A0001",
+      "assertion_text": "Existing general-purpose provenance vocabularies (DC Terms, PROV-O, OPM, PRV) do not, on their own, capture the role distinctions (author vs. curator vs. contributor vs. artifact creator) and the authoring/versioning lineage that scientific knowledge bases such as AlzSWAN require.",
+      "claim_role": "research_question",
+      "assertion_type": "descriptive",
+      "normalization_status": "raw",
+      "criticality": "core",
+      "falsification_criteria": [
+        "Demonstrating that DC Terms or PROV-O properties (e.g., dct:creator, prov:wasAttributedTo) already disambiguate authoring vs. curation vs. artifact creation roles without extension would weaken this premise.",
+        "Showing that AlzSWAN-style use cases (separate author/curator/artifact-creator agents and tracking access vs. retrieval vs. import) can be expressed concisely with existing vocabularies alone would refute the gap claim."
+      ],
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1186/2041-1480-4-37/C0001",
+          "label": "scholarly digital-resource provenance context",
+          "context_facet": "model_system",
+          "origin": "author_stated",
+          "confidence_score": 0.85,
+          "environment_description": "Web-published scientific knowledge bases (e.g., AlzSWAN) and digital artifacts (annotations, datasets, nanopublications) where authors, curators, and artifact creators are distinct."
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.92,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "introduction",
+          "section_heading": "Existing provenance vocabularies",
+          "start_char": 10872,
+          "end_char": 11200,
+          "exact_text": "we argue that they conflate what we consider as the distinct roles of contributor/author/curator and creator of the representation. For instance, a person who converts a web page from HTML 3 to HTML 5 could be said to be the *dct:creator* or *dct:contributor* of the new document, even when that person has not modified the huma",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0025"
+        },
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "introduction",
+          "section_heading": "Existing provenance vocabularies",
+          "start_char": 13603,
+          "end_char": 13712,
+          "exact_text": "PROV-O does not itself provide any distinctions between authors, curators, contributors or artifact creators.",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0026"
+        }
+      ]
+    },
+    {
+      "id": "csag:assertion/doi:10.1186/2041-1480-4-37/A0002",
+      "assertion_text": "The objective of PAV is to provide a lightweight, compact OWL vocabulary that captures 'just enough' provenance, authoring and versioning information for scientific digital resources, distinguishing contributors, authors and curators of content from creators of representations, plus the originating-resource lineage.",
+      "claim_role": "objective",
+      "assertion_type": "descriptive",
+      "normalization_status": "raw",
+      "criticality": "core",
+      "falsification_criteria": [
+        "If PAV is shown to be either too expressive (no longer 'just enough') or too sparse to encode common author/curator/creator separations in adopters' use cases, the objective would be unmet.",
+        "If practical adopters consistently bypass PAV's authoring/curation/creation properties in favor of generic dct/prov terms, the 'just enough' objective is not being achieved."
+      ],
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1186/2041-1480-4-37/C0002",
+          "label": "PAV ontology design context",
+          "context_facet": "model_system",
+          "origin": "author_stated",
+          "confidence_score": 0.88,
+          "environment_description": "Web-published OWL ontology (current release PAV 2.2 at http://purl.org/pav/) intended for use alongside PROV-O and DC Terms."
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.95,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "abstract",
+          "section_heading": "Abstract",
+          "start_char": 1344,
+          "end_char": 2125,
+          "exact_text": "We present the Provenance, Authoring and Versioning ontology (PAV, namespace http://purl.org/pav/): a lightweight ontology for capturing \u201cjust enough\u201d descriptions essential for tracking the provenance, authoring and versioning of web resources. We argue that such descriptions are essential for digital scientific content. PAV distinguishes between contributors, authors and curators of content and creators of representations in addition to the provenance of originating resources that have been accessed, transformed and consumed. We explore five projects (and communities) that have adopted PAV illustrating their usage through concrete examples. Moreover, we present mappings that show how PAV extends the W3C PROV-O ontology to support broader interoperability.\n\n**Method:** ",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0027"
+        }
+      ]
+    },
+    {
+      "id": "csag:assertion/doi:10.1186/2041-1480-4-37/A0003",
+      "assertion_text": "PAV defines three families of properties: authoring (pav:authoredBy, pav:curatedBy, pav:contributedBy with timestamp variants), provenance/creation (pav:createdBy, pav:createdWith, pav:retrievedFrom/By/On, pav:importedFrom/By/On, pav:sourceAccessedAt/By/On, pav:providedBy), and versioning (pav:version, pav:previousVersion, pav:derivedFrom, pav:lastUpdateOn).",
+      "claim_role": "result_claim",
+      "assertion_type": "descriptive",
+      "normalization_status": "partially_normalized",
+      "criticality": "core",
+      "subject": "csag:entity/doi:10.1186/2041-1480-4-37/EN0001",
+      "predicate": "csag:predicate/defines_property_family",
+      "falsification_criteria": [
+        "Showing that the published PAV OWL release omits one of the listed property families, or contains substantially different terms, would refute the structural claim.",
+        "Demonstrating that PAV properties are not aligned with the authoring/provenance/versioning groupings (e.g., pav:authoredBy lacks the documented timestamp variant) would weaken this claim."
+      ],
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1186/2041-1480-4-37/C0003"
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.94,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "results",
+          "section_heading": "PAV Ontology",
+          "start_char": 17150,
+          "end_char": 17500,
+          "exact_text": "PAV is a lightweight vocabulary, for capturing \u201cjust enough\u201d descriptions essential for web resources representing digitized knowledge. PAV is intended to specify Provenance, Authoring and Versioning information. Accordingly, this section is organized into three subsections. PAV properties are outlined in **bold** where they are defined, described ",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0028"
+        },
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "results",
+          "section_heading": "Authoring",
+          "start_char": 18244,
+          "end_char": 18600,
+          "exact_text": "PAV ontology provides properties for tracking intellectual property information, which are described in Table 1.\n\nAs suggested by the properties listed in Table 1, in PAV we distinguish between authors that originate or creatively invent a work that is expressed in a digital resource (pav:authoredBy), e.g., the authors of a scientific publication or of a",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0029"
+        }
+      ]
+    },
+    {
+      "id": "csag:assertion/doi:10.1186/2041-1480-4-37/A0004",
+      "assertion_text": "PAV makes a primary conceptual distinction between authoring knowledge content (pav:authoredBy / pav:curatedBy / pav:contributedBy) and creating the digital representation of that content (pav:createdBy), which DC Terms (e.g., dct:creator) conflates.",
+      "claim_role": "result_claim",
+      "assertion_type": "comparative",
+      "normalization_status": "partially_normalized",
+      "criticality": "core",
+      "subject": "csag:entity/doi:10.1186/2041-1480-4-37/EN0001",
+      "predicate": "csag:predicate/separates_roles_from",
+      "object": "csag:entity/doi:10.1186/2041-1480-4-37/EN0003",
+      "falsification_criteria": [
+        "An adopter that uses pav:authoredBy and pav:createdBy interchangeably without preserving the author/creator distinction would undercut the claim that PAV operationalizes the distinction.",
+        "If DC Terms' dct:creator were shown to already discriminate content-author from representation-creator in widely deployed practice, the contrast claim would be weakened."
+      ],
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1186/2041-1480-4-37/C0004"
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.94,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "results",
+          "section_heading": "Authoring",
+          "start_char": 18244,
+          "end_char": 18651,
+          "exact_text": "PAV ontology provides properties for tracking intellectual property information, which are described in Table 1.\n\nAs suggested by the properties listed in Table 1, in PAV we distinguish between authors that originate or creatively invent a work that is expressed in a digital resource (pav:authoredBy), e.g., the authors of a scientific publication or of a novel scientific hypothesis; and curators (pav:cur",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0030"
+        },
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "discussion",
+          "section_heading": "Dublin core terms",
+          "start_char": 68357,
+          "end_char": 68712,
+          "exact_text": "Dublin Core Terms vocabulary provide terms such as *dct:contributor* and its subproperty *dct:creator*, and we have argued that they conflate the roles of content authoring, knowledge curation and representation creation. Although our presented use-cases highlights the importance of distinguishing these in the setting of formal knowledge representation,",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0031"
+        }
+      ]
+    },
+    {
+      "id": "csag:assertion/doi:10.1186/2041-1480-4-37/A0005",
+      "assertion_text": "Starting from version 2.1, PAV defines a subproperty mapping to PROV-O so that PAV statements RDFS-imply compatible PROV-O statements (e.g., pav:authoredBy rdfs:subPropertyOf prov:wasAttributedTo), enabling PROV-aware tools to consume PAV provenance.",
+      "claim_role": "result_claim",
+      "assertion_type": "methodological",
+      "normalization_status": "partially_normalized",
+      "criticality": "major",
+      "subject": "csag:entity/doi:10.1186/2041-1480-4-37/EN0001",
+      "predicate": "csag:predicate/maps_subproperty_to",
+      "object": "csag:entity/doi:10.1186/2041-1480-4-37/EN0002",
+      "falsification_criteria": [
+        "If a PROV-O reasoner cannot infer prov:wasAttributedTo / prov:wasDerivedFrom / prov:wasRevisionOf statements from PAV statements under standard OWL semantics, the mapping claim is refuted.",
+        "If a PROV-O consuming tool produces incorrect or empty interpretations when fed inferred statements from PAV inputs, the interoperability claim is weakened."
+      ],
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1186/2041-1480-4-37/C0005"
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.93,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "results",
+          "section_heading": "PROV-O and PAV mapping",
+          "start_char": 55767,
+          "end_char": 56400,
+          "exact_text": "PAV can be a useful specialization of PROV-O by providing simple relationships for expressing common provenance for digital artifacts. Therefore PAV, starting from version 2.1, introduced a mapping from PAV to PROV-O using subproperties, as detailed in Table 4:\n\nIn PROV-O, entities are considered immutable, and different states for the purposes of provenance are represented as different entities, each with their own provenance. The W3C Provenance Working Group has published a note \u201cDublin Core to PROV Mapping\u201d [47], proposing a subproperty mapping from Dublin Core\n\nTerms to PROV-O, in addition to a \u201ccomplex mapping\u201d by using ",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0032"
+        }
+      ]
+    },
+    {
+      "id": "csag:assertion/doi:10.1186/2041-1480-4-37/A0006",
+      "assertion_text": "PAV has been adopted by at least five communities/projects (SWAN/AlzSWAN, Annotation Ontology and Domeo, Nanopublications, Open PHACTS dataset descriptions, Wf4Ever Research Objects, and Elsevier Satellite), evidencing pragmatic usefulness.",
+      "claim_role": "result_claim",
+      "assertion_type": "descriptive",
+      "normalization_status": "raw",
+      "criticality": "major",
+      "falsification_criteria": [
+        "If any of the listed adopters do not actually reference PAV terms in their public specifications/codebases, the adoption count is overstated.",
+        "If a systematic review of these specifications shows PAV is referenced only nominally without operational use of its properties, the 'pragmatic usefulness' inference is weakened."
+      ],
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1186/2041-1480-4-37/C0006",
+          "label": "adopter projects context",
+          "context_facet": "model_system",
+          "origin": "author_stated",
+          "confidence_score": 0.85,
+          "environment_description": "Public specifications and toolkits in biomedical semantics (SWAN, AlzSWAN, AO, Domeo, Nanopublications, Open PHACTS, Wf4Ever Research Objects, Elsevier Satellite)."
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.93,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "results",
+          "section_heading": "Who is using PAV",
+          "start_char": 42780,
+          "end_char": 43200,
+          "exact_text": "PAV has successfully been applied by several projects in academia and in industry due to it being compact and easy to understand. Besides the SWAN project, for which PAV was originally developed, it has been used in the Annotation Ontology (AO) [23]; the Domeo Annotation Tool [24]; the Nanopublications specification [25]; the Open PHACTS dataset description specification [26-28]; the Wf4Ever Research Objects [29]; an",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0033"
+        }
+      ]
+    },
+    {
+      "id": "csag:assertion/doi:10.1186/2041-1480-4-37/A0007",
+      "assertion_text": "Compared with the activity-chain style of Provenance Vocabulary (PRV), PAV's resource-centric attribution allows equivalent queries (e.g., 'which API, when, by whom') to be expressed with substantially less SPARQL graph-traversal.",
+      "claim_role": "result_claim",
+      "assertion_type": "comparative",
+      "normalization_status": "partially_normalized",
+      "criticality": "supporting",
+      "subject": "csag:entity/doi:10.1186/2041-1480-4-37/EN0001",
+      "predicate": "csag:predicate/simplifies_queries_relative_to",
+      "object": "csag:entity/doi:10.1186/2041-1480-4-37/EN0004",
+      "falsification_criteria": [
+        "Constructing PRV queries that are no longer than PAV equivalents on the same provenance use case would refute the verbosity-reduction claim.",
+        "If the PAV query in Figure 18 omits required provenance details that the PRV query in Figure 17 captures (e.g., individual API-access timestamps), the equivalence claim is weakened."
+      ],
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1186/2041-1480-4-37/C0007",
+          "label": "Facebook-microposts case study context",
+          "context_facet": "model_system",
+          "origin": "author_stated",
+          "confidence_score": 0.82,
+          "environment_description": "Steiner et al. semantic tagging of Facebook microposts using PRV; used as the comparative case for PAV vs. PRV query verbosity."
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.88,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "discussion",
+          "section_heading": "Provenance vocabulary",
+          "start_char": 78747,
+          "end_char": 79200,
+          "exact_text": "querying the process-oriented PRV approach and we demonstrate how PAV can complement such detailed provenance and simplify queries.\n\nPRV was conceived in 2009, and has been adapted to describe provenance of a range of internet resources, from OpenStreetMap [62] and readings in sensor networks [63] to reified RDF statements [64] and Facebook posts [65]. Here we explore the last case, which presents a browser extension and a REST service for annotatin",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0034"
+        }
+      ]
+    },
+    {
+      "id": "csag:assertion/doi:10.1186/2041-1480-4-37/A0008",
+      "assertion_text": "The role-distinction primitives PAV introduces (author vs. curator vs. artifact creator, with provenance/versioning relations between artifacts and agents) are essential for attributing resources in curated knowledge bases and datasets.",
+      "claim_role": "conclusion",
+      "assertion_type": "comparative",
+      "normalization_status": "raw",
+      "criticality": "core",
+      "falsification_criteria": [
+        "A demonstration that curated knowledge bases can attribute resources accurately without distinguishing content-authoring from representation-creation roles would weaken this conclusion.",
+        "Empirical evidence that adopters do not benefit from the author/curator/creator separation (e.g., they always collapse the roles) would reduce the strength of this conclusion."
+      ],
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1186/2041-1480-4-37/C0008"
+        },
+        {
+          "id": "csag:context/doi:10.1186/2041-1480-4-37/C0009"
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.92,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "conclusion",
+          "section_heading": "Conclusions",
+          "start_char": 88451,
+          "end_char": 88900,
+          "exact_text": "These distinctions are essential for attributing resources in the complex real world of curated knowledge bases and datasets, and PAV has been adapted for these purposes by representation models like Open PHACTS dataset descriptions, Nanopublications, Wf4Ever Research Objects and Elsevier\u2019s Satellite annotations.\n\nWe believe PAV is a good complement to existing provenance vocabularies, such as OPM and PROV-O. Indeed, use of such vocabularies oft",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0035"
+        }
+      ]
+    },
+    {
+      "id": "csag:assertion/doi:10.1186/2041-1480-4-37/A0009",
+      "assertion_text": "PAV's simplification of provenance to resource-attached relations is at the cost of not expressing per-activity details (e.g., when each individual API access happened when multiple imports occur), a trade-off the authors deem reasonable for common cases.",
+      "claim_role": "limitation",
+      "assertion_type": "other",
+      "normalization_status": "raw",
+      "criticality": "supporting",
+      "falsification_criteria": [
+        "A common use case where multiple imports with distinct timestamps must be preserved on a single resource (e.g., multiple pav:importedFrom + pav:importedOn pairs) could not be represented unambiguously in PAV would empirically reinforce, not weaken, this limitation.",
+        "Showing that adopters routinely require per-activity details for common cases (refuting the 'common cases need only one resource' premise) would weaken the 'reasonable trade-off' framing."
+      ],
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1186/2041-1480-4-37/C0010"
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.9,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "discussion",
+          "section_heading": "Provenance vocabulary",
+          "start_char": 82944,
+          "end_char": 83427,
+          "exact_text": "simplification does come at a small cost: If multiple? api resources have been imported for the same tag, it is not possible with PAV alone to express when each individual? api was accessed, as import details such as? when and? agent are expressed directly on the resulting resource. We believe this trade-off is reasonable as for common cases there will be a single resource for each of pav:importedFrom, pav:importedOn and pav: importedBy.\n\nOur design decision to not express the i",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0036"
+        },
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "results",
+          "section_heading": "PAV Ontology",
+          "start_char": 37216,
+          "end_char": 37539,
+          "exact_text": "could be difficult with multiple values. However PAV does not formally add functionality constraints to the OWL ontology.\n\nCombinations of multiple agents, sources and dates may be used with PAV, but would mean that finer details are not fully preserved, such as *who* accessed *which* source *when*. This is the result of ",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0037"
+        }
+      ]
+    },
+    {
+      "id": "csag:assertion/doi:10.1186/2041-1480-4-37/A0010",
+      "assertion_text": "Some information is lost in the PAV->PROV-O inference (notably the author-vs-curator distinction and the per-agent authoring-time pairing), because PAV statements are detangled into separate existential PROV-O variables.",
+      "claim_role": "limitation",
+      "assertion_type": "other",
+      "normalization_status": "raw",
+      "criticality": "supporting",
+      "falsification_criteria": [
+        "An OWL/RDFS encoding (or PROV-aware reasoner) that preserves the author/curator role distinction during PAV->PROV-O inference would weaken this limitation.",
+        "A demonstration that author-time and curation-time can be unambiguously paired with the corresponding agent in the inferred PROV-O graph would refute the loss-of-information claim."
+      ],
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1186/2041-1480-4-37/C0011"
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.9,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "results",
+          "section_heading": "PROV-O and PAV mapping",
+          "start_char": 57216,
+          "end_char": 57586,
+          "exact_text": "Note that some information is not preserved in these inferred statements, e.g. the distinction between authors and curators; and the PAV statements of authorship and authorship time are detangled into separate existential variables and PROV-O statements.\n\nA more integrated mapping from PAV properties to such chains of PROV-O activities and entities could be formulated",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0038"
+        }
+      ]
+    },
+    {
+      "id": "csag:assertion/doi:10.1186/2041-1480-4-37/A0011",
+      "assertion_text": "A more integrated PAV->PROV-O mapping that unrolls PAV statements into chains of PROV-O activities/entities (e.g., creating an :ImportActivity with prov:used / prov:wasAssociatedWith / prov:endedAtTime triples) is feasible but is work in progress and must balance logical correctness against usefulness.",
+      "claim_role": "future_work",
+      "assertion_type": "methodological",
+      "normalization_status": "raw",
+      "criticality": "supporting",
+      "falsification_criteria": [
+        "If a published follow-up demonstrates a complete, semantically lossless unrolling from PAV to PROV-O activities, the 'work in progress' status would be closed.",
+        "A formal counter-proof that no such unrolling is possible without contradicting PAV's resource-centric semantics would refute the feasibility claim."
+      ],
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1186/2041-1480-4-37/C0012"
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.86,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "results",
+          "section_heading": "PROV-O and PAV mapping",
+          "start_char": 62544,
+          "end_char": 62991,
+          "exact_text": "Detailing such a mapping is currently work in progress, and would have to balance logical correctness vs. usefulness, for instance the above assumes that all PAV import statements describe the same activity, but if there are multiple pav:importedFrom statements and multiple pav:importedBy statements we cannot be certain about the extent of that import activity.\n\nThe authors believe that the current PROV-O sub-property mapping is liberal enough",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0039"
+        }
+      ]
+    }
+  ],
+  "evidence_items": [
+    {
+      "id": "csag:evidence/doi:10.1186/2041-1480-4-37/E0001",
+      "evidence_type": "expert_opinion",
+      "evidence_text": "Authors' analysis that DC Terms conflates contributor/author/curator/representation-creator roles (e.g., HTML 3 -> HTML 5 converter could be either dct:creator or dct:contributor) and that PROV-O explicitly provides no such role distinctions.",
+      "origin": "author_stated",
+      "confidence_score": 0.93,
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1186/2041-1480-4-37/C0013"
+        }
+      ],
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "introduction",
+          "section_heading": "Existing provenance vocabularies",
+          "start_char": 10872,
+          "end_char": 11200,
+          "exact_text": "we argue that they conflate what we consider as the distinct roles of contributor/author/curator and creator of the representation. For instance, a person who converts a web page from HTML 3 to HTML 5 could be said to be the *dct:creator* or *dct:contributor* of the new document, even when that person has not modified the huma",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0040"
+        },
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "introduction",
+          "section_heading": "Existing provenance vocabularies",
+          "start_char": 13603,
+          "end_char": 13712,
+          "exact_text": "PROV-O does not itself provide any distinctions between authors, curators, contributors or artifact creators.",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0041"
+        }
+      ]
+    },
+    {
+      "id": "csag:evidence/doi:10.1186/2041-1480-4-37/E0002",
+      "evidence_type": "expert_opinion",
+      "evidence_text": "AlzSWAN use-case description in which the author of a paper, a curator who shapes hypotheses/claims, and an artifact creator who enters them into the platform are demonstrably distinct agents.",
+      "origin": "author_stated",
+      "confidence_score": 0.92,
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1186/2041-1480-4-37/C0014"
+        }
+      ],
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "introduction",
+          "section_heading": "Original use case: SWAN platform",
+          "start_char": 6832,
+          "end_char": 8200,
+          "exact_text": "There is a clear distinction between the roles of the authors and curators, and the source of content:\n\n**Authors** are the primary originators of scientific statements, originally conceiving the content (e.g. a tabular dataset).\n\n**Curators** collect the knowledge published by the authors, interpreting and transforming the content of a textual document into SWAN research statements (hypothesis, claim or research question). They restructure the previously authored content and shape it to be appropriate for the intended representation (e.g. by normalizing the fields for being represented in a spreadsheet). Curators create the SWAN KB version that embodies the authors\u2019 work; thus they are contributing to the knowledge representation. However, the main intellectual property remains attributed to the original authors.\n\n**Artifact creators** take care of physically creating the digital artifact by entering the statements and their links into the platform, (e.g. saves the spreadsheet as an .xlsx file).\n\n**External sources** are the external data- and knowledge-bases such as PubMed [10] and UniProt [11,12] that AlzSWAN draws upon for metadata and for integrated data. Some of this metadata are retrieved and cached as they are, while some are imported after one or more transformations. It is important to track the original source and how it was incorporat",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0042"
+        }
+      ]
+    },
+    {
+      "id": "csag:evidence/doi:10.1186/2041-1480-4-37/E0003",
+      "evidence_type": "experimental_result",
+      "evidence_text": "PAV 2.2 OWL release at http://purl.org/pav/2.2 with three subsections (Authoring, Provenance, Versioning) and explicit OWL-importable IRI; Tables 1-3 enumerate each property family and its semantics.",
+      "origin": "author_stated",
+      "confidence_score": 0.96,
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1186/2041-1480-4-37/C0015"
+        }
+      ],
+      "associated_artifacts": [
+        "csag:artifact/doi:10.1186/2041-1480-4-37/T0001",
+        "csag:artifact/doi:10.1186/2041-1480-4-37/T0002",
+        "csag:artifact/doi:10.1186/2041-1480-4-37/T0003"
+      ],
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "results",
+          "section_heading": "PAV Ontology",
+          "start_char": 17611,
+          "end_char": 17902,
+          "exact_text": "The *pav*: prefix indicates the namespace http://purl.org/pav/ [14], which also resolves to the latest version of the PAV ontology as OWL. PAV is currently in version 2.2 (OWL importable from http://purl.org/pav/2.2 [15]). Further details of versions and changes are listed on the wiki [16].",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0043"
+        }
+      ]
+    },
+    {
+      "id": "csag:evidence/doi:10.1186/2041-1480-4-37/E0004",
+      "evidence_type": "experimental_result",
+      "evidence_text": "Documented PAV->PROV-O subproperty mapping (Table 4) declaring pav:authoredBy/curatedBy/createdBy/createdWith/contributedBy/importedBy/retrievedBy as rdfs:subPropertyOf prov:wasAttributedTo; pav:importedFrom/retrievedFrom under prov:wasDerivedFrom & prov:alternateOf; pav:derivedFrom under prov:wasDerivedFrom; pav:previousVersion under prov:wasRevisionOf; pav:sourceAccessedAt under prov:wasInfluencedBy.",
+      "origin": "author_stated",
+      "confidence_score": 0.95,
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1186/2041-1480-4-37/C0016"
+        }
+      ],
+      "associated_artifacts": [
+        "csag:artifact/doi:10.1186/2041-1480-4-37/T0004"
+      ],
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "results",
+          "section_heading": "PROV-O and PAV mapping",
+          "start_char": 56690,
+          "end_char": 57400,
+          "exact_text": "subproperty mapping from PAV to PROV-O, which implies a similar entity conflation, by attaching all properties to the same resource rather than introducing intermediate entities, which would be required to give a detailed PROV-O trace of the activities that lead to the generation of the final resource state. The combination of OWL/RDFS reasoning and the PROV inference rules [48] means we can infer further PROV statements such as entity generation and activity association from a single PAV statement, shown in Figure 13.\n\nNote that some information is not preserved in these inferred statements, e.g. the distinction between authors and curators; and the PAV statements of authorship and authorship time ar",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0044"
+        }
+      ]
+    },
+    {
+      "id": "csag:evidence/doi:10.1186/2041-1480-4-37/E0005",
+      "evidence_type": "experimental_result",
+      "evidence_text": "Taverna workflow combining Pellet (OWL reasoner) and ProvToolbox materializes PROV-O statements from PAV-only inputs and renders them as an SVG provenance diagram (Figure 14, ChemSpider VoID example).",
+      "origin": "author_stated",
+      "confidence_score": 0.92,
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1186/2041-1480-4-37/C0017"
+        }
+      ],
+      "associated_artifacts": [
+        "csag:artifact/doi:10.1186/2041-1480-4-37/T0004"
+      ],
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "results",
+          "section_heading": "PROV-O and PAV mapping",
+          "start_char": 63183,
+          "end_char": 64000,
+          "exact_text": "we wanted to make use of the PROV-O mapping, so that PROV-O statements could be inferred from PAV statements using a standard OWL reasoner. We then wanted to test if a PROV-O consuming tool was able to understand the statements.\n\n<div style=\"border: 1px solid black; padding: 10px; margin: 10px;\">\n<http://example.com/resource.html> pav:authoredBy :paolo .\n\n(subproperty) \u2192 <http://example.com/resource.html> prov:wasAttributedTo :paolo .\n\n(attribution-inference) \u2192 <http://example.com/resource.html> prov:wasGeneratedBy _:activity .\n\n:paolo prov:wasAssociatedWith _:activity .\n\nFigure 13 Inferences from PAV authorship to existential PROV-O activities. pav:authoredBy is subproperty of prov:wasAttributedBy, which, according to PROV constraint attribution-inference imply that there existed some _:activity that gene",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0045"
+        }
+      ]
+    },
+    {
+      "id": "csag:evidence/doi:10.1186/2041-1480-4-37/E0006",
+      "evidence_type": "observational_data",
+      "evidence_text": "Enumeration of independent adopter projects/specifications that integrate PAV: SWAN/AlzSWAN, Annotation Ontology (AO), Domeo Annotation Tool, Nanopublications specification, Open PHACTS dataset descriptions, Wf4Ever Research Objects, and Elsevier Satellite annotation format.",
+      "origin": "author_stated",
+      "confidence_score": 0.93,
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1186/2041-1480-4-37/C0018"
+        }
+      ],
+      "associated_artifacts": [
+        "csag:artifact/doi:10.1186/2041-1480-4-37/F0007"
+      ],
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "results",
+          "section_heading": "Who is using PAV",
+          "start_char": 42780,
+          "end_char": 43349,
+          "exact_text": "PAV has successfully been applied by several projects in academia and in industry due to it being compact and easy to understand. Besides the SWAN project, for which PAV was originally developed, it has been used in the Annotation Ontology (AO) [23]; the Domeo Annotation Tool [24]; the Nanopublications specification [25]; the Open PHACTS dataset description specification [26-28]; the Wf4Ever Research Objects [29]; and the Elsevier Satellite article annotation format [30]. For its most recent release, we updated PAV to include a mapping to the PROV-O ontology [3],",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0046"
+        }
+      ]
+    },
+    {
+      "id": "csag:evidence/doi:10.1186/2041-1480-4-37/E0007",
+      "evidence_type": "observational_data",
+      "evidence_text": "Open PHACTS dataset specification (a VoID specialization) primarily recommends PAV properties (pav:version, pav:previousVersion, pav:retrievedFrom, pav:importedFrom, pav:importedOn, pav:importedBy, pav:derivedFrom, pav:createdOn, pav:createdBy, pav:createdWith, pav:authoredBy, pav:authoredOn, pav:lastRefreshedOn, pav:lastUpdateOn) for dataset provenance.",
+      "origin": "author_stated",
+      "confidence_score": 0.93,
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1186/2041-1480-4-37/C0019"
+        }
+      ],
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "results",
+          "section_heading": "Open PHACTS dataset descriptions",
+          "start_char": 46922,
+          "end_char": 47419,
+          "exact_text": "Open PHACTS dataset specification, which uses a specialization of VoID, also specifies patterns of recording provenance, but from the provenance-related terms of DC Terms, only uses dct:publisher and dct:issued, and primarily recommends the PAV properties: pav:version, pav:previousVersion, pav:retrievedFrom, pav:importedFrom, pav:importedOn, pav:importedBy, pav:derivedFrom, pav:createdOn, pav:createdBy, pav:createdWith, pav:authoredBy, pav:authoredOn, pav:lastRefreshedOn and pav:lastUpdateOn.",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0047"
+        }
+      ]
+    },
+    {
+      "id": "csag:evidence/doi:10.1186/2041-1480-4-37/E0008",
+      "evidence_type": "observational_data",
+      "evidence_text": "Nanopublication specification recommends PAV (pav:authoredBy, pav:createdBy, pav:version) to attribute scientific assertions and their RDF representations distinctly.",
+      "origin": "author_stated",
+      "confidence_score": 0.91,
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1186/2041-1480-4-37/C0020"
+        }
+      ],
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "results",
+          "section_heading": "Nanopublications",
+          "start_char": 48146,
+          "end_char": 48603,
+          "exact_text": "Nanopublication specification [25] recommend the use of PAV and Open Provenance Model (OPM) [4]. For instances, the examples of nanopublications advertised on the\n\n```text\n<http://example.com/report.html> pav:authoredBy <http://example.com/committee> ;\n<http://example.com/committee> a prov:Organization, foaf:Organization, co:Set ;\nco:element :stian, :khalid, :paolo .\n```\n\nFigure 6 Example illustrating how Collection Ontology (CO) can be used with PAV in",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0048"
+        }
+      ]
+    },
+    {
+      "id": "csag:evidence/doi:10.1186/2041-1480-4-37/E0009",
+      "evidence_type": "experimental_result",
+      "evidence_text": "Comparative SPARQL listings (Figures 17 vs. 18 vs. 19): the PRV query traverses prv:createdBy -> prv:usedData -> prv:retrievedBy -> prv:accessedResource chains, whereas the equivalent PAV query reads pav:importedFrom/importedAt/importedBy directly off the resource.",
+      "origin": "author_stated",
+      "confidence_score": 0.9,
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1186/2041-1480-4-37/C0021"
+        }
+      ],
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "discussion",
+          "section_heading": "Provenance vocabulary",
+          "start_char": 79776,
+          "end_char": 80219,
+          "exact_text": "The authors of [65] are conscious of the need to reduce the verbosity of their provenance trace, and list this as a consequence of using the PRV vocabulary. We have explored their use of the PRV model and based on their example listing, formulated how one could find out: (i) the APIs called to create the tagging <tag1>, (ii) when the tag was made, and (iii) which agent created the tag. In order to answer this, we have to query through the ",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0049"
+        }
+      ]
+    },
+    {
+      "id": "csag:evidence/doi:10.1186/2041-1480-4-37/E0010",
+      "evidence_type": "expert_opinion",
+      "evidence_text": "Authors' note that combinations of multiple agents/sources/dates on the same resource lose 'who accessed which source when' detail (acknowledged trade-off documented under Multiplicity).",
+      "origin": "author_stated",
+      "confidence_score": 0.9,
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1186/2041-1480-4-37/C0022"
+        }
+      ],
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "results",
+          "section_heading": "PAV Ontology",
+          "start_char": 37339,
+          "end_char": 37746,
+          "exact_text": "Combinations of multiple agents, sources and dates may be used with PAV, but would mean that finer details are not fully preserved, such as *who* accessed *which* source *when*. This is the result of a compromise between simplicity and completeness when designing PAV. It is recommended that applications that want to keep those details also provide an accompanying PROV-O trace, as exemplified in Figure 5.",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0050"
+        }
+      ]
+    },
+    {
+      "id": "csag:evidence/doi:10.1186/2041-1480-4-37/E0011",
+      "evidence_type": "expert_opinion",
+      "evidence_text": "Authors' explicit note that information lost in PAV->PROV-O inference includes the author/curator distinction and the per-agent authoring-time association.",
+      "origin": "author_stated",
+      "confidence_score": 0.9,
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1186/2041-1480-4-37/C0023"
+        }
+      ],
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "results",
+          "section_heading": "PROV-O and PAV mapping",
+          "start_char": 57216,
+          "end_char": 57586,
+          "exact_text": "Note that some information is not preserved in these inferred statements, e.g. the distinction between authors and curators; and the PAV statements of authorship and authorship time are detangled into separate existential variables and PROV-O statements.\n\nA more integrated mapping from PAV properties to such chains of PROV-O activities and entities could be formulated",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0051"
+        }
+      ]
+    },
+    {
+      "id": "csag:evidence/doi:10.1186/2041-1480-4-37/E0012",
+      "evidence_type": "expert_opinion",
+      "evidence_text": "Authors flag that a complete PAV->PROV-O unrolling is still 'work in progress' because, with multiple pav:importedFrom + pav:importedBy statements, the extent of a single import activity is uncertain.",
+      "origin": "author_stated",
+      "confidence_score": 0.88,
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1186/2041-1480-4-37/C0024"
+        }
+      ],
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "results",
+          "section_heading": "PROV-O and PAV mapping",
+          "start_char": 62544,
+          "end_char": 63018,
+          "exact_text": "Detailing such a mapping is currently work in progress, and would have to balance logical correctness vs. usefulness, for instance the above assumes that all PAV import statements describe the same activity, but if there are multiple pav:importedFrom statements and multiple pav:importedBy statements we cannot be certain about the extent of that import activity.\n\nThe authors believe that the current PROV-O sub-property mapping is liberal enough to allow PAV to complement",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0052"
+        }
+      ]
+    }
+  ],
+  "evidence_links": [
+    {
+      "id": "csag:elink/doi:10.1186/2041-1480-4-37/L0001",
+      "evidence_item": "csag:evidence/doi:10.1186/2041-1480-4-37/E0001",
+      "assertion": "csag:assertion/doi:10.1186/2041-1480-4-37/A0001",
+      "polarity": "supports",
+      "strength": "strong",
+      "rationale": "The authors' analytic argument directly motivates the research-gap claim that DC Terms/PROV-O do not, alone, capture the needed role distinctions.",
+      "origin": "author_stated",
+      "confidence_score": 0.93
+    },
+    {
+      "id": "csag:elink/doi:10.1186/2041-1480-4-37/L0002",
+      "evidence_item": "csag:evidence/doi:10.1186/2041-1480-4-37/E0002",
+      "assertion": "csag:assertion/doi:10.1186/2041-1480-4-37/A0001",
+      "polarity": "supports",
+      "strength": "strong",
+      "rationale": "The AlzSWAN use-case explicitly enumerates author/curator/artifact-creator/external-source roles whose distinctions are missing from the prior vocabularies.",
+      "origin": "author_stated",
+      "confidence_score": 0.92
+    },
+    {
+      "id": "csag:elink/doi:10.1186/2041-1480-4-37/L0003",
+      "evidence_item": "csag:evidence/doi:10.1186/2041-1480-4-37/E0003",
+      "assertion": "csag:assertion/doi:10.1186/2041-1480-4-37/A0002",
+      "polarity": "supports",
+      "strength": "strong",
+      "rationale": "The published PAV 2.2 OWL release with its three subsections operationalizes the lightweight 'just enough' vocabulary objective.",
+      "origin": "author_stated",
+      "confidence_score": 0.94
+    },
+    {
+      "id": "csag:elink/doi:10.1186/2041-1480-4-37/L0004",
+      "evidence_item": "csag:evidence/doi:10.1186/2041-1480-4-37/E0003",
+      "assertion": "csag:assertion/doi:10.1186/2041-1480-4-37/A0003",
+      "polarity": "supports",
+      "strength": "strong",
+      "rationale": "Tables 1-3 in the released ontology enumerate exactly the three property families claimed.",
+      "origin": "author_stated",
+      "confidence_score": 0.95
+    },
+    {
+      "id": "csag:elink/doi:10.1186/2041-1480-4-37/L0005",
+      "evidence_item": "csag:evidence/doi:10.1186/2041-1480-4-37/E0001",
+      "assertion": "csag:assertion/doi:10.1186/2041-1480-4-37/A0004",
+      "polarity": "supports",
+      "strength": "strong",
+      "rationale": "DC Terms is shown to conflate authoring of content with creation of representation, motivating PAV's explicit author/creator separation.",
+      "origin": "author_stated",
+      "confidence_score": 0.92
+    },
+    {
+      "id": "csag:elink/doi:10.1186/2041-1480-4-37/L0006",
+      "evidence_item": "csag:evidence/doi:10.1186/2041-1480-4-37/E0002",
+      "assertion": "csag:assertion/doi:10.1186/2041-1480-4-37/A0004",
+      "polarity": "supports",
+      "strength": "strong",
+      "rationale": "AlzSWAN's three-role workflow makes the author/curator/creator separation operationally necessary.",
+      "origin": "author_stated",
+      "confidence_score": 0.9
+    },
+    {
+      "id": "csag:elink/doi:10.1186/2041-1480-4-37/L0007",
+      "evidence_item": "csag:evidence/doi:10.1186/2041-1480-4-37/E0004",
+      "assertion": "csag:assertion/doi:10.1186/2041-1480-4-37/A0005",
+      "polarity": "supports",
+      "strength": "strong",
+      "rationale": "The Table 4 subproperty mapping concretely instantiates the PAV->PROV-O interoperability claim.",
+      "origin": "author_stated",
+      "confidence_score": 0.95
+    },
+    {
+      "id": "csag:elink/doi:10.1186/2041-1480-4-37/L0008",
+      "evidence_item": "csag:evidence/doi:10.1186/2041-1480-4-37/E0005",
+      "assertion": "csag:assertion/doi:10.1186/2041-1480-4-37/A0005",
+      "polarity": "supports",
+      "strength": "moderate",
+      "rationale": "The Pellet+ProvToolbox workflow demonstrates that PROV-O statements are actually inferred from PAV inputs and consumed by a PROV-aware tool.",
+      "origin": "author_stated",
+      "confidence_score": 0.88
+    },
+    {
+      "id": "csag:elink/doi:10.1186/2041-1480-4-37/L0009",
+      "evidence_item": "csag:evidence/doi:10.1186/2041-1480-4-37/E0006",
+      "assertion": "csag:assertion/doi:10.1186/2041-1480-4-37/A0006",
+      "polarity": "supports",
+      "strength": "strong",
+      "rationale": "The named projects list directly enumerates the adopters supporting the uptake claim.",
+      "origin": "author_stated",
+      "confidence_score": 0.93
+    },
+    {
+      "id": "csag:elink/doi:10.1186/2041-1480-4-37/L0010",
+      "evidence_item": "csag:evidence/doi:10.1186/2041-1480-4-37/E0007",
+      "assertion": "csag:assertion/doi:10.1186/2041-1480-4-37/A0006",
+      "polarity": "supports",
+      "strength": "moderate",
+      "rationale": "Open PHACTS's published list of recommended PAV properties is concrete operational evidence of adoption beyond a name-check.",
+      "origin": "author_stated",
+      "confidence_score": 0.9
+    },
+    {
+      "id": "csag:elink/doi:10.1186/2041-1480-4-37/L0011",
+      "evidence_item": "csag:evidence/doi:10.1186/2041-1480-4-37/E0008",
+      "assertion": "csag:assertion/doi:10.1186/2041-1480-4-37/A0006",
+      "polarity": "supports",
+      "strength": "moderate",
+      "rationale": "Nanopublication specification's use of pav:authoredBy/createdBy/version operationalizes adoption.",
+      "origin": "author_stated",
+      "confidence_score": 0.88
+    },
+    {
+      "id": "csag:elink/doi:10.1186/2041-1480-4-37/L0012",
+      "evidence_item": "csag:evidence/doi:10.1186/2041-1480-4-37/E0009",
+      "assertion": "csag:assertion/doi:10.1186/2041-1480-4-37/A0007",
+      "polarity": "supports",
+      "strength": "moderate",
+      "rationale": "The author-reported PRV vs. PAV SPARQL contrast directly shows shorter traversal for the same query.",
+      "origin": "author_stated",
+      "confidence_score": 0.86
+    },
+    {
+      "id": "csag:elink/doi:10.1186/2041-1480-4-37/L0013",
+      "evidence_item": "csag:evidence/doi:10.1186/2041-1480-4-37/E0001",
+      "assertion": "csag:assertion/doi:10.1186/2041-1480-4-37/A0008",
+      "polarity": "supports",
+      "strength": "strong",
+      "rationale": "The conflation argument supports the conclusion that role-distinction primitives are essential.",
+      "origin": "author_stated",
+      "confidence_score": 0.9
+    },
+    {
+      "id": "csag:elink/doi:10.1186/2041-1480-4-37/L0014",
+      "evidence_item": "csag:evidence/doi:10.1186/2041-1480-4-37/E0006",
+      "assertion": "csag:assertion/doi:10.1186/2041-1480-4-37/A0008",
+      "polarity": "supports",
+      "strength": "moderate",
+      "rationale": "Diverse adopters relying on the distinctions are author-cited as practical confirmation that they are essential.",
+      "origin": "author_stated",
+      "confidence_score": 0.86
+    },
+    {
+      "id": "csag:elink/doi:10.1186/2041-1480-4-37/L0015",
+      "evidence_item": "csag:evidence/doi:10.1186/2041-1480-4-37/E0010",
+      "assertion": "csag:assertion/doi:10.1186/2041-1480-4-37/A0009",
+      "polarity": "supports",
+      "strength": "strong",
+      "rationale": "Authors explicitly state that PAV alone loses 'who accessed which source when' detail when multiple agents/sources/dates apply to a single resource.",
+      "origin": "author_stated",
+      "confidence_score": 0.9
+    },
+    {
+      "id": "csag:elink/doi:10.1186/2041-1480-4-37/L0016",
+      "evidence_item": "csag:evidence/doi:10.1186/2041-1480-4-37/E0011",
+      "assertion": "csag:assertion/doi:10.1186/2041-1480-4-37/A0010",
+      "polarity": "supports",
+      "strength": "strong",
+      "rationale": "The authors directly enumerate the information lost (author/curator distinction, paired authoring-time) in the PAV->PROV-O inference path.",
+      "origin": "author_stated",
+      "confidence_score": 0.9
+    },
+    {
+      "id": "csag:elink/doi:10.1186/2041-1480-4-37/L0017",
+      "evidence_item": "csag:evidence/doi:10.1186/2041-1480-4-37/E0012",
+      "assertion": "csag:assertion/doi:10.1186/2041-1480-4-37/A0011",
+      "polarity": "supports",
+      "strength": "moderate",
+      "rationale": "Authors state the integrated mapping is work in progress and identify the open issue (multiple imports / activity extent).",
+      "origin": "author_stated",
+      "confidence_score": 0.88
+    },
+    {
+      "id": "csag:elink/doi:10.1186/2041-1480-4-37/L0018",
+      "evidence_item": "csag:evidence/doi:10.1186/2041-1480-4-37/E0011",
+      "assertion": "csag:assertion/doi:10.1186/2041-1480-4-37/A0005",
+      "polarity": "mixed",
+      "strength": "moderate",
+      "rationale": "The subproperty mapping is operational, but the authors concede it loses some PAV-specific semantics during inference (mixed evidence for full interoperability).",
+      "origin": "extractor_inferred",
+      "confidence_score": 0.78
+    }
+  ],
+  "inferences": [
+    {
+      "id": "csag:inference/doi:10.1186/2041-1480-4-37/I0001",
+      "input_assertions": [
+        "csag:assertion/doi:10.1186/2041-1480-4-37/A0001",
+        "csag:assertion/doi:10.1186/2041-1480-4-37/A0002"
+      ],
+      "input_evidence_links": [
+        "csag:elink/doi:10.1186/2041-1480-4-37/L0001",
+        "csag:elink/doi:10.1186/2041-1480-4-37/L0002",
+        "csag:elink/doi:10.1186/2041-1480-4-37/L0005",
+        "csag:elink/doi:10.1186/2041-1480-4-37/L0006"
+      ],
+      "output_assertion": "csag:assertion/doi:10.1186/2041-1480-4-37/A0004",
+      "inference_method": "qualitative_interpretation",
+      "inference_rationale": "Given (i) the gap that DC Terms/PROV-O conflate role distinctions and (ii) the AlzSWAN-driven objective of separating content authoring from representation creation, PAV operationalizes the author/curator vs. creator separation as a deliberate design response.",
+      "origin": "extractor_inferred",
+      "confidence_score": 0.85,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "discussion",
+          "section_heading": "Dublin core terms",
+          "start_char": 70908,
+          "end_char": 71303,
+          "exact_text": "As $dct:creator$ can be seen to cover both content authoring and creating its representation, we have defined both $pav:authoredBy$ and $pav:createdBy$ to be sub-properties of $dct:creator$, while its superproperty $dct:contributor$ is a superproperty of $pav:contributedBy$; here the PAV term only covers contributions to the work or content, while $dct:contributor$ may also cover representati",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0053"
+        }
+      ]
+    },
+    {
+      "id": "csag:inference/doi:10.1186/2041-1480-4-37/I0002",
+      "input_assertions": [
+        "csag:assertion/doi:10.1186/2041-1480-4-37/A0005",
+        "csag:assertion/doi:10.1186/2041-1480-4-37/A0006"
+      ],
+      "input_evidence_links": [
+        "csag:elink/doi:10.1186/2041-1480-4-37/L0007",
+        "csag:elink/doi:10.1186/2041-1480-4-37/L0009"
+      ],
+      "output_assertion": "csag:assertion/doi:10.1186/2041-1480-4-37/A0008",
+      "inference_method": "qualitative_interpretation",
+      "inference_rationale": "From the demonstrated PAV->PROV-O interoperability and the documented multi-project adoption, the authors conclude that the PAV role-distinction primitives are essential and reusable in curated-KB attribution.",
+      "origin": "author_stated",
+      "confidence_score": 0.84,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "conclusion",
+          "section_heading": "Conclusions",
+          "start_char": 88451,
+          "end_char": 88900,
+          "exact_text": "These distinctions are essential for attributing resources in the complex real world of curated knowledge bases and datasets, and PAV has been adapted for these purposes by representation models like Open PHACTS dataset descriptions, Nanopublications, Wf4Ever Research Objects and Elsevier\u2019s Satellite annotations.\n\nWe believe PAV is a good complement to existing provenance vocabularies, such as OPM and PROV-O. Indeed, use of such vocabularies oft",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0054"
+        }
+      ]
+    },
+    {
+      "id": "csag:inference/doi:10.1186/2041-1480-4-37/I0003",
+      "input_assertions": [
+        "csag:assertion/doi:10.1186/2041-1480-4-37/A0007",
+        "csag:assertion/doi:10.1186/2041-1480-4-37/A0005"
+      ],
+      "input_evidence_links": [
+        "csag:elink/doi:10.1186/2041-1480-4-37/L0008",
+        "csag:elink/doi:10.1186/2041-1480-4-37/L0012"
+      ],
+      "output_assertion": "csag:assertion/doi:10.1186/2041-1480-4-37/A0008",
+      "inference_method": "qualitative_interpretation",
+      "inference_rationale": "By combining the resource-centric SPARQL simplification with the PROV-O subproperty mapping, the authors conclude PAV is a good complement to existing process-oriented vocabularies.",
+      "origin": "extractor_inferred",
+      "confidence_score": 0.8,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "discussion",
+          "section_heading": "Provenance vocabulary",
+          "start_char": 83608,
+          "end_char": 84004,
+          "exact_text": "the simplicity approach of PAV.\n\nThis simplicity of PAV\u2019s approach does not preclude the concurrent expression of more detailed provenance using other vocabularies such as PRV; as we showed in Figures 18 and 19, more specific details can be expressed by unrolling a PAV statement into a chain of corresponding PROV-O activities and entities. We believe PRV can be used such to compliment PAV for ",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0055"
+        }
+      ]
+    }
+  ],
+  "assertion_relations": [
+    {
+      "id": "csag:arel/doi:10.1186/2041-1480-4-37/RL0001",
+      "from_assertion": "csag:assertion/doi:10.1186/2041-1480-4-37/A0009",
+      "to_assertion": "csag:assertion/doi:10.1186/2041-1480-4-37/A0002",
+      "relation_type": "qualifies",
+      "relation_rationale": "The 'simplification at a small cost' limitation qualifies the 'just enough' objective: PAV intentionally drops per-activity detail in common cases.",
+      "origin": "author_stated",
+      "confidence_score": 0.9,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "discussion",
+          "section_heading": "Provenance vocabulary",
+          "start_char": 82944,
+          "end_char": 83427,
+          "exact_text": "simplification does come at a small cost: If multiple? api resources have been imported for the same tag, it is not possible with PAV alone to express when each individual? api was accessed, as import details such as? when and? agent are expressed directly on the resulting resource. We believe this trade-off is reasonable as for common cases there will be a single resource for each of pav:importedFrom, pav:importedOn and pav: importedBy.\n\nOur design decision to not express the i",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0056"
+        }
+      ]
+    },
+    {
+      "id": "csag:arel/doi:10.1186/2041-1480-4-37/RL0002",
+      "from_assertion": "csag:assertion/doi:10.1186/2041-1480-4-37/A0010",
+      "to_assertion": "csag:assertion/doi:10.1186/2041-1480-4-37/A0005",
+      "relation_type": "qualifies",
+      "relation_rationale": "Loss of author/curator distinction during the PAV->PROV-O inference qualifies the strength of the interoperability claim.",
+      "origin": "author_stated",
+      "confidence_score": 0.9,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "results",
+          "section_heading": "PROV-O and PAV mapping",
+          "start_char": 57216,
+          "end_char": 57586,
+          "exact_text": "Note that some information is not preserved in these inferred statements, e.g. the distinction between authors and curators; and the PAV statements of authorship and authorship time are detangled into separate existential variables and PROV-O statements.\n\nA more integrated mapping from PAV properties to such chains of PROV-O activities and entities could be formulated",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0057"
+        }
+      ]
+    }
+  ],
+  "critiques": [
+    {
+      "id": "csag:critique/doi:10.1186/2041-1480-4-37/R0001",
+      "label": "Lossy PAV->PROV-O inference for author/curator distinction",
+      "description": "By design, PAV's resource-centric attachment of authoring/creation properties is mapped into existential PROV-O variables; the author-vs-curator role distinction and the pairing of agent with authoring/curation timestamps are lost during inference.",
+      "critique_type": "construct_validity",
+      "risk_domain": "data_quality",
+      "severity": "moderate",
+      "impacted_assertions": [
+        "csag:assertion/doi:10.1186/2041-1480-4-37/A0005"
+      ],
+      "impacted_evidence_items": [
+        "csag:evidence/doi:10.1186/2041-1480-4-37/E0004",
+        "csag:evidence/doi:10.1186/2041-1480-4-37/E0005"
+      ],
+      "mitigation_suggestions": [
+        "Develop an integrated PAV->PROV-O mapping that unrolls PAV properties into explicit PROV-O activities with prov:hadRole / prov:atTime so role and timestamp pairings are preserved."
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.9,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "results",
+          "section_heading": "PROV-O and PAV mapping",
+          "start_char": 57216,
+          "end_char": 57586,
+          "exact_text": "Note that some information is not preserved in these inferred statements, e.g. the distinction between authors and curators; and the PAV statements of authorship and authorship time are detangled into separate existential variables and PROV-O statements.\n\nA more integrated mapping from PAV properties to such chains of PROV-O activities and entities could be formulated",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0058"
+        }
+      ]
+    },
+    {
+      "id": "csag:critique/doi:10.1186/2041-1480-4-37/R0002",
+      "label": "Loss of per-activity detail with multi-valued PAV properties",
+      "description": "PAV permits multiple values for properties such as pav:authoredBy and pav:importedFrom but cannot pair each value with the corresponding timestamp/source on the same resource; finer-grained 'who accessed which source when' detail is sacrificed for simplicity.",
+      "critique_type": "construct_validity",
+      "risk_domain": "data_quality",
+      "severity": "moderate",
+      "impacted_assertions": [
+        "csag:assertion/doi:10.1186/2041-1480-4-37/A0002",
+        "csag:assertion/doi:10.1186/2041-1480-4-37/A0007"
+      ],
+      "impacted_evidence_items": [
+        "csag:evidence/doi:10.1186/2041-1480-4-37/E0010",
+        "csag:evidence/doi:10.1186/2041-1480-4-37/E0009"
+      ],
+      "mitigation_suggestions": [
+        "When such detail is required, accompany PAV statements with a parallel PROV-O trace using prov:qualifiedAttribution, prov:hadRole, and prov:atTime, as illustrated in Figure 5."
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.88,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "results",
+          "section_heading": "PAV Ontology",
+          "start_char": 37339,
+          "end_char": 37746,
+          "exact_text": "Combinations of multiple agents, sources and dates may be used with PAV, but would mean that finer details are not fully preserved, such as *who* accessed *which* source *when*. This is the result of a compromise between simplicity and completeness when designing PAV. It is recommended that applications that want to keep those details also provide an accompanying PROV-O trace, as exemplified in Figure 5.",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0059"
+        }
+      ]
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "id": "csag:gap/doi:10.1186/2041-1480-4-37/G0001",
+      "label": "Integrated PAV->PROV-O activity unrolling not yet finalized",
+      "description": "A more integrated mapping that unrolls PAV properties into chains of PROV-O activities/entities (e.g., explicit :ImportActivity nodes with prov:used / prov:wasAssociatedWith / prov:endedAtTime) is identified as work in progress and must balance correctness vs. usefulness, especially when multiple imports apply.",
+      "gap_type": "missing_mechanism",
+      "severity": "moderate",
+      "related_assertions": [
+        "csag:assertion/doi:10.1186/2041-1480-4-37/A0005",
+        "csag:assertion/doi:10.1186/2041-1480-4-37/A0010",
+        "csag:assertion/doi:10.1186/2041-1480-4-37/A0011"
+      ],
+      "suggested_actions": [
+        "Specify and publish a CONSTRUCT-style unrolling from PAV to PROV-O activities that handles multi-valued pav:importedFrom/pav:importedBy without ambiguity over activity extent."
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.87,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "results",
+          "section_heading": "PROV-O and PAV mapping",
+          "start_char": 62544,
+          "end_char": 63018,
+          "exact_text": "Detailing such a mapping is currently work in progress, and would have to balance logical correctness vs. usefulness, for instance the above assumes that all PAV import statements describe the same activity, but if there are multiple pav:importedFrom statements and multiple pav:importedBy statements we cannot be certain about the extent of that import activity.\n\nThe authors believe that the current PROV-O sub-property mapping is liberal enough to allow PAV to complement",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0060"
+        }
+      ]
+    },
+    {
+      "id": "csag:gap/doi:10.1186/2041-1480-4-37/G0002",
+      "label": "Contributorship-role catalogue is out of scope for PAV core",
+      "description": "PAV intentionally does not model the wide range of contributorship roles surveyed in scholarly attribution work; alignment with role catalogues like SPAR's Publishing Roles Ontology is suggested but not formalized in PAV itself.",
+      "gap_type": "generalizability",
+      "severity": "moderate",
+      "related_assertions": [
+        "csag:assertion/doi:10.1186/2041-1480-4-37/A0002",
+        "csag:assertion/doi:10.1186/2041-1480-4-37/A0004"
+      ],
+      "suggested_actions": [
+        "Adopt third-party subproperties of pav:contributedBy/pav:authoredBy (e.g., pro:editor, pro:illustrator) via prov:hadRole as the recommended pattern for finer contributorship roles."
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.85,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1186/2041-1480-4-37",
+          "section_type": "results",
+          "section_heading": "Contribution roles",
+          "start_char": 42233,
+          "end_char": 42757,
+          "exact_text": "It is out of scope for PAV to try to model this wide range of contributorships, but we do note that ontologies such as SPAR\u2019s Publishing Roles Ontology [22] define roles like pro: illustrator, pro:critic and pro:editor which would be appropriate to use with prov:hadRole in the pattern shown in Figure 5. Additionally, third-party subproperties, e.g. of pav: contributedBy and pav:authoredBy, can be created to further specify the form of the contribution, utilizing PAV as a common platform for attributions across domains.",
+          "id": "csag:span/doi:10.1186/2041-1480-4-37/S0061"
+        }
+      ]
+    }
+  ],
+  "qa_items": [
+    {
+      "id": "csag:qa/doi:10.1186/2041-1480-4-37/Q0001",
+      "question_text": "What is the evidence status for the claim that PAV separates content-authoring roles (pav:authoredBy/curatedBy/contributedBy) from representation-creation (pav:createdBy)?",
+      "query_assertion": "csag:assertion/doi:10.1186/2041-1480-4-37/A0004",
+      "normalized_query": "CSAG_QA_01_STATUS",
+      "expected_answer_type": "categorical",
+      "origin": "extractor_inferred",
+      "confidence_score": 0.9,
+      "answers": [
+        {
+          "id": "csag:answer/doi:10.1186/2041-1480-4-37/ANS0001",
+          "answer_type": "categorical",
+          "answer_text": "supports",
+          "supporting_assertions": [
+            "csag:assertion/doi:10.1186/2041-1480-4-37/A0004"
+          ],
+          "supporting_evidence_links": [
+            "csag:elink/doi:10.1186/2041-1480-4-37/L0005",
+            "csag:elink/doi:10.1186/2041-1480-4-37/L0006"
+          ],
+          "answer_confidence": 0.93
+        }
+      ]
+    },
+    {
+      "id": "csag:qa/doi:10.1186/2041-1480-4-37/Q0002",
+      "question_text": "What evidence supports the claim that PAV has been adopted by multiple independent projects/specifications?",
+      "query_assertion": "csag:assertion/doi:10.1186/2041-1480-4-37/A0006",
+      "normalized_query": "CSAG_QA_02_EVIDENCE_SUPPORT",
+      "expected_answer_type": "list",
+      "origin": "extractor_inferred",
+      "confidence_score": 0.9,
+      "answers": [
+        {
+          "id": "csag:answer/doi:10.1186/2041-1480-4-37/ANS0002",
+          "answer_type": "list",
+          "answer_text": "Named adopters include SWAN/AlzSWAN, AO+Domeo, Nanopublications spec, Open PHACTS dataset descriptions (with an explicit PAV property recommendation list), Wf4Ever Research Objects, and Elsevier Satellite.",
+          "supporting_assertions": [
+            "csag:assertion/doi:10.1186/2041-1480-4-37/A0006"
+          ],
+          "supporting_evidence_links": [
+            "csag:elink/doi:10.1186/2041-1480-4-37/L0009",
+            "csag:elink/doi:10.1186/2041-1480-4-37/L0010",
+            "csag:elink/doi:10.1186/2041-1480-4-37/L0011"
+          ],
+          "answer_confidence": 0.92
+        }
+      ]
+    },
+    {
+      "id": "csag:qa/doi:10.1186/2041-1480-4-37/Q0003",
+      "question_text": "Under what biological/operational contexts is the claim 'PAV maps to PROV-O via subproperties' evaluated in this paper?",
+      "query_assertion": "csag:assertion/doi:10.1186/2041-1480-4-37/A0005",
+      "normalized_query": "CSAG_QA_07_CONTEXT_LIST",
+      "expected_answer_type": "list",
+      "origin": "extractor_inferred",
+      "confidence_score": 0.85,
+      "answers": [
+        {
+          "id": "csag:answer/doi:10.1186/2041-1480-4-37/ANS0003",
+          "answer_type": "list",
+          "answer_text": "Evaluated in the PAV ontology design context (csag:context/.../C0002), with operational demonstration in a Pellet+ProvToolbox Taverna workflow over an Open PHACTS VoID example.",
+          "supporting_assertions": [
+            "csag:assertion/doi:10.1186/2041-1480-4-37/A0005"
+          ],
+          "supporting_evidence_links": [
+            "csag:elink/doi:10.1186/2041-1480-4-37/L0007",
+            "csag:elink/doi:10.1186/2041-1480-4-37/L0008"
+          ],
+          "answer_confidence": 0.84
+        }
+      ]
+    },
+    {
+      "id": "csag:qa/doi:10.1186/2041-1480-4-37/Q0004",
+      "question_text": "What limitations could weaken the 'PAV is interoperable with PROV-O via subproperty mapping' claim?",
+      "query_assertion": "csag:assertion/doi:10.1186/2041-1480-4-37/A0005",
+      "normalized_query": "CSAG_QA_10_LIMITATIONS",
+      "expected_answer_type": "list",
+      "origin": "extractor_inferred",
+      "confidence_score": 0.88,
+      "answers": [
+        {
+          "id": "csag:answer/doi:10.1186/2041-1480-4-37/ANS0004",
+          "answer_type": "list",
+          "answer_text": "Loss of author/curator distinction and pairing of agent with authoring-time during inference; multi-valued PAV imports leave activity-extent ambiguous; integrated PAV->PROV-O unrolling is still work in progress.",
+          "supporting_assertions": [
+            "csag:assertion/doi:10.1186/2041-1480-4-37/A0010",
+            "csag:assertion/doi:10.1186/2041-1480-4-37/A0011"
+          ],
+          "supporting_evidence_links": [
+            "csag:elink/doi:10.1186/2041-1480-4-37/L0016",
+            "csag:elink/doi:10.1186/2041-1480-4-37/L0017",
+            "csag:elink/doi:10.1186/2041-1480-4-37/L0018"
+          ],
+          "answer_confidence": 0.88
+        }
+      ]
+    },
+    {
+      "id": "csag:qa/doi:10.1186/2041-1480-4-37/Q0005",
+      "question_text": "What knowledge gaps remain after this paper for downstream PAV/PROV-O integration?",
+      "query_assertion": "csag:assertion/doi:10.1186/2041-1480-4-37/A0011",
+      "normalized_query": "CSAG_QA_11_GAPS",
+      "expected_answer_type": "list",
+      "origin": "extractor_inferred",
+      "confidence_score": 0.85,
+      "answers": [
+        {
+          "id": "csag:answer/doi:10.1186/2041-1480-4-37/ANS0005",
+          "answer_type": "list",
+          "answer_text": "A complete CONSTRUCT-style unrolling of PAV to PROV-O activities (handling multi-valued imports unambiguously) is open, and a richer contributorship-role catalogue (e.g., SPAR PRO alignment) is left to adopters via prov:hadRole.",
+          "supporting_assertions": [
+            "csag:assertion/doi:10.1186/2041-1480-4-37/A0011"
+          ],
+          "supporting_evidence_links": [
+            "csag:elink/doi:10.1186/2041-1480-4-37/L0017"
+          ],
+          "answer_confidence": 0.86
+        }
+      ]
+    },
+    {
+      "id": "csag:qa/doi:10.1186/2041-1480-4-37/Q0006",
+      "question_text": "Based on this paper, is it supported that PAV's resource-centric model yields shorter SPARQL queries than PRV's activity-chain model for equivalent provenance lookups?",
+      "query_assertion": "csag:assertion/doi:10.1186/2041-1480-4-37/A0007",
+      "normalized_query": "CSAG_QA_04_BOOL",
+      "expected_answer_type": "boolean",
+      "origin": "extractor_inferred",
+      "confidence_score": 0.84,
+      "answers": [
+        {
+          "id": "csag:answer/doi:10.1186/2041-1480-4-37/ANS0006",
+          "answer_type": "boolean",
+          "answer_boolean": true,
+          "answer_text": "Yes; the paired SPARQL listings in Figures 17 (PRV) and 18 (PAV) show fewer joins for the same answer.",
+          "supporting_assertions": [
+            "csag:assertion/doi:10.1186/2041-1480-4-37/A0007"
+          ],
+          "supporting_evidence_links": [
+            "csag:elink/doi:10.1186/2041-1480-4-37/L0012"
+          ],
+          "answer_confidence": 0.85
+        }
+      ]
+    }
+  ],
+  "schema_version": "1.0.0",
+  "validator_version": "1.0.0"
+}

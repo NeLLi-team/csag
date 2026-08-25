@@ -1,0 +1,168 @@
+{
+  "markdown_path": "toy.md",
+  "line_count": 24,
+  "section_count": 6,
+  "title_index": 0,
+  "front_matter_end_index": 4,
+  "headings": [
+    {
+      "index": 0,
+      "level": 1,
+      "heading": "Toy Plastid Claim Manuscript",
+      "normalized_heading": "toy plastid claim manuscript",
+      "start_line": 1,
+      "end_line": 4,
+      "body_char_count": 34
+    },
+    {
+      "index": 1,
+      "level": 2,
+      "heading": "Abstract",
+      "normalized_heading": "abstract",
+      "start_line": 5,
+      "end_line": 8,
+      "body_char_count": 203
+    },
+    {
+      "index": 2,
+      "level": 2,
+      "heading": "Methods",
+      "normalized_heading": "methods",
+      "start_line": 9,
+      "end_line": 12,
+      "body_char_count": 125
+    },
+    {
+      "index": 3,
+      "level": 2,
+      "heading": "Results",
+      "normalized_heading": "results",
+      "start_line": 13,
+      "end_line": 16,
+      "body_char_count": 119
+    },
+    {
+      "index": 4,
+      "level": 2,
+      "heading": "Discussion",
+      "normalized_heading": "discussion",
+      "start_line": 17,
+      "end_line": 20,
+      "body_char_count": 174
+    },
+    {
+      "index": 5,
+      "level": 2,
+      "heading": "Data availability",
+      "normalized_heading": "data availability",
+      "start_line": 21,
+      "end_line": 24,
+      "body_char_count": 88
+    }
+  ],
+  "front_matter": {
+    "authors_candidate": "Bikash Example and Crysten Curator",
+    "affiliations": [],
+    "correspondence": [],
+    "keywords": "",
+    "abstract_candidate": ""
+  },
+  "field_audit": {
+    "title": {
+      "expected": true,
+      "populated": true,
+      "source": "title_line",
+      "source_headings": [],
+      "char_count": 28,
+      "preview": "Toy Plastid Claim Manuscript",
+      "text": "Toy Plastid Claim Manuscript"
+    },
+    "authors": {
+      "expected": true,
+      "populated": true,
+      "source": "front_matter",
+      "source_headings": [],
+      "char_count": 34,
+      "preview": "Bikash Example and Crysten Curator",
+      "text": "Bikash Example and Crysten Curator"
+    },
+    "affiliations": {
+      "expected": false,
+      "populated": false,
+      "source": "front_matter",
+      "source_headings": [],
+      "char_count": 0,
+      "preview": "",
+      "text": ""
+    },
+    "abstract": {
+      "expected": true,
+      "populated": true,
+      "source": "section",
+      "source_headings": [
+        "Abstract"
+      ],
+      "char_count": 203,
+      "preview": "Toy algae grown under blue light accumulated more plastid pigment than matched dark controls. The observation supports the claim that blue light increases plastid pigment accumulation in this toy system.",
+      "text": "Toy algae grown under blue light accumulated more plastid pigment than matched dark controls. The observation supports the claim that blue light increases plastid pigment accumulation in this toy system."
+    },
+    "methods": {
+      "expected": true,
+      "populated": true,
+      "source": "section_run",
+      "source_headings": [
+        "Methods"
+      ],
+      "char_count": 137,
+      "preview": "## Methods\n\nTwo toy algal cultures were grown for 24 hours. One culture received blue light and the matched control was kept in darkness.",
+      "text": "## Methods\n\nTwo toy algal cultures were grown for 24 hours. One culture received blue light and the matched control was kept in darkness."
+    },
+    "main": {
+      "expected": true,
+      "populated": true,
+      "source": "section_runs",
+      "source_headings": [
+        "Results",
+        "Discussion"
+      ],
+      "char_count": 322,
+      "preview": "## Results\n\nBlue-light cultures measured 2.1 absorbance units of plastid pigment, while dark controls measured 1.0 absorbance unit.\n\n## Discussion\n\nThese data suggest that blue light increases plastid pigment accumulation in the toy algal system. A larger replicate series would be needed to estimate the effect precisely.",
+      "text": "## Results\n\nBlue-light cultures measured 2.1 absorbance units of plastid pigment, while dark controls measured 1.0 absorbance unit.\n\n## Discussion\n\nThese data suggest that blue light increases plastid pigment accumulation in the toy algal system. A larger replicate series would be needed to estimate the effect precisely."
+    },
+    "figure_legends": {
+      "expected": false,
+      "populated": false,
+      "source": "caption_scan",
+      "source_headings": [],
+      "count": 0,
+      "preview": [],
+      "entries": []
+    },
+    "figure_interpretation": {
+      "expected": false,
+      "populated": false,
+      "source": "figure_review_required",
+      "source_headings": [],
+      "char_count": 0,
+      "preview": "",
+      "text": ""
+    },
+    "references": {
+      "expected": false,
+      "populated": false,
+      "source": "section_run",
+      "source_headings": [],
+      "count": 0,
+      "preview": [],
+      "entries": []
+    }
+  },
+  "expected_fields": [
+    "title",
+    "authors",
+    "abstract",
+    "methods",
+    "main"
+  ],
+  "missing_expected_fields": []
+}

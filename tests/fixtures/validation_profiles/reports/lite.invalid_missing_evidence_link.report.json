@@ -1,0 +1,35 @@
+{
+  "ok": false,
+  "profile": "lite",
+  "strictness_profile": "lite",
+  "profile_modules": [
+    "core"
+  ],
+  "validator_version": "1.0.0",
+  "extraction_json": "../lite.invalid_missing_evidence_link.json",
+  "inputs": {
+    "extraction": {
+      "path": "../lite.invalid_missing_evidence_link.json",
+      "sha256": "abb7b1b0baec34197454c3fc456107f3e960ec37f0905419f3318cb529d21b73",
+      "size_bytes": 2519
+    }
+  },
+  "errors": [
+    "object=evidence_links; field=evidence_links; reason=LinkML-derived schema violation: [] should be non-empty; suggested_fix=Conform the artifact to skills/csag-extraction/assets/csag.yaml."
+  ],
+  "structured_errors": [
+    {
+      "object_id": "evidence_links",
+      "field_path": "evidence_links",
+      "reason": "LinkML-derived schema violation: [] should be non-empty",
+      "suggested_fix": "Conform the artifact to skills/csag-extraction/assets/csag.yaml.",
+      "code": "linkml_derived_schema_violation_should_be_non_empty"
+    }
+  ],
+  "error_summary": {
+    "linkml_derived_schema_violation_should_be_non_empty": 1
+  },
+  "warnings": [],
+  "repair_actions": [],
+  "metrics": {}
+}

@@ -1,0 +1,25 @@
+{
+  "id": "csag:scoring_schema/toy_invalid_missing_disagreement",
+  "weights": {
+    "assertion_text": 0.4,
+    "evidence_polarity": 0.4,
+    "context": 0.1,
+    "grounding": 0.1
+  },
+  "false_positive_penalty": 0.1,
+  "allowed_equivalent_formulations": [
+    {
+      "assertion": "csag:assertion/csag:doc/toy_plastid_claim/A0002",
+      "equivalent_text": "Blue light raises plastid pigment accumulation in toy algae."
+    }
+  ],
+  "partial_credit": {
+    "missing_evidence": "Lose evidence_polarity credit for the affected assertion.",
+    "unsupported_claim": "False positive assertions subtract the configured penalty.",
+    "wrong_polarity": "Lose evidence_polarity credit for the affected assertion.",
+    "missing_context": "Lose context credit for the affected assertion.",
+    "missing_grounding": "Lose grounding credit for the affected assertion.",
+    "hallucinated_assertions": "Assertions not present in the answer key are listed as false positives and subtract the configured penalty."
+  },
+  "expert_disagreement_note": ""
+}

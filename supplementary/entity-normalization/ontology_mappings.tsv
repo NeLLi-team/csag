@@ -1,0 +1,24 @@
+entity_category	biolink_class	preferred_namespaces	fallback_namespaces	notes
+organism	biolink:OrganismTaxon	NCBITaxon	GTDB|csag.local	Use NCBI Taxonomy for named taxa; GTDB may supplement microbial genome taxonomy.
+strain	biolink:OrganismTaxon	NCBITaxon	GTDB|csag.local	Use strain-level taxonomy when resolvable.
+gene	biolink:Gene	NCBIGene|HGNC|Ensembl	MGI|RGD|csag.local	Use organism-appropriate gene authority.
+transcript	biolink:Transcript	Ensembl|NCBIGene	csag.local	Use transcript IDs only when the manuscript supports transcript-level identity.
+protein	biolink:Protein	UniProtKB|PR	csag.local	Use local CURIEs for novel author-named proteins not yet represented externally.
+variant	biolink:SequenceVariant	dbSNP|ClinVar|HGVS|SO	csag.local	Prefer HGVS or accession-backed variant identifiers when dbSNP/ClinVar is absent.
+disease	biolink:Disease	MONDO	DOID|OMIM|Orphanet|MeSH|UMLS	MONDO first; keep other disease resources as xrefs.
+phenotype	biolink:PhenotypicFeature	HP	MP|PATO	Use organism-specific phenotype ontologies where appropriate.
+cell_type	biolink:Cell	CL	csag.local	Use CL for cell types.
+tissue	biolink:AnatomicalEntity	UBERON	FMA|BTO	Use UBERON for cross-species anatomy.
+anatomical_structure	biolink:AnatomicalEntity	UBERON	FMA|BTO	Use UBERON for cross-species anatomy.
+biological_process	biolink:BiologicalProcess	GO	csag.local	Use GO biological process terms.
+molecular_function	biolink:MolecularActivity	GO	csag.local	Use GO molecular function terms.
+cellular_component	biolink:CellularComponent	GO	csag.local	Use GO cellular component terms.
+chemical	biolink:ChemicalEntity	CHEBI|PubChem|ChEMBL	DrugBank|HMDB|csag.local	Use ChEBI for ontology alignment and PubChem/ChEMBL for database identifiers.
+drug	biolink:Drug	CHEBI|ChEMBL|DrugBank	PubChem|csag.local	Use DrugBank or ChEMBL when pharmacological identity matters.
+metabolite	biolink:ChemicalEntity	CHEBI|HMDB	PubChem|csag.local	Use HMDB as metabolomics-specific xref.
+pathway	biolink:Pathway	Reactome|WikiPathways	KEGG|csag.local	Use Reactome/WikiPathways for open pathway references.
+assay	biolink:Procedure	OBI|EFO	NCIT|csag.local	Use OBI/EFO for assays and experimental procedures.
+method	biolink:Procedure	OBI|EDAM|EFO	NCIT|csag.local	Use EDAM for computational biology methods.
+environment	biolink:EnvironmentalFeature	ENVO	csag.local	Use ENVO for environmental context.
+dataset	biolink:Dataset	csag.local		CSAG dataset objects may carry repository-specific accessions separately.
+other	biolink:NamedThing	csag.local		Fallback for supported source terms without a stable external class.

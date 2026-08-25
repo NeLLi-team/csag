@@ -1,0 +1,24 @@
+{
+  "id": "examples/toy",
+  "title": "Toy Plastid Claim Manuscript",
+  "source_record_url": "local:examples/toy/toy.md",
+  "origin": "Synthetic minimal manuscript for documentation, tests, and quickstart checks.",
+  "license": "BSD 3-Clause License",
+  "license_url": "https://opensource.org/license/bsd-3-clause",
+  "license_evidence_url": "local:LICENSE",
+  "included_sources": [
+    "toy.md",
+    "toy_measurements.tsv"
+  ],
+  "included_sidecars": [
+    "toy.section_audit.json",
+    "toy.article.json"
+  ],
+  "included_outputs": [
+    "paper_extraction.json",
+    "paper_extraction.validation.json",
+    "paper_extraction.quality.json"
+  ],
+  "validation_profile": "paper_local",
+  "interpretation": "The example represents a simple treatment-control claim in which blue-light cultures show higher plastid pigment absorbance than dark controls."
+}

@@ -1,0 +1,1049 @@
+{
+  "extraction_id": "doi:10.3233/DS-210053",
+  "title": "Packaging research artefacts with RO-Crate",
+  "doi": "10.3233/DS-210053",
+  "pmid": null,
+  "counts": {
+    "artifacts": 5,
+    "datasets": 2,
+    "entities": 9,
+    "studies": 0,
+    "experiments": 0,
+    "assertions": 12,
+    "evidence_items": 11,
+    "evidence_links": 16,
+    "inferences": 2,
+    "assertion_relations": 2,
+    "critiques": 2,
+    "knowledge_gaps": 3,
+    "qa_items": 6,
+    "research_states": 0,
+    "next_actions": 0,
+    "executions": 0
+  },
+  "distributions": {
+    "claim_role": {
+      "background": 0,
+      "hypothesis": 0,
+      "research_question": 1,
+      "objective": 1,
+      "method_claim": 1,
+      "result_claim": 4,
+      "conclusion": 2,
+      "discovery": 0,
+      "speculation": 0,
+      "limitation": 2,
+      "future_work": 1
+    },
+    "criticality": {
+      "core": 2,
+      "major": 6,
+      "supporting": 4,
+      "background": 0
+    },
+    "normalization_status": {
+      "raw": 12,
+      "partially_normalized": 0,
+      "fully_normalized": 0
+    },
+    "evidence_polarity": {
+      "supports": 15,
+      "refutes": 0,
+      "mixed": 1,
+      "inconclusive": 0
+    },
+    "evidence_strength": {
+      "very_strong": 0,
+      "strong": 8,
+      "moderate": 8,
+      "weak": 0,
+      "very_weak": 0,
+      "unknown": 0
+    },
+    "research_state": {
+      "open": 0,
+      "supported": 0,
+      "rejected": 0,
+      "mixed": 0,
+      "needs_evidence": 0,
+      "needs_replication": 0,
+      "blocked": 0,
+      "merged": 0
+    }
+  },
+  "grounding": {
+    "assertions": {
+      "with_text_spans": 12,
+      "without_text_spans": 0
+    },
+    "evidence_items": {
+      "with_text_spans": 11,
+      "without_text_spans": 0
+    },
+    "evidence_links": {
+      "with_text_spans": 0,
+      "without_text_spans": 16
+    },
+    "text_spans_by_section": {
+      "figure_caption": 4,
+      "table_caption": 2,
+      "abstract": 6,
+      "other": 18,
+      "introduction": 3,
+      "discussion": 12,
+      "conclusion": 2,
+      "supplementary": 1
+    }
+  },
+  "coverage": {
+    "assertions": 12,
+    "with_evidence_links": 10,
+    "without_evidence_links": 2,
+    "with_decisive_evidence": 10,
+    "assertions_with_context": 12,
+    "assertions_missing_context": 0,
+    "assertions_with_falsification_criteria": 11
+  },
+  "completeness": {
+    "document_scope": "full_article",
+    "requested_document_scope": "auto",
+    "source_word_count": 23473,
+    "score": 1.0,
+    "checks": [
+      {
+        "name": "objective_or_question_assertion",
+        "status": "pass",
+        "observed": 2,
+        "target": 1,
+        "reason": "hypothesis, research question, or objective assertion coverage",
+        "suggested_fix": "Add an objective/research-question assertion, or state in notes that the source lacks one."
+      },
+      {
+        "name": "result_or_conclusion_assertions",
+        "status": "pass",
+        "observed": 6,
+        "target": 2,
+        "reason": "result/conclusion claim coverage",
+        "suggested_fix": "Extract additional result or conclusion assertions from distinct manuscript sections when present."
+      },
+      {
+        "name": "evidence_items",
+        "status": "pass",
+        "observed": 11,
+        "target": 2,
+        "reason": "evidence item coverage",
+        "suggested_fix": "Add evidence items for the main analyses, observations, or cited support."
+      },
+      {
+        "name": "evidence_links",
+        "status": "pass",
+        "observed": 16,
+        "target": 2,
+        "reason": "claim-to-evidence linkage",
+        "suggested_fix": "Link each key assertion to supporting, refuting, mixed, or inconclusive evidence."
+      },
+      {
+        "name": "assertion_contexts",
+        "status": "pass",
+        "observed": 12,
+        "target": 12,
+        "reason": "every assertion needs at least one context",
+        "suggested_fix": "Attach a Context object to each assertion."
+      },
+      {
+        "name": "falsification_criteria",
+        "status": "pass",
+        "observed": 11,
+        "target": 2,
+        "reason": "core or major claims should say what would weaken them",
+        "suggested_fix": "Add falsification criteria to core and major assertions."
+      },
+      {
+        "name": "artifacts_from_captions",
+        "status": "pass",
+        "observed": 5,
+        "target": 1,
+        "reason": "figure/table captions in source should be represented as artifacts",
+        "suggested_fix": "Add Artifact objects for detected figures, tables, and supplements."
+      },
+      {
+        "name": "datasets_from_availability_signals",
+        "status": "pass",
+        "observed": 2,
+        "target": 1,
+        "reason": "data-availability or accession signals should be represented as datasets",
+        "suggested_fix": "Add Dataset objects for repository links, accessions, project IDs, and availability statements."
+      }
+    ]
+  },
+  "density": {
+    "document_scope": "full_article",
+    "requested_document_scope": "auto",
+    "source_word_count": 23473,
+    "context_count": 23,
+    "score": 1.0,
+    "checks": [
+      {
+        "name": "full_article_assertions",
+        "status": "pass",
+        "observed": 12,
+        "target": 5,
+        "strict_failure": true,
+        "reason": "Full research articles require richer extraction density than a toy/demo.",
+        "suggested_fix": "Extract objective, methods/results, conclusion, limitation, and other central claims."
+      },
+      {
+        "name": "full_article_contexts",
+        "status": "pass",
+        "observed": 23,
+        "target": 2,
+        "strict_failure": true,
+        "reason": "Full articles should include multiple contexts when claims span methods/results/discussion.",
+        "suggested_fix": "Add distinct Context objects for major claim scopes."
+      },
+      {
+        "name": "full_article_core_major_claims_with_evidence",
+        "status": "pass",
+        "observed": 8,
+        "target": 8,
+        "strict_failure": false,
+        "reason": "Every core/major claim should have at least one evidence link.",
+        "suggested_fix": "Add EvidenceLinks for each core/major assertion."
+      },
+      {
+        "name": "full_article_core_claims_with_two_evidence_links",
+        "status": "pass",
+        "observed": 2,
+        "target": 2,
+        "strict_failure": false,
+        "reason": "Core claims target at least two evidence links when source supports it.",
+        "suggested_fix": "Add a second independent EvidenceLink for core assertions when possible."
+      },
+      {
+        "name": "artifacts_from_captions",
+        "status": "pass",
+        "observed": 5,
+        "target": 1,
+        "strict_failure": true,
+        "reason": "Figure/table captions should be represented as artifacts.",
+        "suggested_fix": "Add Artifact objects for detected figures/tables."
+      },
+      {
+        "name": "datasets_from_availability_signals",
+        "status": "pass",
+        "observed": 2,
+        "target": 1,
+        "strict_failure": true,
+        "reason": "Data-availability/accession signals should be represented as datasets.",
+        "suggested_fix": "Add Dataset objects for source repository/accession signals."
+      }
+    ]
+  },
+  "conversion_quality": {
+    "overall_conversion_score": 0.963,
+    "band": "excellent",
+    "subscores": {
+      "structural_integrity": 1.0,
+      "grounding": 1.0,
+      "evidence_linkage": 0.833,
+      "density": 1.0,
+      "field_quality": 0.977,
+      "artifact_discipline": 1.0
+    },
+    "interpretation": "Measures conversion/extraction quality, not whether the source literature itself is scientifically correct."
+  },
+  "claim_readouts": [
+    {
+      "assertion_id": "csag:assertion/doi:10.3233/DS-210053/A0001",
+      "claim_role": "research_question",
+      "criticality": "major",
+      "assertion_text": "Traditional scientific articles are ambiguous, incomplete, and difficult for automated systems to process, motivating a machine-readable approach for packaging research artefacts and their metadata.",
+      "state": "supported",
+      "current_read": "Inferred from 1 evidence link(s): supported.",
+      "evidence_for": [
+        {
+          "evidence_link_id": "csag:elink/doi:10.3233/DS-210053/L0001",
+          "evidence_item": "csag:evidence/doi:10.3233/DS-210053/E0001",
+          "strength": "moderate",
+          "rationale": "Authors' own framing in the Introduction directly motivates the need addressed by RO-Crate.",
+          "evidence_text": "Authors state that experience with prior bundling/packaging approaches showed greater emphasis on artefact interconnection was needed and that previous Research Object implementations require a large technology stack inaccessible to typical users.",
+          "associated_artifacts": [],
+          "results": []
+        }
+      ],
+      "evidence_against": [],
+      "mixed_or_inconclusive": [],
+      "next_actions": [],
+      "research_state_records": []
+    },
+    {
+      "assertion_id": "csag:assertion/doi:10.3233/DS-210053/A0002",
+      "claim_role": "objective",
+      "criticality": "core",
+      "assertion_text": "RO-Crate is introduced as an open, community-driven, lightweight approach to packaging research artefacts and their metadata in a machine-readable manner using Schema.org annotations in JSON-LD.",
+      "state": "supported",
+      "current_read": "Inferred from 2 evidence link(s): supported.",
+      "evidence_for": [
+        {
+          "evidence_link_id": "csag:elink/doi:10.3233/DS-210053/L0011",
+          "evidence_item": "csag:evidence/doi:10.3233/DS-210053/E0009",
+          "strength": "moderate",
+          "rationale": "Comparison with prior Wf4Ever RO model motivates RO-Crate's simpler positioning that the abstract states.",
+          "evidence_text": "Prior Research Object framework (Wf4Ever) is cited as harder to adopt due to its reliance on multiple overlapping vocabularies and Semantic Web development choices, motivating the simpler RO-Crate approach.",
+          "associated_artifacts": [],
+          "results": []
+        },
+        {
+          "evidence_link_id": "csag:elink/doi:10.3233/DS-210053/L0012",
+          "evidence_item": "csag:evidence/doi:10.3233/DS-210053/E0010",
+          "strength": "moderate",
+          "rationale": "Documented community membership and engagement supports the 'open, community-driven' framing of RO-Crate.",
+          "evidence_text": "RO-Crate community comprised more than 50 members at time of writing (October 2021), with monthly calls, Slack channel, mailing list, and engagement with EU projects (ELIXIR, EOSC-Life, FAIRplus, BY-COVID).",
+          "associated_artifacts": [],
+          "results": []
+        }
+      ],
+      "evidence_against": [],
+      "mixed_or_inconclusive": [],
+      "next_actions": [],
+      "research_state_records": []
+    },
+    {
+      "assertion_id": "csag:assertion/doi:10.3233/DS-210053/A0003",
+      "claim_role": "method_claim",
+      "criticality": "major",
+      "assertion_text": "RO-Crate is designed around four explicit principles: conceptual simplicity for developers, strong easy tooling, an opinionated guide of current best practices, and adoption of de-facto Web standards.",
+      "state": "supported",
+      "current_read": "Inferred from 1 evidence link(s): supported.",
+      "evidence_for": [
+        {
+          "evidence_link_id": "csag:elink/doi:10.3233/DS-210053/L0002",
+          "evidence_item": "csag:evidence/doi:10.3233/DS-210053/E0002",
+          "strength": "strong",
+          "rationale": "Direct enumeration of the four design principles in the text of Section 2 supports the stated principles claim.",
+          "evidence_text": "Authors explicitly state the four design principles of RO-Crate as: conceptually simple, strong easy tooling, opinionated best-practice guide, and adoption of de-facto Web standards.",
+          "associated_artifacts": [],
+          "results": []
+        }
+      ],
+      "evidence_against": [],
+      "mixed_or_inconclusive": [],
+      "next_actions": [],
+      "research_state_records": []
+    },
+    {
+      "assertion_id": "csag:assertion/doi:10.3233/DS-210053/A0004",
+      "claim_role": "result_claim",
+      "criticality": "supporting",
+      "assertion_text": "RO-Crate's underlying data structure, although conceptually a graph, is representable as a depth-limited tree, and this boundedness separates Data Entities (hasPart) from external Contextual Entities (mentions).",
+      "state": "supported",
+      "current_read": "Inferred from 1 evidence link(s): supported.",
+      "evidence_for": [
+        {
+          "evidence_link_id": "csag:elink/doi:10.3233/DS-210053/L0003",
+          "evidence_item": "csag:evidence/doi:10.3233/DS-210053/E0003",
+          "strength": "strong",
+          "rationale": "Appendix A FOL formalisation provides the analytical basis for the depth-limited tree / boundedness claim.",
+          "evidence_text": "First-Order Logic formalisation of RO-Crate in Appendix A establishes that RO-Crate is representable as a depth-limited tree with bounded structure, and supports forward-chained production rules to generate JSON-LD.",
+          "associated_artifacts": [],
+          "results": []
+        }
+      ],
+      "evidence_against": [],
+      "mixed_or_inconclusive": [],
+      "next_actions": [],
+      "research_state_records": []
+    },
+    {
+      "assertion_id": "csag:assertion/doi:10.3233/DS-210053/A0005",
+      "claim_role": "result_claim",
+      "criticality": "core",
+      "assertion_text": "RO-Crate has been adopted across diverse domains - bioinformatics workflows (WorkflowHub), regulatory science (BCO RO-Crate), cultural heritage (Modern PARADISEC), data management plans, and institutional repositories (Harvard Data Commons) - through domain-specific profiles.",
+      "state": "supported",
+      "current_read": "Inferred from 5 evidence link(s): supported.",
+      "evidence_for": [
+        {
+          "evidence_link_id": "csag:elink/doi:10.3233/DS-210053/L0006",
+          "evidence_item": "csag:evidence/doi:10.3233/DS-210053/E0005",
+          "strength": "strong",
+          "rationale": "WorkflowHub adoption is one of the principal cross-domain adoptions cited by the cross-domain-adoption claim.",
+          "evidence_text": "Documented use of RO-Crate at WorkflowHub - a cross-domain workflow registry supported by ELIXIR and EOSC-Life - including dedicated Workflow RO-Crate, Workflow Run, and Workflow Testing profiles. Co-development informed the Bioschemas ComputationalWorkflow profile.",
+          "associated_artifacts": [],
+          "results": []
+        },
+        {
+          "evidence_link_id": "csag:elink/doi:10.3233/DS-210053/L0007",
+          "evidence_item": "csag:evidence/doi:10.3233/DS-210053/E0006",
+          "strength": "strong",
+          "rationale": "BCO RO-Crate is the explicit regulatory-science use case for cross-domain adoption.",
+          "evidence_text": "BCO RO-Crate, part of the BioCompute Object user guides, defines a profile for wrapping BCO/workflow regulatory submissions inside an RO-Crate (illustrated in Fig. 3).",
+          "associated_artifacts": [
+            "csag:artifact/doi:10.3233/DS-210053/F0003"
+          ],
+          "results": []
+        },
+        {
+          "evidence_link_id": "csag:elink/doi:10.3233/DS-210053/L0009",
+          "evidence_item": "csag:evidence/doi:10.3233/DS-210053/E0007",
+          "strength": "strong",
+          "rationale": "PARADISEC is one of the digital-humanities adoption cases enumerated.",
+          "evidence_text": "Modern PARADISEC demonstrator captures more than 500,000 files documenting endangered languages in RO-Crates over OCFL, exposing them through a Web portal independent of the original platform.",
+          "associated_artifacts": [],
+          "results": []
+        },
+        {
+          "evidence_link_id": "csag:elink/doi:10.3233/DS-210053/L0010",
+          "evidence_item": "csag:evidence/doi:10.3233/DS-210053/E0008",
+          "strength": "moderate",
+          "rationale": "Harvard Data Commons adoption is a documented institutional use case for RO-Crate.",
+          "evidence_text": "Harvard Data Commons, integrating Harvard Research Computing with Harvard Dataverse (over 120K datasets, 1.3M files), is adopting RO-Crate to make multiple institutional research artefacts FAIR (illustrated in Fig. 4).",
+          "associated_artifacts": [
+            "csag:artifact/doi:10.3233/DS-210053/F0004"
+          ],
+          "results": []
+        },
+        {
+          "evidence_link_id": "csag:elink/doi:10.3233/DS-210053/L0015",
+          "evidence_item": "csag:evidence/doi:10.3233/DS-210053/E0004",
+          "strength": "moderate",
+          "rationale": "Cross-language, cross-platform tool inventory demonstrates breadth of adoption underpinning the multi-domain claim.",
+          "evidence_text": "Table 1 enumerates 15+ RO-Crate tools across multiple programming languages (Python, JavaScript, Ruby, Java, PHP) and platforms, used by developers, data managers, and end users.",
+          "associated_artifacts": [
+            "csag:artifact/doi:10.3233/DS-210053/T0001"
+          ],
+          "results": []
+        }
+      ],
+      "evidence_against": [],
+      "mixed_or_inconclusive": [],
+      "next_actions": [],
+      "research_state_records": []
+    },
+    {
+      "assertion_id": "csag:assertion/doi:10.3233/DS-210053/A0006",
+      "claim_role": "result_claim",
+      "criticality": "major",
+      "assertion_text": "WorkflowHub adopted RO-Crate as the packaging mechanism for cross-domain workflows, marking up workflow language and constituent files, and this co-development helped shape both the Bioschemas Computational Workflow profile and the RO-Crate 1.1 workflows specification.",
+      "state": "supported",
+      "current_read": "Inferred from 1 evidence link(s): supported.",
+      "evidence_for": [
+        {
+          "evidence_link_id": "csag:elink/doi:10.3233/DS-210053/L0005",
+          "evidence_item": "csag:evidence/doi:10.3233/DS-210053/E0005",
+          "strength": "strong",
+          "rationale": "Section 4.1 details WorkflowHub's adoption and the co-development with Bioschemas, directly supporting the assertion.",
+          "evidence_text": "Documented use of RO-Crate at WorkflowHub - a cross-domain workflow registry supported by ELIXIR and EOSC-Life - including dedicated Workflow RO-Crate, Workflow Run, and Workflow Testing profiles. Co-development informed the Bioschemas ComputationalWorkflow profile.",
+          "associated_artifacts": [],
+          "results": []
+        }
+      ],
+      "evidence_against": [],
+      "mixed_or_inconclusive": [],
+      "next_actions": [],
+      "research_state_records": []
+    },
+    {
+      "assertion_id": "csag:assertion/doi:10.3233/DS-210053/A0007",
+      "claim_role": "result_claim",
+      "criticality": "major",
+      "assertion_text": "The Modern PARADISEC demonstrator uses RO-Crate to capture metadata of more than 500,000 endangered-language items in a portable, platform-independent way that supports long-term preservation and SPARQL-queryable corpora.",
+      "state": "supported",
+      "current_read": "Inferred from 1 evidence link(s): supported.",
+      "evidence_for": [
+        {
+          "evidence_link_id": "csag:elink/doi:10.3233/DS-210053/L0008",
+          "evidence_item": "csag:evidence/doi:10.3233/DS-210053/E0007",
+          "strength": "strong",
+          "rationale": "The PARADISEC scale numbers and reuse pattern directly support the cultural-heritage adoption claim.",
+          "evidence_text": "Modern PARADISEC demonstrator captures more than 500,000 files documenting endangered languages in RO-Crates over OCFL, exposing them through a Web portal independent of the original platform.",
+          "associated_artifacts": [],
+          "results": []
+        }
+      ],
+      "evidence_against": [],
+      "mixed_or_inconclusive": [],
+      "next_actions": [],
+      "research_state_records": []
+    },
+    {
+      "assertion_id": "csag:assertion/doi:10.3233/DS-210053/A0008",
+      "claim_role": "conclusion",
+      "criticality": "major",
+      "assertion_text": "RO-Crate can serve as a Metadata FDO and provide a predictable, extensible serialisation of structured metadata for FAIR Digital Object ecosystems.",
+      "state": "mixed",
+      "current_read": "Inferred from 2 evidence link(s): mixed.",
+      "evidence_for": [
+        {
+          "evidence_link_id": "csag:elink/doi:10.3233/DS-210053/L0013",
+          "evidence_item": "csag:evidence/doi:10.3233/DS-210053/E0011",
+          "strength": "moderate",
+          "rationale": "Authors explicitly argue RO-Crate fits within FDO ecosystems while noting FDO's broader requirements.",
+          "evidence_text": "Authors note that the goal of FDO is broader than RO-Crate, requiring PIDs for every element and active operations, but argue a FAIR-profiled RO-Crate fits within an FDO ecosystem.",
+          "associated_artifacts": [],
+          "results": []
+        }
+      ],
+      "evidence_against": [],
+      "mixed_or_inconclusive": [
+        {
+          "evidence_link_id": "csag:elink/doi:10.3233/DS-210053/L0014",
+          "evidence_item": "csag:evidence/doi:10.3233/DS-210053/E0011",
+          "strength": "moderate",
+          "rationale": "While FDO compatibility is argued, the authors acknowledge that the FDO goal is broader, qualifying any strong RO-Crate-as-Metadata-FDO claim.",
+          "evidence_text": "Authors note that the goal of FDO is broader than RO-Crate, requiring PIDs for every element and active operations, but argue a FAIR-profiled RO-Crate fits within an FDO ecosystem.",
+          "associated_artifacts": [],
+          "results": []
+        }
+      ],
+      "next_actions": [],
+      "research_state_records": []
+    },
+    {
+      "assertion_id": "csag:assertion/doi:10.3233/DS-210053/A0009",
+      "claim_role": "conclusion",
+      "criticality": "major",
+      "assertion_text": "RO-Crate is not merely a packaging container but functions as a multimodal scholarly knowledge graph that helps FAIRify and combine metadata of existing resources.",
+      "state": "supported",
+      "current_read": "Inferred from 1 evidence link(s): supported.",
+      "evidence_for": [
+        {
+          "evidence_link_id": "csag:elink/doi:10.3233/DS-210053/L0016",
+          "evidence_item": "csag:evidence/doi:10.3233/DS-210053/E0002",
+          "strength": "moderate",
+          "rationale": "The Linked-Data and Schema.org-based design enumerated in the principles underpins the 'knowledge graph' conclusion.",
+          "evidence_text": "Authors explicitly state the four design principles of RO-Crate as: conceptually simple, strong easy tooling, opinionated best-practice guide, and adoption of de-facto Web standards.",
+          "associated_artifacts": [],
+          "results": []
+        }
+      ],
+      "evidence_against": [],
+      "mixed_or_inconclusive": [],
+      "next_actions": [],
+      "research_state_records": []
+    },
+    {
+      "assertion_id": "csag:assertion/doi:10.3233/DS-210053/A0010",
+      "claim_role": "limitation",
+      "criticality": "supporting",
+      "assertion_text": "There is an unresolved tradeoff between flexibility (richness/applicability) and strictness (ease of producing and consuming) of metadata models, and RO-Crate addresses this by combining a flexible core with domain-specific profiles.",
+      "state": "needs_evidence",
+      "current_read": "No evidence link is attached; the claim needs evidence.",
+      "evidence_for": [],
+      "evidence_against": [],
+      "mixed_or_inconclusive": [],
+      "next_actions": [],
+      "research_state_records": []
+    },
+    {
+      "assertion_id": "csag:assertion/doi:10.3233/DS-210053/A0011",
+      "claim_role": "limitation",
+      "criticality": "supporting",
+      "assertion_text": "Most current RO-Crate tools are still in Beta (or earlier) stages, but their maturity is increasing now that the RO-Crate 1.1 specification has stabilised.",
+      "state": "supported",
+      "current_read": "Inferred from 1 evidence link(s): supported.",
+      "evidence_for": [
+        {
+          "evidence_link_id": "csag:elink/doi:10.3233/DS-210053/L0004",
+          "evidence_item": "csag:evidence/doi:10.3233/DS-210053/E0004",
+          "strength": "strong",
+          "rationale": "Table 1 lists the tool inventory and statuses that ground the claim that most tools are still in Beta.",
+          "evidence_text": "Table 1 enumerates 15+ RO-Crate tools across multiple programming languages (Python, JavaScript, Ruby, Java, PHP) and platforms, used by developers, data managers, and end users.",
+          "associated_artifacts": [
+            "csag:artifact/doi:10.3233/DS-210053/T0001"
+          ],
+          "results": []
+        }
+      ],
+      "evidence_against": [],
+      "mixed_or_inconclusive": [],
+      "next_actions": [],
+      "research_state_records": []
+    },
+    {
+      "assertion_id": "csag:assertion/doi:10.3233/DS-210053/A0012",
+      "claim_role": "future_work",
+      "criticality": "supporting",
+      "assertion_text": "Future RO-Crate work, governed by the community, will include profile formalisation in version 1.2, training material, exploration of new entity types (workflow runs, containers, software packages), and alignment with related efforts (CodeMeta, Science-on-Schema.org, FDO).",
+      "state": "needs_evidence",
+      "current_read": "No evidence link is attached; the claim needs evidence.",
+      "evidence_for": [],
+      "evidence_against": [],
+      "mixed_or_inconclusive": [],
+      "next_actions": [],
+      "research_state_records": []
+    }
+  ],
+  "artifact_discipline": {
+    "empirical_evidence_items": 7,
+    "with_durable_output": 7,
+    "score": 1.0,
+    "checks": []
+  },
+  "literature_quality": {
+    "source": "none",
+    "available": false,
+    "summary": "No OpenAlex work metadata supplied.",
+    "metrics": {},
+    "signals": []
+  },
+  "missing_or_weak": [
+    {
+      "category": "field_quality",
+      "severity": "warning",
+      "field": "assertions",
+      "reason": "missing recommended fields: {'falsification_criteria': 1}",
+      "suggested_fix": "Improve grounding, criticality, rationale, and provenance fields where the manuscript supports them."
+    },
+    {
+      "category": "field_quality",
+      "severity": "warning",
+      "field": "evidence_links",
+      "reason": "missing recommended fields: {'text_spans': 16}",
+      "suggested_fix": "Improve grounding, criticality, rationale, and provenance fields where the manuscript supports them."
+    },
+    {
+      "category": "field_quality",
+      "severity": "warning",
+      "field": "datasets",
+      "reason": "missing recommended fields: {'accession': 1}",
+      "suggested_fix": "Improve grounding, criticality, rationale, and provenance fields where the manuscript supports them."
+    }
+  ],
+  "field_quality": {
+    "overall_field_completeness_score": 0.977,
+    "missing_required_field_count": 0,
+    "missing_recommended_field_count": 18,
+    "weak_text_values": [],
+    "collections": {
+      "assertions": {
+        "object_count": 12,
+        "required_fields": [
+          "id",
+          "assertion_text",
+          "claim_role",
+          "normalization_status",
+          "contexts"
+        ],
+        "recommended_fields": [
+          "assertion_type",
+          "criticality",
+          "falsification_criteria",
+          "text_spans"
+        ],
+        "missing_required_by_field": {},
+        "missing_recommended_by_field": {
+          "falsification_criteria": 1
+        },
+        "objects_with_missing_required": [],
+        "objects_with_missing_recommended": [
+          {
+            "id": "csag:assertion/doi:10.3233/DS-210053/A0012",
+            "missing_required": [],
+            "missing_recommended": [
+              "falsification_criteria"
+            ]
+          }
+        ],
+        "field_completeness_score": 0.995
+      },
+      "evidence_items": {
+        "object_count": 11,
+        "required_fields": [
+          "id",
+          "evidence_type"
+        ],
+        "recommended_fields": [
+          "evidence_text",
+          "contexts",
+          "text_spans"
+        ],
+        "missing_required_by_field": {},
+        "missing_recommended_by_field": {},
+        "objects_with_missing_required": [],
+        "objects_with_missing_recommended": [],
+        "field_completeness_score": 1.0
+      },
+      "evidence_links": {
+        "object_count": 16,
+        "required_fields": [
+          "id",
+          "evidence_item",
+          "assertion",
+          "polarity"
+        ],
+        "recommended_fields": [
+          "strength",
+          "rationale",
+          "text_spans"
+        ],
+        "missing_required_by_field": {},
+        "missing_recommended_by_field": {
+          "text_spans": 16
+        },
+        "objects_with_missing_required": [],
+        "objects_with_missing_recommended": [
+          {
+            "id": "csag:elink/doi:10.3233/DS-210053/L0001",
+            "missing_required": [],
+            "missing_recommended": [
+              "text_spans"
+            ]
+          },
+          {
+            "id": "csag:elink/doi:10.3233/DS-210053/L0002",
+            "missing_required": [],
+            "missing_recommended": [
+              "text_spans"
+            ]
+          },
+          {
+            "id": "csag:elink/doi:10.3233/DS-210053/L0003",
+            "missing_required": [],
+            "missing_recommended": [
+              "text_spans"
+            ]
+          },
+          {
+            "id": "csag:elink/doi:10.3233/DS-210053/L0004",
+            "missing_required": [],
+            "missing_recommended": [
+              "text_spans"
+            ]
+          },
+          {
+            "id": "csag:elink/doi:10.3233/DS-210053/L0005",
+            "missing_required": [],
+            "missing_recommended": [
+              "text_spans"
+            ]
+          },
+          {
+            "id": "csag:elink/doi:10.3233/DS-210053/L0006",
+            "missing_required": [],
+            "missing_recommended": [
+              "text_spans"
+            ]
+          },
+          {
+            "id": "csag:elink/doi:10.3233/DS-210053/L0007",
+            "missing_required": [],
+            "missing_recommended": [
+              "text_spans"
+            ]
+          },
+          {
+            "id": "csag:elink/doi:10.3233/DS-210053/L0008",
+            "missing_required": [],
+            "missing_recommended": [
+              "text_spans"
+            ]
+          },
+          {
+            "id": "csag:elink/doi:10.3233/DS-210053/L0009",
+            "missing_required": [],
+            "missing_recommended": [
+              "text_spans"
+            ]
+          },
+          {
+            "id": "csag:elink/doi:10.3233/DS-210053/L0010",
+            "missing_required": [],
+            "missing_recommended": [
+              "text_spans"
+            ]
+          },
+          {
+            "id": "csag:elink/doi:10.3233/DS-210053/L0011",
+            "missing_required": [],
+            "missing_recommended": [
+              "text_spans"
+            ]
+          },
+          {
+            "id": "csag:elink/doi:10.3233/DS-210053/L0012",
+            "missing_required": [],
+            "missing_recommended": [
+              "text_spans"
+            ]
+          },
+          {
+            "id": "csag:elink/doi:10.3233/DS-210053/L0013",
+            "missing_required": [],
+            "missing_recommended": [
+              "text_spans"
+            ]
+          },
+          {
+            "id": "csag:elink/doi:10.3233/DS-210053/L0014",
+            "missing_required": [],
+            "missing_recommended": [
+              "text_spans"
+            ]
+          },
+          {
+            "id": "csag:elink/doi:10.3233/DS-210053/L0015",
+            "missing_required": [],
+            "missing_recommended": [
+              "text_spans"
+            ]
+          },
+          {
+            "id": "csag:elink/doi:10.3233/DS-210053/L0016",
+            "missing_required": [],
+            "missing_recommended": [
+              "text_spans"
+            ]
+          }
+        ],
+        "field_completeness_score": 0.929
+      },
+      "inferences": {
+        "object_count": 2,
+        "required_fields": [
+          "id",
+          "output_assertion",
+          "inference_method"
+        ],
+        "recommended_fields": [
+          "input_assertions",
+          "input_evidence_links",
+          "inference_rationale",
+          "text_spans"
+        ],
+        "missing_required_by_field": {},
+        "missing_recommended_by_field": {},
+        "objects_with_missing_required": [],
+        "objects_with_missing_recommended": [],
+        "field_completeness_score": 1.0
+      },
+      "critiques": {
+        "object_count": 2,
+        "required_fields": [
+          "id"
+        ],
+        "recommended_fields": [
+          "critique_type",
+          "risk_domain",
+          "severity",
+          "impacted_assertions",
+          "text_spans"
+        ],
+        "missing_required_by_field": {},
+        "missing_recommended_by_field": {},
+        "objects_with_missing_required": [],
+        "objects_with_missing_recommended": [],
+        "field_completeness_score": 1.0
+      },
+      "knowledge_gaps": {
+        "object_count": 3,
+        "required_fields": [
+          "id"
+        ],
+        "recommended_fields": [
+          "gap_type",
+          "severity",
+          "related_assertions",
+          "suggested_actions",
+          "text_spans"
+        ],
+        "missing_required_by_field": {},
+        "missing_recommended_by_field": {},
+        "objects_with_missing_required": [],
+        "objects_with_missing_recommended": [],
+        "field_completeness_score": 1.0
+      },
+      "artifacts": {
+        "object_count": 5,
+        "required_fields": [
+          "id",
+          "artifact_type",
+          "artifact_label"
+        ],
+        "recommended_fields": [
+          "caption",
+          "text_spans"
+        ],
+        "missing_required_by_field": {},
+        "missing_recommended_by_field": {},
+        "objects_with_missing_required": [],
+        "objects_with_missing_recommended": [],
+        "field_completeness_score": 1.0
+      },
+      "datasets": {
+        "object_count": 2,
+        "required_fields": [
+          "id"
+        ],
+        "recommended_fields": [
+          "accession",
+          "repository",
+          "dataset_url",
+          "text_spans"
+        ],
+        "missing_required_by_field": {},
+        "missing_recommended_by_field": {
+          "accession": 1
+        },
+        "objects_with_missing_required": [],
+        "objects_with_missing_recommended": [
+          {
+            "id": "csag:dataset/doi:10.3233/DS-210053/D0002",
+            "missing_required": [],
+            "missing_recommended": [
+              "accession"
+            ]
+          }
+        ],
+        "field_completeness_score": 0.95
+      },
+      "qa_items": {
+        "object_count": 6,
+        "required_fields": [
+          "id",
+          "question_text",
+          "expected_answer_type",
+          "answers"
+        ],
+        "recommended_fields": [
+          "query_assertion",
+          "normalized_query"
+        ],
+        "missing_required_by_field": {},
+        "missing_recommended_by_field": {},
+        "objects_with_missing_required": [],
+        "objects_with_missing_recommended": [],
+        "field_completeness_score": 1.0
+      },
+      "research_states": {
+        "object_count": 0,
+        "required_fields": [
+          "id",
+          "state"
+        ],
+        "recommended_fields": [
+          "target_assertions",
+          "current_read",
+          "rationale",
+          "recommended_next_actions"
+        ],
+        "missing_required_by_field": {},
+        "missing_recommended_by_field": {},
+        "objects_with_missing_required": [],
+        "objects_with_missing_recommended": [],
+        "field_completeness_score": 1.0
+      },
+      "next_actions": {
+        "object_count": 0,
+        "required_fields": [
+          "id",
+          "action_type",
+          "description"
+        ],
+        "recommended_fields": [
+          "target_assertions",
+          "target_knowledge_gaps",
+          "priority"
+        ],
+        "missing_required_by_field": {},
+        "missing_recommended_by_field": {},
+        "objects_with_missing_required": [],
+        "objects_with_missing_recommended": [],
+        "field_completeness_score": 1.0
+      },
+      "executions": {
+        "object_count": 0,
+        "required_fields": [
+          "id",
+          "execution_type",
+          "execution_status"
+        ],
+        "recommended_fields": [
+          "command",
+          "output_artifacts",
+          "generated_evidence_items",
+          "tested_assertions"
+        ],
+        "missing_required_by_field": {},
+        "missing_recommended_by_field": {},
+        "objects_with_missing_required": [],
+        "objects_with_missing_recommended": [],
+        "field_completeness_score": 1.0
+      }
+    }
+  },
+  "source_signals": {
+    "figure_or_table_caption_present": true,
+    "dataset_signal_present": true
+  },
+  "structural_issues": {
+    "evidence_links_with_unknown_assertion": 0,
+    "evidence_links_with_unknown_evidence_item": 0
+  },
+  "section_word_counts": {
+    "_preamble": 662,
+    "1. Introduction": 536,
+    "2. RO-Crate": 432,
+    "2.1. Development methodology": 268,
+    "2.2. Conceptual definition": 225,
+    "2.2.1. Linked Data as a foundation": 346,
+    "2.2.2. RO-Crate is a self-described container": 374,
+    "2.2.3. Data entities are described using contextual entities": 539,
+    "2.2.4. Guide through recommended practices": 186,
+    "2.2.5. Ensuring simplicity": 272,
+    "2.2.6. Extensibility and RO-Crate profiles": 465,
+    "2.3. Technical implementation of the RO-Crate model": 156,
+    "2.3.1. RO-Crate JSON-LD": 550,
+    "2.3.2. Flattened JSON-LD": 260,
+    "2.3.3. JSON-LD context": 382,
+    "2.4. RO-Crate community": 87,
+    "2.4.1. People": 420,
+    "2.4.2. Norms": 310,
+    "2.4.3. Open platforms": 328,
+    "3. RO-Crate tooling": 273,
+    "4. Profiles of RO-Crate in use": 1009,
+    "4.1. Bioinformatics workflows": 130,
+    "4.1.1. Profile for describing workflows": 328,
+    "4.1.2. Profile for recording workflow runs": 309,
+    "4.1.3. Profile for testing workflows": 448,
+    "4.2. Regulatory sciences": 805,
+    "4.3. Digital humanities: Cultural heritage": 322,
+    "4.4. Machine-actionable Data Management Plans": 339,
+    "4.5. Institutional data repositories \u2013 Harvard Data Commons": 663,
+    "5. Related work": 161,
+    "5.1. Bundling and packaging digital research artefacts": 548,
+    "5.2. FAIR Digital Objects": 366,
+    "5.3. Packaging workflows": 969,
+    "6. Conclusion": 241,
+    "6.1. Strictness vs flexibility": 195,
+    "7. Future work": 487,
+    "Acknowledgements": 137,
+    "Contributions": 291,
+    "Appendix A. Formalizing RO-Crate in First Order Logic": 19,
+    "A.1. Language": 164,
+    "A.2. Minimal RO-Crate": 584,
+    "A.3. Example of formalised RO-Crate": 385,
+    "A.4. Mapping to RDF with Schema.org": 528,
+    "A.5. RO-Crate 1.1 Metadata File Descriptor": 258,
+    "A.6. Forward-chained production rules for JSON-LD": 348,
+    "Appendix B. RO-Crate Community": 546,
+    "References": 5822
+  },
+  "issues": [],
+  "inputs": {
+    "extraction": {
+      "path": "paper_extraction.json",
+      "sha256": "68a1a6da6da4cd8ecb0c1c8b073a62ce8142727713efca7426cf6f276f8a7b66",
+      "size_bytes": 76607
+    },
+    "source_markdown": {
+      "path": "soilandreyes2022_rocrate.md",
+      "sha256": "7a72d93b80d86435f7a06887ecba5e698a8ea6c9ee67332854c740ed5a40d7fd",
+      "size_bytes": 152851
+    },
+    "article_json": {
+      "path": "soilandreyes2022_rocrate.article.json",
+      "sha256": "c9c5ea63643d1f6b06dda766466240e9c3bd91e6db780b18c18b49d4aabcbe6a",
+      "size_bytes": 149315
+    }
+  }
+}

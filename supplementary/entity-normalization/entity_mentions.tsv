@@ -1,0 +1,6 @@
+mention_id	csag_entity_id	document_id	section_type	start_char	end_char	exact_text	mention_type	confidence	extractor	needs_review
+csag:mention/pmid35150280/M0001	csag:entity/pmid35150280/EN0001	pmid:35150280	other	1792	2130	viractin	named_entity	0.95	csag-example-curation	true
+csag:mention/pmid35150280/M0002	csag:entity/pmid35150280/EN0002	pmid:35150280	other	1792	2130	Imitervirales	taxon	0.93	csag-example-curation	false
+csag:mention/pmid35150280/M0003	csag:entity/pmid35150280/EN0003	pmid:35150280	other	6855	7243	actin-related proteins	protein_family	0.90	csag-example-curation	true
+csag:mention/pmid35150280/M0004	csag:entity/pmid35150280/EN0004	pmid:35150280	other	18550	18939	Nucleocytoviricota	taxon	0.90	csag-example-curation	false
+csag:mention/pmid35150280/M0005	csag:entity/pmid35150280/EN0005	pmid:35150280	other	13738	14117	protoeukaryotes	taxon_concept	0.86	csag-example-curation	true

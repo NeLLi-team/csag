@@ -1,0 +1,25 @@
+{
+  "id": "examples/jamy2026",
+  "title": "Identification of a deep-branching lineage of algae using environmental plastid genomes",
+  "doi": "10.1038/s41467-025-67401-4",
+  "license": "Creative Commons Attribution 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "license_evidence_url": "local:s41467-025-67401-4.md",
+  "source_pdf": "s41467-025-67401-4.pdf",
+  "sha256": "a68eaecf7b89d4f2a29c6012c405c22da9bc096e0ac80168ffd7d05c4a008666",
+  "included_sources": [
+    "s41467-025-67401-4.pdf",
+    "s41467-025-67401-4.md"
+  ],
+  "included_sidecars": [
+    "s41467-025-67401-4.section_audit.json",
+    "s41467-025-67401-4.article.json"
+  ],
+  "included_outputs": [
+    "paper_extraction.json",
+    "paper_extraction.validation.json",
+    "paper_extraction.quality.json"
+  ],
+  "validation_profile": "paper_local",
+  "interpretation": "The CSAG captures the paper's central claim that environmental plastid genomes reveal a deep-branching plastid-bearing algal lineage from sunlit-ocean metagenomes, with supporting evidence from ptMAG recovery, phylogenomics, organelle comparisons, and environmental distribution."
+}

@@ -1,0 +1,35 @@
+{
+  "ok": false,
+  "profile": "lite",
+  "strictness_profile": "lite",
+  "profile_modules": [
+    "core"
+  ],
+  "validator_version": "1.0.0",
+  "extraction_json": "../lite.invalid_unresolved_context.json",
+  "inputs": {
+    "extraction": {
+      "path": "../lite.invalid_unresolved_context.json",
+      "sha256": "43aa7324b4d69ab6334679eae5be197fad2768696c6f3421ec9c6a965de61ffc",
+      "size_bytes": 2697
+    }
+  },
+  "errors": [
+    "object=assertions.0.contexts.0; field=assertions.0.contexts.0; reason=LinkML-derived schema violation: 'csag:context/csag:doc/lite_claim_example/MISSING' is not of type 'object'; suggested_fix=Conform the artifact to skills/csag-extraction/assets/csag.yaml."
+  ],
+  "structured_errors": [
+    {
+      "object_id": "assertions.0.contexts.0",
+      "field_path": "assertions.0.contexts.0",
+      "reason": "LinkML-derived schema violation: 'csag:context/csag:doc/lite_claim_example/MISSING' is not of type 'object'",
+      "suggested_fix": "Conform the artifact to skills/csag-extraction/assets/csag.yaml.",
+      "code": "linkml_derived_schema_violation_csag_context_csag_doc_lite_claim_example_missing"
+    }
+  ],
+  "error_summary": {
+    "linkml_derived_schema_violation_csag_context_csag_doc_lite_claim_example_missing": 1
+  },
+  "warnings": [],
+  "repair_actions": [],
+  "metrics": {}
+}

@@ -1,0 +1,6 @@
+csag_entity_id	label	entity_category	biolink_class	canonical_curie	canonical_uri	xrefs	aliases	match_type	confidence	curation_status	source_document
+csag:entity/pmid35150280/EN0001	viractin	protein	biolink:Protein	csag.local:pmid35150280.EN0001		csag.local:entity.pmid35150280/EN0001		author_label	0.95	needs_review	pmid:35150280
+csag:entity/pmid35150280/EN0002	Imitervirales	organism	biolink:OrganismTaxon	NCBITaxon:2732554	https://identifiers.org/NCBITaxon:2732554	NCBITaxon:2732554		exact	0.93	human_verified	pmid:35150280
+csag:entity/pmid35150280/EN0003	actin/actin-related proteins (ARPs)	protein	biolink:Protein	csag.local:pmid35150280.EN0003		csag.local:entity.pmid35150280/EN0003	actin-related proteins|ARPs	broad_synonym	0.90	needs_review	pmid:35150280
+csag:entity/pmid35150280/EN0004	Nucleocytoviricota	organism	biolink:OrganismTaxon	NCBITaxon:2732007	https://identifiers.org/NCBITaxon:2732007	NCBITaxon:2732007	NCLDV|nucleocytoplasmic large DNA viruses	exact	0.90	human_verified	pmid:35150280
+csag:entity/pmid35150280/EN0005	protoeukaryotes	organism	biolink:OrganismTaxon	csag.local:pmid35150280.EN0005		csag.local:entity.pmid35150280/EN0005		provisional_concept	0.86	needs_review	pmid:35150280

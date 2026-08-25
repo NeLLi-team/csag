@@ -1,0 +1,23 @@
+{
+  "id": "examples/prior-art/soilandreyes2022_rocrate",
+  "title": "Packaging research artefacts with RO-Crate",
+  "doi": "10.3233/DS-210053",
+  "source_record_url": "https://journals.sagepub.com/doi/abs/10.3233/DS-210053",
+  "license": "Creative Commons Attribution 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "license_evidence_url": "https://journals.sagepub.com/doi/abs/10.3233/DS-210053",
+  "included_sources": [
+    "soilandreyes2022_rocrate.md"
+  ],
+  "included_sidecars": [
+    "soilandreyes2022_rocrate.section_audit.json",
+    "soilandreyes2022_rocrate.article.json"
+  ],
+  "included_outputs": [
+    "paper_extraction.json",
+    "paper_extraction.validation.json",
+    "paper_extraction.quality.json"
+  ],
+  "validation_profile": "paper_local",
+  "interpretation": "The extraction records RO-Crate as a lightweight packaging approach for research artifacts, with emphasis on JSON-LD metadata, aggregation of files, and preservation-oriented provenance."
+}

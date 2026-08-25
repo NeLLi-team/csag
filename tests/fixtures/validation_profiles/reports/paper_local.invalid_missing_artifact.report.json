@@ -1,0 +1,48 @@
+{
+  "ok": false,
+  "profile": "paper_local",
+  "strictness_profile": "paper_local",
+  "profile_modules": [
+    "core"
+  ],
+  "validator_version": "1.0.0",
+  "extraction_json": "../paper_local.invalid_missing_artifact.json",
+  "inputs": {
+    "extraction": {
+      "path": "../paper_local.invalid_missing_artifact.json",
+      "sha256": "dd03766360d1807f2fea87d19f76a53dce9595ac6b2f283c4e1678496db97489",
+      "size_bytes": 9506
+    },
+    "article_json": {
+      "path": "../article_with_figure.json",
+      "sha256": "a16c11be58a485eab0a98379f59f1eb8bbcf2411f74e0ed16ae3f5b9fface06b",
+      "size_bytes": 530
+    }
+  },
+  "errors": [
+    "object=csag:doc/toy_plastid_claim; field=artifacts; reason=figure/table captions are present in the source but extraction.artifacts is empty; suggested_fix=Add Artifact entries for source figures or tables, or correct the article sidecar if captions were detected incorrectly."
+  ],
+  "structured_errors": [
+    {
+      "object_id": "csag:doc/toy_plastid_claim",
+      "field_path": "artifacts",
+      "reason": "figure/table captions are present in the source but extraction.artifacts is empty",
+      "suggested_fix": "Add Artifact entries for source figures or tables, or correct the article sidecar if captions were detected incorrectly.",
+      "code": "figure_table_captions_are_present_in_the_source_but_extraction_artifacts_is_empt"
+    }
+  ],
+  "error_summary": {
+    "figure_table_captions_are_present_in_the_source_but_extraction_artifacts_is_empt": 1
+  },
+  "warnings": [],
+  "repair_actions": [],
+  "metrics": {
+    "assertions": 2,
+    "assertions_with_criticality": 2,
+    "assertions_with_falsification_criteria": 2,
+    "evidence_items": 2,
+    "evidence_links": 2,
+    "artifacts": 0,
+    "datasets": 1
+  }
+}

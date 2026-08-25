@@ -1,0 +1,40 @@
+{
+  "id": "examples/pmid35150280",
+  "title": "Giant Viruses Encode Actin-Related Proteins",
+  "doi": "10.1093/molbev/msac022",
+  "pmid": "35150280",
+  "source_record_url": "https://pubmed.ncbi.nlm.nih.gov/35150280/",
+  "origin": "Compact biological worked example retained under examples/ for the public repository.",
+  "license": "Creative Commons Attribution-NonCommercial 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_evidence_url": "https://academic.oup.com/mbe/article/39/2/msac022/6527639",
+  "included_outputs": [
+    "paper_extraction.json",
+    "paper_extraction.validation.json",
+    "paper_extraction.quality.json"
+  ],
+  "source_sidecars": {
+    "markdown": "not distributed with this example",
+    "section_audit": "not distributed with this example",
+    "article_json": "not distributed with this example"
+  },
+  "omitted_inputs": [
+    {
+      "kind": "markdown",
+      "expected_file": "pmid35150280.md",
+      "reason": "The converted Markdown for this manuscript is not distributed with the example."
+    },
+    {
+      "kind": "section_audit",
+      "expected_file": "pmid35150280.section_audit.json",
+      "reason": "The section audit for this manuscript is not distributed with the example."
+    },
+    {
+      "kind": "article_json",
+      "expected_file": "pmid35150280.article.json",
+      "reason": "The article sidecar for this manuscript is not distributed with the example."
+    }
+  ],
+  "validation_profile": "paper_local",
+  "interpretation": "The extraction captures the paper's central claim that giant viruses encode actin-related proteins and connects that claim to comparative and phylogenetic evidence."
+}

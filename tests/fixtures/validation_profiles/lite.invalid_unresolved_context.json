@@ -1,0 +1,96 @@
+{
+  "id": "csag:doc/lite_claim_example",
+  "title": "Lite Claim Example",
+  "schema_version": "1.0.0",
+  "validator_version": "1.0.0",
+  "doi": "",
+  "pmid": "",
+  "authors": [
+    {
+      "label": "A. Curator",
+      "id": "csag:author/csag:doc/lite_claim_example/AU0001"
+    }
+  ],
+  "abstract": "Blue light increased pigment in the toy algae.",
+  "artifacts": [],
+  "datasets": [],
+  "entities": [],
+  "studies": [],
+  "assertions": [
+    {
+      "id": "csag:assertion/csag:doc/lite_claim_example/A0001",
+      "assertion_text": "Blue light increased pigment in the toy algae.",
+      "claim_role": "result_claim",
+      "normalization_status": "raw",
+      "contexts": [
+        "csag:context/csag:doc/lite_claim_example/MISSING"
+      ],
+      "text_spans": [
+        {
+          "document_id": "csag:doc/lite_claim_example",
+          "section_type": "abstract",
+          "start_char": 47,
+          "end_char": 93,
+          "exact_text": "Blue light increased pigment in the toy algae.",
+          "id": "csag:span/csag:doc/lite_claim_example/S0001"
+        }
+      ]
+    }
+  ],
+  "evidence_items": [
+    {
+      "id": "csag:evidence/csag:doc/lite_claim_example/E0001",
+      "evidence_type": "observational_data",
+      "evidence_text": "Blue-light cultures had more pigment than dark controls.",
+      "contexts": [
+        {
+          "id": "csag:context/csag:doc/lite_claim_example/C0001",
+          "label": "toy algae",
+          "context_facet": "model_system"
+        }
+      ],
+      "text_spans": [
+        {
+          "document_id": "csag:doc/lite_claim_example",
+          "section_type": "results",
+          "start_char": 107,
+          "end_char": 163,
+          "exact_text": "Blue-light cultures had more pigment than dark controls.",
+          "id": "csag:span/csag:doc/lite_claim_example/S0002"
+        }
+      ]
+    }
+  ],
+  "evidence_links": [
+    {
+      "id": "csag:elink/csag:doc/lite_claim_example/L0001",
+      "evidence_item": "csag:evidence/csag:doc/lite_claim_example/E0001",
+      "assertion": "csag:assertion/csag:doc/lite_claim_example/A0001",
+      "polarity": "supports",
+      "strength": "moderate"
+    }
+  ],
+  "inferences": [],
+  "assertion_relations": [],
+  "critiques": [],
+  "knowledge_gaps": [],
+  "qa_items": [],
+  "extraction_activities": [
+    {
+      "id": "csag:activity/csag:doc/lite_claim_example/ACT0001",
+      "activity_type": "curator lite example",
+      "tool_name": "manual",
+      "run_datetime": "2026-06-22T00:00:00Z",
+      "parameters": [
+        {
+          "key": "doi_status",
+          "value": "unresolved"
+        },
+        {
+          "key": "pmid_status",
+          "value": "unresolved"
+        }
+      ]
+    }
+  ]
+}

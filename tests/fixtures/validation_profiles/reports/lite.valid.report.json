@@ -1,0 +1,31 @@
+{
+  "ok": true,
+  "profile": "lite",
+  "strictness_profile": "lite",
+  "profile_modules": [
+    "core"
+  ],
+  "validator_version": "1.0.0",
+  "extraction_json": "../lite.valid.json",
+  "inputs": {
+    "extraction": {
+      "path": "../lite.valid.json",
+      "sha256": "20c5d489f9032495572082bb76dc696888b153f81fbcccad8b0e7ca8c0c432c4",
+      "size_bytes": 2798
+    }
+  },
+  "errors": [],
+  "structured_errors": [],
+  "error_summary": {},
+  "warnings": [],
+  "repair_actions": [],
+  "metrics": {
+    "assertions": 1,
+    "assertions_with_criticality": 0,
+    "assertions_with_falsification_criteria": 0,
+    "evidence_items": 1,
+    "evidence_links": 1,
+    "artifacts": 0,
+    "datasets": 0
+  }
+}

@@ -1,0 +1,104 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6.0.2
+      - uses: astral-sh/setup-uv@v8.1.0
+      - run: uv sync --extra local-pdf
+      - run: uv build
+      - run: uv run python scripts/check_release_metadata.py
+      - run: uv run python scripts/check_schema_artifacts.py
+      - run: uv run python scripts/check_schema_conformance.py
+      - run: uv run python scripts/check_controlled_vocabularies.py
+      - run: uv run python scripts/check_cli_docs.py
+      - run: uv run python scripts/check_doc_json_snippets.py
+      - run: uv run pytest
+      - run: uv run python scripts/check_ocr_api_job_contract.py
+      - run: uv run csag ingest examples/toy/toy.md --output-dir /tmp/csag-md-extract
+      - run: test -f /tmp/csag-md-extract/toy.md
+      - run: test -f /tmp/csag-md-extract/toy.article.json
+      - run: test -f /tmp/csag-md-extract/toy.section_audit.json
+      - run: |
+          uv run csag ingest examples/prior-art/ciccarese2013_pav_ontology/2041-1480-4-37.pdf --output-dir /tmp/csag-pdf-local --pdf-mode local
+          test -f /tmp/csag-pdf-local/2041-1480-4-37.md
+          test -f /tmp/csag-pdf-local/2041-1480-4-37.article.json
+      - run: uv run python scripts/verify_prior_art_manifest.py examples/prior-art/candidate_manifest.json
+      - run: uv run csag quickstart --output-dir /tmp/csag-quickstart
+      - run: uv run csag check-examples --examples-dir examples --report-out /tmp/check-examples.json --coverage-out /tmp/check-examples.coverage.json
+      - run: |
+          uv run csag validate examples/toy/paper_extraction.json \
+            --source-markdown examples/toy/toy.md \
+            --article-json examples/toy/toy.article.json \
+            --profile paper_local \
+            --report-out /tmp/toy.validation.json
+      - run: |
+          uv run csag report examples/toy/paper_extraction.json \
+            --source-markdown examples/toy/toy.md \
+            --report-out /tmp/toy.quality.json \
+            --strict
+      - run: uv run csag lint examples/toy/paper_extraction.json --report-out /tmp/toy.lint.json --strict
+      - run: |
+          uv run csag validate tests/fixtures/validation_profiles/promoted_claim.valid.json \
+            --profile promoted_claim \
+            --report-out /tmp/promoted.validation.json
+      - run: |
+          ! uv run csag validate tests/fixtures/validation_profiles/promoted_claim.invalid_missing_rationale.json \
+            --profile promoted_claim \
+            --report-out /tmp/invalid-promoted.validation.json
+      - run: |
+          ! uv run csag validate tests/fixtures/validation_profiles/promoted_claim.invalid_missing_curation_status.json \
+            --profile promoted_claim \
+            --report-out /tmp/invalid-promoted-curation.validation.json
+      - run: |
+          ! uv run csag validate tests/fixtures/validation_profiles/promoted_claim.invalid_missing_review_provenance.json \
+            --profile promoted_claim \
+            --report-out /tmp/invalid-promoted-provenance.validation.json
+      - run: |
+          uv run csag validate tests/fixtures/validation_profiles/benchmark_key.valid.json \
+            --profile benchmark_key \
+            --report-out /tmp/benchmark.validation.json
+      - run: |
+          ! uv run csag validate tests/fixtures/validation_profiles/paper_local.invalid_missing_context.json \
+            --profile paper_local \
+            --report-out /tmp/invalid.validation.json
+      - run: |
+          ! uv run csag validate tests/fixtures/validation_profiles/paper_local.invalid_misplaced_semantics.json \
+            --profile paper_local \
+            --report-out /tmp/invalid-semantics.validation.json
+      - run: |
+          ! uv run csag validate tests/fixtures/validation_profiles/paper_local.invalid_missing_dataset.json \
+            --source-markdown examples/toy/toy.md \
+            --article-json examples/toy/toy.article.json \
+            --profile paper_local \
+            --report-out /tmp/invalid-dataset.validation.json
+      - run: |
+          ! uv run csag validate tests/fixtures/validation_profiles/paper_local.invalid_missing_artifact.json \
+            --article-json tests/fixtures/validation_profiles/article_with_figure.json \
+            --profile paper_local \
+            --report-out /tmp/invalid-artifact.validation.json
+      - run: |
+          ! uv run csag validate tests/fixtures/validation_profiles/benchmark_key.invalid_weak_core.json \
+            --profile benchmark_key \
+            --report-out /tmp/invalid-benchmark.validation.json
+      - run: uv run python scripts/check_validation_profile_reports.py
+      - run: |
+          uv run csag export examples/toy/paper_extraction.json --format jsonld --output /tmp/toy.jsonld
+          uv run csag export examples/toy/paper_extraction.json --format graphml --output /tmp/toy.graphml
+          uv run csag export examples/toy/paper_extraction.json --format rdf --output /tmp/toy.ttl
+          uv run csag export examples/toy/paper_extraction.json --format table --output /tmp/toy.tsv
+          uv run csag export examples/toy/paper_extraction.json --format ro-crate --output /tmp/toy-ro-crate
+      - run: |
+          uv run csag score \
+            --answer-key tests/fixtures/benchmark/answer_key.hidden.json \
+            --participant tests/fixtures/benchmark/participant_output.json \
+            --scoring-schema tests/fixtures/benchmark/scoring_schema.json \
+            --report-out /tmp/scored_report.json
+      - run: uv run python scripts/check_benchmark_report.py
+      - run: uv run python scripts/collect_example_metrics.py --examples-dir examples --report-out /tmp/coverage_metrics.json
+      - run: uv run python scripts/check_example_metrics.py

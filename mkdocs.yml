@@ -1,0 +1,97 @@
+site_name: Conditional Scientific Argumentation Graphs
+site_description: Schema, tooling, examples, and benchmark summaries for CSAG artifacts.
+site_url: https://nelli-team.github.io/csag/
+repo_url: https://github.com/NeLLi-team/csag
+repo_name: NeLLi-team/csag
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.action.edit
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/github
+  font:
+    text: Inter
+    code: JetBrains Mono
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+  - Getting started:
+      - CSAG Lite: csag-lite.md
+      - Curator guide: curator-guide.md
+      - Repository layout: repository-layout.md
+      - Developer guide: developer-guide.md
+  - Specification:
+      - Schema table: schema-table.md
+      - Validation profiles: profiles.md
+      - Extraction density targets: extraction-density-targets.md
+      - Entity normalization: entity-normalization.md
+      - Agent handoff envelope: handoff-envelope.md
+      - Interoperability: interoperability.md
+      - Adjacent standards: adjacent-standards.md
+  - Evaluation:
+      - Evaluation metrics: evaluation-metrics.md
+      - Support: benchmark-support.md
+  - Release:
+      - License policy: license-policy.md
+      - Release process: release-process.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/NeLLi-team/csag

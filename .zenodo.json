@@ -1,0 +1,31 @@
+{
+  "title": "Conditional Scientific Argumentation Graphs",
+  "description": "Schema, validator, command-line tools, and worked examples for Conditional Scientific Argumentation Graphs (CSAG), a machine-readable representation of the argumentation structure of a scientific manuscript.",
+  "creators": [
+    {
+      "name": "Schulz, Frederik"
+    }
+  ],
+  "license": "bsd-3-clause",
+  "version": "1.0.0",
+  "upload_type": "software",
+  "keywords": [
+    "scientific literature",
+    "argumentation",
+    "evidence extraction",
+    "provenance",
+    "knowledge representation"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/NeLLi-team/csag",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "pending-zenodo-doi",
+      "relation": "isIdenticalTo",
+      "scheme": "doi"
+    }
+  ]
+}

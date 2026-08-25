@@ -1,0 +1,27 @@
+{
+  "id": "examples/prior-art/stocker2025_machine_readable",
+  "title": "Rethinking the production and publication of machine-readable expressions of research findings",
+  "doi": "10.1038/s41597-025-04905-0",
+  "source_record_url": "https://www.nature.com/articles/s41597-025-04905-0",
+  "license": "Creative Commons Attribution 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "license_evidence_url": "https://www.nature.com/articles/s41597-025-04905-0",
+  "source_pdf": "s41597-025-04905-0.pdf",
+  "sha256": "5f0470493b9f45e2c0eb9307a5f4cd07897c0d316685ee87a2e7be8fe06b14ab",
+  "download_url": "https://www.nature.com/articles/s41597-025-04905-0.pdf",
+  "included_sources": [
+    "s41597-025-04905-0.pdf",
+    "stocker2025_machine_readable.md"
+  ],
+  "included_sidecars": [
+    "stocker2025_machine_readable.section_audit.json",
+    "stocker2025_machine_readable.article.json"
+  ],
+  "included_outputs": [
+    "paper_extraction.json",
+    "paper_extraction.validation.json",
+    "paper_extraction.quality.json"
+  ],
+  "validation_profile": "paper_local",
+  "interpretation": "The extraction captures the article's argument that scholarly findings should be published in structured forms that remain linked to narrative articles, provenance, and community review."
+}

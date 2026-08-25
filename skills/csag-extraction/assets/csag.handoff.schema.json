@@ -1,0 +1,5721 @@
+{
+  "$defs": {
+    "Answer": {
+      "additionalProperties": false,
+      "description": "A single answer to a QA item, linked to assertions/evidence.",
+      "properties": {
+        "aliases": {
+          "description": "Alternative labels/synonyms.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "answer_boolean": {
+          "description": "Boolean answer.",
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "answer_confidence": {
+          "description": "Confidence in this answer.",
+          "maximum": 1,
+          "minimum": 0,
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "answer_entity": {
+          "description": "Entity answer (Entity id).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "answer_number": {
+          "description": "Numeric answer.",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "answer_text": {
+          "description": "Free-text answer.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "answer_type": {
+          "$ref": "#/$defs/QAAnswerType",
+          "description": "The type/shape of this answer."
+        },
+        "confidence_score": {
+          "description": "Extractor confidence (0-1).",
+          "maximum": 1,
+          "minimum": 0,
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "created_by": {
+          "description": "Actor responsible (tool URI or ORCID).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "created_on": {
+          "description": "Timestamp for object creation.",
+          "format": "date-time",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "curation_status": {
+          "$ref": "#/$defs/CurationStatus",
+          "description": "Review status for this extracted object."
+        },
+        "derived_from": {
+          "description": "Upstream objects this record was derived from.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "description": {
+          "description": "Longer free-text description.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "generated_by": {
+          "description": "Reference to an ExtractionActivity that generated this object.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "description": "Stable identifier for the object (URI/CURIE recommended).",
+          "type": "string"
+        },
+        "label": {
+          "description": "Human-friendly short label.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "notes": {
+          "description": "Curator/system notes (not intended as machine-extracted content).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "origin": {
+          "$ref": "#/$defs/Origin",
+          "description": "Whether content is explicitly author-stated or inferred."
+        },
+        "provenance": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ProvenanceRecord"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Minimal provenance record."
+        },
+        "supporting_assertions": {
+          "description": "Assertions that justify the answer.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "supporting_evidence_links": {
+          "description": "Evidence links supporting the answer.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "text_spans": {
+          "description": "Text spans grounding this object.",
+          "items": {
+            "$ref": "#/$defs/TextSpan"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "answer_type",
+        "id"
+      ],
+      "title": "Answer",
+      "type": "object"
+    },
+    "Artifact": {
+      "additionalProperties": false,
+      "description": "A figure/table/supplemental artifact referred to in the paper.",
+      "properties": {
+        "aliases": {
+          "description": "Alternative labels/synonyms.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "artifact_label": {
+          "description": "Label such as \"Figure 2\" or \"Table S1\".",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "artifact_type": {
+          "$ref": "#/$defs/ArtifactType",
+          "description": "Type of artifact (figure/table/etc)."
+        },
+        "caption": {
+          "description": "Artifact caption.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "confidence_score": {
+          "description": "Extractor confidence (0-1).",
+          "maximum": 1,
+          "minimum": 0,
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "created_by": {
+          "description": "Actor responsible (tool URI or ORCID).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "created_on": {
+          "description": "Timestamp for object creation.",
+          "format": "date-time",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "curation_status": {
+          "$ref": "#/$defs/CurationStatus",
+          "description": "Review status for this extracted object."
+        },
+        "derived_from": {
+          "description": "Upstream objects this record was derived from.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "description": {
+          "description": "Longer free-text description.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "generated_by": {
+          "description": "Reference to an ExtractionActivity that generated this object.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "description": "Stable identifier for the object (URI/CURIE recommended).",
+          "type": "string"
+        },
+        "label": {
+          "description": "Human-friendly short label.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "notes": {
+          "description": "Curator/system notes (not intended as machine-extracted content).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "origin": {
+          "$ref": "#/$defs/Origin",
+          "description": "Whether content is explicitly author-stated or inferred."
+        },
+        "provenance": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ProvenanceRecord"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Minimal provenance record."
+        },
+        "text_spans": {
+          "description": "Text spans grounding this object.",
+          "items": {
+            "$ref": "#/$defs/TextSpan"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "title": "Artifact",
+      "type": "object"
+    },
+    "ArtifactType": {
+      "description": "Artifact kinds referenced in a paper.",
+      "enum": [
+        "figure",
+        "table",
+        "supplementary",
+        "equation",
+        "protocol",
+        "code",
+        "other"
+      ],
+      "title": "ArtifactType",
+      "type": "string"
+    },
+    "Assertion": {
+      "additionalProperties": false,
+      "description": "A hypothesis/claim/result/conclusion. Optionally normalized as a triple (subject, predicate, object). CSAG rule: every Assertion has at least one Context.",
+      "properties": {
+        "aliases": {
+          "description": "Alternative labels/synonyms.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "asserted_in_study": {
+          "description": "Reference to a Study (Study id) where the assertion is posed/tested/concluded.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "assertion_text": {
+          "description": "Natural-language form of the assertion, close to author wording.",
+          "type": "string"
+        },
+        "assertion_type": {
+          "$ref": "#/$defs/AssertionType",
+          "description": "Semantic type, for example causal, mechanistic, or associative."
+        },
+        "claim_role": {
+          "$ref": "#/$defs/ClaimRole",
+          "description": "Rhetorical role of the assertion."
+        },
+        "conditions": {
+          "description": "Conditions/parameters required for an observation/claim.",
+          "items": {
+            "$ref": "#/$defs/Condition"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "confidence_score": {
+          "description": "Extractor confidence (0-1).",
+          "maximum": 1,
+          "minimum": 0,
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "contexts": {
+          "description": "Contexts under which an assertion/evidence holds.",
+          "items": {
+            "$ref": "#/$defs/Context"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "created_by": {
+          "description": "Actor responsible (tool URI or ORCID).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "created_on": {
+          "description": "Timestamp for object creation.",
+          "format": "date-time",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "criticality": {
+          "$ref": "#/$defs/AssertionCriticality",
+          "description": "Evaluation importance of the assertion for ground-truth and scoring use."
+        },
+        "curation_status": {
+          "$ref": "#/$defs/CurationStatus",
+          "description": "Review status for this extracted object."
+        },
+        "derived_from": {
+          "description": "Upstream objects this record was derived from.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "description": {
+          "description": "Longer free-text description.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "falsification_criteria": {
+          "description": "Concrete observations or analyses that would weaken, refute, or require revising the assertion.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "generated_by": {
+          "description": "Reference to an ExtractionActivity that generated this object.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "description": "Stable identifier for the object (URI/CURIE recommended).",
+          "type": "string"
+        },
+        "label": {
+          "description": "Human-friendly short label.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "normalization_status": {
+          "$ref": "#/$defs/NormalizationStatus",
+          "description": "Normalization status of the assertion triple (raw/partial/full)."
+        },
+        "notes": {
+          "description": "Curator/system notes (not intended as machine-extracted content).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "object": {
+          "description": "Entity reference (Entity id) for object of a normalized triple.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "origin": {
+          "$ref": "#/$defs/Origin",
+          "description": "Whether content is explicitly author-stated or inferred."
+        },
+        "predicate": {
+          "description": "Predicate/relation CURIE/URI (RO/SIO recommended).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "provenance": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ProvenanceRecord"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Minimal provenance record."
+        },
+        "qualifiers": {
+          "description": "Generic qualifiers that scope/condition the assertion (extra beyond Context/Condition).",
+          "items": {
+            "$ref": "#/$defs/Qualifier"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "subject": {
+          "description": "Entity reference (Entity id) for subject of a normalized triple.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "text_spans": {
+          "description": "Text spans grounding this object.",
+          "items": {
+            "$ref": "#/$defs/TextSpan"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "assertion_text",
+        "claim_role",
+        "normalization_status",
+        "contexts",
+        "id"
+      ],
+      "title": "Assertion",
+      "type": "object"
+    },
+    "AssertionCriticality": {
+      "description": "Benchmark/evaluation importance of an assertion.",
+      "enum": [
+        "core",
+        "major",
+        "supporting",
+        "background"
+      ],
+      "title": "AssertionCriticality",
+      "type": "string"
+    },
+    "AssertionRelation": {
+      "additionalProperties": false,
+      "description": "A typed edge from one Assertion to another, for example contradicts, qualifies, or replicates. This is the canonical location for contradiction/qualification to avoid duplicated semantics.",
+      "properties": {
+        "aliases": {
+          "description": "Alternative labels/synonyms.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "confidence_score": {
+          "description": "Extractor confidence (0-1).",
+          "maximum": 1,
+          "minimum": 0,
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "created_by": {
+          "description": "Actor responsible (tool URI or ORCID).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "created_on": {
+          "description": "Timestamp for object creation.",
+          "format": "date-time",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "curation_status": {
+          "$ref": "#/$defs/CurationStatus",
+          "description": "Review status for this extracted object."
+        },
+        "derived_from": {
+          "description": "Upstream objects this record was derived from.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "description": {
+          "description": "Longer free-text description.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "from_assertion": {
+          "description": "Source assertion for the relation edge.",
+          "type": "string"
+        },
+        "generated_by": {
+          "description": "Reference to an ExtractionActivity that generated this object.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "description": "Stable identifier for the object (URI/CURIE recommended).",
+          "type": "string"
+        },
+        "label": {
+          "description": "Human-friendly short label.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "notes": {
+          "description": "Curator/system notes (not intended as machine-extracted content).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "origin": {
+          "$ref": "#/$defs/Origin",
+          "description": "Whether content is explicitly author-stated or inferred."
+        },
+        "provenance": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ProvenanceRecord"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Minimal provenance record."
+        },
+        "related_work": {
+          "description": "Optional external work identifier if relating to an external claim.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "relation_rationale": {
+          "description": "Rationale for the assertion relation.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "relation_type": {
+          "$ref": "#/$defs/AssertionRelationType",
+          "description": "Type of relation between assertions."
+        },
+        "text_spans": {
+          "description": "Text spans grounding this object.",
+          "items": {
+            "$ref": "#/$defs/TextSpan"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "to_assertion": {
+          "description": "Target assertion for the relation edge.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "from_assertion",
+        "to_assertion",
+        "relation_type",
+        "id"
+      ],
+      "title": "AssertionRelation",
+      "type": "object"
+    },
+    "AssertionRelationType": {
+      "description": "Relationships between assertions (within or across papers).",
+      "enum": [
+        "same_as",
+        "contradicts",
+        "qualifies",
+        "competes_with",
+        "alternative_to",
+        "merged_into",
+        "generalizes",
+        "specializes",
+        "derived_from",
+        "replicates",
+        "other"
+      ],
+      "title": "AssertionRelationType",
+      "type": "string"
+    },
+    "AssertionType": {
+      "description": "Semantic type of an assertion.",
+      "enum": [
+        "causal",
+        "associative",
+        "mechanistic",
+        "comparative",
+        "localization",
+        "functional",
+        "descriptive",
+        "methodological",
+        "other"
+      ],
+      "title": "AssertionType",
+      "type": "string"
+    },
+    "Author": {
+      "additionalProperties": false,
+      "description": "An author of a paper.",
+      "properties": {
+        "affiliation": {
+          "description": "Author affiliation (free text).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "description": "ORCID URI is recommended when available.",
+          "type": "string"
+        },
+        "label": {
+          "description": "Human-friendly short label.",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "title": "Author",
+      "type": "object"
+    },
+    "ClaimRole": {
+      "description": "The rhetorical/functional role an assertion plays in the paper.",
+      "enum": [
+        "background",
+        "hypothesis",
+        "research_question",
+        "objective",
+        "method_claim",
+        "result_claim",
+        "conclusion",
+        "discovery",
+        "speculation",
+        "limitation",
+        "future_work"
+      ],
+      "title": "ClaimRole",
+      "type": "string"
+    },
+    "Condition": {
+      "additionalProperties": false,
+      "description": "Specific parameters/settings required for an observation/claim to hold (dose, timepoint, genotype, etc). Prefer ontology terms for parameter_type where possible; otherwise use a CSAG-local term.",
+      "properties": {
+        "aliases": {
+          "description": "Alternative labels/synonyms.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "confidence_score": {
+          "description": "Extractor confidence (0-1).",
+          "maximum": 1,
+          "minimum": 0,
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "created_by": {
+          "description": "Actor responsible (tool URI or ORCID).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "created_on": {
+          "description": "Timestamp for object creation.",
+          "format": "date-time",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "curation_status": {
+          "$ref": "#/$defs/CurationStatus",
+          "description": "Review status for this extracted object."
+        },
+        "derived_from": {
+          "description": "Upstream objects this record was derived from.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "description": {
+          "description": "Longer free-text description.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "entity_involved": {
+          "description": "Entity reference implicated by the condition, for example a drug used in a treatment.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "generated_by": {
+          "description": "Reference to an ExtractionActivity that generated this object.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "description": "Stable identifier for the object (URI/CURIE recommended).",
+          "type": "string"
+        },
+        "label": {
+          "description": "Human-friendly short label.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "logical_expression": {
+          "description": "Logical expression for complex conditions, for example \"A AND (B OR C)\".",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "notes": {
+          "description": "Curator/system notes (not intended as machine-extracted content).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "origin": {
+          "$ref": "#/$defs/Origin",
+          "description": "Whether content is explicitly author-stated or inferred."
+        },
+        "parameter_type": {
+          "description": "Ontology term or controlled CURIE describing the parameter (OBI/EFO/NCIT recommended).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "provenance": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ProvenanceRecord"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Minimal provenance record."
+        },
+        "text_spans": {
+          "description": "Text spans grounding this object.",
+          "items": {
+            "$ref": "#/$defs/TextSpan"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "value_number": {
+          "description": "Numeric value for a qualifier/condition/result.",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "value_text": {
+          "description": "Text value for a qualifier/condition/result.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "value_unit": {
+          "description": "Unit (UCUM recommended).",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "title": "Condition",
+      "type": "object"
+    },
+    "Context": {
+      "additionalProperties": false,
+      "description": "The broader biological or experimental context in which an assertion/evidence is stated. In phase 1, Context may be coarse, for example facet=unspecified with label=\"in this study\". In phase 2, populate organism/cell_type/tissue/disease_state/etc with Entity references.",
+      "properties": {
+        "additional_context_qualifiers": {
+          "description": "Additional context qualifiers (predicate/value pairs).",
+          "items": {
+            "$ref": "#/$defs/Qualifier"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "age": {
+          "description": "Age description, for example \"8-week\" or \"adult\".",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "aliases": {
+          "description": "Alternative labels/synonyms.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "cell_type": {
+          "description": "Entity reference for cell type (CL recommended).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "confidence_score": {
+          "description": "Extractor confidence (0-1).",
+          "maximum": 1,
+          "minimum": 0,
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "context_facet": {
+          "$ref": "#/$defs/ContextFacet",
+          "description": "Coarse context facet (helps early extraction)."
+        },
+        "created_by": {
+          "description": "Actor responsible (tool URI or ORCID).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "created_on": {
+          "description": "Timestamp for object creation.",
+          "format": "date-time",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "curation_status": {
+          "$ref": "#/$defs/CurationStatus",
+          "description": "Review status for this extracted object."
+        },
+        "derived_from": {
+          "description": "Upstream objects this record was derived from.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "description": {
+          "description": "Longer free-text description.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "developmental_stage": {
+          "description": "Developmental stage (free text or ontology term CURIE as string).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "disease_state": {
+          "description": "Entity reference for disease context (MONDO recommended).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "environment_description": {
+          "description": "Free text environment details not captured elsewhere.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "generated_by": {
+          "description": "Reference to an ExtractionActivity that generated this object.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "description": "Stable identifier for the object (URI/CURIE recommended).",
+          "type": "string"
+        },
+        "label": {
+          "description": "Human-friendly short label.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "notes": {
+          "description": "Curator/system notes (not intended as machine-extracted content).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "organism": {
+          "description": "Entity reference (Entity id) for organism (NCBITaxon recommended).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "origin": {
+          "$ref": "#/$defs/Origin",
+          "description": "Whether content is explicitly author-stated or inferred."
+        },
+        "provenance": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ProvenanceRecord"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Minimal provenance record."
+        },
+        "sex": {
+          "description": "Sex (free text or ontology term CURIE as string).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "strain": {
+          "description": "Entity reference for strain (NCBITaxon/other as available).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "text_spans": {
+          "description": "Text spans grounding this object.",
+          "items": {
+            "$ref": "#/$defs/TextSpan"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "tissue": {
+          "description": "Entity reference for tissue/anatomy (UBERON recommended).",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "title": "Context",
+      "type": "object"
+    },
+    "ContextFacet": {
+      "description": "Optional coarse facet label for a Context (useful for phase 1/2).",
+      "enum": [
+        "unspecified",
+        "organism",
+        "cell_type",
+        "tissue",
+        "disease_state",
+        "environment",
+        "model_system",
+        "dataset",
+        "evolutionary_context",
+        "other"
+      ],
+      "title": "ContextFacet",
+      "type": "string"
+    },
+    "Corpus": {
+      "additionalProperties": false,
+      "description": "A collection of CSAG-extracted papers.",
+      "properties": {
+        "created_by": {
+          "description": "Actor responsible (tool URI or ORCID).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "created_on": {
+          "description": "Timestamp for object creation.",
+          "format": "date-time",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "description": {
+          "description": "Longer free-text description.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "documents": {
+          "description": "Per-paper extraction records.",
+          "items": {
+            "$ref": "#/$defs/PaperExtraction"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "extraction_activities": {
+          "description": "Extraction runs/activities used to generate the corpus or paper extraction.",
+          "items": {
+            "$ref": "#/$defs/ExtractionActivity"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "id": {
+          "description": "Stable identifier for the object (URI/CURIE recommended).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "label": {
+          "description": "Human-friendly short label.",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "title": "Corpus",
+      "type": "object"
+    },
+    "CurationStatus": {
+      "description": "Review state for an extracted object.",
+      "enum": [
+        "unreviewed",
+        "machine_extracted",
+        "human_verified",
+        "human_corrected",
+        "deprecated"
+      ],
+      "title": "CurationStatus",
+      "type": "string"
+    },
+    "Dataset": {
+      "additionalProperties": false,
+      "description": "A dataset produced or used by the paper.",
+      "properties": {
+        "accession": {
+          "description": "Accession identifier, for example a GEO or SRA accession.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "aliases": {
+          "description": "Alternative labels/synonyms.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "confidence_score": {
+          "description": "Extractor confidence (0-1).",
+          "maximum": 1,
+          "minimum": 0,
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "created_by": {
+          "description": "Actor responsible (tool URI or ORCID).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "created_on": {
+          "description": "Timestamp for object creation.",
+          "format": "date-time",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "curation_status": {
+          "$ref": "#/$defs/CurationStatus",
+          "description": "Review status for this extracted object."
+        },
+        "dataset_license": {
+          "description": "Dataset license.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "dataset_url": {
+          "description": "URL to dataset.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "derived_from": {
+          "description": "Upstream objects this record was derived from.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "description": {
+          "description": "Longer free-text description.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "generated_by": {
+          "description": "Reference to an ExtractionActivity that generated this object.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "description": "Stable identifier for the object (URI/CURIE recommended).",
+          "type": "string"
+        },
+        "label": {
+          "description": "Human-friendly short label.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "notes": {
+          "description": "Curator/system notes (not intended as machine-extracted content).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "origin": {
+          "$ref": "#/$defs/Origin",
+          "description": "Whether content is explicitly author-stated or inferred."
+        },
+        "provenance": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ProvenanceRecord"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Minimal provenance record."
+        },
+        "repository": {
+          "description": "Repository name, for example GEO, SRA, PRIDE, or Zenodo.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "text_spans": {
+          "description": "Text spans grounding this object.",
+          "items": {
+            "$ref": "#/$defs/TextSpan"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "title": "Dataset",
+      "type": "object"
+    },
+    "Entity": {
+      "additionalProperties": false,
+      "description": "A normalized entity such as a gene, chemical, disease, or cell type.",
+      "properties": {
+        "aliases": {
+          "description": "Alternative labels/synonyms.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "confidence_score": {
+          "description": "Extractor confidence (0-1).",
+          "maximum": 1,
+          "minimum": 0,
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "created_by": {
+          "description": "Actor responsible (tool URI or ORCID).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "created_on": {
+          "description": "Timestamp for object creation.",
+          "format": "date-time",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "curation_status": {
+          "$ref": "#/$defs/CurationStatus",
+          "description": "Review status for this extracted object."
+        },
+        "derived_from": {
+          "description": "Upstream objects this record was derived from.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "description": {
+          "description": "Longer free-text description.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "entity_category": {
+          "$ref": "#/$defs/EntityCategory",
+          "description": "High-level category of the entity."
+        },
+        "generated_by": {
+          "description": "Reference to an ExtractionActivity that generated this object.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "description": "Stable identifier for the object (URI/CURIE recommended).",
+          "type": "string"
+        },
+        "label": {
+          "description": "Human-friendly short label.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "mentions": {
+          "description": "Mentions of the entity grounded to spans.",
+          "items": {
+            "$ref": "#/$defs/EntityMention"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "notes": {
+          "description": "Curator/system notes (not intended as machine-extracted content).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ontology_annotations": {
+          "description": "Ontology normalization records.",
+          "items": {
+            "$ref": "#/$defs/OntologyAnnotation"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "origin": {
+          "$ref": "#/$defs/Origin",
+          "description": "Whether content is explicitly author-stated or inferred."
+        },
+        "provenance": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ProvenanceRecord"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Minimal provenance record."
+        },
+        "text_spans": {
+          "description": "Text spans grounding this object.",
+          "items": {
+            "$ref": "#/$defs/TextSpan"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "xrefs": {
+          "description": "External database cross-references (CURIEs/URIs).",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "title": "Entity",
+      "type": "object"
+    },
+    "EntityCategory": {
+      "description": "High-level categories for normalized entities.",
+      "enum": [
+        "gene",
+        "protein",
+        "transcript",
+        "variant",
+        "chemical",
+        "metabolite",
+        "drug",
+        "disease",
+        "phenotype",
+        "pathway",
+        "biological_process",
+        "molecular_function",
+        "cellular_component",
+        "cell_type",
+        "tissue",
+        "anatomical_structure",
+        "organism",
+        "strain",
+        "environment",
+        "assay",
+        "method",
+        "dataset",
+        "other"
+      ],
+      "title": "EntityCategory",
+      "type": "string"
+    },
+    "EntityMention": {
+      "additionalProperties": false,
+      "description": "A mention of an entity in the paper, grounded to text.",
+      "properties": {
+        "aliases": {
+          "description": "Alternative labels/synonyms.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "confidence_score": {
+          "description": "Extractor confidence (0-1).",
+          "maximum": 1,
+          "minimum": 0,
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "created_by": {
+          "description": "Actor responsible (tool URI or ORCID).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "created_on": {
+          "description": "Timestamp for object creation.",
+          "format": "date-time",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "curation_status": {
+          "$ref": "#/$defs/CurationStatus",
+          "description": "Review status for this extracted object."
+        },
+        "derived_from": {
+          "description": "Upstream objects this record was derived from.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "description": {
+          "description": "Longer free-text description.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "entity_ref": {
+          "description": "Reference to an Entity.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "generated_by": {
+          "description": "Reference to an ExtractionActivity that generated this object.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "description": "Stable identifier for the object (URI/CURIE recommended).",
+          "type": "string"
+        },
+        "label": {
+          "description": "Human-friendly short label.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "mention_span": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/TextSpan"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Text span grounding an entity mention."
+        },
+        "notes": {
+          "description": "Curator/system notes (not intended as machine-extracted content).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "origin": {
+          "$ref": "#/$defs/Origin",
+          "description": "Whether content is explicitly author-stated or inferred."
+        },
+        "provenance": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ProvenanceRecord"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Minimal provenance record."
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "title": "EntityMention",
+      "type": "object"
+    },
+    "EvidenceItem": {
+      "additionalProperties": false,
+      "description": "An evidence unit (result/analysis/citation) that can link to one or more assertions. IMPORTANT: EvidenceItem itself does NOT encode support/refute; that is canonicalized in EvidenceLink.",
+      "properties": {
+        "aliases": {
+          "description": "Alternative labels/synonyms.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "associated_artifacts": {
+          "description": "References to figures/tables supporting this evidence.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "associated_experiment": {
+          "description": "Reference to an Experiment that produced this evidence.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "conditions": {
+          "description": "Conditions/parameters required for an observation/claim.",
+          "items": {
+            "$ref": "#/$defs/Condition"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "confidence_score": {
+          "description": "Extractor confidence (0-1).",
+          "maximum": 1,
+          "minimum": 0,
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "contexts": {
+          "description": "Contexts under which an assertion/evidence holds.",
+          "items": {
+            "$ref": "#/$defs/Context"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "created_by": {
+          "description": "Actor responsible (tool URI or ORCID).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "created_on": {
+          "description": "Timestamp for object creation.",
+          "format": "date-time",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "curation_status": {
+          "$ref": "#/$defs/CurationStatus",
+          "description": "Review status for this extracted object."
+        },
+        "derived_from": {
+          "description": "Upstream objects this record was derived from.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "description": {
+          "description": "Longer free-text description.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "evidence_text": {
+          "description": "Short description of the evidence item.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "evidence_type": {
+          "$ref": "#/$defs/EvidenceType",
+          "description": "Category of evidence item."
+        },
+        "generated_by": {
+          "description": "Reference to an ExtractionActivity that generated this object.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "description": "Stable identifier for the object (URI/CURIE recommended).",
+          "type": "string"
+        },
+        "label": {
+          "description": "Human-friendly short label.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "notes": {
+          "description": "Curator/system notes (not intended as machine-extracted content).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "origin": {
+          "$ref": "#/$defs/Origin",
+          "description": "Whether content is explicitly author-stated or inferred."
+        },
+        "provenance": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ProvenanceRecord"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Minimal provenance record."
+        },
+        "referenced_works": {
+          "description": "External works cited as evidence.",
+          "items": {
+            "$ref": "#/$defs/Reference"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "results": {
+          "description": "Structured results reported in this evidence item.",
+          "items": {
+            "$ref": "#/$defs/Result"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "text_spans": {
+          "description": "Text spans grounding this object.",
+          "items": {
+            "$ref": "#/$defs/TextSpan"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "evidence_type",
+        "id"
+      ],
+      "title": "EvidenceItem",
+      "type": "object"
+    },
+    "EvidenceLink": {
+      "additionalProperties": false,
+      "description": "Canonical edge EvidenceItem -> Assertion with support/refute polarity and strength. This is the only place where support/refutation is encoded (prevents inconsistency).",
+      "properties": {
+        "aliases": {
+          "description": "Alternative labels/synonyms.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "assertion": {
+          "description": "Reference to an Assertion.",
+          "type": "string"
+        },
+        "confidence_score": {
+          "description": "Extractor confidence (0-1).",
+          "maximum": 1,
+          "minimum": 0,
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "created_by": {
+          "description": "Actor responsible (tool URI or ORCID).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "created_on": {
+          "description": "Timestamp for object creation.",
+          "format": "date-time",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "curation_status": {
+          "$ref": "#/$defs/CurationStatus",
+          "description": "Review status for this extracted object."
+        },
+        "derived_from": {
+          "description": "Upstream objects this record was derived from.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "description": {
+          "description": "Longer free-text description.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "evidence_item": {
+          "description": "Reference to an EvidenceItem.",
+          "type": "string"
+        },
+        "generated_by": {
+          "description": "Reference to an ExtractionActivity that generated this object.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "description": "Stable identifier for the object (URI/CURIE recommended).",
+          "type": "string"
+        },
+        "label": {
+          "description": "Human-friendly short label.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "notes": {
+          "description": "Curator/system notes (not intended as machine-extracted content).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "origin": {
+          "$ref": "#/$defs/Origin",
+          "description": "Whether content is explicitly author-stated or inferred."
+        },
+        "polarity": {
+          "$ref": "#/$defs/Polarity",
+          "description": "Whether evidence supports/refutes the assertion."
+        },
+        "provenance": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ProvenanceRecord"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Minimal provenance record."
+        },
+        "rationale": {
+          "description": "Explanation of why the evidence supports/refutes the assertion.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "strength": {
+          "$ref": "#/$defs/StrengthLevel",
+          "description": "Strength label for the evidence link."
+        },
+        "text_spans": {
+          "description": "Text spans grounding this object.",
+          "items": {
+            "$ref": "#/$defs/TextSpan"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "evidence_item",
+        "assertion",
+        "polarity",
+        "id"
+      ],
+      "title": "EvidenceLink",
+      "type": "object"
+    },
+    "EvidenceType": {
+      "description": "The kind of evidence item extracted from the paper.",
+      "enum": [
+        "experimental_result",
+        "statistical_analysis",
+        "computational_model",
+        "observational_data",
+        "literature_citation",
+        "meta_analysis",
+        "replication",
+        "control_result",
+        "negative_result",
+        "expert_opinion",
+        "other"
+      ],
+      "title": "EvidenceType",
+      "type": "string"
+    },
+    "Execution": {
+      "additionalProperties": false,
+      "description": "A run or execution that generated evidence, tested a claim, or produced inspectable artifacts.",
+      "properties": {
+        "aliases": {
+          "description": "Alternative labels/synonyms.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "command": {
+          "description": "Command, protocol step, or run descriptor used for the execution.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "completed_on": {
+          "description": "Execution completion timestamp.",
+          "format": "date-time",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "confidence_score": {
+          "description": "Extractor confidence (0-1).",
+          "maximum": 1,
+          "minimum": 0,
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "created_by": {
+          "description": "Actor responsible (tool URI or ORCID).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "created_on": {
+          "description": "Timestamp for object creation.",
+          "format": "date-time",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "curation_status": {
+          "$ref": "#/$defs/CurationStatus",
+          "description": "Review status for this extracted object."
+        },
+        "derived_from": {
+          "description": "Upstream objects this record was derived from.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "description": {
+          "description": "Longer free-text description.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "execution_status": {
+          "$ref": "#/$defs/ExecutionStatus",
+          "description": "Status of the execution/run."
+        },
+        "execution_type": {
+          "description": "Kind of execution/run, such as benchmark, notebook, analysis script, simulation, or wet-lab assay.",
+          "type": "string"
+        },
+        "generated_by": {
+          "description": "Reference to an ExtractionActivity that generated this object.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "generated_evidence_items": {
+          "description": "EvidenceItem IDs generated or materially supported by the execution/run.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "id": {
+          "description": "Stable identifier for the object (URI/CURIE recommended).",
+          "type": "string"
+        },
+        "label": {
+          "description": "Human-friendly short label.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "notes": {
+          "description": "Curator/system notes (not intended as machine-extracted content).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "origin": {
+          "$ref": "#/$defs/Origin",
+          "description": "Whether content is explicitly author-stated or inferred."
+        },
+        "output_artifacts": {
+          "description": "Artifact IDs produced by the execution/run.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "parameters": {
+          "description": "Key-value parameters.",
+          "items": {
+            "$ref": "#/$defs/KeyValue"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "provenance": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ProvenanceRecord"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Minimal provenance record."
+        },
+        "started_on": {
+          "description": "Execution start timestamp.",
+          "format": "date-time",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "tested_assertions": {
+          "description": "Assertion IDs tested by the execution/run.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "text_spans": {
+          "description": "Text spans grounding this object.",
+          "items": {
+            "$ref": "#/$defs/TextSpan"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "url": {
+          "description": "URL for the referenced work.",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "execution_type",
+        "execution_status",
+        "id"
+      ],
+      "title": "Execution",
+      "type": "object"
+    },
+    "ExecutionStatus": {
+      "description": "Status of an execution/run that generated or tested evidence.",
+      "enum": [
+        "planned",
+        "running",
+        "completed",
+        "failed",
+        "cancelled",
+        "blocked"
+      ],
+      "title": "ExecutionStatus",
+      "type": "string"
+    },
+    "Experiment": {
+      "additionalProperties": false,
+      "description": "An experiment/assay within a study.",
+      "properties": {
+        "aliases": {
+          "description": "Alternative labels/synonyms.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "assay_type": {
+          "description": "Ontology term for assay type (OBI recommended).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "confidence_score": {
+          "description": "Extractor confidence (0-1).",
+          "maximum": 1,
+          "minimum": 0,
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "created_by": {
+          "description": "Actor responsible (tool URI or ORCID).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "created_on": {
+          "description": "Timestamp for object creation.",
+          "format": "date-time",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "curation_status": {
+          "$ref": "#/$defs/CurationStatus",
+          "description": "Review status for this extracted object."
+        },
+        "derived_from": {
+          "description": "Upstream objects this record was derived from.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "description": {
+          "description": "Longer free-text description.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "generated_by": {
+          "description": "Reference to an ExtractionActivity that generated this object.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "description": "Stable identifier for the object (URI/CURIE recommended).",
+          "type": "string"
+        },
+        "label": {
+          "description": "Human-friendly short label.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "notes": {
+          "description": "Curator/system notes (not intended as machine-extracted content).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "origin": {
+          "$ref": "#/$defs/Origin",
+          "description": "Whether content is explicitly author-stated or inferred."
+        },
+        "provenance": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ProvenanceRecord"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Minimal provenance record."
+        },
+        "text_spans": {
+          "description": "Text spans grounding this object.",
+          "items": {
+            "$ref": "#/$defs/TextSpan"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "variables": {
+          "description": "Variables measured/manipulated in an experiment.",
+          "items": {
+            "$ref": "#/$defs/Variable"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "title": "Experiment",
+      "type": "object"
+    },
+    "ExtractionActivity": {
+      "additionalProperties": false,
+      "description": "A run of an extraction tool/pipeline component.",
+      "properties": {
+        "activity_type": {
+          "description": "Activity type, for example claim extraction, named-entity recognition, or human review.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "agent_uri": {
+          "description": "URI/CURIE identifying the responsible actor (tool, service, or person).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "description": "Stable identifier for the object (URI/CURIE recommended).",
+          "type": "string"
+        },
+        "model_name": {
+          "description": "Model name (if applicable).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "model_version": {
+          "description": "Model version/checkpoint.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "parameters": {
+          "description": "Key-value parameters.",
+          "items": {
+            "$ref": "#/$defs/KeyValue"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "run_datetime": {
+          "description": "Extraction run datetime.",
+          "format": "date-time",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "run_id": {
+          "description": "Run identifier.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "tool_name": {
+          "description": "Extraction tool name.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "tool_version": {
+          "description": "Extraction tool version.",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "title": "ExtractionActivity",
+      "type": "object"
+    },
+    "GapType": {
+      "description": "Types of knowledge gaps or future work items.",
+      "enum": [
+        "missing_mechanism",
+        "missing_experiment",
+        "missing_control",
+        "replication_needed",
+        "generalizability",
+        "data_missing",
+        "inconsistent_results",
+        "unresolved_contradiction",
+        "other"
+      ],
+      "title": "GapType",
+      "type": "string"
+    },
+    "HandoffAction": {
+      "additionalProperties": false,
+      "description": "Owned unit of work with dependency and completion contracts.",
+      "properties": {
+        "acceptance_criteria": {
+          "description": "Observable conditions that define action completion.",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "action_status": {
+          "$ref": "#/$defs/HandoffActionStatus",
+          "description": "Lifecycle state of a handoff action."
+        },
+        "action_type": {
+          "$ref": "#/$defs/NextActionType",
+          "description": "Type of next action."
+        },
+        "created_by": {
+          "description": "Actor responsible (tool URI or ORCID).",
+          "type": "string"
+        },
+        "created_on": {
+          "description": "Timestamp for object creation.",
+          "format": "date-time",
+          "type": "string"
+        },
+        "dependencies": {
+          "description": "HandoffAction IDs that must complete before this action is ready.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "description": {
+          "description": "Longer free-text description.",
+          "type": "string"
+        },
+        "id": {
+          "description": "Stable identifier for the object (URI/CURIE recommended).",
+          "type": "string"
+        },
+        "owner": {
+          "description": "Agent or person accountable for an action.",
+          "type": "string"
+        },
+        "target_assertions": {
+          "description": "Assertions this state, next action, or execution is about.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "target_knowledge_gaps": {
+          "description": "KnowledgeGap IDs this next action addresses.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "action_type",
+        "description",
+        "owner",
+        "action_status",
+        "acceptance_criteria",
+        "created_on",
+        "created_by"
+      ],
+      "title": "HandoffAction",
+      "type": "object"
+    },
+    "HandoffActionStatus": {
+      "description": "Lifecycle state of an action in an agent handoff.",
+      "enum": [
+        "proposed",
+        "ready",
+        "in_progress",
+        "blocked",
+        "completed",
+        "cancelled"
+      ],
+      "title": "HandoffActionStatus",
+      "type": "string"
+    },
+    "HandoffArtifactDigest": {
+      "additionalProperties": false,
+      "description": "Content identity and location for an exchanged source, input, or output artifact.",
+      "properties": {
+        "artifact_path": {
+          "description": "Bundle-relative path or non-file external locator for an artifact; absolute and escaping local paths are rejected.",
+          "type": "string"
+        },
+        "artifact_role": {
+          "$ref": "#/$defs/HandoffArtifactRole",
+          "description": "Role of an artifact in the handoff."
+        },
+        "byte_size": {
+          "description": "Artifact size in bytes when known.",
+          "minimum": 0,
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "id": {
+          "description": "Stable identifier for the object (URI/CURIE recommended).",
+          "type": "string"
+        },
+        "media_type": {
+          "description": "IANA media type when known.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sha256": {
+          "description": "SHA-256 digest of the artifact bytes.",
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "artifact_role",
+        "artifact_path",
+        "sha256"
+      ],
+      "title": "HandoffArtifactDigest",
+      "type": "object"
+    },
+    "HandoffArtifactRole": {
+      "description": "Role of a content-hashed artifact in a handoff.",
+      "enum": [
+        "paper_extraction",
+        "source_markdown",
+        "article_metadata",
+        "validation_report",
+        "quality_report",
+        "dataset",
+        "code",
+        "result",
+        "other"
+      ],
+      "title": "HandoffArtifactRole",
+      "type": "string"
+    },
+    "HandoffAssessment": {
+      "additionalProperties": false,
+      "description": "Agent assessment with inspectable evidence and execution bases.",
+      "properties": {
+        "assessment_status": {
+          "$ref": "#/$defs/HandoffAssessmentStatus",
+          "description": "Review status of an assessment."
+        },
+        "assessment_text": {
+          "description": "Concise assessment or decision-ready interpretation.",
+          "type": "string"
+        },
+        "basis_artifacts": {
+          "description": "HandoffArtifactDigest IDs used as assessment evidence.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "basis_executions": {
+          "description": "HandoffExecution IDs used as assessment evidence.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "basis_refs": {
+          "description": "IDs inside source artifacts, such as assertions or evidence items, used as assessment evidence.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "created_by": {
+          "description": "Actor responsible (tool URI or ORCID).",
+          "type": "string"
+        },
+        "created_on": {
+          "description": "Timestamp for object creation.",
+          "format": "date-time",
+          "type": "string"
+        },
+        "id": {
+          "description": "Stable identifier for the object (URI/CURIE recommended).",
+          "type": "string"
+        },
+        "target_assertions": {
+          "description": "Assertions this state, next action, or execution is about.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "assessment_status",
+        "assessment_text",
+        "created_on",
+        "created_by"
+      ],
+      "title": "HandoffAssessment",
+      "type": "object"
+    },
+    "HandoffAssessmentStatus": {
+      "description": "Review status of an assessment recorded in a handoff.",
+      "enum": [
+        "open",
+        "accepted",
+        "disputed",
+        "superseded"
+      ],
+      "title": "HandoffAssessmentStatus",
+      "type": "string"
+    },
+    "HandoffConflict": {
+      "additionalProperties": false,
+      "description": "Explicit disagreement between revision heads and its resolution state.",
+      "properties": {
+        "competing_heads": {
+          "description": "Revision heads whose changes conflict.",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 2,
+          "type": "array"
+        },
+        "conflict_status": {
+          "$ref": "#/$defs/HandoffConflictStatus",
+          "description": "Whether a revision conflict remains open or has been resolved."
+        },
+        "created_by": {
+          "description": "Actor responsible (tool URI or ORCID).",
+          "type": "string"
+        },
+        "created_on": {
+          "description": "Timestamp for object creation.",
+          "format": "date-time",
+          "type": "string"
+        },
+        "description": {
+          "description": "Longer free-text description.",
+          "type": "string"
+        },
+        "id": {
+          "description": "Stable identifier for the object (URI/CURIE recommended).",
+          "type": "string"
+        },
+        "resolution": {
+          "description": "Recorded resolution for a resolved conflict.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "resolved_by_head": {
+          "description": "Current revision head that contains the conflict resolution.",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "conflict_status",
+        "description",
+        "competing_heads",
+        "created_on",
+        "created_by"
+      ],
+      "title": "HandoffConflict",
+      "type": "object"
+    },
+    "HandoffConflictStatus": {
+      "description": "Resolution state of a conflict between handoff revisions.",
+      "enum": [
+        "open",
+        "resolved"
+      ],
+      "title": "HandoffConflictStatus",
+      "type": "string"
+    },
+    "HandoffEnvelope": {
+      "additionalProperties": false,
+      "description": "Versioned exchange record for agent work over one or more content-hashed PaperExtraction snapshots. Collaboration state belongs here rather than in the source-grounded PaperExtraction, and state changes should create new revisions.",
+      "properties": {
+        "actions": {
+          "description": "Owned work items with dependencies and acceptance criteria.",
+          "items": {
+            "$ref": "#/$defs/HandoffAction"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "assessments": {
+          "description": "Agent assessments and the artifacts, claims, or executions that support them.",
+          "items": {
+            "$ref": "#/$defs/HandoffAssessment"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "conflicts": {
+          "description": "Open or resolved conflicts between revision heads.",
+          "items": {
+            "$ref": "#/$defs/HandoffConflict"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "created_by": {
+          "description": "Actor responsible (tool URI or ORCID).",
+          "type": "string"
+        },
+        "created_on": {
+          "description": "Timestamp for object creation.",
+          "format": "date-time",
+          "type": "string"
+        },
+        "current_heads": {
+          "description": "Revision identifiers that are current workspace heads.",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "envelope_version": {
+          "description": "Version of the HandoffEnvelope contract used by this artifact.",
+          "pattern": "^1\\.0\\.0$",
+          "type": "string"
+        },
+        "executions": {
+          "description": "Runs/executions that generated evidence, tested assertions, or produced inspectable artifacts.",
+          "items": {
+            "$ref": "#/$defs/HandoffExecution"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "id": {
+          "description": "Stable identifier for the object (URI/CURIE recommended).",
+          "type": "string"
+        },
+        "parents": {
+          "description": "Immediate parent revision identifiers.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "revision": {
+          "description": "Stable identifier for a handoff revision; it is not a digest of the envelope bytes.",
+          "type": "string"
+        },
+        "source_artifacts": {
+          "description": "Content-hashed source snapshots on which the handoff is based.",
+          "items": {
+            "$ref": "#/$defs/HandoffArtifactDigest"
+          },
+          "minItems": 1,
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "envelope_version",
+        "revision",
+        "source_artifacts",
+        "current_heads",
+        "created_on",
+        "created_by"
+      ],
+      "title": "HandoffEnvelope",
+      "type": "object"
+    },
+    "HandoffExecution": {
+      "additionalProperties": false,
+      "description": "Run record tied to an action, with content-hashed inputs and outputs.",
+      "properties": {
+        "action_ref": {
+          "description": "HandoffAction ID executed by a run.",
+          "type": "string"
+        },
+        "code_commit": {
+          "description": "Version-control commit that supplied the executed code, or an explicit uncommitted-tree descriptor for a development fixture.",
+          "type": "string"
+        },
+        "command": {
+          "description": "Command, protocol step, or run descriptor used for the execution.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "completed_on": {
+          "description": "Execution completion timestamp.",
+          "format": "date-time",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "created_by": {
+          "description": "Actor responsible (tool URI or ORCID).",
+          "type": "string"
+        },
+        "environment": {
+          "description": "Environment lockfile locator followed by its SHA-256 digest.",
+          "pattern": "^.+#sha256=[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "execution_outcome": {
+          "description": "Observed execution result, including failure information when applicable.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "execution_status": {
+          "$ref": "#/$defs/ExecutionStatus",
+          "description": "Status of the execution/run."
+        },
+        "execution_type": {
+          "description": "Kind of execution/run, such as benchmark, notebook, analysis script, simulation, or wet-lab assay.",
+          "type": "string"
+        },
+        "id": {
+          "description": "Stable identifier for the object (URI/CURIE recommended).",
+          "type": "string"
+        },
+        "inputs": {
+          "description": "Content-hashed artifacts consumed by an execution.",
+          "items": {
+            "$ref": "#/$defs/HandoffArtifactDigest"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "outputs": {
+          "description": "Content-hashed artifacts produced by an execution.",
+          "items": {
+            "$ref": "#/$defs/HandoffArtifactDigest"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "started_on": {
+          "description": "Execution start timestamp.",
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "action_ref",
+        "execution_type",
+        "execution_status",
+        "inputs",
+        "environment",
+        "code_commit",
+        "started_on",
+        "created_by"
+      ],
+      "title": "HandoffExecution",
+      "type": "object"
+    },
+    "InferenceMethod": {
+      "description": "Reasoning mode used to connect evidence/premises to a conclusion.",
+      "enum": [
+        "statistical_inference",
+        "mechanistic_reasoning",
+        "causal_inference",
+        "qualitative_interpretation",
+        "computational_inference",
+        "analogy_or_prior_knowledge",
+        "other"
+      ],
+      "title": "InferenceMethod",
+      "type": "string"
+    },
+    "InferenceStep": {
+      "additionalProperties": false,
+      "description": "A reasoning step chaining premises/evidence into a derived assertion. This captures evidence chains and mechanistic reasoning explicitly.",
+      "properties": {
+        "aliases": {
+          "description": "Alternative labels/synonyms.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "assumptions": {
+          "description": "Assumptions (assertions) needed for the inference.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "confidence_score": {
+          "description": "Extractor confidence (0-1).",
+          "maximum": 1,
+          "minimum": 0,
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "created_by": {
+          "description": "Actor responsible (tool URI or ORCID).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "created_on": {
+          "description": "Timestamp for object creation.",
+          "format": "date-time",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "curation_status": {
+          "$ref": "#/$defs/CurationStatus",
+          "description": "Review status for this extracted object."
+        },
+        "derived_from": {
+          "description": "Upstream objects this record was derived from.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "description": {
+          "description": "Longer free-text description.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "generated_by": {
+          "description": "Reference to an ExtractionActivity that generated this object.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "description": "Stable identifier for the object (URI/CURIE recommended).",
+          "type": "string"
+        },
+        "inference_method": {
+          "$ref": "#/$defs/InferenceMethod",
+          "description": "Reasoning mode."
+        },
+        "inference_rationale": {
+          "description": "Free-text rationale for the inference step.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "input_assertions": {
+          "description": "Premise assertions used in an inference step.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "input_evidence_links": {
+          "description": "Evidence links used as inputs to the inference step.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "label": {
+          "description": "Human-friendly short label.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "notes": {
+          "description": "Curator/system notes (not intended as machine-extracted content).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "origin": {
+          "$ref": "#/$defs/Origin",
+          "description": "Whether content is explicitly author-stated or inferred."
+        },
+        "output_assertion": {
+          "description": "The conclusion assertion produced by the inference step.",
+          "type": "string"
+        },
+        "provenance": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ProvenanceRecord"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Minimal provenance record."
+        },
+        "text_spans": {
+          "description": "Text spans grounding this object.",
+          "items": {
+            "$ref": "#/$defs/TextSpan"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "output_assertion",
+        "inference_method",
+        "id"
+      ],
+      "title": "InferenceStep",
+      "type": "object"
+    },
+    "KeyValue": {
+      "additionalProperties": false,
+      "description": "Key-value record.",
+      "properties": {
+        "key": {
+          "description": "Key for a parameter.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "value": {
+          "description": "Value for a parameter.",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "title": "KeyValue",
+      "type": "object"
+    },
+    "KnowledgeGap": {
+      "additionalProperties": false,
+      "description": "An open question or missing evidence item (author-stated or extractor-inferred).",
+      "properties": {
+        "aliases": {
+          "description": "Alternative labels/synonyms.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "confidence_score": {
+          "description": "Extractor confidence (0-1).",
+          "maximum": 1,
+          "minimum": 0,
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "created_by": {
+          "description": "Actor responsible (tool URI or ORCID).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "created_on": {
+          "description": "Timestamp for object creation.",
+          "format": "date-time",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "curation_status": {
+          "$ref": "#/$defs/CurationStatus",
+          "description": "Review status for this extracted object."
+        },
+        "derived_from": {
+          "description": "Upstream objects this record was derived from.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "description": {
+          "description": "Longer free-text description.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "gap_type": {
+          "$ref": "#/$defs/GapType",
+          "description": "Type of knowledge gap."
+        },
+        "generated_by": {
+          "description": "Reference to an ExtractionActivity that generated this object.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "description": "Stable identifier for the object (URI/CURIE recommended).",
+          "type": "string"
+        },
+        "label": {
+          "description": "Human-friendly short label.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "notes": {
+          "description": "Curator/system notes (not intended as machine-extracted content).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "origin": {
+          "$ref": "#/$defs/Origin",
+          "description": "Whether content is explicitly author-stated or inferred."
+        },
+        "provenance": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ProvenanceRecord"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Minimal provenance record."
+        },
+        "related_assertions": {
+          "description": "Assertions related to the knowledge gap.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "severity": {
+          "$ref": "#/$defs/SeverityLevel",
+          "description": "Severity label."
+        },
+        "suggested_actions": {
+          "description": "Suggested experiments/analyses to address the gap.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "text_spans": {
+          "description": "Text spans grounding this object.",
+          "items": {
+            "$ref": "#/$defs/TextSpan"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "title": "KnowledgeGap",
+      "type": "object"
+    },
+    "NextAction": {
+      "additionalProperties": false,
+      "description": "A concrete next experiment, analysis, review, decision, branch, or merge action.",
+      "properties": {
+        "action_type": {
+          "$ref": "#/$defs/NextActionType",
+          "description": "Type of next action."
+        },
+        "aliases": {
+          "description": "Alternative labels/synonyms.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "confidence_score": {
+          "description": "Extractor confidence (0-1).",
+          "maximum": 1,
+          "minimum": 0,
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "created_by": {
+          "description": "Actor responsible (tool URI or ORCID).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "created_on": {
+          "description": "Timestamp for object creation.",
+          "format": "date-time",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "curation_status": {
+          "$ref": "#/$defs/CurationStatus",
+          "description": "Review status for this extracted object."
+        },
+        "derived_from": {
+          "description": "Upstream objects this record was derived from.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "description": {
+          "description": "Longer free-text description.",
+          "type": "string"
+        },
+        "due_date": {
+          "description": "Optional due date for a next action.",
+          "format": "date",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "generated_by": {
+          "description": "Reference to an ExtractionActivity that generated this object.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "description": "Stable identifier for the object (URI/CURIE recommended).",
+          "type": "string"
+        },
+        "label": {
+          "description": "Human-friendly short label.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "notes": {
+          "description": "Curator/system notes (not intended as machine-extracted content).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "origin": {
+          "$ref": "#/$defs/Origin",
+          "description": "Whether content is explicitly author-stated or inferred."
+        },
+        "priority": {
+          "$ref": "#/$defs/StrengthLevel",
+          "description": "Relative priority or urgency of a next action."
+        },
+        "provenance": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ProvenanceRecord"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Minimal provenance record."
+        },
+        "target_assertions": {
+          "description": "Assertions this state, next action, or execution is about.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "target_knowledge_gaps": {
+          "description": "KnowledgeGap IDs this next action addresses.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "text_spans": {
+          "description": "Text spans grounding this object.",
+          "items": {
+            "$ref": "#/$defs/TextSpan"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "action_type",
+        "description",
+        "id"
+      ],
+      "title": "NextAction",
+      "type": "object"
+    },
+    "NextActionType": {
+      "description": "Type of next action recommended for a claim, gap, or branch.",
+      "enum": [
+        "experiment",
+        "analysis",
+        "replication",
+        "review",
+        "decision",
+        "branch",
+        "merge",
+        "data_collection",
+        "other"
+      ],
+      "title": "NextActionType",
+      "type": "string"
+    },
+    "NormalizationStatus": {
+      "description": "Normalization status of an Assertion into a structured triple.",
+      "enum": [
+        "raw",
+        "partially_normalized",
+        "fully_normalized"
+      ],
+      "title": "NormalizationStatus",
+      "type": "string"
+    },
+    "OntologyAnnotation": {
+      "additionalProperties": false,
+      "description": "A mapping from extracted text to an ontology term.",
+      "properties": {
+        "aliases": {
+          "description": "Alternative labels/synonyms.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "confidence_score": {
+          "description": "Extractor confidence (0-1).",
+          "maximum": 1,
+          "minimum": 0,
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "created_by": {
+          "description": "Actor responsible (tool URI or ORCID).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "created_on": {
+          "description": "Timestamp for object creation.",
+          "format": "date-time",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "curation_status": {
+          "$ref": "#/$defs/CurationStatus",
+          "description": "Review status for this extracted object."
+        },
+        "derived_from": {
+          "description": "Upstream objects this record was derived from.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "description": {
+          "description": "Longer free-text description.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "evidence_code": {
+          "description": "Optional ECO/SEPIO evidence code term.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "generated_by": {
+          "description": "Reference to an ExtractionActivity that generated this object.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "description": "Stable identifier for the object (URI/CURIE recommended).",
+          "type": "string"
+        },
+        "label": {
+          "description": "Human-friendly short label.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "match_type": {
+          "description": "Match type (exact/broad/narrow/related).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "notes": {
+          "description": "Curator/system notes (not intended as machine-extracted content).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "origin": {
+          "$ref": "#/$defs/Origin",
+          "description": "Whether content is explicitly author-stated or inferred."
+        },
+        "provenance": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ProvenanceRecord"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Minimal provenance record."
+        },
+        "term_id": {
+          "description": "Ontology term CURIE/URI used for normalization.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "term_label": {
+          "description": "Label of the ontology term at extraction time.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "text_spans": {
+          "description": "Text spans grounding this object.",
+          "items": {
+            "$ref": "#/$defs/TextSpan"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "title": "OntologyAnnotation",
+      "type": "object"
+    },
+    "Origin": {
+      "description": "Where an extracted object comes from.",
+      "enum": [
+        "author_stated",
+        "author_implied",
+        "extractor_inferred",
+        "curator_added"
+      ],
+      "title": "Origin",
+      "type": "string"
+    },
+    "Paper": {
+      "additionalProperties": false,
+      "description": "Bibliographic metadata for a scientific paper.",
+      "properties": {
+        "abstract": {
+          "description": "Paper abstract.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "authors": {
+          "description": "Author list.",
+          "items": {
+            "$ref": "#/$defs/Author"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "doi": {
+          "description": "DOI string, for example 10.xxxx/xxxx.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "full_text_url": {
+          "description": "URL where the full text can be accessed.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "description": "Stable identifier for the object (URI/CURIE recommended).",
+          "type": "string"
+        },
+        "journal": {
+          "description": "Journal or venue.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "keywords": {
+          "description": "Keywords.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "license": {
+          "description": "License URL.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "mesh_terms": {
+          "description": "MeSH terms (if available).",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "pmid": {
+          "description": "PubMed ID string.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "publication_date": {
+          "description": "Publication date.",
+          "format": "date",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "schema_version": {
+          "description": "CSAG schema version used to create or validate this extraction.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "title": {
+          "description": "Paper title.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "validator_version": {
+          "description": "Validator version used for the latest validation report.",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "title": "Paper",
+      "type": "object"
+    },
+    "PaperExtraction": {
+      "additionalProperties": false,
+      "description": "A paper plus extracted CSAG objects.",
+      "properties": {
+        "abstract": {
+          "description": "Paper abstract.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "artifacts": {
+          "description": "Figures/tables/supplemental artifacts.",
+          "items": {
+            "$ref": "#/$defs/Artifact"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "assertion_relations": {
+          "description": "Relations between assertions (contradicts/qualifies/replicates/etc).",
+          "items": {
+            "$ref": "#/$defs/AssertionRelation"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "assertions": {
+          "description": "Hypotheses/claims/results/conclusions extracted from the paper.",
+          "items": {
+            "$ref": "#/$defs/Assertion"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "authors": {
+          "description": "Author list.",
+          "items": {
+            "$ref": "#/$defs/Author"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "critiques": {
+          "description": "Study limitations/flaws and risk-of-bias.",
+          "items": {
+            "$ref": "#/$defs/StudyCritique"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "datasets": {
+          "description": "Datasets/accessions.",
+          "items": {
+            "$ref": "#/$defs/Dataset"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "doi": {
+          "description": "DOI string, for example 10.xxxx/xxxx.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "entities": {
+          "description": "Normalized entities mentioned/implied in the paper.",
+          "items": {
+            "$ref": "#/$defs/Entity"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "evidence_items": {
+          "description": "Evidence units (results/analyses/citations).",
+          "items": {
+            "$ref": "#/$defs/EvidenceItem"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "evidence_links": {
+          "description": "Canonical EvidenceItem -> Assertion links with support/refute polarity.",
+          "items": {
+            "$ref": "#/$defs/EvidenceLink"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "executions": {
+          "description": "Runs/executions that generated evidence, tested assertions, or produced inspectable artifacts.",
+          "items": {
+            "$ref": "#/$defs/Execution"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "extraction_activities": {
+          "description": "Extraction runs/activities used to generate the corpus or paper extraction.",
+          "items": {
+            "$ref": "#/$defs/ExtractionActivity"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "full_text_url": {
+          "description": "URL where the full text can be accessed.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "description": "Stable identifier for the object (URI/CURIE recommended).",
+          "type": "string"
+        },
+        "inferences": {
+          "description": "Evidence/premise chains producing derived assertions.",
+          "items": {
+            "$ref": "#/$defs/InferenceStep"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "journal": {
+          "description": "Journal or venue.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "keywords": {
+          "description": "Keywords.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "knowledge_gaps": {
+          "description": "Open questions/missing evidence/future work.",
+          "items": {
+            "$ref": "#/$defs/KnowledgeGap"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "license": {
+          "description": "License URL.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "mesh_terms": {
+          "description": "MeSH terms (if available).",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "next_actions": {
+          "description": "Next experiments, analyses, reviews, decisions, or branch operations recommended by the extraction or curator.",
+          "items": {
+            "$ref": "#/$defs/NextAction"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "notes": {
+          "description": "Curator/system notes (not intended as machine-extracted content).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "pmid": {
+          "description": "PubMed ID string.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "publication_date": {
+          "description": "Publication date.",
+          "format": "date",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "qa_items": {
+          "description": "Question/answer items linked to extracted claims and evidence.",
+          "items": {
+            "$ref": "#/$defs/QAItem"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "research_states": {
+          "description": "Current interpretation/state records for assertions or competing research branches.",
+          "items": {
+            "$ref": "#/$defs/ResearchStateRecord"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "schema_version": {
+          "description": "CSAG schema version used to create or validate this extraction.",
+          "type": "string"
+        },
+        "studies": {
+          "description": "Studies/experiments described in the paper.",
+          "items": {
+            "$ref": "#/$defs/Study"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "title": {
+          "description": "Paper title.",
+          "type": "string"
+        },
+        "validator_version": {
+          "description": "Validator version used for the latest validation report.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "assertions",
+        "evidence_items",
+        "evidence_links",
+        "id",
+        "title",
+        "schema_version",
+        "validator_version"
+      ],
+      "title": "PaperExtraction",
+      "type": "object"
+    },
+    "Polarity": {
+      "description": "Direction of an evidence link with respect to an assertion.",
+      "enum": [
+        "supports",
+        "refutes",
+        "mixed",
+        "inconclusive"
+      ],
+      "title": "Polarity",
+      "type": "string"
+    },
+    "ProvenanceRecord": {
+      "additionalProperties": false,
+      "description": "Minimal provenance record compatible with PROV-O/PAV patterns.",
+      "properties": {
+        "created_by": {
+          "description": "Actor responsible (tool URI or ORCID).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "created_on": {
+          "description": "Timestamp for object creation.",
+          "format": "date-time",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "derived_from": {
+          "description": "Upstream objects this record was derived from.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "generated_by": {
+          "description": "Reference to an ExtractionActivity that generated this object.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "description": "Stable identifier for the object (URI/CURIE recommended).",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "title": "ProvenanceRecord",
+      "type": "object"
+    },
+    "QAAnswerType": {
+      "description": "Expected shape of an answer to a question.",
+      "enum": [
+        "boolean",
+        "numeric",
+        "categorical",
+        "entity",
+        "relation",
+        "free_text",
+        "list",
+        "dataset_pointer"
+      ],
+      "title": "QAAnswerType",
+      "type": "string"
+    },
+    "QAItem": {
+      "additionalProperties": false,
+      "description": "A question with answers grounded in extracted assertions and evidence.",
+      "properties": {
+        "aliases": {
+          "description": "Alternative labels/synonyms.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "answers": {
+          "description": "Candidate answers with evidence.",
+          "items": {
+            "$ref": "#/$defs/Answer"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "confidence_score": {
+          "description": "Extractor confidence (0-1).",
+          "maximum": 1,
+          "minimum": 0,
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "created_by": {
+          "description": "Actor responsible (tool URI or ORCID).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "created_on": {
+          "description": "Timestamp for object creation.",
+          "format": "date-time",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "curation_status": {
+          "$ref": "#/$defs/CurationStatus",
+          "description": "Review status for this extracted object."
+        },
+        "derived_from": {
+          "description": "Upstream objects this record was derived from.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "description": {
+          "description": "Longer free-text description.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "expected_answer_type": {
+          "$ref": "#/$defs/QAAnswerType",
+          "description": "Expected answer type."
+        },
+        "generated_by": {
+          "description": "Reference to an ExtractionActivity that generated this object.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "description": "Stable identifier for the object (URI/CURIE recommended).",
+          "type": "string"
+        },
+        "label": {
+          "description": "Human-friendly short label.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "normalized_query": {
+          "description": "Optional normalized form of the question (templated/structured).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "notes": {
+          "description": "Curator/system notes (not intended as machine-extracted content).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "origin": {
+          "$ref": "#/$defs/Origin",
+          "description": "Whether content is explicitly author-stated or inferred."
+        },
+        "provenance": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ProvenanceRecord"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Minimal provenance record."
+        },
+        "query_assertion": {
+          "description": "Optional reference to an Assertion representing the question in structured form.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "question_text": {
+          "description": "Natural-language question.",
+          "type": "string"
+        },
+        "text_spans": {
+          "description": "Text spans grounding this object.",
+          "items": {
+            "$ref": "#/$defs/TextSpan"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "question_text",
+        "expected_answer_type",
+        "id"
+      ],
+      "title": "QAItem",
+      "type": "object"
+    },
+    "Qualifier": {
+      "additionalProperties": false,
+      "description": "A flexible predicate/value qualifier for scoping assertions or contexts.",
+      "properties": {
+        "aliases": {
+          "description": "Alternative labels/synonyms.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "confidence_score": {
+          "description": "Extractor confidence (0-1).",
+          "maximum": 1,
+          "minimum": 0,
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "created_by": {
+          "description": "Actor responsible (tool URI or ORCID).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "created_on": {
+          "description": "Timestamp for object creation.",
+          "format": "date-time",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "curation_status": {
+          "$ref": "#/$defs/CurationStatus",
+          "description": "Review status for this extracted object."
+        },
+        "derived_from": {
+          "description": "Upstream objects this record was derived from.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "description": {
+          "description": "Longer free-text description.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "generated_by": {
+          "description": "Reference to an ExtractionActivity that generated this object.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "description": "Stable identifier for the object (URI/CURIE recommended).",
+          "type": "string"
+        },
+        "label": {
+          "description": "Human-friendly short label.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "notes": {
+          "description": "Curator/system notes (not intended as machine-extracted content).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "origin": {
+          "$ref": "#/$defs/Origin",
+          "description": "Whether content is explicitly author-stated or inferred."
+        },
+        "predicate": {
+          "description": "Predicate/relation CURIE/URI (RO/SIO recommended).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "provenance": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ProvenanceRecord"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Minimal provenance record."
+        },
+        "text_spans": {
+          "description": "Text spans grounding this object.",
+          "items": {
+            "$ref": "#/$defs/TextSpan"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "value_entity_ref": {
+          "description": "Entity-valued qualifier reference (Entity id).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "value_number": {
+          "description": "Numeric value for a qualifier/condition/result.",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "value_text": {
+          "description": "Text value for a qualifier/condition/result.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "value_unit": {
+          "description": "Unit (UCUM recommended).",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "title": "Qualifier",
+      "type": "object"
+    },
+    "Reference": {
+      "additionalProperties": false,
+      "description": "A referenced/cited external work used as background or evidence.",
+      "properties": {
+        "aliases": {
+          "description": "Alternative labels/synonyms.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "citation_text": {
+          "description": "Citation string as appears in the paper.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "confidence_score": {
+          "description": "Extractor confidence (0-1).",
+          "maximum": 1,
+          "minimum": 0,
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "created_by": {
+          "description": "Actor responsible (tool URI or ORCID).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "created_on": {
+          "description": "Timestamp for object creation.",
+          "format": "date-time",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "curation_status": {
+          "$ref": "#/$defs/CurationStatus",
+          "description": "Review status for this extracted object."
+        },
+        "derived_from": {
+          "description": "Upstream objects this record was derived from.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "description": {
+          "description": "Longer free-text description.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "doi": {
+          "description": "DOI string, for example 10.xxxx/xxxx.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "generated_by": {
+          "description": "Reference to an ExtractionActivity that generated this object.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "description": "Stable identifier for the object (URI/CURIE recommended).",
+          "type": "string"
+        },
+        "label": {
+          "description": "Human-friendly short label.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "notes": {
+          "description": "Curator/system notes (not intended as machine-extracted content).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "origin": {
+          "$ref": "#/$defs/Origin",
+          "description": "Whether content is explicitly author-stated or inferred."
+        },
+        "pmid": {
+          "description": "PubMed ID string.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "provenance": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ProvenanceRecord"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Minimal provenance record."
+        },
+        "text_spans": {
+          "description": "Text spans grounding this object.",
+          "items": {
+            "$ref": "#/$defs/TextSpan"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "url": {
+          "description": "URL for the referenced work.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "year": {
+          "description": "Publication year.",
+          "type": [
+            "integer",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "title": "Reference",
+      "type": "object"
+    },
+    "ResearchState": {
+      "description": "Current review or investigation state for a claim or research branch.",
+      "enum": [
+        "open",
+        "supported",
+        "rejected",
+        "mixed",
+        "needs_evidence",
+        "needs_replication",
+        "blocked",
+        "merged"
+      ],
+      "title": "ResearchState",
+      "type": "string"
+    },
+    "ResearchStateRecord": {
+      "additionalProperties": false,
+      "description": "Current interpretation/state for one or more assertions or research branches. This is a workflow/readout layer: keep support/refute evidence in EvidenceLink.",
+      "properties": {
+        "aliases": {
+          "description": "Alternative labels/synonyms.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "confidence_score": {
+          "description": "Extractor confidence (0-1).",
+          "maximum": 1,
+          "minimum": 0,
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "created_by": {
+          "description": "Actor responsible (tool URI or ORCID).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "created_on": {
+          "description": "Timestamp for object creation.",
+          "format": "date-time",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "curation_status": {
+          "$ref": "#/$defs/CurationStatus",
+          "description": "Review status for this extracted object."
+        },
+        "current_read": {
+          "description": "Concise current interpretation of the claim after considering available evidence.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "derived_from": {
+          "description": "Upstream objects this record was derived from.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "description": {
+          "description": "Longer free-text description.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "generated_by": {
+          "description": "Reference to an ExtractionActivity that generated this object.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "description": "Stable identifier for the object (URI/CURIE recommended).",
+          "type": "string"
+        },
+        "label": {
+          "description": "Human-friendly short label.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "notes": {
+          "description": "Curator/system notes (not intended as machine-extracted content).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "origin": {
+          "$ref": "#/$defs/Origin",
+          "description": "Whether content is explicitly author-stated or inferred."
+        },
+        "provenance": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ProvenanceRecord"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Minimal provenance record."
+        },
+        "rationale": {
+          "description": "Explanation of why the evidence supports/refutes the assertion.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "recommended_next_actions": {
+          "description": "NextAction IDs recommended by a research-state record.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "state": {
+          "$ref": "#/$defs/ResearchState",
+          "description": "Current claim or branch state."
+        },
+        "target_assertions": {
+          "description": "Assertions this state, next action, or execution is about.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "text_spans": {
+          "description": "Text spans grounding this object.",
+          "items": {
+            "$ref": "#/$defs/TextSpan"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "state",
+        "id"
+      ],
+      "title": "ResearchStateRecord",
+      "type": "object"
+    },
+    "Result": {
+      "additionalProperties": false,
+      "description": "A structured representation of a reported result/statistic.",
+      "properties": {
+        "aliases": {
+          "description": "Alternative labels/synonyms.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "ci_high": {
+          "description": "Upper confidence interval bound.",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "ci_low": {
+          "description": "Lower confidence interval bound.",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "comparator": {
+          "description": "Comparator/control condition description.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "confidence_score": {
+          "description": "Extractor confidence (0-1).",
+          "maximum": 1,
+          "minimum": 0,
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "created_by": {
+          "description": "Actor responsible (tool URI or ORCID).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "created_on": {
+          "description": "Timestamp for object creation.",
+          "format": "date-time",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "curation_status": {
+          "$ref": "#/$defs/CurationStatus",
+          "description": "Review status for this extracted object."
+        },
+        "derived_from": {
+          "description": "Upstream objects this record was derived from.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "description": {
+          "description": "Longer free-text description.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "effect_size": {
+          "description": "Reported effect size (if numeric).",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "effect_size_type": {
+          "description": "Effect size type, for example log2FC, odds ratio, or Cohen's d.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "generated_by": {
+          "description": "Reference to an ExtractionActivity that generated this object.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "description": "Stable identifier for the object (URI/CURIE recommended).",
+          "type": "string"
+        },
+        "label": {
+          "description": "Human-friendly short label.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "n": {
+          "description": "Sample size for this result.",
+          "minimum": 0,
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "notes": {
+          "description": "Curator/system notes (not intended as machine-extracted content).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "origin": {
+          "$ref": "#/$defs/Origin",
+          "description": "Whether content is explicitly author-stated or inferred."
+        },
+        "outcome": {
+          "description": "Entity reference for the measured outcome.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "p_value": {
+          "description": "Reported p-value (if any).",
+          "maximum": 1,
+          "minimum": 0,
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "provenance": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ProvenanceRecord"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Minimal provenance record."
+        },
+        "result_text": {
+          "description": "Natural-language statement of the result.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "statistic": {
+          "description": "Reported test or statistic, for example t-test, F statistic, or chi-square.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "text_spans": {
+          "description": "Text spans grounding this object.",
+          "items": {
+            "$ref": "#/$defs/TextSpan"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "title": "Result",
+      "type": "object"
+    },
+    "RiskOfBiasDomain": {
+      "description": "Common risk-of-bias or failure modes.",
+      "enum": [
+        "selection_bias",
+        "performance_bias",
+        "detection_bias",
+        "attrition_bias",
+        "reporting_bias",
+        "confounding",
+        "batch_effect",
+        "contamination",
+        "measurement_error",
+        "multiple_testing",
+        "p_hacking",
+        "model_overfitting",
+        "data_leakage",
+        "data_quality",
+        "other"
+      ],
+      "title": "RiskOfBiasDomain",
+      "type": "string"
+    },
+    "SectionType": {
+      "description": "Canonical paper sections for anchoring extracted snippets.",
+      "enum": [
+        "title",
+        "abstract",
+        "introduction",
+        "methods",
+        "results",
+        "discussion",
+        "conclusion",
+        "supplementary",
+        "figure_caption",
+        "table_caption",
+        "other"
+      ],
+      "title": "SectionType",
+      "type": "string"
+    },
+    "SeverityLevel": {
+      "description": "Qualitative severity for critiques and knowledge gaps.",
+      "enum": [
+        "high",
+        "moderate",
+        "low",
+        "unknown"
+      ],
+      "title": "SeverityLevel",
+      "type": "string"
+    },
+    "StrengthLevel": {
+      "description": "Qualitative evidence-strength label.",
+      "enum": [
+        "very_strong",
+        "strong",
+        "moderate",
+        "weak",
+        "very_weak",
+        "unknown"
+      ],
+      "title": "StrengthLevel",
+      "type": "string"
+    },
+    "Study": {
+      "additionalProperties": false,
+      "description": "A study described in the paper (may include multiple experiments).",
+      "properties": {
+        "aliases": {
+          "description": "Alternative labels/synonyms.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "confidence_score": {
+          "description": "Extractor confidence (0-1).",
+          "maximum": 1,
+          "minimum": 0,
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "created_by": {
+          "description": "Actor responsible (tool URI or ORCID).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "created_on": {
+          "description": "Timestamp for object creation.",
+          "format": "date-time",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "curation_status": {
+          "$ref": "#/$defs/CurationStatus",
+          "description": "Review status for this extracted object."
+        },
+        "derived_from": {
+          "description": "Upstream objects this record was derived from.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "description": {
+          "description": "Longer free-text description.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "experiments": {
+          "description": "Experiments/assays within a study.",
+          "items": {
+            "$ref": "#/$defs/Experiment"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "generated_by": {
+          "description": "Reference to an ExtractionActivity that generated this object.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "description": "Stable identifier for the object (URI/CURIE recommended).",
+          "type": "string"
+        },
+        "label": {
+          "description": "Human-friendly short label.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "notes": {
+          "description": "Curator/system notes (not intended as machine-extracted content).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "origin": {
+          "$ref": "#/$defs/Origin",
+          "description": "Whether content is explicitly author-stated or inferred."
+        },
+        "provenance": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ProvenanceRecord"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Minimal provenance record."
+        },
+        "sample_size": {
+          "description": "Total sample size (if reported).",
+          "minimum": 0,
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "study_contexts": {
+          "description": "Context objects for the study (may overlap with assertion contexts).",
+          "items": {
+            "$ref": "#/$defs/Context"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "study_type": {
+          "description": "Ontology term for study design/type (OBI/EFO recommended).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "text_spans": {
+          "description": "Text spans grounding this object.",
+          "items": {
+            "$ref": "#/$defs/TextSpan"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "title": "Study",
+      "type": "object"
+    },
+    "StudyCritique": {
+      "additionalProperties": false,
+      "description": "A limitation/flaw/risk-of-bias assessment.",
+      "properties": {
+        "aliases": {
+          "description": "Alternative labels/synonyms.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "confidence_score": {
+          "description": "Extractor confidence (0-1).",
+          "maximum": 1,
+          "minimum": 0,
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "created_by": {
+          "description": "Actor responsible (tool URI or ORCID).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "created_on": {
+          "description": "Timestamp for object creation.",
+          "format": "date-time",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "critique_type": {
+          "$ref": "#/$defs/ThreatToValidityType",
+          "description": "Broad threat-to-validity class."
+        },
+        "curation_status": {
+          "$ref": "#/$defs/CurationStatus",
+          "description": "Review status for this extracted object."
+        },
+        "derived_from": {
+          "description": "Upstream objects this record was derived from.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "description": {
+          "description": "Longer free-text description.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "generated_by": {
+          "description": "Reference to an ExtractionActivity that generated this object.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "description": "Stable identifier for the object (URI/CURIE recommended).",
+          "type": "string"
+        },
+        "impacted_assertions": {
+          "description": "Assertions likely impacted.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "impacted_evidence_items": {
+          "description": "Evidence items likely impacted.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "label": {
+          "description": "Human-friendly short label.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "mitigation_suggestions": {
+          "description": "Suggested mitigations (optional).",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "notes": {
+          "description": "Curator/system notes (not intended as machine-extracted content).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "origin": {
+          "$ref": "#/$defs/Origin",
+          "description": "Whether content is explicitly author-stated or inferred."
+        },
+        "provenance": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ProvenanceRecord"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Minimal provenance record."
+        },
+        "risk_domain": {
+          "$ref": "#/$defs/RiskOfBiasDomain",
+          "description": "Specific risk/bias domain."
+        },
+        "severity": {
+          "$ref": "#/$defs/SeverityLevel",
+          "description": "Severity label."
+        },
+        "text_spans": {
+          "description": "Text spans grounding this object.",
+          "items": {
+            "$ref": "#/$defs/TextSpan"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "title": "StudyCritique",
+      "type": "object"
+    },
+    "TextSpan": {
+      "additionalProperties": false,
+      "description": "A grounded location in a document where an extracted object is evidenced.",
+      "properties": {
+        "aliases": {
+          "description": "Alternative labels/synonyms.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "artifact_ref": {
+          "description": "Optional reference to an Artifact (figure/table).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "confidence_score": {
+          "description": "Extractor confidence (0-1).",
+          "maximum": 1,
+          "minimum": 0,
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "created_by": {
+          "description": "Actor responsible (tool URI or ORCID).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "created_on": {
+          "description": "Timestamp for object creation.",
+          "format": "date-time",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "curation_status": {
+          "$ref": "#/$defs/CurationStatus",
+          "description": "Review status for this extracted object."
+        },
+        "derived_from": {
+          "description": "Upstream objects this record was derived from.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "description": {
+          "description": "Longer free-text description.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "document_id": {
+          "description": "Identifier of the source document this span belongs to.",
+          "type": "string"
+        },
+        "end_char": {
+          "description": "End character offset (exclusive).",
+          "minimum": 0,
+          "type": "integer"
+        },
+        "exact_text": {
+          "description": "Exact extracted string (optional).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "generated_by": {
+          "description": "Reference to an ExtractionActivity that generated this object.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "description": "Stable identifier for the object (URI/CURIE recommended).",
+          "type": "string"
+        },
+        "label": {
+          "description": "Human-friendly short label.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "notes": {
+          "description": "Curator/system notes (not intended as machine-extracted content).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "origin": {
+          "$ref": "#/$defs/Origin",
+          "description": "Whether content is explicitly author-stated or inferred."
+        },
+        "page_number": {
+          "description": "Page number (if PDF-sourced).",
+          "minimum": 1,
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "provenance": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ProvenanceRecord"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Minimal provenance record."
+        },
+        "section_heading": {
+          "description": "Actual heading text, if available.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "section_type": {
+          "$ref": "#/$defs/SectionType",
+          "description": "Canonical section for this span."
+        },
+        "start_char": {
+          "description": "Start character offset (0-based).",
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "document_id",
+        "section_type",
+        "start_char",
+        "end_char",
+        "id"
+      ],
+      "title": "TextSpan",
+      "type": "object"
+    },
+    "ThreatToValidityType": {
+      "description": "Broad threat-to-validity category.",
+      "enum": [
+        "internal_validity",
+        "external_validity",
+        "construct_validity",
+        "statistical_conclusion_validity"
+      ],
+      "title": "ThreatToValidityType",
+      "type": "string"
+    },
+    "Variable": {
+      "additionalProperties": false,
+      "description": "A measured/manipulated variable in an experiment.",
+      "properties": {
+        "aliases": {
+          "description": "Alternative labels/synonyms.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "confidence_score": {
+          "description": "Extractor confidence (0-1).",
+          "maximum": 1,
+          "minimum": 0,
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "created_by": {
+          "description": "Actor responsible (tool URI or ORCID).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "created_on": {
+          "description": "Timestamp for object creation.",
+          "format": "date-time",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "curation_status": {
+          "$ref": "#/$defs/CurationStatus",
+          "description": "Review status for this extracted object."
+        },
+        "derived_from": {
+          "description": "Upstream objects this record was derived from.",
+          "items": {
+            "type": "string"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "description": {
+          "description": "Longer free-text description.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "generated_by": {
+          "description": "Reference to an ExtractionActivity that generated this object.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "description": "Stable identifier for the object (URI/CURIE recommended).",
+          "type": "string"
+        },
+        "label": {
+          "description": "Human-friendly short label.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "measurement_type": {
+          "description": "Ontology term for measurement/attribute type (optional).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "notes": {
+          "description": "Curator/system notes (not intended as machine-extracted content).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "origin": {
+          "$ref": "#/$defs/Origin",
+          "description": "Whether content is explicitly author-stated or inferred."
+        },
+        "provenance": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ProvenanceRecord"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Minimal provenance record."
+        },
+        "text_spans": {
+          "description": "Text spans grounding this object.",
+          "items": {
+            "$ref": "#/$defs/TextSpan"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "value_number": {
+          "description": "Numeric value for a qualifier/condition/result.",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "value_text": {
+          "description": "Text value for a qualifier/condition/result.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "value_unit": {
+          "description": "Unit (UCUM recommended).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "variable_entity": {
+          "description": "Entity reference (Entity id) representing what is measured/manipulated.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "variable_role": {
+          "description": "Role of the variable (independent/dependent/control/confounder).",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "title": "Variable",
+      "type": "object"
+    }
+  },
+  "$id": "https://w3id.org/csag/schema/csag.handoff.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Versioned exchange record for agent work over one or more content-hashed PaperExtraction snapshots. Collaboration state belongs here rather than in the source-grounded PaperExtraction, and state changes should create new revisions.",
+  "metamodel_version": "1.7.0",
+  "properties": {
+    "actions": {
+      "description": "Owned work items with dependencies and acceptance criteria.",
+      "items": {
+        "$ref": "#/$defs/HandoffAction"
+      },
+      "type": [
+        "array",
+        "null"
+      ]
+    },
+    "assessments": {
+      "description": "Agent assessments and the artifacts, claims, or executions that support them.",
+      "items": {
+        "$ref": "#/$defs/HandoffAssessment"
+      },
+      "type": [
+        "array",
+        "null"
+      ]
+    },
+    "conflicts": {
+      "description": "Open or resolved conflicts between revision heads.",
+      "items": {
+        "$ref": "#/$defs/HandoffConflict"
+      },
+      "type": [
+        "array",
+        "null"
+      ]
+    },
+    "created_by": {
+      "description": "Actor responsible (tool URI or ORCID).",
+      "type": "string"
+    },
+    "created_on": {
+      "description": "Timestamp for object creation.",
+      "format": "date-time",
+      "type": "string"
+    },
+    "current_heads": {
+      "description": "Revision identifiers that are current workspace heads.",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "envelope_version": {
+      "description": "Version of the HandoffEnvelope contract used by this artifact.",
+      "pattern": "^1\\.0\\.0$",
+      "type": "string"
+    },
+    "executions": {
+      "description": "Runs/executions that generated evidence, tested assertions, or produced inspectable artifacts.",
+      "items": {
+        "$ref": "#/$defs/HandoffExecution"
+      },
+      "type": [
+        "array",
+        "null"
+      ]
+    },
+    "id": {
+      "description": "Stable identifier for the object (URI/CURIE recommended).",
+      "type": "string"
+    },
+    "parents": {
+      "description": "Immediate parent revision identifiers.",
+      "items": {
+        "type": "string"
+      },
+      "type": [
+        "array",
+        "null"
+      ]
+    },
+    "revision": {
+      "description": "Stable identifier for a handoff revision; it is not a digest of the envelope bytes.",
+      "type": "string"
+    },
+    "source_artifacts": {
+      "description": "Content-hashed source snapshots on which the handoff is based.",
+      "items": {
+        "$ref": "#/$defs/HandoffArtifactDigest"
+      },
+      "minItems": 1,
+      "type": "array"
+    }
+  },
+  "required": [
+    "id",
+    "envelope_version",
+    "revision",
+    "source_artifacts",
+    "current_heads",
+    "created_on",
+    "created_by"
+  ],
+  "title": "csag",
+  "type": "object",
+  "version": "1.0.0"
+}

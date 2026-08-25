@@ -1,0 +1,161 @@
+{
+  "bundle_id": "csag:entity-normalization-bundle/pmid35150280",
+  "source_document": "pmid:35150280",
+  "profile": "csag:entity-normalization-profile/biomedical-default/v1",
+  "entities": [
+    {
+      "csag_entity_id": "csag:entity/pmid35150280/EN0001",
+      "label": "viractin",
+      "entity_category": "protein",
+      "biolink_class": "biolink:Protein",
+      "canonical_curie": "csag.local:pmid35150280.EN0001",
+      "canonical_uri": "",
+      "xrefs": [
+        "csag.local:entity.pmid35150280/EN0001"
+      ],
+      "aliases": [],
+      "match_type": "author_label",
+      "confidence": 0.95,
+      "curation_status": "needs_review",
+      "source_document": "pmid:35150280"
+    },
+    {
+      "csag_entity_id": "csag:entity/pmid35150280/EN0002",
+      "label": "Imitervirales",
+      "entity_category": "organism",
+      "biolink_class": "biolink:OrganismTaxon",
+      "canonical_curie": "NCBITaxon:2732554",
+      "canonical_uri": "https://identifiers.org/NCBITaxon:2732554",
+      "xrefs": [
+        "NCBITaxon:2732554"
+      ],
+      "aliases": [],
+      "match_type": "exact",
+      "confidence": 0.93,
+      "curation_status": "human_verified",
+      "source_document": "pmid:35150280"
+    },
+    {
+      "csag_entity_id": "csag:entity/pmid35150280/EN0003",
+      "label": "actin/actin-related proteins (ARPs)",
+      "entity_category": "protein",
+      "biolink_class": "biolink:Protein",
+      "canonical_curie": "csag.local:pmid35150280.EN0003",
+      "canonical_uri": "",
+      "xrefs": [
+        "csag.local:entity.pmid35150280/EN0003"
+      ],
+      "aliases": [
+        "actin-related proteins",
+        "ARPs"
+      ],
+      "match_type": "broad_synonym",
+      "confidence": 0.9,
+      "curation_status": "needs_review",
+      "source_document": "pmid:35150280"
+    },
+    {
+      "csag_entity_id": "csag:entity/pmid35150280/EN0004",
+      "label": "Nucleocytoviricota",
+      "entity_category": "organism",
+      "biolink_class": "biolink:OrganismTaxon",
+      "canonical_curie": "NCBITaxon:2732007",
+      "canonical_uri": "https://identifiers.org/NCBITaxon:2732007",
+      "xrefs": [
+        "NCBITaxon:2732007"
+      ],
+      "aliases": [
+        "NCLDV",
+        "nucleocytoplasmic large DNA viruses"
+      ],
+      "match_type": "exact",
+      "confidence": 0.9,
+      "curation_status": "human_verified",
+      "source_document": "pmid:35150280"
+    },
+    {
+      "csag_entity_id": "csag:entity/pmid35150280/EN0005",
+      "label": "protoeukaryotes",
+      "entity_category": "organism",
+      "biolink_class": "biolink:OrganismTaxon",
+      "canonical_curie": "csag.local:pmid35150280.EN0005",
+      "canonical_uri": "",
+      "xrefs": [
+        "csag.local:entity.pmid35150280/EN0005"
+      ],
+      "aliases": [],
+      "match_type": "provisional_concept",
+      "confidence": 0.86,
+      "curation_status": "needs_review",
+      "source_document": "pmid:35150280"
+    }
+  ],
+  "mentions": [
+    {
+      "mention_id": "csag:mention/pmid35150280/M0001",
+      "csag_entity_id": "csag:entity/pmid35150280/EN0001",
+      "document_id": "pmid:35150280",
+      "section_type": "other",
+      "start_char": 1792,
+      "end_char": 2130,
+      "exact_text": "viractin",
+      "mention_type": "named_entity",
+      "confidence": 0.95,
+      "extractor": "csag-example-curation",
+      "needs_review": true
+    },
+    {
+      "mention_id": "csag:mention/pmid35150280/M0002",
+      "csag_entity_id": "csag:entity/pmid35150280/EN0002",
+      "document_id": "pmid:35150280",
+      "section_type": "other",
+      "start_char": 1792,
+      "end_char": 2130,
+      "exact_text": "Imitervirales",
+      "mention_type": "taxon",
+      "confidence": 0.93,
+      "extractor": "csag-example-curation",
+      "needs_review": false
+    },
+    {
+      "mention_id": "csag:mention/pmid35150280/M0003",
+      "csag_entity_id": "csag:entity/pmid35150280/EN0003",
+      "document_id": "pmid:35150280",
+      "section_type": "other",
+      "start_char": 6855,
+      "end_char": 7243,
+      "exact_text": "actin-related proteins",
+      "mention_type": "protein_family",
+      "confidence": 0.9,
+      "extractor": "csag-example-curation",
+      "needs_review": true
+    },
+    {
+      "mention_id": "csag:mention/pmid35150280/M0004",
+      "csag_entity_id": "csag:entity/pmid35150280/EN0004",
+      "document_id": "pmid:35150280",
+      "section_type": "other",
+      "start_char": 18550,
+      "end_char": 18939,
+      "exact_text": "Nucleocytoviricota",
+      "mention_type": "taxon",
+      "confidence": 0.9,
+      "extractor": "csag-example-curation",
+      "needs_review": false
+    },
+    {
+      "mention_id": "csag:mention/pmid35150280/M0005",
+      "csag_entity_id": "csag:entity/pmid35150280/EN0005",
+      "document_id": "pmid:35150280",
+      "section_type": "other",
+      "start_char": 13738,
+      "end_char": 14117,
+      "exact_text": "protoeukaryotes",
+      "mention_type": "taxon_concept",
+      "confidence": 0.86,
+      "extractor": "csag-example-curation",
+      "needs_review": true
+    }
+  ],
+  "normalization_report": "normalization_report.json"
+}

@@ -1,0 +1,53 @@
+{
+  "ok": false,
+  "profile": "paper_local",
+  "strictness_profile": "paper_local",
+  "profile_modules": [
+    "core"
+  ],
+  "validator_version": "1.0.0",
+  "extraction_json": "../paper_local.invalid_misplaced_semantics.json",
+  "inputs": {
+    "extraction": {
+      "path": "../paper_local.invalid_misplaced_semantics.json",
+      "sha256": "e275e93a13376b0929a1a81af03447cb99a4f259bc97c497e53aa49ebfb80e29",
+      "size_bytes": 9609
+    }
+  },
+  "errors": [
+    "object=assertions.0; field=assertions.0; reason=LinkML-derived schema violation: Additional properties are not allowed ('polarity' was unexpected); suggested_fix=Conform the artifact to skills/csag-extraction/assets/csag.yaml.",
+    "object=evidence_items.0; field=evidence_items.0; reason=LinkML-derived schema violation: Additional properties are not allowed ('relation_type' was unexpected); suggested_fix=Conform the artifact to skills/csag-extraction/assets/csag.yaml.",
+    "object=evidence_items.1; field=evidence_items.1; reason=LinkML-derived schema violation: Additional properties are not allowed ('inference_method' was unexpected); suggested_fix=Conform the artifact to skills/csag-extraction/assets/csag.yaml."
+  ],
+  "structured_errors": [
+    {
+      "object_id": "assertions.0",
+      "field_path": "assertions.0",
+      "reason": "LinkML-derived schema violation: Additional properties are not allowed ('polarity' was unexpected)",
+      "suggested_fix": "Conform the artifact to skills/csag-extraction/assets/csag.yaml.",
+      "code": "linkml_derived_schema_violation_additional_properties_are_not_allowed_polarity_w"
+    },
+    {
+      "object_id": "evidence_items.0",
+      "field_path": "evidence_items.0",
+      "reason": "LinkML-derived schema violation: Additional properties are not allowed ('relation_type' was unexpected)",
+      "suggested_fix": "Conform the artifact to skills/csag-extraction/assets/csag.yaml.",
+      "code": "linkml_derived_schema_violation_additional_properties_are_not_allowed_relation_t"
+    },
+    {
+      "object_id": "evidence_items.1",
+      "field_path": "evidence_items.1",
+      "reason": "LinkML-derived schema violation: Additional properties are not allowed ('inference_method' was unexpected)",
+      "suggested_fix": "Conform the artifact to skills/csag-extraction/assets/csag.yaml.",
+      "code": "linkml_derived_schema_violation_additional_properties_are_not_allowed_inference_"
+    }
+  ],
+  "error_summary": {
+    "linkml_derived_schema_violation_additional_properties_are_not_allowed_inference_": 1,
+    "linkml_derived_schema_violation_additional_properties_are_not_allowed_polarity_w": 1,
+    "linkml_derived_schema_violation_additional_properties_are_not_allowed_relation_t": 1
+  },
+  "warnings": [],
+  "repair_actions": [],
+  "metrics": {}
+}

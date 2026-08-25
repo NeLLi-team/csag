@@ -1,0 +1,27 @@
+{
+  "id": "examples/prior-art/ciccarese2013_pav_ontology",
+  "title": "PAV ontology: provenance, authoring and versioning",
+  "doi": "10.1186/2041-1480-4-37",
+  "source_record_url": "https://link.springer.com/article/10.1186/2041-1480-4-37",
+  "license": "Creative Commons Attribution 2.0 Generic",
+  "license_url": "https://creativecommons.org/licenses/by/2.0/",
+  "license_evidence_url": "https://link.springer.com/article/10.1186/2041-1480-4-37",
+  "source_pdf": "2041-1480-4-37.pdf",
+  "sha256": "82b76f48dafbdd82fe5c0123ff1645a0872a85a2ce33e752bcdd6138dedbf77f",
+  "download_url": "https://jbiomedsem.biomedcentral.com/counter/pdf/10.1186/2041-1480-4-37.pdf",
+  "included_sources": [
+    "2041-1480-4-37.pdf",
+    "ciccarese2013_pav_ontology.md"
+  ],
+  "included_sidecars": [
+    "ciccarese2013_pav_ontology.section_audit.json",
+    "ciccarese2013_pav_ontology.article.json"
+  ],
+  "included_outputs": [
+    "paper_extraction.json",
+    "paper_extraction.validation.json",
+    "paper_extraction.quality.json"
+  ],
+  "validation_profile": "paper_local",
+  "interpretation": "The extraction captures PAV as a compact provenance vocabulary that complements PROV-O by recording authorship, creation, derivation, and versioning for web resources."
+}

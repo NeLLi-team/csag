@@ -1,0 +1,566 @@
+{
+  "extraction_id": "csag:doc/toy_plastid_claim",
+  "title": "Toy Plastid Claim Manuscript",
+  "doi": "",
+  "pmid": "",
+  "counts": {
+    "artifacts": 0,
+    "datasets": 1,
+    "entities": 0,
+    "studies": 0,
+    "experiments": 0,
+    "assertions": 2,
+    "evidence_items": 2,
+    "evidence_links": 2,
+    "inferences": 1,
+    "assertion_relations": 0,
+    "critiques": 1,
+    "knowledge_gaps": 1,
+    "qa_items": 0,
+    "research_states": 0,
+    "next_actions": 0,
+    "executions": 0
+  },
+  "distributions": {
+    "claim_role": {
+      "background": 0,
+      "hypothesis": 0,
+      "research_question": 0,
+      "objective": 1,
+      "method_claim": 0,
+      "result_claim": 0,
+      "conclusion": 1,
+      "discovery": 0,
+      "speculation": 0,
+      "limitation": 0,
+      "future_work": 0
+    },
+    "criticality": {
+      "core": 1,
+      "major": 0,
+      "supporting": 1,
+      "background": 0
+    },
+    "normalization_status": {
+      "raw": 2,
+      "partially_normalized": 0,
+      "fully_normalized": 0
+    },
+    "evidence_polarity": {
+      "supports": 2,
+      "refutes": 0,
+      "mixed": 0,
+      "inconclusive": 0
+    },
+    "evidence_strength": {
+      "very_strong": 0,
+      "strong": 0,
+      "moderate": 2,
+      "weak": 0,
+      "very_weak": 0,
+      "unknown": 0
+    },
+    "research_state": {
+      "open": 0,
+      "supported": 0,
+      "rejected": 0,
+      "mixed": 0,
+      "needs_evidence": 0,
+      "needs_replication": 0,
+      "blocked": 0,
+      "merged": 0
+    }
+  },
+  "grounding": {
+    "assertions": {
+      "with_text_spans": 2,
+      "without_text_spans": 0
+    },
+    "evidence_items": {
+      "with_text_spans": 2,
+      "without_text_spans": 0
+    },
+    "evidence_links": {
+      "with_text_spans": 2,
+      "without_text_spans": 0
+    },
+    "text_spans_by_section": {
+      "other": 1,
+      "abstract": 3,
+      "discussion": 3,
+      "results": 2
+    }
+  },
+  "coverage": {
+    "assertions": 2,
+    "with_evidence_links": 2,
+    "without_evidence_links": 0,
+    "with_decisive_evidence": 2,
+    "assertions_with_context": 2,
+    "assertions_missing_context": 0,
+    "assertions_with_falsification_criteria": 2
+  },
+  "completeness": {
+    "document_scope": "lite",
+    "requested_document_scope": "auto",
+    "source_word_count": 119,
+    "score": 1.0,
+    "checks": [
+      {
+        "name": "objective_or_question_assertion",
+        "status": "pass",
+        "observed": 1,
+        "target": 1,
+        "reason": "hypothesis, research question, or objective assertion coverage",
+        "suggested_fix": "Add an objective/research-question assertion, or state in notes that the source lacks one."
+      },
+      {
+        "name": "result_or_conclusion_assertions",
+        "status": "pass",
+        "observed": 1,
+        "target": 1,
+        "reason": "result/conclusion claim coverage",
+        "suggested_fix": "Extract additional result or conclusion assertions from distinct manuscript sections when present."
+      },
+      {
+        "name": "evidence_items",
+        "status": "pass",
+        "observed": 2,
+        "target": 1,
+        "reason": "evidence item coverage",
+        "suggested_fix": "Add evidence items for the main analyses, observations, or cited support."
+      },
+      {
+        "name": "evidence_links",
+        "status": "pass",
+        "observed": 2,
+        "target": 1,
+        "reason": "claim-to-evidence linkage",
+        "suggested_fix": "Link each key assertion to supporting, refuting, mixed, or inconclusive evidence."
+      },
+      {
+        "name": "assertion_contexts",
+        "status": "pass",
+        "observed": 2,
+        "target": 2,
+        "reason": "every assertion needs at least one context",
+        "suggested_fix": "Attach a Context object to each assertion."
+      },
+      {
+        "name": "falsification_criteria",
+        "status": "pass",
+        "observed": 2,
+        "target": 1,
+        "reason": "core or major claims should say what would weaken them",
+        "suggested_fix": "Add falsification criteria to core and major assertions."
+      }
+    ]
+  },
+  "density": {
+    "document_scope": "lite",
+    "requested_document_scope": "auto",
+    "source_word_count": 119,
+    "context_count": 4,
+    "score": 1.0,
+    "checks": [
+      {
+        "name": "lite_assertions",
+        "status": "pass",
+        "observed": 2,
+        "target": 1,
+        "strict_failure": false,
+        "reason": "Lite artifacts need at least one assertion.",
+        "suggested_fix": "Add one central Assertion."
+      },
+      {
+        "name": "lite_evidence_links",
+        "status": "pass",
+        "observed": 2,
+        "target": 1,
+        "strict_failure": false,
+        "reason": "Lite artifacts need at least one evidence link.",
+        "suggested_fix": "Link one EvidenceItem to one Assertion."
+      },
+      {
+        "name": "lite_contexts",
+        "status": "pass",
+        "observed": 4,
+        "target": 1,
+        "strict_failure": false,
+        "reason": "Lite artifacts need at least one Context.",
+        "suggested_fix": "Attach a Context to the Assertion."
+      }
+    ]
+  },
+  "conversion_quality": {
+    "overall_conversion_score": 0.998,
+    "band": "excellent",
+    "subscores": {
+      "structural_integrity": 1.0,
+      "grounding": 1.0,
+      "evidence_linkage": 1.0,
+      "density": 1.0,
+      "field_quality": 0.985,
+      "artifact_discipline": 1.0
+    },
+    "interpretation": "Measures conversion/extraction quality, not whether the source literature itself is scientifically correct."
+  },
+  "claim_readouts": [
+    {
+      "assertion_id": "csag:assertion/csag:doc/toy_plastid_claim/A0001",
+      "claim_role": "objective",
+      "criticality": "supporting",
+      "assertion_text": "The toy manuscript evaluates whether blue light increases plastid pigment accumulation in toy algae.",
+      "state": "supported",
+      "current_read": "Inferred from 1 evidence link(s): supported.",
+      "evidence_for": [
+        {
+          "evidence_link_id": "csag:elink/csag:doc/toy_plastid_claim/L0002",
+          "evidence_item": "csag:evidence/csag:doc/toy_plastid_claim/E0002",
+          "strength": "moderate",
+          "rationale": "The abstract states the study comparison that motivates the objective assertion.",
+          "evidence_text": "The abstract states that toy algae grown under blue light accumulated more plastid pigment than matched dark controls.",
+          "associated_artifacts": [],
+          "results": []
+        }
+      ],
+      "evidence_against": [],
+      "mixed_or_inconclusive": [],
+      "next_actions": [],
+      "research_state_records": []
+    },
+    {
+      "assertion_id": "csag:assertion/csag:doc/toy_plastid_claim/A0002",
+      "claim_role": "conclusion",
+      "criticality": "core",
+      "assertion_text": "Blue light increases plastid pigment accumulation in the toy algal system.",
+      "state": "supported",
+      "current_read": "Inferred from 1 evidence link(s): supported.",
+      "evidence_for": [
+        {
+          "evidence_link_id": "csag:elink/csag:doc/toy_plastid_claim/L0001",
+          "evidence_item": "csag:evidence/csag:doc/toy_plastid_claim/E0001",
+          "strength": "moderate",
+          "rationale": "The measured pigment value is higher in the blue-light culture than in the matched dark control.",
+          "evidence_text": "Blue-light cultures measured 2.1 absorbance units of plastid pigment, while dark controls measured 1.0 absorbance unit.",
+          "associated_artifacts": [],
+          "results": []
+        }
+      ],
+      "evidence_against": [],
+      "mixed_or_inconclusive": [],
+      "next_actions": [],
+      "research_state_records": []
+    }
+  ],
+  "artifact_discipline": {
+    "empirical_evidence_items": 2,
+    "with_durable_output": 2,
+    "score": 1.0,
+    "checks": []
+  },
+  "literature_quality": {
+    "source": "none",
+    "available": false,
+    "summary": "No OpenAlex work metadata supplied.",
+    "metrics": {},
+    "signals": []
+  },
+  "missing_or_weak": [
+    {
+      "category": "field_quality",
+      "severity": "warning",
+      "field": "inferences",
+      "reason": "missing recommended fields: {'text_spans': 1}",
+      "suggested_fix": "Improve grounding, criticality, rationale, and provenance fields where the manuscript supports them."
+    },
+    {
+      "category": "field_quality",
+      "severity": "warning",
+      "field": "datasets",
+      "reason": "missing recommended fields: {'accession': 1}",
+      "suggested_fix": "Improve grounding, criticality, rationale, and provenance fields where the manuscript supports them."
+    }
+  ],
+  "field_quality": {
+    "overall_field_completeness_score": 0.985,
+    "missing_required_field_count": 0,
+    "missing_recommended_field_count": 2,
+    "weak_text_values": [],
+    "collections": {
+      "assertions": {
+        "object_count": 2,
+        "required_fields": [
+          "id",
+          "assertion_text",
+          "claim_role",
+          "normalization_status",
+          "contexts"
+        ],
+        "recommended_fields": [
+          "assertion_type",
+          "criticality",
+          "falsification_criteria",
+          "text_spans"
+        ],
+        "missing_required_by_field": {},
+        "missing_recommended_by_field": {},
+        "objects_with_missing_required": [],
+        "objects_with_missing_recommended": [],
+        "field_completeness_score": 1.0
+      },
+      "evidence_items": {
+        "object_count": 2,
+        "required_fields": [
+          "id",
+          "evidence_type"
+        ],
+        "recommended_fields": [
+          "evidence_text",
+          "contexts",
+          "text_spans"
+        ],
+        "missing_required_by_field": {},
+        "missing_recommended_by_field": {},
+        "objects_with_missing_required": [],
+        "objects_with_missing_recommended": [],
+        "field_completeness_score": 1.0
+      },
+      "evidence_links": {
+        "object_count": 2,
+        "required_fields": [
+          "id",
+          "evidence_item",
+          "assertion",
+          "polarity"
+        ],
+        "recommended_fields": [
+          "strength",
+          "rationale",
+          "text_spans"
+        ],
+        "missing_required_by_field": {},
+        "missing_recommended_by_field": {},
+        "objects_with_missing_required": [],
+        "objects_with_missing_recommended": [],
+        "field_completeness_score": 1.0
+      },
+      "inferences": {
+        "object_count": 1,
+        "required_fields": [
+          "id",
+          "output_assertion",
+          "inference_method"
+        ],
+        "recommended_fields": [
+          "input_assertions",
+          "input_evidence_links",
+          "inference_rationale",
+          "text_spans"
+        ],
+        "missing_required_by_field": {},
+        "missing_recommended_by_field": {
+          "text_spans": 1
+        },
+        "objects_with_missing_required": [],
+        "objects_with_missing_recommended": [
+          {
+            "id": "csag:inference/csag:doc/toy_plastid_claim/I0001",
+            "missing_required": [],
+            "missing_recommended": [
+              "text_spans"
+            ]
+          }
+        ],
+        "field_completeness_score": 0.929
+      },
+      "critiques": {
+        "object_count": 1,
+        "required_fields": [
+          "id"
+        ],
+        "recommended_fields": [
+          "critique_type",
+          "risk_domain",
+          "severity",
+          "impacted_assertions",
+          "text_spans"
+        ],
+        "missing_required_by_field": {},
+        "missing_recommended_by_field": {},
+        "objects_with_missing_required": [],
+        "objects_with_missing_recommended": [],
+        "field_completeness_score": 1.0
+      },
+      "knowledge_gaps": {
+        "object_count": 1,
+        "required_fields": [
+          "id"
+        ],
+        "recommended_fields": [
+          "gap_type",
+          "severity",
+          "related_assertions",
+          "suggested_actions",
+          "text_spans"
+        ],
+        "missing_required_by_field": {},
+        "missing_recommended_by_field": {},
+        "objects_with_missing_required": [],
+        "objects_with_missing_recommended": [],
+        "field_completeness_score": 1.0
+      },
+      "artifacts": {
+        "object_count": 0,
+        "required_fields": [
+          "id",
+          "artifact_type",
+          "artifact_label"
+        ],
+        "recommended_fields": [
+          "caption",
+          "text_spans"
+        ],
+        "missing_required_by_field": {},
+        "missing_recommended_by_field": {},
+        "objects_with_missing_required": [],
+        "objects_with_missing_recommended": [],
+        "field_completeness_score": 1.0
+      },
+      "datasets": {
+        "object_count": 1,
+        "required_fields": [
+          "id"
+        ],
+        "recommended_fields": [
+          "accession",
+          "repository",
+          "dataset_url",
+          "text_spans"
+        ],
+        "missing_required_by_field": {},
+        "missing_recommended_by_field": {
+          "accession": 1
+        },
+        "objects_with_missing_required": [],
+        "objects_with_missing_recommended": [
+          {
+            "id": "csag:dataset/csag:doc/toy_plastid_claim/D0001",
+            "missing_required": [],
+            "missing_recommended": [
+              "accession"
+            ]
+          }
+        ],
+        "field_completeness_score": 0.9
+      },
+      "qa_items": {
+        "object_count": 0,
+        "required_fields": [
+          "id",
+          "question_text",
+          "expected_answer_type",
+          "answers"
+        ],
+        "recommended_fields": [
+          "query_assertion",
+          "normalized_query"
+        ],
+        "missing_required_by_field": {},
+        "missing_recommended_by_field": {},
+        "objects_with_missing_required": [],
+        "objects_with_missing_recommended": [],
+        "field_completeness_score": 1.0
+      },
+      "research_states": {
+        "object_count": 0,
+        "required_fields": [
+          "id",
+          "state"
+        ],
+        "recommended_fields": [
+          "target_assertions",
+          "current_read",
+          "rationale",
+          "recommended_next_actions"
+        ],
+        "missing_required_by_field": {},
+        "missing_recommended_by_field": {},
+        "objects_with_missing_required": [],
+        "objects_with_missing_recommended": [],
+        "field_completeness_score": 1.0
+      },
+      "next_actions": {
+        "object_count": 0,
+        "required_fields": [
+          "id",
+          "action_type",
+          "description"
+        ],
+        "recommended_fields": [
+          "target_assertions",
+          "target_knowledge_gaps",
+          "priority"
+        ],
+        "missing_required_by_field": {},
+        "missing_recommended_by_field": {},
+        "objects_with_missing_required": [],
+        "objects_with_missing_recommended": [],
+        "field_completeness_score": 1.0
+      },
+      "executions": {
+        "object_count": 0,
+        "required_fields": [
+          "id",
+          "execution_type",
+          "execution_status"
+        ],
+        "recommended_fields": [
+          "command",
+          "output_artifacts",
+          "generated_evidence_items",
+          "tested_assertions"
+        ],
+        "missing_required_by_field": {},
+        "missing_recommended_by_field": {},
+        "objects_with_missing_required": [],
+        "objects_with_missing_recommended": [],
+        "field_completeness_score": 1.0
+      }
+    }
+  },
+  "source_signals": {
+    "figure_or_table_caption_present": false,
+    "dataset_signal_present": true
+  },
+  "structural_issues": {
+    "evidence_links_with_unknown_assertion": 0,
+    "evidence_links_with_unknown_evidence_item": 0
+  },
+  "section_word_counts": {
+    "_preamble": 9,
+    "Abstract": 30,
+    "Methods": 22,
+    "Results": 19,
+    "Discussion": 27,
+    "Data availability": 12
+  },
+  "issues": [],
+  "inputs": {
+    "extraction": {
+      "path": "paper_extraction.json",
+      "sha256": "bca4bdf09d0a6b7db4862b05b4cdbb36891513e6c2b1bde8df1e16acdf230adc",
+      "size_bytes": 9487
+    },
+    "source_markdown": {
+      "path": "toy.md",
+      "sha256": "1451c01219626d546a628559a350345c0eb4711a3d3713f442982df4a2d4d7f2",
+      "size_bytes": 860
+    },
+    "article_json": {
+      "path": "toy.article.json",
+      "sha256": "191e76623ed688debf5da2598dd2e1c854855189d83acb8f12eaa21c7cb9ac79",
+      "size_bytes": 913
+    }
+  }
+}

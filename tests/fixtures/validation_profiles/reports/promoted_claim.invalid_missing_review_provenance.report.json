@@ -1,0 +1,43 @@
+{
+  "ok": false,
+  "profile": "promoted_claim",
+  "strictness_profile": "promoted_claim",
+  "profile_modules": [
+    "core"
+  ],
+  "validator_version": "1.0.0",
+  "extraction_json": "../promoted_claim.invalid_missing_review_provenance.json",
+  "inputs": {
+    "extraction": {
+      "path": "../promoted_claim.invalid_missing_review_provenance.json",
+      "sha256": "bfb4dee3b0755dac01e4a8b822a8f124f50c636b67b423dfd89bc2a0c5be5a61",
+      "size_bytes": 9659
+    }
+  },
+  "errors": [
+    "object=csag:doc/toy_plastid_claim; field=extraction_activities[].activity_type; reason=missing promotion review provenance; suggested_fix=Record an ExtractionActivity whose activity_type names human review or curation before using the promoted_claim profile."
+  ],
+  "structured_errors": [
+    {
+      "object_id": "csag:doc/toy_plastid_claim",
+      "field_path": "extraction_activities[].activity_type",
+      "reason": "missing promotion review provenance",
+      "suggested_fix": "Record an ExtractionActivity whose activity_type names human review or curation before using the promoted_claim profile.",
+      "code": "missing_promotion_review_provenance"
+    }
+  ],
+  "error_summary": {
+    "missing_promotion_review_provenance": 1
+  },
+  "warnings": [],
+  "repair_actions": [],
+  "metrics": {
+    "assertions": 2,
+    "assertions_with_criticality": 2,
+    "assertions_with_falsification_criteria": 2,
+    "evidence_items": 2,
+    "evidence_links": 2,
+    "artifacts": 0,
+    "datasets": 1
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ok": true,
+  "scorer_version": "csag-score/2",
+  "inputs": {
+    "answer_key": {
+      "path": "answer_key.hidden.json",
+      "sha256": "19dcb9c46a33fa33229008b4011de5b6ce8593e8ab860244b09004acb6b233af",
+      "size_bytes": 9676
+    },
+    "participant": {
+      "path": "participant_output.json",
+      "sha256": "d91d16d0f1a48fd3ebeb81177c1ffcd0adf1f77220e0c459e899e8c67582a8e5",
+      "size_bytes": 9221
+    },
+    "scoring_schema": {
+      "path": "scoring_schema.json",
+      "sha256": "60716e4978a369c29ea81016560a122394e8a582fa6e93f523bc565c25af2cb1",
+      "size_bytes": 1092
+    }
+  },
+  "score": 1.5,
+  "possible": 2.0,
+  "normalized_score": 0.75,
+  "false_positive_assertions": [
+    "csag:assertion/csag:doc/toy_plastid_claim/A9999"
+  ],
+  "false_positive_penalty": 0.1,
+  "assertion_scores": [
+    {
+      "assertion": "csag:assertion/csag:doc/toy_plastid_claim/A0001",
+      "participant_assertion": "csag:assertion/csag:doc/toy_plastid_claim/A0001",
+      "match_basis": "canonical",
+      "component_scores": {
+        "assertion_text": 1.0,
+        "evidence_polarity": 0.0,
+        "context": 1.0,
+        "grounding": 1.0
+      },
+      "weighted_components": {
+        "assertion_text": 0.4,
+        "evidence_polarity": 0.0,
+        "context": 0.1,
+        "grounding": 0.1
+      },
+      "score": 0.6,
+      "possible": 1.0,
+      "reasons": [
+        "evidence_polarity partial or missing"
+      ]
+    },
+    {
+      "assertion": "csag:assertion/csag:doc/toy_plastid_claim/A0002",
+      "participant_assertion": "csag:assertion/csag:doc/toy_plastid_claim/A0002",
+      "match_basis": "canonical",
+      "component_scores": {
+        "assertion_text": 1.0,
+        "evidence_polarity": 1.0,
+        "context": 1.0,
+        "grounding": 1.0
+      },
+      "weighted_components": {
+        "assertion_text": 0.4,
+        "evidence_polarity": 0.4,
+        "context": 0.1,
+        "grounding": 0.1
+      },
+      "score": 1.0,
+      "possible": 1.0,
+      "reasons": []
+    }
+  ],
+  "expert_disagreement_note": "The key is a curated scoring reference, not the only possible interpretation."
+}

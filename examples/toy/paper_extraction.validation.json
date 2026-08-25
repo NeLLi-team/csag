@@ -1,0 +1,41 @@
+{
+  "ok": true,
+  "profile": "paper_local",
+  "strictness_profile": "paper_local",
+  "profile_modules": [
+    "core"
+  ],
+  "validator_version": "1.0.0",
+  "extraction_json": "paper_extraction.json",
+  "inputs": {
+    "extraction": {
+      "path": "paper_extraction.json",
+      "sha256": "bca4bdf09d0a6b7db4862b05b4cdbb36891513e6c2b1bde8df1e16acdf230adc",
+      "size_bytes": 9487
+    },
+    "source_markdown": {
+      "path": "toy.md",
+      "sha256": "1451c01219626d546a628559a350345c0eb4711a3d3713f442982df4a2d4d7f2",
+      "size_bytes": 860
+    },
+    "article_json": {
+      "path": "toy.article.json",
+      "sha256": "191e76623ed688debf5da2598dd2e1c854855189d83acb8f12eaa21c7cb9ac79",
+      "size_bytes": 913
+    }
+  },
+  "errors": [],
+  "structured_errors": [],
+  "error_summary": {},
+  "warnings": [],
+  "repair_actions": [],
+  "metrics": {
+    "assertions": 2,
+    "assertions_with_criticality": 2,
+    "assertions_with_falsification_criteria": 2,
+    "evidence_items": 2,
+    "evidence_links": 2,
+    "artifacts": 0,
+    "datasets": 1
+  }
+}

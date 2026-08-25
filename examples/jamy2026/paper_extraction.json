@@ -1,0 +1,1672 @@
+{
+  "id": "doi:10.1038/s41467-025-67401-4",
+  "title": "Identification of a deep-branching lineage of algae using environmental plastid genomes",
+  "schema_version": "1.0.0",
+  "validator_version": "1.0.0",
+  "doi": "10.1038/s41467-025-67401-4",
+  "pmid": "",
+  "journal": "Nature Communications",
+  "publication_date": "2025-12-14",
+  "authors": [
+    {
+      "label": "Mahwash Jamy",
+      "id": "csag:author/doi:10.1038/s41467-025-67401-4/AU0001"
+    },
+    {
+      "label": "Thomas Huber",
+      "id": "csag:author/doi:10.1038/s41467-025-67401-4/AU0002"
+    },
+    {
+      "label": "Thibault Antoine",
+      "id": "csag:author/doi:10.1038/s41467-025-67401-4/AU0003"
+    },
+    {
+      "label": "Hans-Joachim Ruscheweyh",
+      "id": "csag:author/doi:10.1038/s41467-025-67401-4/AU0004"
+    },
+    {
+      "label": "Lucas Paoli",
+      "id": "csag:author/doi:10.1038/s41467-025-67401-4/AU0005"
+    },
+    {
+      "label": "Eric Pelletier",
+      "id": "csag:author/doi:10.1038/s41467-025-67401-4/AU0006"
+    },
+    {
+      "label": "Tom O. Delmont",
+      "id": "csag:author/doi:10.1038/s41467-025-67401-4/AU0007"
+    },
+    {
+      "label": "Fabien Burki",
+      "id": "csag:author/doi:10.1038/s41467-025-67401-4/AU0008"
+    }
+  ],
+  "abstract": "**Mahwash Jamy**, **Thomas Huber**, **Thibault Antoine**, **Hans-Joachim Ruscheweyh**, **Lucas Paoli**, **Eric Pelletier**, **Tom O. Delmont**, **Fabien Burki**",
+  "artifacts": [
+    {
+      "id": "csag:artifact/doi:10.1038/s41467-025-67401-4/F0001",
+      "artifact_type": "figure",
+      "artifact_label": "Figure 1",
+      "caption": "Global phylogenetic analysis of plastid genomes from the sunlit ocean.",
+      "origin": "author_stated",
+      "confidence_score": 0.92,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41467-025-67401-4",
+          "section_type": "figure_caption",
+          "start_char": 12443,
+          "end_char": 12526,
+          "exact_text": "**Fig. 1 | Global phylogenetic analysis of plastid genomes from the sunlit ocean.**",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41467-025-67401-4/S0001"
+        }
+      ]
+    },
+    {
+      "id": "csag:artifact/doi:10.1038/s41467-025-67401-4/F0002",
+      "artifact_type": "figure",
+      "artifact_label": "Figure 2",
+      "caption": "Distribution patterns of plastid-encoded genes across algae with red plastids.",
+      "origin": "author_stated",
+      "confidence_score": 0.92,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41467-025-67401-4",
+          "section_type": "figure_caption",
+          "start_char": 14668,
+          "end_char": 14759,
+          "exact_text": "**Fig. 2 | Distribution patterns of plastid-encoded genes across algae with red plastids.**",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41467-025-67401-4/S0002"
+        }
+      ]
+    },
+    {
+      "id": "csag:artifact/doi:10.1038/s41467-025-67401-4/F0003",
+      "artifact_type": "figure",
+      "artifact_label": "Figure 3",
+      "caption": "Phylogenomic analyses based on a reduced taxon-sampling.",
+      "origin": "author_stated",
+      "confidence_score": 0.9,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41467-025-67401-4",
+          "section_type": "figure_caption",
+          "start_char": 20198,
+          "end_char": 20268,
+          "exact_text": "## Figure 3 | Phylogenomic analyses based on a reduced taxon-sampling.",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41467-025-67401-4/S0003"
+        }
+      ]
+    },
+    {
+      "id": "csag:artifact/doi:10.1038/s41467-025-67401-4/F0004",
+      "artifact_type": "figure",
+      "artifact_label": "Figure 4",
+      "caption": "Phylogeny and abundance patterns of a putative leptophyte mitochondrial genome.",
+      "origin": "author_stated",
+      "confidence_score": 0.9,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41467-025-67401-4",
+          "section_type": "figure_caption",
+          "start_char": 35596,
+          "end_char": 35688,
+          "exact_text": "**Fig. 4 | Phylogeny and abundance patterns of a putative leptophyte mitochondrial genome.**",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41467-025-67401-4/S0004"
+        }
+      ]
+    }
+  ],
+  "datasets": [
+    {
+      "id": "csag:dataset/doi:10.1038/s41467-025-67401-4/D0001",
+      "label": "Tara Oceans metagenomes",
+      "description": "Public Tara Oceans metagenomes used by the study.",
+      "accession": "PRJEB402",
+      "repository": "EBI",
+      "origin": "author_stated",
+      "confidence_score": 0.95,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41467-025-67401-4",
+          "section_type": "other",
+          "start_char": 75461,
+          "end_char": 75573,
+          "exact_text": "The 937 metagenomes from Tara Oceans used in the study are publicly available at the EBI under project PRJEB402.",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41467-025-67401-4/S0005"
+        }
+      ]
+    },
+    {
+      "id": "csag:dataset/doi:10.1038/s41467-025-67401-4/D0002",
+      "label": "Jamy et al. generated plastid and mitochondrial genome resources",
+      "description": "Repository containing FASTA files, co-assemblies, alignments, and tree files generated by the study.",
+      "accession": "10.17044/scilifelab.28212173",
+      "repository": "SciLifeLab Data Repository",
+      "dataset_url": "https://doi.org/10.17044/scilifelab.28212173",
+      "origin": "author_stated",
+      "confidence_score": 0.95,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41467-025-67401-4",
+          "section_type": "other",
+          "start_char": 75574,
+          "end_char": 75695,
+          "exact_text": "Data our study generated has been deposited in an online repository: https://doi.org/10.17044/scilifelab.28212173$^{81}$.",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41467-025-67401-4/S0006"
+        }
+      ]
+    }
+  ],
+  "assertions": [
+    {
+      "id": "csag:assertion/doi:10.1038/s41467-025-67401-4/A0001",
+      "assertion_text": "The study uses Tara Oceans genome-resolved metagenomics to assemble and curate a large environmental plastid genome resource.",
+      "claim_role": "objective",
+      "assertion_type": "methodological",
+      "normalization_status": "raw",
+      "criticality": "major",
+      "falsification_criteria": [
+        "This claim would be weakened if the paper did not use Tara Oceans metagenomic reads or did not curate environmental plastid MAGs."
+      ],
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1038/s41467-025-67401-4/C0001",
+          "label": "Tara Oceans genome-resolved metagenomic survey of sunlit ocean plastids",
+          "context_facet": "dataset",
+          "origin": "extractor_inferred",
+          "confidence_score": 0.82,
+          "additional_context_qualifiers": [
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0001",
+              "predicate": "csag:context_qualifier",
+              "value_text": "937 Tara Oceans metagenomes"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0002",
+              "predicate": "csag:context_qualifier",
+              "value_text": "Tara Oceans co-assemblies"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0003",
+              "predicate": "csag:context_qualifier",
+              "value_text": "environmental marine ptMAGs"
+            }
+          ]
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.95,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41467-025-67401-4",
+          "section_type": "introduction",
+          "start_char": 6597,
+          "end_char": 6847,
+          "exact_text": "Here, we used 280 billion metagenomic reads covering a wide range of *Tara* Oceans planktonic size fractions$^{15,16}$ as well as additional resources$^{17,18}$ to assemble and manually curate 660 non-redundant environmental plastid genomes (ptMAGs).",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41467-025-67401-4/S0007"
+        }
+      ]
+    },
+    {
+      "id": "csag:assertion/doi:10.1038/s41467-025-67401-4/A0002",
+      "assertion_text": "The survey produced 660 new non-redundant environmental plastid genomes that expand known marine algal plastid diversity.",
+      "claim_role": "result_claim",
+      "assertion_type": "descriptive",
+      "normalization_status": "raw",
+      "criticality": "core",
+      "falsification_criteria": [
+        "This claim would be weakened if redundancy filtering, completeness checks, or independent reanalysis failed to support the reported 660 non-redundant ptMAG resource."
+      ],
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1038/s41467-025-67401-4/C0002",
+          "label": "Tara Oceans genome-resolved metagenomic survey of sunlit ocean plastids",
+          "context_facet": "dataset",
+          "origin": "extractor_inferred",
+          "confidence_score": 0.82,
+          "additional_context_qualifiers": [
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0004",
+              "predicate": "csag:context_qualifier",
+              "value_text": "937 Tara Oceans metagenomes"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0005",
+              "predicate": "csag:context_qualifier",
+              "value_text": "Tara Oceans co-assemblies"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0006",
+              "predicate": "csag:context_qualifier",
+              "value_text": "environmental marine ptMAGs"
+            }
+          ]
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.94,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41467-025-67401-4",
+          "section_type": "abstract",
+          "start_char": 796,
+          "end_char": 1024,
+          "exact_text": "We present a curated resource of 660 new non-redundant plastid genomes of environmental marine algae, vastly expanding plastid genome diversity within major algal groups, including many without closely related reference genomes.",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41467-025-67401-4/S0008"
+        },
+        {
+          "document_id": "doi:10.1038/s41467-025-67401-4",
+          "section_type": "results",
+          "start_char": 8642,
+          "end_char": 8867,
+          "exact_text": "After filtering for redundancy (ANI >98%), our final plastid genome database derived from all oceanic regions consisted of 660 new ptMAGs, as well as 166 reference plastid genomes (Supplementary Fig. 1, Supplementary Data 1).",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41467-025-67401-4/S0009"
+        }
+      ]
+    },
+    {
+      "id": "csag:assertion/doi:10.1038/s41467-025-67401-4/A0003",
+      "assertion_text": "Jamy et al. recover leptophytes as a rare, widespread, deep-branching group of red-algal-derived plastid genomes that includes the DPL2 lineage.",
+      "claim_role": "discovery",
+      "assertion_type": "descriptive",
+      "normalization_status": "raw",
+      "criticality": "core",
+      "falsification_criteria": [
+        "This claim would be weakened if the four leptophyte ptMAGs were contaminants, if DPL2 similarity failed to reproduce, or if broad sampling placed them inside an established algal group."
+      ],
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1038/s41467-025-67401-4/C0003",
+          "label": "leptophyte deep-branching plastid lineage",
+          "context_facet": "model_system",
+          "origin": "extractor_inferred",
+          "confidence_score": 0.82,
+          "additional_context_qualifiers": [
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0007",
+              "predicate": "csag:context_qualifier",
+              "value_text": "Lepto-01"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0008",
+              "predicate": "csag:context_qualifier",
+              "value_text": "Lepto-02"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0009",
+              "predicate": "csag:context_qualifier",
+              "value_text": "Lepto-03"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0010",
+              "predicate": "csag:context_qualifier",
+              "value_text": "Lepto-04"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0011",
+              "predicate": "csag:context_qualifier",
+              "value_text": "DPL2"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0012",
+              "predicate": "csag:context_qualifier",
+              "value_text": "red-algal-derived plastids"
+            }
+          ]
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.92,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41467-025-67401-4",
+          "section_type": "results",
+          "start_char": 13525,
+          "end_char": 13854,
+          "exact_text": "Aside from the extended genomic diversity within clearly defined plastid groups, we also recovered a fully supported deep-branching clade formed by four red algal-derived ptMAGs that is related to, but distinct from all major groups with complex red plastids, i.e., haptophytes, cryptophytes, ochrophytes, and myzozoans (Fig. 1).",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41467-025-67401-4/S0010"
+        },
+        {
+          "document_id": "doi:10.1038/s41467-025-67401-4",
+          "section_type": "results",
+          "start_char": 15760,
+          "end_char": 15978,
+          "exact_text": "Interestingly, two 16S rDNA gene fragments were recovered in Lepto-01 and Lepto-04, respectively, which revealed that leptophytes are most similar to a few amplicon sequences of the enigmatic DPL2 plastid group$^{13}$.",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41467-025-67401-4/S0011"
+        }
+      ]
+    },
+    {
+      "id": "csag:assertion/doi:10.1038/s41467-025-67401-4/A0004",
+      "assertion_text": "Leptophyte plastids are related to haptophyte and cryptophyte plastids, with HC-sister and H-sister placements both remaining credible under different phylogenetic treatments.",
+      "claim_role": "result_claim",
+      "assertion_type": "comparative",
+      "normalization_status": "raw",
+      "criticality": "major",
+      "falsification_criteria": [
+        "This claim would be weakened if expanded phylogenomic analyses rejected one topology robustly across site-heterogeneous, composition-aware, and trimmed datasets."
+      ],
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1038/s41467-025-67401-4/C0004",
+          "label": "CHL plastid evolutionary topology testing",
+          "context_facet": "evolutionary_context",
+          "origin": "extractor_inferred",
+          "confidence_score": 0.82,
+          "additional_context_qualifiers": [
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0013",
+              "predicate": "csag:context_qualifier",
+              "value_text": "Cryptophytes-Haptophytes-Leptophytes group"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0014",
+              "predicate": "csag:context_qualifier",
+              "value_text": "HC-sister topology"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0015",
+              "predicate": "csag:context_qualifier",
+              "value_text": "H-sister topology"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0016",
+              "predicate": "csag:context_qualifier",
+              "value_text": "site-heterogeneous phylogenomics"
+            }
+          ]
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.86,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41467-025-67401-4",
+          "section_type": "results",
+          "start_char": 19172,
+          "end_char": 19351,
+          "exact_text": "The battery of advanced phylogenetic analyses all unambiguously confirmed that leptophytes form a novel group of plastid genomes related to haptophytes and cryptophytes (Fig. 3a).",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41467-025-67401-4/S0012"
+        },
+        {
+          "document_id": "doi:10.1038/s41467-025-67401-4",
+          "section_type": "results",
+          "start_char": 19633,
+          "end_char": 19937,
+          "exact_text": "Leptophytes were recovered as sister to both haptophytes and cryptophytes (HC-sister topology) with the Bayesian model CAT + GTR + G4 (PP = 0.99), as well as the ML models GTR + CAT-PMSF + G4 (BS = 88) and LG + MEOW80 + G4 (UFB = 61) in which site profiles are estimated directly from the data$^{30,31}$.",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41467-025-67401-4/S0013"
+        },
+        {
+          "document_id": "doi:10.1038/s41467-025-67401-4",
+          "section_type": "results",
+          "start_char": 25457,
+          "end_char": 25685,
+          "exact_text": "Overall, these results indicate that resolving the topology of the CHL group in general and placement of leptophytes in particular is not trivial, as both HC-sister and H-sister topologies remain credible (Supplementary Note 1).",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41467-025-67401-4/S0014"
+        }
+      ]
+    },
+    {
+      "id": "csag:assertion/doi:10.1038/s41467-025-67401-4/A0005",
+      "assertion_text": "A near-complete mitochondrial MAG associated with Lepto-01 places the leptophyte host lineage as sister to haptophytes.",
+      "claim_role": "result_claim",
+      "assertion_type": "comparative",
+      "normalization_status": "raw",
+      "criticality": "major",
+      "falsification_criteria": [
+        "This claim would be weakened if Lepto-01_mtMAG_004 did not co-vary with Lepto-01 ptMAG abundance or if mitochondrial phylogenies failed to place it sister to haptophytes."
+      ],
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1038/s41467-025-67401-4/C0005",
+          "label": "leptophyte deep-branching plastid lineage",
+          "context_facet": "model_system",
+          "origin": "extractor_inferred",
+          "confidence_score": 0.82,
+          "additional_context_qualifiers": [
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0017",
+              "predicate": "csag:context_qualifier",
+              "value_text": "Lepto-01"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0018",
+              "predicate": "csag:context_qualifier",
+              "value_text": "Lepto-02"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0019",
+              "predicate": "csag:context_qualifier",
+              "value_text": "Lepto-03"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0020",
+              "predicate": "csag:context_qualifier",
+              "value_text": "Lepto-04"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0021",
+              "predicate": "csag:context_qualifier",
+              "value_text": "DPL2"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0022",
+              "predicate": "csag:context_qualifier",
+              "value_text": "red-algal-derived plastids"
+            }
+          ]
+        },
+        {
+          "id": "csag:context/doi:10.1038/s41467-025-67401-4/C0006",
+          "label": "CHL plastid evolutionary topology testing",
+          "context_facet": "evolutionary_context",
+          "origin": "extractor_inferred",
+          "confidence_score": 0.82,
+          "additional_context_qualifiers": [
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0023",
+              "predicate": "csag:context_qualifier",
+              "value_text": "Cryptophytes-Haptophytes-Leptophytes group"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0024",
+              "predicate": "csag:context_qualifier",
+              "value_text": "HC-sister topology"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0025",
+              "predicate": "csag:context_qualifier",
+              "value_text": "H-sister topology"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0026",
+              "predicate": "csag:context_qualifier",
+              "value_text": "site-heterogeneous phylogenomics"
+            }
+          ]
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.9,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41467-025-67401-4",
+          "section_type": "results",
+          "start_char": 27575,
+          "end_char": 27767,
+          "exact_text": "Among the 34 mtMAGs, one genome (Lepto-01_mtMAG_004) showed highly significant read coverage correlation with the Lepto-01 ptMAG ($R^2 = 0.96$, p-value < 0.01) (Fig. 4, Supplementary Fig. 22).",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41467-025-67401-4/S0015"
+        },
+        {
+          "document_id": "doi:10.1038/s41467-025-67401-4",
+          "section_type": "results",
+          "start_char": 27768,
+          "end_char": 27950,
+          "exact_text": "Most interestingly, Lepto-01_mtMAG_004 also corresponded to a novel deep-branching lineage firmly placed as sister to haptophyte mitochondrial genomes (Fig. 4; UFB = 100%, PP = 1.0).",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41467-025-67401-4/S0016"
+        }
+      ]
+    },
+    {
+      "id": "csag:assertion/doi:10.1038/s41467-025-67401-4/A0006",
+      "assertion_text": "The order of plastid transfer among leptophytes, cryptophytes, and haptophytes remains unresolved and requires nuclear or nucleomorph genome information, ideally from cultivation.",
+      "claim_role": "limitation",
+      "assertion_type": "descriptive",
+      "normalization_status": "raw",
+      "criticality": "major",
+      "falsification_criteria": [
+        "This limitation would be weakened by a conclusive plastid phylogeny or recovery of nuclear/nucleomorph genomes that resolves leptophyte host placement and transfer direction."
+      ],
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1038/s41467-025-67401-4/C0007",
+          "label": "CHL plastid evolutionary topology testing",
+          "context_facet": "evolutionary_context",
+          "origin": "extractor_inferred",
+          "confidence_score": 0.82,
+          "additional_context_qualifiers": [
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0027",
+              "predicate": "csag:context_qualifier",
+              "value_text": "Cryptophytes-Haptophytes-Leptophytes group"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0028",
+              "predicate": "csag:context_qualifier",
+              "value_text": "HC-sister topology"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0029",
+              "predicate": "csag:context_qualifier",
+              "value_text": "H-sister topology"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0030",
+              "predicate": "csag:context_qualifier",
+              "value_text": "site-heterogeneous phylogenomics"
+            }
+          ]
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.9,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41467-025-67401-4",
+          "section_type": "discussion",
+          "start_char": 40638,
+          "end_char": 40784,
+          "exact_text": "Without a more conclusive plastid phylogeny, or other supporting evidence, it is currently not possible to decide which model, if any, is correct.",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41467-025-67401-4/S0017"
+        },
+        {
+          "document_id": "doi:10.1038/s41467-025-67401-4",
+          "section_type": "discussion",
+          "start_char": 41485,
+          "end_char": 41845,
+          "exact_text": "Ultimately, deciding between the origin of the leptophyte plastid and order of transfer to or from cryptophytes and haptophytes will rest on characterising the nuclear and putative nucleomorph genomes of leptophytes, ideally in the context of cultivation, in order to determine their specific position in the eukaryotic tree and investigate their cell biology.",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41467-025-67401-4/S0018"
+        }
+      ]
+    },
+    {
+      "id": "csag:assertion/doi:10.1038/s41467-025-67401-4/A0007",
+      "assertion_text": "Jamy et al. recover moderate support for monophyly of red-algal-derived plastids rather than a separate secondary plastid acquisition in ochrophytes.",
+      "claim_role": "conclusion",
+      "assertion_type": "comparative",
+      "normalization_status": "raw",
+      "criticality": "major",
+      "falsification_criteria": [
+        "This claim would be weakened if expanded phylogenetic analyses robustly recovered separate secondary plastid acquisition in ochrophytes."
+      ],
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1038/s41467-025-67401-4/C0008",
+          "label": "CHL plastid evolutionary topology testing",
+          "context_facet": "evolutionary_context",
+          "origin": "extractor_inferred",
+          "confidence_score": 0.82,
+          "additional_context_qualifiers": [
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0031",
+              "predicate": "csag:context_qualifier",
+              "value_text": "Cryptophytes-Haptophytes-Leptophytes group"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0032",
+              "predicate": "csag:context_qualifier",
+              "value_text": "HC-sister topology"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0033",
+              "predicate": "csag:context_qualifier",
+              "value_text": "H-sister topology"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0034",
+              "predicate": "csag:context_qualifier",
+              "value_text": "site-heterogeneous phylogenomics"
+            }
+          ]
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.82,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41467-025-67401-4",
+          "section_type": "discussion",
+          "start_char": 41114,
+          "end_char": 41400,
+          "exact_text": "More generally, our advanced phylogenetic analyses and broad taxon sampling continue to recover\u2014albeit with only moderate support\u2014the monophyly of all red algal-derived plastids, unlike in a recent proposal that argues for a separate secondary plastid acquisition in ochrophytes$^{46}$.",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41467-025-67401-4/S0019"
+        }
+      ]
+    }
+  ],
+  "evidence_items": [
+    {
+      "id": "csag:evidence/doi:10.1038/s41467-025-67401-4/E0001",
+      "evidence_type": "observational_data",
+      "evidence_text": "The study curated 660 new non-redundant ptMAGs from Tara Oceans and related metagenomic resources.",
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1038/s41467-025-67401-4/C0009",
+          "label": "Tara Oceans genome-resolved metagenomic survey of sunlit ocean plastids",
+          "context_facet": "dataset",
+          "origin": "extractor_inferred",
+          "confidence_score": 0.82,
+          "additional_context_qualifiers": [
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0035",
+              "predicate": "csag:context_qualifier",
+              "value_text": "937 Tara Oceans metagenomes"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0036",
+              "predicate": "csag:context_qualifier",
+              "value_text": "Tara Oceans co-assemblies"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0037",
+              "predicate": "csag:context_qualifier",
+              "value_text": "environmental marine ptMAGs"
+            }
+          ]
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.94,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41467-025-67401-4",
+          "section_type": "introduction",
+          "start_char": 6597,
+          "end_char": 6847,
+          "exact_text": "Here, we used 280 billion metagenomic reads covering a wide range of *Tara* Oceans planktonic size fractions$^{15,16}$ as well as additional resources$^{17,18}$ to assemble and manually curate 660 non-redundant environmental plastid genomes (ptMAGs).",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41467-025-67401-4/S0020"
+        },
+        {
+          "document_id": "doi:10.1038/s41467-025-67401-4",
+          "section_type": "results",
+          "start_char": 8642,
+          "end_char": 8867,
+          "exact_text": "After filtering for redundancy (ANI >98%), our final plastid genome database derived from all oceanic regions consisted of 660 new ptMAGs, as well as 166 reference plastid genomes (Supplementary Fig. 1, Supplementary Data 1).",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41467-025-67401-4/S0021"
+        }
+      ]
+    },
+    {
+      "id": "csag:evidence/doi:10.1038/s41467-025-67401-4/E0002",
+      "evidence_type": "computational_model",
+      "evidence_text": "A 93-gene plastid phylogeny and abundance mapping show broad recovery of marine algal ptMAGs, especially in ochrophytes and haptophytes.",
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1038/s41467-025-67401-4/C0010",
+          "label": "Tara Oceans genome-resolved metagenomic survey of sunlit ocean plastids",
+          "context_facet": "dataset",
+          "origin": "extractor_inferred",
+          "confidence_score": 0.82,
+          "additional_context_qualifiers": [
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0038",
+              "predicate": "csag:context_qualifier",
+              "value_text": "937 Tara Oceans metagenomes"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0039",
+              "predicate": "csag:context_qualifier",
+              "value_text": "Tara Oceans co-assemblies"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0040",
+              "predicate": "csag:context_qualifier",
+              "value_text": "environmental marine ptMAGs"
+            }
+          ]
+        }
+      ],
+      "associated_artifacts": [
+        "csag:artifact/doi:10.1038/s41467-025-67401-4/F0001"
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.9,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41467-025-67401-4",
+          "section_type": "results",
+          "start_char": 10722,
+          "end_char": 11035,
+          "exact_text": "Conversely, the ptMAGs greatly expanded the known plastid genome diversity of ochrophytes ($n = 375$, including 304 diatoms displaying a very broad cellular size range), and haptophytes ($n = 196$, including Phaeocystales found in large size fractions likely due to their distinct colony-forming lifestyle$^{1}$).",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41467-025-67401-4/S0022"
+        },
+        {
+          "document_id": "doi:10.1038/s41467-025-67401-4",
+          "section_type": "figure_caption",
+          "start_char": 12443,
+          "end_char": 12526,
+          "exact_text": "**Fig. 1 | Global phylogenetic analysis of plastid genomes from the sunlit ocean.**",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41467-025-67401-4/S0023"
+        }
+      ]
+    },
+    {
+      "id": "csag:evidence/doi:10.1038/s41467-025-67401-4/E0003",
+      "evidence_type": "computational_model",
+      "evidence_text": "Four red-algal-derived ptMAGs form a fully supported deep-branching clade distinct from major red-plastid groups.",
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1038/s41467-025-67401-4/C0011",
+          "label": "leptophyte deep-branching plastid lineage",
+          "context_facet": "model_system",
+          "origin": "extractor_inferred",
+          "confidence_score": 0.82,
+          "additional_context_qualifiers": [
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0041",
+              "predicate": "csag:context_qualifier",
+              "value_text": "Lepto-01"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0042",
+              "predicate": "csag:context_qualifier",
+              "value_text": "Lepto-02"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0043",
+              "predicate": "csag:context_qualifier",
+              "value_text": "Lepto-03"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0044",
+              "predicate": "csag:context_qualifier",
+              "value_text": "Lepto-04"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0045",
+              "predicate": "csag:context_qualifier",
+              "value_text": "DPL2"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0046",
+              "predicate": "csag:context_qualifier",
+              "value_text": "red-algal-derived plastids"
+            }
+          ]
+        }
+      ],
+      "associated_artifacts": [
+        "csag:artifact/doi:10.1038/s41467-025-67401-4/F0001"
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.9,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41467-025-67401-4",
+          "section_type": "results",
+          "start_char": 13525,
+          "end_char": 13854,
+          "exact_text": "Aside from the extended genomic diversity within clearly defined plastid groups, we also recovered a fully supported deep-branching clade formed by four red algal-derived ptMAGs that is related to, but distinct from all major groups with complex red plastids, i.e., haptophytes, cryptophytes, ochrophytes, and myzozoans (Fig. 1).",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41467-025-67401-4/S0024"
+        }
+      ]
+    },
+    {
+      "id": "csag:evidence/doi:10.1038/s41467-025-67401-4/E0004",
+      "evidence_type": "observational_data",
+      "evidence_text": "Lepto-01 and Lepto-04 16S rDNA fragments connect leptophytes to the enigmatic DPL2 plastid group.",
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1038/s41467-025-67401-4/C0012",
+          "label": "leptophyte deep-branching plastid lineage",
+          "context_facet": "model_system",
+          "origin": "extractor_inferred",
+          "confidence_score": 0.82,
+          "additional_context_qualifiers": [
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0047",
+              "predicate": "csag:context_qualifier",
+              "value_text": "Lepto-01"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0048",
+              "predicate": "csag:context_qualifier",
+              "value_text": "Lepto-02"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0049",
+              "predicate": "csag:context_qualifier",
+              "value_text": "Lepto-03"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0050",
+              "predicate": "csag:context_qualifier",
+              "value_text": "Lepto-04"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0051",
+              "predicate": "csag:context_qualifier",
+              "value_text": "DPL2"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0052",
+              "predicate": "csag:context_qualifier",
+              "value_text": "red-algal-derived plastids"
+            }
+          ]
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.9,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41467-025-67401-4",
+          "section_type": "results",
+          "start_char": 15760,
+          "end_char": 15978,
+          "exact_text": "Interestingly, two 16S rDNA gene fragments were recovered in Lepto-01 and Lepto-04, respectively, which revealed that leptophytes are most similar to a few amplicon sequences of the enigmatic DPL2 plastid group$^{13}$.",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41467-025-67401-4/S0025"
+        }
+      ]
+    },
+    {
+      "id": "csag:evidence/doi:10.1038/s41467-025-67401-4/E0005",
+      "evidence_type": "computational_model",
+      "evidence_text": "Lepto-01 is near-complete, photosynthetic, and gene-content clustering makes leptophytes most similar to haptophytes.",
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1038/s41467-025-67401-4/C0013",
+          "label": "leptophyte deep-branching plastid lineage",
+          "context_facet": "model_system",
+          "origin": "extractor_inferred",
+          "confidence_score": 0.82,
+          "additional_context_qualifiers": [
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0053",
+              "predicate": "csag:context_qualifier",
+              "value_text": "Lepto-01"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0054",
+              "predicate": "csag:context_qualifier",
+              "value_text": "Lepto-02"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0055",
+              "predicate": "csag:context_qualifier",
+              "value_text": "Lepto-03"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0056",
+              "predicate": "csag:context_qualifier",
+              "value_text": "Lepto-04"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0057",
+              "predicate": "csag:context_qualifier",
+              "value_text": "DPL2"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0058",
+              "predicate": "csag:context_qualifier",
+              "value_text": "red-algal-derived plastids"
+            }
+          ]
+        }
+      ],
+      "associated_artifacts": [
+        "csag:artifact/doi:10.1038/s41467-025-67401-4/F0002"
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.9,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41467-025-67401-4",
+          "section_type": "results",
+          "start_char": 16528,
+          "end_char": 16769,
+          "exact_text": "Lepto-01 is the best representative genome for the group. This assembly had the highest coverage (detected in 20 stations with an average mean coverage of 6.3\u00d7) but it was also near complete and contiguous with a single contig of 104,203 bp.",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41467-025-67401-4/S0026"
+        },
+        {
+          "document_id": "doi:10.1038/s41467-025-67401-4",
+          "section_type": "results",
+          "start_char": 17162,
+          "end_char": 17519,
+          "exact_text": "The functional repertoire of Lepto-01 shows that it is a photosynthetic plastid genome, retaining genes for the core components of both photosystem I and II (*psa*- and *psb*-genes), carbon fixation (*rbcL* and *rbcS*), cytochrome b6/f complex (*pet*-genes), ATP synthase (*atp*-genes), and chlorophyll biosynthesis (*chlI*) (Fig. 2, Supplementary Fig. 15).",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41467-025-67401-4/S0027"
+        },
+        {
+          "document_id": "doi:10.1038/s41467-025-67401-4",
+          "section_type": "results",
+          "start_char": 17824,
+          "end_char": 17963,
+          "exact_text": "UPGMA-clustering of homologous gene occurrence showed that the gene content of leptophytes is most similar to that of haptophytes (Fig. 2).",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41467-025-67401-4/S0028"
+        }
+      ]
+    },
+    {
+      "id": "csag:evidence/doi:10.1038/s41467-025-67401-4/E0006",
+      "evidence_type": "computational_model",
+      "evidence_text": "Advanced plastid phylogenies support the CHL group and HC-sister topology, but alternative topology tests leave both HC-sister and H-sister positions credible.",
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1038/s41467-025-67401-4/C0014",
+          "label": "CHL plastid evolutionary topology testing",
+          "context_facet": "evolutionary_context",
+          "origin": "extractor_inferred",
+          "confidence_score": 0.82,
+          "additional_context_qualifiers": [
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0059",
+              "predicate": "csag:context_qualifier",
+              "value_text": "Cryptophytes-Haptophytes-Leptophytes group"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0060",
+              "predicate": "csag:context_qualifier",
+              "value_text": "HC-sister topology"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0061",
+              "predicate": "csag:context_qualifier",
+              "value_text": "H-sister topology"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0062",
+              "predicate": "csag:context_qualifier",
+              "value_text": "site-heterogeneous phylogenomics"
+            }
+          ]
+        }
+      ],
+      "associated_artifacts": [
+        "csag:artifact/doi:10.1038/s41467-025-67401-4/F0003"
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.86,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41467-025-67401-4",
+          "section_type": "results",
+          "start_char": 19172,
+          "end_char": 19351,
+          "exact_text": "The battery of advanced phylogenetic analyses all unambiguously confirmed that leptophytes form a novel group of plastid genomes related to haptophytes and cryptophytes (Fig. 3a).",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41467-025-67401-4/S0029"
+        },
+        {
+          "document_id": "doi:10.1038/s41467-025-67401-4",
+          "section_type": "results",
+          "start_char": 19352,
+          "end_char": 19544,
+          "exact_text": "This affinity is also supported by a shared rare bacterial gene replacement by horizontal transfer of the ribosomal protein gene *rpl36* into the plastid genomes of all three groups (Fig. 3b).",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41467-025-67401-4/S0030"
+        },
+        {
+          "document_id": "doi:10.1038/s41467-025-67401-4",
+          "section_type": "results",
+          "start_char": 19633,
+          "end_char": 19937,
+          "exact_text": "Leptophytes were recovered as sister to both haptophytes and cryptophytes (HC-sister topology) with the Bayesian model CAT + GTR + G4 (PP = 0.99), as well as the ML models GTR + CAT-PMSF + G4 (BS = 88) and LG + MEOW80 + G4 (UFB = 61) in which site profiles are estimated directly from the data$^{30,31}$.",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41467-025-67401-4/S0031"
+        },
+        {
+          "document_id": "doi:10.1038/s41467-025-67401-4",
+          "section_type": "results",
+          "start_char": 25457,
+          "end_char": 25685,
+          "exact_text": "Overall, these results indicate that resolving the topology of the CHL group in general and placement of leptophytes in particular is not trivial, as both HC-sister and H-sister topologies remain credible (Supplementary Note 1).",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41467-025-67401-4/S0032"
+        }
+      ]
+    },
+    {
+      "id": "csag:evidence/doi:10.1038/s41467-025-67401-4/E0007",
+      "evidence_type": "statistical_analysis",
+      "evidence_text": "Lepto-01_mtMAG_004 strongly correlates with Lepto-01 ptMAG abundance and is phylogenetically sister to haptophyte mitochondria.",
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1038/s41467-025-67401-4/C0015",
+          "label": "leptophyte deep-branching plastid lineage",
+          "context_facet": "model_system",
+          "origin": "extractor_inferred",
+          "confidence_score": 0.82,
+          "additional_context_qualifiers": [
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0063",
+              "predicate": "csag:context_qualifier",
+              "value_text": "Lepto-01"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0064",
+              "predicate": "csag:context_qualifier",
+              "value_text": "Lepto-02"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0065",
+              "predicate": "csag:context_qualifier",
+              "value_text": "Lepto-03"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0066",
+              "predicate": "csag:context_qualifier",
+              "value_text": "Lepto-04"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0067",
+              "predicate": "csag:context_qualifier",
+              "value_text": "DPL2"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0068",
+              "predicate": "csag:context_qualifier",
+              "value_text": "red-algal-derived plastids"
+            }
+          ]
+        },
+        {
+          "id": "csag:context/doi:10.1038/s41467-025-67401-4/C0016",
+          "label": "CHL plastid evolutionary topology testing",
+          "context_facet": "evolutionary_context",
+          "origin": "extractor_inferred",
+          "confidence_score": 0.82,
+          "additional_context_qualifiers": [
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0069",
+              "predicate": "csag:context_qualifier",
+              "value_text": "Cryptophytes-Haptophytes-Leptophytes group"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0070",
+              "predicate": "csag:context_qualifier",
+              "value_text": "HC-sister topology"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0071",
+              "predicate": "csag:context_qualifier",
+              "value_text": "H-sister topology"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0072",
+              "predicate": "csag:context_qualifier",
+              "value_text": "site-heterogeneous phylogenomics"
+            }
+          ]
+        }
+      ],
+      "associated_artifacts": [
+        "csag:artifact/doi:10.1038/s41467-025-67401-4/F0004"
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.9,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41467-025-67401-4",
+          "section_type": "results",
+          "start_char": 27575,
+          "end_char": 27767,
+          "exact_text": "Among the 34 mtMAGs, one genome (Lepto-01_mtMAG_004) showed highly significant read coverage correlation with the Lepto-01 ptMAG ($R^2 = 0.96$, p-value < 0.01) (Fig. 4, Supplementary Fig. 22).",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41467-025-67401-4/S0033"
+        },
+        {
+          "document_id": "doi:10.1038/s41467-025-67401-4",
+          "section_type": "results",
+          "start_char": 27768,
+          "end_char": 27950,
+          "exact_text": "Most interestingly, Lepto-01_mtMAG_004 also corresponded to a novel deep-branching lineage firmly placed as sister to haptophyte mitochondrial genomes (Fig. 4; UFB = 100%, PP = 1.0).",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41467-025-67401-4/S0034"
+        }
+      ]
+    },
+    {
+      "id": "csag:evidence/doi:10.1038/s41467-025-67401-4/E0008",
+      "evidence_type": "expert_opinion",
+      "evidence_text": "The authors state that existing evidence is insufficient to decide among the plastid-transfer models and that nuclear/nucleomorph data are needed.",
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1038/s41467-025-67401-4/C0017",
+          "label": "CHL plastid evolutionary topology testing",
+          "context_facet": "evolutionary_context",
+          "origin": "extractor_inferred",
+          "confidence_score": 0.82,
+          "additional_context_qualifiers": [
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0073",
+              "predicate": "csag:context_qualifier",
+              "value_text": "Cryptophytes-Haptophytes-Leptophytes group"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0074",
+              "predicate": "csag:context_qualifier",
+              "value_text": "HC-sister topology"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0075",
+              "predicate": "csag:context_qualifier",
+              "value_text": "H-sister topology"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0076",
+              "predicate": "csag:context_qualifier",
+              "value_text": "site-heterogeneous phylogenomics"
+            }
+          ]
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.88,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41467-025-67401-4",
+          "section_type": "discussion",
+          "start_char": 40638,
+          "end_char": 40784,
+          "exact_text": "Without a more conclusive plastid phylogeny, or other supporting evidence, it is currently not possible to decide which model, if any, is correct.",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41467-025-67401-4/S0035"
+        },
+        {
+          "document_id": "doi:10.1038/s41467-025-67401-4",
+          "section_type": "discussion",
+          "start_char": 41485,
+          "end_char": 41845,
+          "exact_text": "Ultimately, deciding between the origin of the leptophyte plastid and order of transfer to or from cryptophytes and haptophytes will rest on characterising the nuclear and putative nucleomorph genomes of leptophytes, ideally in the context of cultivation, in order to determine their specific position in the eukaryotic tree and investigate their cell biology.",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41467-025-67401-4/S0036"
+        },
+        {
+          "document_id": "doi:10.1038/s41467-025-67401-4",
+          "section_type": "discussion",
+          "start_char": 41846,
+          "end_char": 42002,
+          "exact_text": "This will be challenging, as our data suggest that leptophytes are generally rare and it remains unclear if they occur in easily accessible coastal regions.",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41467-025-67401-4/S0037"
+        }
+      ]
+    },
+    {
+      "id": "csag:evidence/doi:10.1038/s41467-025-67401-4/E0009",
+      "evidence_type": "computational_model",
+      "evidence_text": "The discussion states that advanced phylogenetic analyses and broad taxon sampling recover moderate support for monophyly of red-algal-derived plastids, contrasting with separate ochrophyte acquisition.",
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1038/s41467-025-67401-4/C0018",
+          "label": "CHL plastid evolutionary topology testing",
+          "context_facet": "evolutionary_context",
+          "origin": "extractor_inferred",
+          "confidence_score": 0.82,
+          "additional_context_qualifiers": [
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0077",
+              "predicate": "csag:context_qualifier",
+              "value_text": "Cryptophytes-Haptophytes-Leptophytes group"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0078",
+              "predicate": "csag:context_qualifier",
+              "value_text": "HC-sister topology"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0079",
+              "predicate": "csag:context_qualifier",
+              "value_text": "H-sister topology"
+            },
+            {
+              "id": "csag:qualifier/doi:10.1038/s41467-025-67401-4/Q0080",
+              "predicate": "csag:context_qualifier",
+              "value_text": "site-heterogeneous phylogenomics"
+            }
+          ]
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.82,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41467-025-67401-4",
+          "section_type": "discussion",
+          "start_char": 41114,
+          "end_char": 41400,
+          "exact_text": "More generally, our advanced phylogenetic analyses and broad taxon sampling continue to recover\u2014albeit with only moderate support\u2014the monophyly of all red algal-derived plastids, unlike in a recent proposal that argues for a separate secondary plastid acquisition in ochrophytes$^{46}$.",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41467-025-67401-4/S0038"
+        }
+      ]
+    }
+  ],
+  "evidence_links": [
+    {
+      "id": "csag:elink/doi:10.1038/s41467-025-67401-4/L0001",
+      "evidence_item": "csag:evidence/doi:10.1038/s41467-025-67401-4/E0001",
+      "assertion": "csag:assertion/doi:10.1038/s41467-025-67401-4/A0001",
+      "polarity": "supports",
+      "strength": "strong",
+      "rationale": "The methods-framing passage directly states the Tara Oceans metagenomic input and 660-ptMAG curation.",
+      "origin": "author_stated",
+      "confidence_score": 0.92
+    },
+    {
+      "id": "csag:elink/doi:10.1038/s41467-025-67401-4/L0002",
+      "evidence_item": "csag:evidence/doi:10.1038/s41467-025-67401-4/E0001",
+      "assertion": "csag:assertion/doi:10.1038/s41467-025-67401-4/A0002",
+      "polarity": "supports",
+      "strength": "strong",
+      "rationale": "The final non-redundant database count is the core evidence for the 660-genome resource claim.",
+      "origin": "author_stated",
+      "confidence_score": 0.92
+    },
+    {
+      "id": "csag:elink/doi:10.1038/s41467-025-67401-4/L0003",
+      "evidence_item": "csag:evidence/doi:10.1038/s41467-025-67401-4/E0002",
+      "assertion": "csag:assertion/doi:10.1038/s41467-025-67401-4/A0002",
+      "polarity": "supports",
+      "strength": "moderate",
+      "rationale": "The phylogeny and group counts show how the resource expands known plastid diversity across marine algal groups.",
+      "origin": "author_stated",
+      "confidence_score": 0.88
+    },
+    {
+      "id": "csag:elink/doi:10.1038/s41467-025-67401-4/L0004",
+      "evidence_item": "csag:evidence/doi:10.1038/s41467-025-67401-4/E0003",
+      "assertion": "csag:assertion/doi:10.1038/s41467-025-67401-4/A0003",
+      "polarity": "supports",
+      "strength": "strong",
+      "rationale": "The fully supported deep-branching four-ptMAG clade is direct evidence for leptophytes as a distinct plastid lineage.",
+      "origin": "author_stated",
+      "confidence_score": 0.9
+    },
+    {
+      "id": "csag:elink/doi:10.1038/s41467-025-67401-4/L0005",
+      "evidence_item": "csag:evidence/doi:10.1038/s41467-025-67401-4/E0004",
+      "assertion": "csag:assertion/doi:10.1038/s41467-025-67401-4/A0003",
+      "polarity": "supports",
+      "strength": "moderate",
+      "rationale": "The 16S rDNA match links leptophytes to the previously sequence-only DPL2 lineage.",
+      "origin": "author_stated",
+      "confidence_score": 0.88
+    },
+    {
+      "id": "csag:elink/doi:10.1038/s41467-025-67401-4/L0006",
+      "evidence_item": "csag:evidence/doi:10.1038/s41467-025-67401-4/E0006",
+      "assertion": "csag:assertion/doi:10.1038/s41467-025-67401-4/A0004",
+      "polarity": "mixed",
+      "strength": "moderate",
+      "rationale": "Advanced plastid phylogenies support CHL affinity but leave both HC-sister and H-sister placements credible.",
+      "origin": "author_stated",
+      "confidence_score": 0.84
+    },
+    {
+      "id": "csag:elink/doi:10.1038/s41467-025-67401-4/L0007",
+      "evidence_item": "csag:evidence/doi:10.1038/s41467-025-67401-4/E0007",
+      "assertion": "csag:assertion/doi:10.1038/s41467-025-67401-4/A0005",
+      "polarity": "supports",
+      "strength": "strong",
+      "rationale": "The mtMAG abundance correlation and mitochondrial phylogenetic placement directly support the haptophyte-sister host-lineage claim.",
+      "origin": "author_stated",
+      "confidence_score": 0.9
+    },
+    {
+      "id": "csag:elink/doi:10.1038/s41467-025-67401-4/L0008",
+      "evidence_item": "csag:evidence/doi:10.1038/s41467-025-67401-4/E0008",
+      "assertion": "csag:assertion/doi:10.1038/s41467-025-67401-4/A0006",
+      "polarity": "supports",
+      "strength": "strong",
+      "rationale": "The authors explicitly state that current evidence cannot decide among models and specify the missing nuclear/nucleomorph information.",
+      "origin": "author_stated",
+      "confidence_score": 0.9
+    },
+    {
+      "id": "csag:elink/doi:10.1038/s41467-025-67401-4/L0009",
+      "evidence_item": "csag:evidence/doi:10.1038/s41467-025-67401-4/E0009",
+      "assertion": "csag:assertion/doi:10.1038/s41467-025-67401-4/A0007",
+      "polarity": "supports",
+      "strength": "moderate",
+      "rationale": "The authors explicitly contrast their moderate monophyly signal with a separate-secondary-acquisition model for ochrophytes.",
+      "origin": "author_stated",
+      "confidence_score": 0.82
+    }
+  ],
+  "inferences": [
+    {
+      "id": "csag:inference/doi:10.1038/s41467-025-67401-4/I0001",
+      "input_evidence_links": [
+        "csag:elink/doi:10.1038/s41467-025-67401-4/L0006",
+        "csag:elink/doi:10.1038/s41467-025-67401-4/L0007",
+        "csag:elink/doi:10.1038/s41467-025-67401-4/L0008"
+      ],
+      "output_assertion": "csag:assertion/doi:10.1038/s41467-025-67401-4/A0006",
+      "inference_method": "qualitative_interpretation",
+      "assumptions": [
+        "Plastid and mitochondrial phylogenies can disagree because plastid histories include serial endosymbiosis while mitochondrial genomes track host evolution."
+      ],
+      "inference_rationale": "The plastid tree leaves HC/H placements unresolved, while the mitochondrial genome supports a haptophyte-sister host relationship; this mismatch motivates competing transfer models rather than a single resolved history.",
+      "origin": "extractor_inferred",
+      "confidence_score": 0.82
+    }
+  ],
+  "assertion_relations": [
+    {
+      "id": "csag:arel/doi:10.1038/s41467-025-67401-4/RL0001",
+      "from_assertion": "csag:assertion/doi:10.1038/s41467-025-67401-4/A0005",
+      "to_assertion": "csag:assertion/doi:10.1038/s41467-025-67401-4/A0004",
+      "relation_type": "qualifies",
+      "relation_rationale": "The mitochondrial evidence constrains the likely host relationship to haptophytes, qualifying what can be inferred from plastid HC/H topology alone.",
+      "origin": "author_stated",
+      "confidence_score": 0.82,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41467-025-67401-4",
+          "section_type": "results",
+          "start_char": 27768,
+          "end_char": 27950,
+          "exact_text": "Most interestingly, Lepto-01_mtMAG_004 also corresponded to a novel deep-branching lineage firmly placed as sister to haptophyte mitochondrial genomes (Fig. 4; UFB = 100%, PP = 1.0).",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41467-025-67401-4/S0039"
+        },
+        {
+          "document_id": "doi:10.1038/s41467-025-67401-4",
+          "section_type": "results",
+          "start_char": 25457,
+          "end_char": 25685,
+          "exact_text": "Overall, these results indicate that resolving the topology of the CHL group in general and placement of leptophytes in particular is not trivial, as both HC-sister and H-sister topologies remain credible (Supplementary Note 1).",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41467-025-67401-4/S0040"
+        }
+      ]
+    },
+    {
+      "id": "csag:arel/doi:10.1038/s41467-025-67401-4/RL0002",
+      "from_assertion": "csag:assertion/doi:10.1038/s41467-025-67401-4/A0004",
+      "to_assertion": "csag:assertion/doi:10.1038/s41467-025-67401-4/A0006",
+      "relation_type": "qualifies",
+      "relation_rationale": "Credible alternative plastid topologies are the reason the authors conclude the transfer order remains unresolved.",
+      "origin": "author_stated",
+      "confidence_score": 0.84,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41467-025-67401-4",
+          "section_type": "discussion",
+          "start_char": 30595,
+          "end_char": 31135,
+          "exact_text": "Taking into account this phylogenetic uncertainty, we propose two competing hypotheses for the evolutionary origin of leptophyte plastids: 1) the HC-sister topology (leptophytes are sister to both cryptophytes and haptophytes), which was favoured by all site-heterogeneous models, or 2) the H-sister topology (leptophytes are sister to haptophytes, to the exclusion of cryptophytes), which was favoured only after specifically taking into consideration amino acid compositional heterogeneity across taxa, and also by the 16S rDNA phylogeny.",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41467-025-67401-4/S0041"
+        },
+        {
+          "document_id": "doi:10.1038/s41467-025-67401-4",
+          "section_type": "discussion",
+          "start_char": 40638,
+          "end_char": 40784,
+          "exact_text": "Without a more conclusive plastid phylogeny, or other supporting evidence, it is currently not possible to decide which model, if any, is correct.",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41467-025-67401-4/S0042"
+        }
+      ]
+    },
+    {
+      "id": "csag:arel/doi:10.1038/s41467-025-67401-4/RL0003",
+      "from_assertion": "csag:assertion/doi:10.1038/s41467-025-67401-4/A0006",
+      "to_assertion": "csag:assertion/doi:10.1038/s41467-025-67401-4/A0007",
+      "relation_type": "qualifies",
+      "relation_rationale": "The unresolved leptophyte transfer order qualifies how strongly the broader red-plastid monophyly signal should be interpreted.",
+      "origin": "extractor_inferred",
+      "confidence_score": 0.76,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41467-025-67401-4",
+          "section_type": "discussion",
+          "start_char": 40638,
+          "end_char": 40784,
+          "exact_text": "Without a more conclusive plastid phylogeny, or other supporting evidence, it is currently not possible to decide which model, if any, is correct.",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41467-025-67401-4/S0043"
+        },
+        {
+          "document_id": "doi:10.1038/s41467-025-67401-4",
+          "section_type": "discussion",
+          "start_char": 41114,
+          "end_char": 41400,
+          "exact_text": "More generally, our advanced phylogenetic analyses and broad taxon sampling continue to recover\u2014albeit with only moderate support\u2014the monophyly of all red algal-derived plastids, unlike in a recent proposal that argues for a separate secondary plastid acquisition in ochrophytes$^{46}$.",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41467-025-67401-4/S0044"
+        }
+      ]
+    }
+  ],
+  "critiques": [
+    {
+      "id": "csag:critique/doi:10.1038/s41467-025-67401-4/R0001",
+      "label": "Phylogenetic ambiguity and missing host/nucleomorph genomes",
+      "critique_type": "construct_validity",
+      "risk_domain": "data_quality",
+      "severity": "high",
+      "impacted_assertions": [
+        "csag:assertion/doi:10.1038/s41467-025-67401-4/A0004",
+        "csag:assertion/doi:10.1038/s41467-025-67401-4/A0005",
+        "csag:assertion/doi:10.1038/s41467-025-67401-4/A0006"
+      ],
+      "impacted_evidence_items": [
+        "csag:evidence/doi:10.1038/s41467-025-67401-4/E0006",
+        "csag:evidence/doi:10.1038/s41467-025-67401-4/E0007",
+        "csag:evidence/doi:10.1038/s41467-025-67401-4/E0008"
+      ],
+      "mitigation_suggestions": [
+        "Recover leptophyte nuclear genomes and putative nucleomorph genomes.",
+        "Cultivate leptophytes or target accessible environments where they occur.",
+        "Use additional models and data types to distinguish HC-sister and H-sister transfer scenarios."
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.9,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41467-025-67401-4",
+          "section_type": "discussion",
+          "start_char": 40638,
+          "end_char": 40784,
+          "exact_text": "Without a more conclusive plastid phylogeny, or other supporting evidence, it is currently not possible to decide which model, if any, is correct.",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41467-025-67401-4/S0045"
+        },
+        {
+          "document_id": "doi:10.1038/s41467-025-67401-4",
+          "section_type": "discussion",
+          "start_char": 41485,
+          "end_char": 41845,
+          "exact_text": "Ultimately, deciding between the origin of the leptophyte plastid and order of transfer to or from cryptophytes and haptophytes will rest on characterising the nuclear and putative nucleomorph genomes of leptophytes, ideally in the context of cultivation, in order to determine their specific position in the eukaryotic tree and investigate their cell biology.",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41467-025-67401-4/S0046"
+        },
+        {
+          "document_id": "doi:10.1038/s41467-025-67401-4",
+          "section_type": "discussion",
+          "start_char": 41846,
+          "end_char": 42002,
+          "exact_text": "This will be challenging, as our data suggest that leptophytes are generally rare and it remains unclear if they occur in easily accessible coastal regions.",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41467-025-67401-4/S0047"
+        }
+      ]
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "id": "csag:gap/doi:10.1038/s41467-025-67401-4/G0001",
+      "label": "Nuclear and nucleomorph evidence for leptophyte placement and plastid-transfer direction",
+      "gap_type": "missing_experiment",
+      "severity": "high",
+      "related_assertions": [
+        "csag:assertion/doi:10.1038/s41467-025-67401-4/A0004",
+        "csag:assertion/doi:10.1038/s41467-025-67401-4/A0005",
+        "csag:assertion/doi:10.1038/s41467-025-67401-4/A0006"
+      ],
+      "suggested_actions": [
+        "Characterize leptophyte nuclear genomes.",
+        "Search for or rule out leptophyte nucleomorph genomes.",
+        "Cultivate leptophytes to inspect morphology and cell biology."
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.9,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41467-025-67401-4",
+          "section_type": "discussion",
+          "start_char": 41485,
+          "end_char": 41845,
+          "exact_text": "Ultimately, deciding between the origin of the leptophyte plastid and order of transfer to or from cryptophytes and haptophytes will rest on characterising the nuclear and putative nucleomorph genomes of leptophytes, ideally in the context of cultivation, in order to determine their specific position in the eukaryotic tree and investigate their cell biology.",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41467-025-67401-4/S0048"
+        }
+      ]
+    }
+  ],
+  "qa_items": [
+    {
+      "id": "csag:qa/doi:10.1038/s41467-025-67401-4/Q0001",
+      "question_text": "What evidence supports leptophytes as a new deep-branching plastid lineage rather than a known haptophyte or cryptophyte subgroup?",
+      "expected_answer_type": "free_text",
+      "query_assertion": "csag:assertion/doi:10.1038/s41467-025-67401-4/A0003",
+      "normalized_query": "CSAG_QA_LEPTOPHYTE_STATUS",
+      "answers": [
+        {
+          "id": "csag:answer/doi:10.1038/s41467-025-67401-4/ANS0001",
+          "answer_text": "Four red-algal-derived ptMAGs form a supported clade distinct from major complex red-plastid groups, and 16S rDNA connects them to DPL2, a previously enigmatic sequence-only plastid lineage.",
+          "supporting_assertions": [
+            "csag:assertion/doi:10.1038/s41467-025-67401-4/A0003"
+          ],
+          "supporting_evidence_links": [
+            "csag:elink/doi:10.1038/s41467-025-67401-4/L0004",
+            "csag:elink/doi:10.1038/s41467-025-67401-4/L0005"
+          ],
+          "answer_type": "free_text"
+        }
+      ],
+      "origin": "curator_added",
+      "confidence_score": 0.88
+    },
+    {
+      "id": "csag:qa/doi:10.1038/s41467-025-67401-4/Q0002",
+      "question_text": "Why does the paper not treat the leptophyte plastid transfer direction as resolved?",
+      "expected_answer_type": "free_text",
+      "query_assertion": "csag:assertion/doi:10.1038/s41467-025-67401-4/A0006",
+      "normalized_query": "CSAG_QA_TRANSFER_UNCERTAINTY",
+      "answers": [
+        {
+          "id": "csag:answer/doi:10.1038/s41467-025-67401-4/ANS0002",
+          "answer_text": "Plastid phylogenies leave both HC-sister and H-sister topologies credible, while mitochondrial evidence supports a haptophyte-sister host lineage; the authors state that nuclear or nucleomorph genomes are needed to decide the model.",
+          "supporting_assertions": [
+            "csag:assertion/doi:10.1038/s41467-025-67401-4/A0004",
+            "csag:assertion/doi:10.1038/s41467-025-67401-4/A0005",
+            "csag:assertion/doi:10.1038/s41467-025-67401-4/A0006"
+          ],
+          "supporting_evidence_links": [
+            "csag:elink/doi:10.1038/s41467-025-67401-4/L0006",
+            "csag:elink/doi:10.1038/s41467-025-67401-4/L0007",
+            "csag:elink/doi:10.1038/s41467-025-67401-4/L0008"
+          ],
+          "answer_type": "free_text"
+        }
+      ],
+      "origin": "curator_added",
+      "confidence_score": 0.9
+    }
+  ],
+  "extraction_activities": [
+    {
+      "id": "csag:activity/doi:10.1038/s41467-025-67401-4/ACT0001",
+      "activity_type": "structured_extraction",
+      "tool_name": "csag curator workflow",
+      "tool_version": "0.7.0",
+      "model_name": "curated extraction",
+      "run_id": "2026-05-18-jamy2026",
+      "run_datetime": "2026-05-18T14:50:00-07:00",
+      "parameters": [
+        {
+          "key": "doi_status",
+          "value": "resolved"
+        },
+        {
+          "key": "pmid_status",
+          "value": "unresolved"
+        },
+        {
+          "key": "source_pdf",
+          "value": "s41467-025-67401-4.pdf"
+        },
+        {
+          "key": "ocr_path",
+          "value": "local OCR API"
+        },
+        {
+          "key": "extraction_scope",
+          "value": "full-paper"
+        }
+      ],
+      "agent_uri": "local:curator"
+    }
+  ],
+  "notes": "Paper-local CSAG extracted from OCR Markdown. The article sidecar title was misparsed by the first-pass script, so the title here is set from the article front matter."
+}

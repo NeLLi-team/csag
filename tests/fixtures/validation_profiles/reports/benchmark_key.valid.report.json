@@ -1,0 +1,32 @@
+{
+  "ok": true,
+  "profile": "benchmark_key",
+  "strictness_profile": "benchmark_key",
+  "profile_modules": [
+    "core",
+    "benchmark"
+  ],
+  "validator_version": "1.0.0",
+  "extraction_json": "../benchmark_key.valid.json",
+  "inputs": {
+    "extraction": {
+      "path": "../benchmark_key.valid.json",
+      "sha256": "60a2fbba41e0e643b3f798d5b9839691849f99ce9e2bfb077ceec320ad129c98",
+      "size_bytes": 9676
+    }
+  },
+  "errors": [],
+  "structured_errors": [],
+  "error_summary": {},
+  "warnings": [],
+  "repair_actions": [],
+  "metrics": {
+    "assertions": 2,
+    "assertions_with_criticality": 2,
+    "assertions_with_falsification_criteria": 2,
+    "evidence_items": 2,
+    "evidence_links": 2,
+    "artifacts": 0,
+    "datasets": 1
+  }
+}

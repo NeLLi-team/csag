@@ -1,0 +1,22 @@
+{
+  "id": "examples/lite",
+  "title": "Lite Claim Example",
+  "source_record_url": "local:examples/lite/lite.md",
+  "origin": "Synthetic CSAG Lite example.",
+  "license": "BSD 3-Clause License",
+  "license_url": "https://opensource.org/license/bsd-3-clause",
+  "license_evidence_url": "local:LICENSE",
+  "included_sources": [
+    "lite.md"
+  ],
+  "included_sidecars": [
+    "lite.article.json"
+  ],
+  "included_outputs": [
+    "paper_extraction.json",
+    "paper_extraction.validation.json",
+    "paper_extraction.quality.json"
+  ],
+  "validation_profile": "lite",
+  "interpretation": "Minimal Lite example with one assertion, one evidence item, one evidence link, and one context."
+}

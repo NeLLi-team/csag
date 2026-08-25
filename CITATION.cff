@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+title: Conditional Scientific Argumentation Graphs
+message: "If you use this repository, cite the CSAG manuscript and the versioned software release."
+type: software
+authors:
+  - family-names: Schulz
+    given-names: Frederik
+version: 1.0.0
+date-released: "2026-08-25"
+repository-code: "https://github.com/NeLLi-team/csag"
+identifiers:
+  - type: doi
+    value: "pending-zenodo-doi"
+    description: "Zenodo archive DOI (placeholder until the release is archived)."
+license: BSD-3-Clause
+abstract: "Schema, validator, command-line tools, and worked examples for Conditional Scientific Argumentation Graphs (CSAG), a machine-readable representation of the argumentation structure of a scientific manuscript."
+preferred-citation:
+  type: article
+  title: "Conditional Scientific Argumentation Graphs"
+  authors:
+    - family-names: Schulz
+      given-names: Frederik
+  year: 2026
+  notes: "Manuscript in preparation."

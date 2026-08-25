@@ -1,0 +1,1911 @@
+{
+  "id": "doi:10.1038/s41597-025-04905-0",
+  "title": "Rethinking the production and publication of machine-readable expressions of research findings",
+  "abstract": "Scientific literature is the primary expression of scientific knowledge and an important source of research data. However, scientific knowledge expressed in narrative text documents is not inherently machine readable. To facilitate knowledge reuse, knowledge must be extracted from articles and organized into databases post-publication. The high time costs and inaccuracies associated with completing these activities manually has driven the development of techniques that automate knowledge extraction. Tackling the problem with a different mindset, we propose a pre-publication approach, known as reborn, that ensures scientific knowledge is born readable, i.e. produced in a machine-readable format with formal data syntax during knowledge production. We implement the approach using the Open Research Knowledge Graph infrastructure for FAIR scientific knowledge organization. With a focus on statistical research findings, we test the approach with three use cases in soil science, computer science, and agroecology. Our results suggest that the proposed approach is superior compared to classical manual and semi-automated post-publication extraction techniques in terms of knowledge accuracy, richness, and reproducibility as well as technological simplicity.",
+  "doi": "10.1038/s41597-025-04905-0",
+  "journal": "Scientific Data",
+  "publication_date": "2025-04-30",
+  "full_text_url": "https://doi.org/10.1038/s41597-025-04905-0",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "notes": "Full-paper extraction covering Introduction, Results (three use cases), Discussion (Comparing approaches, Impact, Limitations), and Methods. The manuscript is methodological/infrastructural rather than empirical biological; assertions are largely conceptual/methodological with three use-case applications used as supporting evidence.",
+  "extraction_activities": [
+    {
+      "id": "csag:activity/doi:10.1038/s41597-025-04905-0/ACT0001",
+      "activity_type": "structured_extraction",
+      "tool_name": "csag-extraction",
+      "tool_version": "0.7.0",
+      "run_id": "20260511T210800Z",
+      "run_datetime": "2026-05-11T21:08:00+00:00",
+      "agent_uri": "local:csag-curator",
+      "parameters": [
+        {
+          "key": "target_doc",
+          "value": "stocker2025_machine_readable"
+        },
+        {
+          "key": "include_full_text",
+          "value": "true"
+        },
+        {
+          "key": "extraction_scope",
+          "value": "full-paper"
+        },
+        {
+          "key": "doi_status",
+          "value": "resolved"
+        },
+        {
+          "key": "pmid_status",
+          "value": "unresolved"
+        }
+      ]
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "csag:artifact/doi:10.1038/s41597-025-04905-0/AR0001",
+      "artifact_type": "figure",
+      "artifact_label": "Fig. 1",
+      "caption": "Scientific knowledge expressed in articles is produced as machine-readable data in computing environments during the data analysis phase of the research lifecycle. Machine-readable scientific knowledge is deposited in a data repository as reborn data of the article and interlinked with the article in DOI metadata. Finally, to support reuse, e.g. for synthesis research, machine-readable scientific knowledge is collected and organized in aggregation systems, such as knowledge graphs.",
+      "origin": "author_stated",
+      "confidence_score": 0.95,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41597-025-04905-0",
+          "section_type": "figure_caption",
+          "section_heading": "Fig. 1",
+          "start_char": 4590,
+          "end_char": 5172,
+          "exact_text": "**Fig. 1** Scientific knowledge expressed in articles is produced as machine-readable data in computing environments during the data analysis phase of the research lifecycle. Machine-readable scientific knowledge is deposited in a data repository as reborn data of the article and interlinked with the article in DOI metadata. Finally, to support reuse, e.g. for synthesis research, machine-readable scientific knowledge is collected and organized in aggregation systems, such as knowledge graphs.",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0001"
+        }
+      ]
+    },
+    {
+      "id": "csag:artifact/doi:10.1038/s41597-025-04905-0/AR0002",
+      "artifact_type": "table",
+      "artifact_label": "Table 1",
+      "caption": "Overview of the pros and cons of classical post-publication extraction in contrast to the proposed pre-publication production, compared along important dimensions.",
+      "description": "Compares post-publication extraction (manual and automatic) with pre-publication production along Accuracy, Richness, Simplicity, Scalability, Coverage, and Legacy. Pre-publication production excels (double check marks) on Accuracy, Richness, and Simplicity; lags on Scalability and Legacy.",
+      "origin": "author_stated",
+      "confidence_score": 0.95,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41597-025-04905-0",
+          "section_type": "table_caption",
+          "section_heading": "Table 1",
+          "start_char": 38691,
+          "end_char": 38857,
+          "exact_text": "**Table 1.** Overview of the pros and cons of classical post-publication extraction in contrast to the proposed pre-publication production, compared along important dimensions.",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0002"
+        }
+      ]
+    },
+    {
+      "id": "csag:artifact/doi:10.1038/s41597-025-04905-0/AR0003",
+      "artifact_type": "figure",
+      "artifact_label": "Fig. 6",
+      "caption": "Architectural overview of the proposed distributed system, its components and relations, including the (statistical) computing environment with specialized library, data type registry, publisher, data repository, and aggregation system; machine-readable scientific knowledge as the primary exchanged data; and system-system as well as system-data relations.",
+      "origin": "author_stated",
+      "confidence_score": 0.95,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41597-025-04905-0",
+          "section_type": "figure_caption",
+          "section_heading": "Fig. 6",
+          "start_char": 58998,
+          "end_char": 59358,
+          "exact_text": "Fig. 6 Architectural overview of the proposed distributed system, its components and relations, including the (statistical) computing environment with specialized library, data type registry, publisher, data repository, and aggregation system; machine-readable scientific knowledge as the primary exchanged data; and system-system as well as system-data relations.",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0003"
+        }
+      ]
+    },
+    {
+      "id": "csag:artifact/doi:10.1038/s41597-025-04905-0/AR0004",
+      "artifact_type": "code",
+      "artifact_label": "Listing 1",
+      "caption": "Integration of templates in a Python script, here shown for the Student's t-test template with resource ID R12002 exemplified with the Iris dataset.",
+      "origin": "author_stated",
+      "confidence_score": 0.93,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41597-025-04905-0",
+          "section_type": "other",
+          "section_heading": "Listing 1",
+          "start_char": 16736,
+          "end_char": 17126,
+          "exact_text": "**Listing 1.** Integration of templates in a Python script, here shown for the Student\u2019s t-test template with resource ID R12002 exemplified with the Iris dataset. Note that for the sake of simplicity we illustrate this step with a popular dataset and statistical method, rather than with our running example in soil science. Furthermore, we omit some details on Iris dataset processing.",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0004"
+        }
+      ]
+    }
+  ],
+  "datasets": [
+    {
+      "id": "csag:dataset/doi:10.1038/s41597-025-04905-0/DS0001",
+      "label": "Reborn data for the soil science use case (Gentsch et al.)",
+      "accession": "10.48366/R664252",
+      "repository": "Open Research Knowledge Graph (ORKG)",
+      "dataset_url": "https://doi.org/10.48366/R664252",
+      "dataset_license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "origin": "author_stated",
+      "confidence_score": 0.95,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41597-025-04905-0",
+          "section_type": "other",
+          "section_heading": "Data availability",
+          "start_char": 74341,
+          "end_char": 74905,
+          "origin": "author_stated",
+          "confidence_score": 0.92,
+          "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0005"
+        }
+      ]
+    },
+    {
+      "id": "csag:dataset/doi:10.1038/s41597-025-04905-0/DS0002",
+      "label": "Reborn data for the computer science use case (Thie\u00dfen et al.)",
+      "accession": "10.48366/R661500",
+      "repository": "Open Research Knowledge Graph (ORKG)",
+      "dataset_url": "https://doi.org/10.48366/R661500",
+      "dataset_license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "origin": "author_stated",
+      "confidence_score": 0.95,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41597-025-04905-0",
+          "section_type": "other",
+          "section_heading": "Data availability",
+          "start_char": 74341,
+          "end_char": 74905,
+          "origin": "author_stated",
+          "confidence_score": 0.92,
+          "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0006"
+        }
+      ]
+    },
+    {
+      "id": "csag:dataset/doi:10.1038/s41597-025-04905-0/DS0003",
+      "label": "Reborn data for the agroecology use case (Perez-Alvarez et al.)",
+      "accession": "10.48366/R689181",
+      "repository": "Open Research Knowledge Graph (ORKG)",
+      "dataset_url": "https://doi.org/10.48366/R689181",
+      "dataset_license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "origin": "author_stated",
+      "confidence_score": 0.95,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41597-025-04905-0",
+          "section_type": "other",
+          "section_heading": "Data availability",
+          "start_char": 74341,
+          "end_char": 74905,
+          "origin": "author_stated",
+          "confidence_score": 0.92,
+          "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0007"
+        }
+      ]
+    },
+    {
+      "id": "csag:dataset/doi:10.1038/s41597-025-04905-0/DS0004",
+      "label": "Reborn data for the present article",
+      "accession": "10.48366/R1362623",
+      "repository": "Open Research Knowledge Graph (ORKG)",
+      "dataset_url": "https://doi.org/10.48366/R1362623",
+      "dataset_license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "origin": "author_stated",
+      "confidence_score": 0.9,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41597-025-04905-0",
+          "section_type": "other",
+          "section_heading": "Data availability",
+          "start_char": 74341,
+          "end_char": 74905,
+          "origin": "author_stated",
+          "confidence_score": 0.92,
+          "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0008"
+        }
+      ]
+    },
+    {
+      "id": "csag:dataset/doi:10.1038/s41597-025-04905-0/DS0005",
+      "label": "ORKG source code repository (Python and R libraries)",
+      "repository": "GitLab (TIB Hannover)",
+      "dataset_url": "https://gitlab.com/TIBHannover/orkg",
+      "origin": "author_stated",
+      "confidence_score": 0.9,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41597-025-04905-0",
+          "section_type": "other",
+          "section_heading": "Code availability",
+          "start_char": 75082,
+          "end_char": 75700,
+          "origin": "author_stated",
+          "confidence_score": 0.92,
+          "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0009"
+        }
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "id": "csag:entity/doi:10.1038/s41597-025-04905-0/EN0001",
+      "label": "reborn approach",
+      "entity_category": "method",
+      "description": "Pre-publication approach proposed by the authors to produce machine-readable expressions of research findings during the data analysis phase of the research lifecycle.",
+      "aliases": [
+        "born-readable",
+        "reborn"
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.97,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41597-025-04905-0",
+          "section_type": "abstract",
+          "start_char": 950,
+          "end_char": 1006,
+          "exact_text": "we propose a pre-publication approach, known as *reborn*",
+          "origin": "author_stated",
+          "confidence_score": 0.97,
+          "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0010"
+        }
+      ]
+    },
+    {
+      "id": "csag:entity/doi:10.1038/s41597-025-04905-0/EN0002",
+      "label": "Open Research Knowledge Graph (ORKG)",
+      "entity_category": "method",
+      "description": "Digital scholarship infrastructure used as aggregation system, template registry and reference implementation in the work.",
+      "xrefs": [
+        "https://orkg.org/"
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.97,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41597-025-04905-0",
+          "section_type": "abstract",
+          "start_char": 1135,
+          "end_char": 1273,
+          "exact_text": "We implement the approach using the Open Research Knowledge Graph infrastructure for FAIR scientific knowledge organization. With a focus",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0011"
+        }
+      ]
+    },
+    {
+      "id": "csag:entity/doi:10.1038/s41597-025-04905-0/EN0003",
+      "label": "ORKG Template",
+      "entity_category": "method",
+      "description": "Schema/data-type specification used by the ORKG to guide structured description of research contributions and statistical methods.",
+      "origin": "author_stated",
+      "confidence_score": 0.95,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41597-025-04905-0",
+          "section_type": "other",
+          "section_heading": "Listing 1",
+          "start_char": 16736,
+          "end_char": 17126,
+          "origin": "author_stated",
+          "confidence_score": 0.93,
+          "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0012"
+        }
+      ]
+    },
+    {
+      "id": "csag:entity/doi:10.1038/s41597-025-04905-0/EN0004",
+      "label": "TDMS-tuple extraction",
+      "entity_category": "method",
+      "description": "Task, Dataset, Metric, Score tuple extraction from machine-learning papers, cited as a benchmark for automated post-publication extraction performance.",
+      "origin": "author_stated",
+      "confidence_score": 0.92,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41597-025-04905-0",
+          "section_type": "introduction",
+          "start_char": 7770,
+          "end_char": 8050,
+          "exact_text": "For example, with performance ranging from approximately 10%$^{31}$ to 20%$^{32}$, the relatively simple extraction of TDMS (Task, Dataset, Metric, Score) tuples from articles in ML relies on considerable human curation",
+          "origin": "author_stated",
+          "confidence_score": 0.92,
+          "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0013"
+        }
+      ]
+    },
+    {
+      "id": "csag:entity/doi:10.1038/s41597-025-04905-0/EN0005",
+      "label": "JSON-LD",
+      "entity_category": "method",
+      "description": "Linked Data serialization format used by the ORKG Python and R libraries to write reborn data files.",
+      "origin": "author_stated",
+      "confidence_score": 0.95,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41597-025-04905-0",
+          "section_type": "methods",
+          "start_char": 63500,
+          "end_char": 63900,
+          "origin": "author_stated",
+          "confidence_score": 0.85,
+          "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0014"
+        }
+      ]
+    },
+    {
+      "id": "csag:entity/doi:10.1038/s41597-025-04905-0/EN0006",
+      "label": "Student's t-test",
+      "entity_category": "method",
+      "description": "Statistical hypothesis test used as the running example in Listing 1 to illustrate ORKG template integration.",
+      "ontology_annotations": [
+        {
+          "id": "csag:ontoann/doi:10.1038/s41597-025-04905-0/OA0001",
+          "term_id": "OBI:0000739",
+          "term_label": "Student's t-test (Ontology for Biomedical Investigations)",
+          "match_type": "exact",
+          "confidence_score": 0.85
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.95,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41597-025-04905-0",
+          "section_type": "other",
+          "section_heading": "Listing 1",
+          "start_char": 16736,
+          "end_char": 17126,
+          "origin": "author_stated",
+          "confidence_score": 0.93,
+          "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0015"
+        }
+      ]
+    },
+    {
+      "id": "csag:entity/doi:10.1038/s41597-025-04905-0/EN0007",
+      "label": "FAIR data principles",
+      "entity_category": "method",
+      "description": "Findable, Accessible, Interoperable, Reusable data principles (Wilkinson et al. 2016) framing the goal of the work.",
+      "origin": "author_stated",
+      "confidence_score": 0.92,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41597-025-04905-0",
+          "section_type": "introduction",
+          "start_char": 4019,
+          "end_char": 4307,
+          "exact_text": "To facilitate the efficient transfer, reuse, and synthesis of scientific knowledge, there is a growing movement to ensure knowledge expressed in scientific articles is produced in a manner that is findable, accessible, interoperable, and reusable (FAIR) for humans, and also for machines",
+          "origin": "author_stated",
+          "confidence_score": 0.93,
+          "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0016"
+        }
+      ]
+    }
+  ],
+  "assertions": [
+    {
+      "id": "csag:assertion/doi:10.1038/s41597-025-04905-0/A0001",
+      "assertion_text": "How can we support the production of machine-readable expressions of research findings in the data analysis phase of the research lifecycle?",
+      "claim_role": "research_question",
+      "assertion_type": "descriptive",
+      "normalization_status": "raw",
+      "criticality": "core",
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1038/s41597-025-04905-0/C0001",
+          "label": "FAIR scientific knowledge production lifecycle",
+          "context_facet": "unspecified",
+          "environment_description": "Research-lifecycle data analysis phase across disciplines, with focus on statistical computing environments (R, Python).",
+          "origin": "extractor_inferred",
+          "confidence_score": 0.85,
+          "text_spans": [
+            {
+              "document_id": "doi:10.1038/s41597-025-04905-0",
+              "section_type": "introduction",
+              "start_char": 9078,
+              "end_char": 9438,
+              "origin": "author_stated",
+              "confidence_score": 0.92,
+              "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0018"
+            }
+          ]
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.95,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41597-025-04905-0",
+          "section_type": "introduction",
+          "section_heading": "Introduction",
+          "start_char": 9078,
+          "end_char": 9438,
+          "exact_text": "on in aggregation systems that support more efficient knowledge reuse (Fig. 1). Thus, the present work addresses the following research question: How can we support the production of machine-readable expressions of research findings in the data analysis phase of the research lifecycle?\n\nSpecifically, we propose an interoperable distributed system that enable",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0017"
+        }
+      ],
+      "falsification_criteria": [
+        "This framing would be weakened if existing publication workflows already produced structured research-finding expressions during data analysis without extra author intervention."
+      ]
+    },
+    {
+      "id": "csag:assertion/doi:10.1038/s41597-025-04905-0/A0002",
+      "assertion_text": "The authors propose a pre-publication approach (reborn) that produces machine-readable expressions of research findings during data analysis, using ORKG templates to specify formal data syntax for statistical findings.",
+      "claim_role": "objective",
+      "assertion_type": "methodological",
+      "normalization_status": "raw",
+      "criticality": "core",
+      "falsification_criteria": [
+        "Demonstrating that integrating templates into statistical scripts does not produce structured machine-readable output for the targeted research findings.",
+        "Showing that the produced JSON-LD reborn data cannot be deposited and discovered via DOI metadata in any actual publishing workflow."
+      ],
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1038/s41597-025-04905-0/C0002",
+          "label": "Statistical computing environments (R/Python) integrated with the ORKG",
+          "context_facet": "model_system",
+          "environment_description": "Data analysis in R/Python supported by the ORKG Python/R libraries and an ORKG-hosted template registry as Data Type Registry.",
+          "origin": "author_stated",
+          "confidence_score": 0.9,
+          "text_spans": [
+            {
+              "document_id": "doi:10.1038/s41597-025-04905-0",
+              "section_type": "abstract",
+              "start_char": 398,
+              "end_char": 1528,
+              "origin": "author_stated",
+              "confidence_score": 0.95,
+              "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0020"
+            }
+          ]
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.96,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41597-025-04905-0",
+          "section_type": "abstract",
+          "section_heading": "Abstract",
+          "start_char": 398,
+          "end_char": 1528,
+          "exact_text": "Scientific literature is the primary expression of scientific knowledge and an important source of research data. However, scientific knowledge expressed in narrative text documents is not inherently machine readable. To facilitate knowledge reuse, knowledge must be extracted from articles and organized into databases post-publication. The high time costs and inaccuracies associated with completing these activities manually has driven the development of techniques that automate knowledge extraction. Tackling the problem with a different mindset, we propose a pre-publication approach, known as *reborn*, that ensures scientific knowledge is born readable, i.e. produced in a machine-readable format with formal data syntax during knowledge production. We implement the approach using the Open Research Knowledge Graph infrastructure for FAIR scientific knowledge organization. With a focus on statistical research findings, we test the approach with three use cases in soil science, computer science, and agroecology. Our results suggest that the proposed approach is superior compared to classical manual and semi-automated",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0019"
+        }
+      ]
+    },
+    {
+      "id": "csag:assertion/doi:10.1038/s41597-025-04905-0/A0003",
+      "assertion_text": "The reborn approach is superior to classical manual and semi-automated post-publication extraction in terms of knowledge accuracy, richness, reproducibility, and technological simplicity.",
+      "claim_role": "conclusion",
+      "assertion_type": "comparative",
+      "normalization_status": "partially_normalized",
+      "criticality": "core",
+      "falsification_criteria": [
+        "An empirical comparison showing automated post-publication extraction matches or exceeds reborn on richness/accuracy on the same statistical findings.",
+        "Use-case audits revealing that the reborn data are less accurate or less reproducible than data manually extracted from the same articles."
+      ],
+      "subject": "csag:entity/doi:10.1038/s41597-025-04905-0/EN0001",
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1038/s41597-025-04905-0/C0003",
+          "label": "Comparative evaluation along accuracy/richness/simplicity/scalability/coverage/legacy",
+          "context_facet": "unspecified",
+          "environment_description": "Qualitative pros/cons comparison across three approaches (manual post-publication, automated post-publication, pre-publication production), grounded in Table 1.",
+          "origin": "author_stated",
+          "confidence_score": 0.9,
+          "text_spans": [
+            {
+              "document_id": "doi:10.1038/s41597-025-04905-0",
+              "section_type": "discussion",
+              "start_char": 39400,
+              "end_char": 40050,
+              "origin": "author_stated",
+              "confidence_score": 0.9,
+              "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0022"
+            }
+          ]
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.9,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41597-025-04905-0",
+          "section_type": "abstract",
+          "section_heading": "Abstract",
+          "start_char": 1422,
+          "end_char": 1700,
+          "exact_text": "Our results suggest that the proposed approach is superior compared to classical manual and semi-automated post-publication extraction techniques in terms of knowledge accuracy, richness, and reproducibility as well as technological simplicity.\n\n---\n\n## Introduction\n\nA",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0021"
+        }
+      ]
+    },
+    {
+      "id": "csag:assertion/doi:10.1038/s41597-025-04905-0/A0004",
+      "assertion_text": "The reborn approach was applied to three use cases (soil science by Gentsch et al., computer science by Thie\u00dfen et al., agroecology by Perez-Alvarez et al.) and produced machine-readable research findings in each, demonstrating practical viability.",
+      "claim_role": "result_claim",
+      "assertion_type": "descriptive",
+      "normalization_status": "raw",
+      "criticality": "major",
+      "falsification_criteria": [
+        "Independent re-execution showing that the reborn data of any of the three use cases is missing or fails to render as structured findings in the ORKG.",
+        "Demonstrating that the use cases were not actually published as reborn data interlinked with the original articles."
+      ],
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1038/s41597-025-04905-0/C0004",
+          "label": "Three use cases across soil science, computer science, agroecology",
+          "context_facet": "model_system",
+          "environment_description": "Three statistical-analysis-based papers from different disciplines and publishers; one prospective (soil science) and two retrospective (CS, agroecology) applications.",
+          "origin": "author_stated",
+          "confidence_score": 0.92,
+          "text_spans": [
+            {
+              "document_id": "doi:10.1038/s41597-025-04905-0",
+              "section_type": "results",
+              "start_char": 18313,
+              "end_char": 18800,
+              "origin": "author_stated",
+              "confidence_score": 0.93,
+              "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0024"
+            }
+          ]
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.92,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41597-025-04905-0",
+          "section_type": "results",
+          "section_heading": "Use cases",
+          "start_char": 18313,
+          "end_char": 18800,
+          "exact_text": "his article.\n\n**Use cases.** We now present how we tested *reborn* in three use cases involving articles published in journals or proceedings by different publishers. For each use case, we describe the results along the three stages. Further technical details are provided in the Methods section using the first use case in soil science as a running example.\n\n**Use case in soil science.** The use case in soil science centers around the paper by Gentsch *et al.*$^{41}$ titled \u201cCover cr",
+          "origin": "author_stated",
+          "confidence_score": 0.93,
+          "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0023"
+        }
+      ]
+    },
+    {
+      "id": "csag:assertion/doi:10.1038/s41597-025-04905-0/A0005",
+      "assertion_text": "Automated post-publication extraction of scientific knowledge currently achieves high accuracy (above 90-95%) only for the simplest tasks (e.g. TDM tuples, ~90%), and accuracy drops substantially (60% keyphrase identification, 40% classification, 30% relation extraction) for more general tasks.",
+      "claim_role": "background",
+      "assertion_type": "descriptive",
+      "normalization_status": "raw",
+      "criticality": "supporting",
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1038/s41597-025-04905-0/C0005",
+          "label": "Literature on automated knowledge extraction performance",
+          "context_facet": "unspecified",
+          "environment_description": "Cited literature (refs 31\u201335, 50\u201353) on TDM(S) extraction, materials-data extraction, keyphrase/relation extraction.",
+          "origin": "author_stated",
+          "confidence_score": 0.9,
+          "text_spans": [
+            {
+              "document_id": "doi:10.1038/s41597-025-04905-0",
+              "section_type": "discussion",
+              "start_char": 40052,
+              "end_char": 41200,
+              "origin": "author_stated",
+              "confidence_score": 0.92,
+              "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0026"
+            }
+          ]
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.92,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41597-025-04905-0",
+          "section_type": "discussion",
+          "section_heading": "Accuracy",
+          "start_char": 40052,
+          "end_char": 41200,
+          "exact_text": "**Accuracy.** In terms of accuracy, the extraction of scientific knowledge from published articles continues to challenge automation. Automated approaches can achieve above 90\u201395% accuracy, but only for the simplest of tasks$^{50}$. For example, authors report an accuracy of ~ 90% for the extraction of TDM (Task, Dataset, Metric, without Score) tuples from papers in machine learning$^{33}$. As another example, using a well-engineered set of prompts, a new conversational LLM approach to post-publ",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0025"
+        }
+      ]
+    },
+    {
+      "id": "csag:assertion/doi:10.1038/s41597-025-04905-0/A0006",
+      "assertion_text": "By embedding expressive data type schemata into data analysis, the reborn approach delivers richer, more granular machine-readable expressions of scientific knowledge than either manual or automated post-publication extraction can.",
+      "claim_role": "conclusion",
+      "assertion_type": "comparative",
+      "normalization_status": "raw",
+      "criticality": "major",
+      "falsification_criteria": [
+        "A side-by-side comparison showing that automated extraction recovers equal or greater structured detail (entities, relations, qualifiers) on the same article.",
+        "User studies showing that the granularity captured by templates is not perceived as richer than the structured outputs of state-of-the-art LLM extractors."
+      ],
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1038/s41597-025-04905-0/C0006",
+          "label": "Granularity comparison across approaches",
+          "context_facet": "unspecified",
+          "environment_description": "Statistical knowledge types described via ORKG templates vs. NLP/LLM-extracted entity-relation structures.",
+          "origin": "author_stated",
+          "confidence_score": 0.88,
+          "text_spans": [
+            {
+              "document_id": "doi:10.1038/s41597-025-04905-0",
+              "section_type": "discussion",
+              "start_char": 42086,
+              "end_char": 43500,
+              "origin": "author_stated",
+              "confidence_score": 0.9,
+              "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0028"
+            }
+          ]
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.88,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41597-025-04905-0",
+          "section_type": "discussion",
+          "section_heading": "Richness or granularly",
+          "start_char": 42086,
+          "end_char": 43500,
+          "origin": "author_stated",
+          "confidence_score": 0.9,
+          "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0027"
+        }
+      ]
+    },
+    {
+      "id": "csag:assertion/doi:10.1038/s41597-025-04905-0/A0007",
+      "assertion_text": "Reborn data can strengthen the peer-review process by giving reviewers structured, finer-grained access to research findings and by enabling verification of figures and reproducibility of scripts.",
+      "claim_role": "discovery",
+      "assertion_type": "functional",
+      "normalization_status": "raw",
+      "criticality": "supporting",
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1038/s41597-025-04905-0/C0007",
+          "label": "Manuscript review workflow",
+          "context_facet": "model_system",
+          "environment_description": "Journal/conference review processes that can ingest reborn data alongside the manuscript.",
+          "origin": "author_stated",
+          "confidence_score": 0.88,
+          "text_spans": [
+            {
+              "document_id": "doi:10.1038/s41597-025-04905-0",
+              "section_type": "discussion",
+              "start_char": 52801,
+              "end_char": 53330,
+              "origin": "author_stated",
+              "confidence_score": 0.9,
+              "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0030"
+            }
+          ]
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.88,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41597-025-04905-0",
+          "section_type": "discussion",
+          "section_heading": "Discussion",
+          "start_char": 52801,
+          "end_char": 53330,
+          "exact_text": "reborn data can strengthen the peer-review process, as reviewers of manuscripts may derive several benefits from structured expressions of research findings. First, the more granular structuring may increase clarity compared to the more compact presentation of the same information in manuscripts. Second, the interlinking of data can support verifying the correctness of data visualized as figures in manuscripts. Third, the interlinking of scripts can support validating the published results as we",
+          "origin": "author_stated",
+          "confidence_score": 0.92,
+          "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0029"
+        }
+      ]
+    },
+    {
+      "id": "csag:assertion/doi:10.1038/s41597-025-04905-0/A0008",
+      "assertion_text": "The reborn approach has been developed and evaluated only for statistical/quantitative knowledge in R and Python computing environments; it has not been tested on qualitative or other knowledge types (formulae, proofs, arguments), nor on commercial environments without scripting (SPSS, GraphPad, Stata).",
+      "claim_role": "limitation",
+      "assertion_type": "descriptive",
+      "normalization_status": "raw",
+      "criticality": "major",
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1038/s41597-025-04905-0/C0008",
+          "label": "Scope-of-applicability limitation",
+          "context_facet": "unspecified",
+          "environment_description": "Quantitative/statistical research findings in open scripting languages; excludes qualitative knowledge and GUI-only commercial tools.",
+          "origin": "author_stated",
+          "confidence_score": 0.9,
+          "text_spans": [
+            {
+              "document_id": "doi:10.1038/s41597-025-04905-0",
+              "section_type": "discussion",
+              "start_char": 53331,
+              "end_char": 54750,
+              "origin": "author_stated",
+              "confidence_score": 0.92,
+              "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0032"
+            }
+          ]
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.92,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41597-025-04905-0",
+          "section_type": "discussion",
+          "section_heading": "Limitations",
+          "start_char": 53331,
+          "end_char": 54750,
+          "origin": "author_stated",
+          "confidence_score": 0.92,
+          "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0031"
+        }
+      ],
+      "falsification_criteria": [
+        "This limitation would be weakened by demonstrated reborn-style implementations for qualitative findings, proofs, arguments, or non-scripted commercial analysis environments."
+      ]
+    },
+    {
+      "id": "csag:assertion/doi:10.1038/s41597-025-04905-0/A0009",
+      "assertion_text": "ORKG templates specify only data syntax and do not encode formal semantics, so reborn data cannot currently support reasoning and only partially meet the FAIR interoperability sub-principles.",
+      "claim_role": "limitation",
+      "assertion_type": "descriptive",
+      "normalization_status": "raw",
+      "criticality": "major",
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1038/s41597-025-04905-0/C0009",
+          "label": "ORKG template expressiveness limitation",
+          "context_facet": "unspecified",
+          "environment_description": "ORKG templates as schemata for data syntax (no formal semantics, no ontology-class binding without external mappings to e.g. STATO).",
+          "origin": "author_stated",
+          "confidence_score": 0.9,
+          "text_spans": [
+            {
+              "document_id": "doi:10.1038/s41597-025-04905-0",
+              "section_type": "discussion",
+              "start_char": 56500,
+              "end_char": 57864,
+              "origin": "author_stated",
+              "confidence_score": 0.92,
+              "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0034"
+            }
+          ]
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.9,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41597-025-04905-0",
+          "section_type": "discussion",
+          "section_heading": "Limitations",
+          "start_char": 56500,
+          "end_char": 57864,
+          "origin": "author_stated",
+          "confidence_score": 0.92,
+          "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0033"
+        }
+      ],
+      "falsification_criteria": [
+        "This limitation would be weakened if ORKG templates or linked extensions encoded formal semantics sufficient for automated reasoning over reborn data."
+      ]
+    },
+    {
+      "id": "csag:assertion/doi:10.1038/s41597-025-04905-0/A0010",
+      "assertion_text": "The reborn approach inherits an adoption/scalability limitation: it relies on authors to apply it during the research lifecycle, so coverage depends on researcher uptake and on which results authors choose to express.",
+      "claim_role": "limitation",
+      "assertion_type": "descriptive",
+      "normalization_status": "raw",
+      "criticality": "major",
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1038/s41597-025-04905-0/C0010",
+          "label": "Author-driven adoption requirement",
+          "context_facet": "unspecified",
+          "environment_description": "Practical deployment limitation: authors must adopt templates and select which findings to express.",
+          "origin": "author_stated",
+          "confidence_score": 0.88,
+          "text_spans": [
+            {
+              "document_id": "doi:10.1038/s41597-025-04905-0",
+              "section_type": "discussion",
+              "start_char": 57864,
+              "end_char": 58550,
+              "origin": "author_stated",
+              "confidence_score": 0.92,
+              "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0036"
+            }
+          ]
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.9,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41597-025-04905-0",
+          "section_type": "discussion",
+          "section_heading": "Limitations",
+          "start_char": 57864,
+          "end_char": 58550,
+          "exact_text": "the reliance on authors may present some limitations. Authors drive the usefulness of the proposed system by deciding which results to express in machine-readable format. Naturally, the usefulness of the system increases as the number of reborn results increases. Capturing only the most salient results with reborn limits the usefulness of the system as not all results are expressed. Another concern is the possibility that authors may not capture all of the key results or results authors may cons",
+          "origin": "author_stated",
+          "confidence_score": 0.92,
+          "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0035"
+        }
+      ],
+      "falsification_criteria": [
+        "This limitation would be weakened by broad author uptake or automated integration that captures findings without requiring authors to selectively apply the workflow."
+      ]
+    },
+    {
+      "id": "csag:assertion/doi:10.1038/s41597-025-04905-0/A0011",
+      "assertion_text": "If pre-publication production approaches such as reborn are adopted, reliance on post-publication extraction is predicted to decline in the coming decades and may become largely obsolete in the second half of the century.",
+      "claim_role": "speculation",
+      "assertion_type": "other",
+      "normalization_status": "raw",
+      "criticality": "supporting",
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1038/s41597-025-04905-0/C0011",
+          "label": "Future-impact speculation",
+          "context_facet": "unspecified",
+          "environment_description": "Forward-looking claim conditioned on adoption; the authors explicitly note its limited applicability to past research.",
+          "origin": "author_stated",
+          "confidence_score": 0.85,
+          "text_spans": [
+            {
+              "document_id": "doi:10.1038/s41597-025-04905-0",
+              "section_type": "discussion",
+              "start_char": 47524,
+              "end_char": 48700,
+              "origin": "author_stated",
+              "confidence_score": 0.88,
+              "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0038"
+            }
+          ]
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.85,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41597-025-04905-0",
+          "section_type": "discussion",
+          "section_heading": "Impact",
+          "start_char": 47524,
+          "end_char": 48700,
+          "origin": "author_stated",
+          "confidence_score": 0.88,
+          "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0037"
+        }
+      ]
+    },
+    {
+      "id": "csag:assertion/doi:10.1038/s41597-025-04905-0/A0012",
+      "assertion_text": "The proposed distributed system uses a (statistical) Computing Environment plus Library, a Data Type Registry of templates (implemented in ORKG), a Publisher and Data Repository for reborn data, and Aggregation Systems (e.g. ORKG) that discover reborn data via DOI metadata.",
+      "claim_role": "method_claim",
+      "assertion_type": "methodological",
+      "normalization_status": "raw",
+      "criticality": "core",
+      "falsification_criteria": [
+        "An end-to-end deployment failing because a required component (template registry, repository, aggregator) cannot be substituted as described.",
+        "Showing that DOI-metadata-based discovery (DataCite IsSupplementTo/Crossref is-supplemented-by) does not function as specified."
+      ],
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1038/s41597-025-04905-0/C0012",
+          "label": "Reference distributed-system architecture",
+          "context_facet": "model_system",
+          "environment_description": "Distributed-system architecture as depicted in Fig. 6: computing environment + library + template registry + repository + aggregation system.",
+          "origin": "author_stated",
+          "confidence_score": 0.9,
+          "text_spans": [
+            {
+              "document_id": "doi:10.1038/s41597-025-04905-0",
+              "section_type": "methods",
+              "start_char": 58998,
+              "end_char": 60800,
+              "origin": "author_stated",
+              "confidence_score": 0.92,
+              "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0040"
+            }
+          ]
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.9,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41597-025-04905-0",
+          "section_type": "methods",
+          "section_heading": "Architectural overview",
+          "start_char": 58998,
+          "end_char": 60800,
+          "origin": "author_stated",
+          "confidence_score": 0.92,
+          "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0039"
+        }
+      ]
+    }
+  ],
+  "evidence_items": [
+    {
+      "id": "csag:evidence/doi:10.1038/s41597-025-04905-0/E0001",
+      "evidence_type": "experimental_result",
+      "evidence_text": "Soil science use case (Gentsch et al., SOIL 2024): the authors integrated ORKG templates with the original R scripts to produce reborn data for descriptive statistics, LMM fittings, pairwise t-tests, and structural equation modeling, deposited at https://doi.org/10.48366/R664252 and interlinked with the article DOI via DataCite IsSupplementTo.",
+      "associated_artifacts": [
+        "csag:artifact/doi:10.1038/s41597-025-04905-0/AR0001"
+      ],
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1038/s41597-025-04905-0/C0013",
+          "label": "Soil science use case (Gentsch et al., 2024)",
+          "context_facet": "model_system",
+          "environment_description": "Pre-publication application of reborn to a SOIL paper on cover-crop effects on soil structure, collaborative with the first author.",
+          "origin": "author_stated",
+          "confidence_score": 0.92,
+          "text_spans": [
+            {
+              "document_id": "doi:10.1038/s41597-025-04905-0",
+              "section_type": "results",
+              "start_char": 18703,
+              "end_char": 19550,
+              "origin": "author_stated",
+              "confidence_score": 0.94,
+              "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0042"
+            }
+          ]
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.93,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41597-025-04905-0",
+          "section_type": "results",
+          "section_heading": "Use case in soil science",
+          "start_char": 18703,
+          "end_char": 19550,
+          "exact_text": "The use case in soil science centers around the paper by Gentsch *et al.*$^{41}$ titled \u201cCover crops improve soil structure and change organic carbon distribution in macroaggregate fractions\u201d published in the journal SOIL by Copernicus Publications. Fig. 2 in this article illustrates the result of executing the proposed approach for this use case. Readers can view and interact with the reborn data (e.g. download data as a CSV file) in the ORKG$^{42}$.\n\n**Production.** Gentsch *et al.* impleme",
+          "origin": "author_stated",
+          "confidence_score": 0.93,
+          "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0041"
+        }
+      ]
+    },
+    {
+      "id": "csag:evidence/doi:10.1038/s41597-025-04905-0/E0002",
+      "evidence_type": "experimental_result",
+      "evidence_text": "Computer science use case (Thie\u00dfen et al., NLP4KGC 2023): TDMS-tuples for synonym discovery on SciERC were captured with the ORKG Leaderboard template (F1 scores: SciBERT 0.713, BART 0.668, RoBERTa 0.657), reborn data deposited at https://doi.org/10.48366/R661500; produced retroactively as the CEUR-WS article has no DOI.",
+      "associated_artifacts": [
+        "csag:artifact/doi:10.1038/s41597-025-04905-0/AR0001"
+      ],
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1038/s41597-025-04905-0/C0014",
+          "label": "Computer science use case (Thie\u00dfen et al., 2023)",
+          "context_facet": "model_system",
+          "environment_description": "Retrospective application to a CEUR-WS NLP4KGC paper; ORKG Leaderboard template, file-based collection rather than DOI-based.",
+          "origin": "author_stated",
+          "confidence_score": 0.9,
+          "text_spans": [
+            {
+              "document_id": "doi:10.1038/s41597-025-04905-0",
+              "section_type": "results",
+              "start_char": 25699,
+              "end_char": 28000,
+              "origin": "author_stated",
+              "confidence_score": 0.92,
+              "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0045"
+            }
+          ]
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.92,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41597-025-04905-0",
+          "section_type": "results",
+          "section_heading": "Use case in computer science",
+          "start_char": 25699,
+          "end_char": 28000,
+          "origin": "author_stated",
+          "confidence_score": 0.93,
+          "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0043"
+        },
+        {
+          "document_id": "doi:10.1038/s41597-025-04905-0",
+          "section_type": "results",
+          "section_heading": "Use case in computer science",
+          "start_char": 28100,
+          "end_char": 30900,
+          "origin": "author_stated",
+          "confidence_score": 0.9,
+          "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0044"
+        }
+      ]
+    },
+    {
+      "id": "csag:evidence/doi:10.1038/s41597-025-04905-0/E0003",
+      "evidence_type": "experimental_result",
+      "evidence_text": "Agroecology use case (Perez-Alvarez et al., Ecological Applications 2018): retroactive production of reborn data for LMM fittings and linear regressions, deposited at https://doi.org/10.48366/R689181 and discovered via the article DOI through ORKG harvesting.",
+      "associated_artifacts": [
+        "csag:artifact/doi:10.1038/s41597-025-04905-0/AR0001"
+      ],
+      "contexts": [
+        {
+          "id": "csag:context/doi:10.1038/s41597-025-04905-0/C0015",
+          "label": "Agroecology use case (Perez-Alvarez et al., 2018)",
+          "context_facet": "model_system",
+          "environment_description": "Retrospective application to a Wiley journal paper (Ecological Applications); illustrates retroactive deployment and rich tabular data.",
+          "origin": "author_stated",
+          "confidence_score": 0.9,
+          "text_spans": [
+            {
+              "document_id": "doi:10.1038/s41597-025-04905-0",
+              "section_type": "results",
+              "start_char": 34902,
+              "end_char": 36750,
+              "origin": "author_stated",
+              "confidence_score": 0.92,
+              "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0047"
+            }
+          ]
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.92,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41597-025-04905-0",
+          "section_type": "results",
+          "section_heading": "Use case in agroecology",
+          "start_char": 34902,
+          "end_char": 36750,
+          "origin": "author_stated",
+          "confidence_score": 0.93,
+          "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0046"
+        }
+      ]
+    },
+    {
+      "id": "csag:evidence/doi:10.1038/s41597-025-04905-0/E0004",
+      "evidence_type": "literature_citation",
+      "evidence_text": "Cited performance figures for automated post-publication extraction: ~90% accuracy for TDM extraction (Kabongo et al. 2021); 91.6% for LLM materials-data extraction (Polak & Morgan 2024); ~60% keyphrase identification, ~40% classification, ~30% relation extraction (Augenstein et al. 2017); 90-95% only on simplest tasks (Jonnalagadda et al. 2015).",
+      "origin": "author_stated",
+      "confidence_score": 0.93,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41597-025-04905-0",
+          "section_type": "discussion",
+          "section_heading": "Accuracy",
+          "start_char": 40052,
+          "end_char": 41200,
+          "exact_text": "**Accuracy.** In terms of accuracy, the extraction of scientific knowledge from published articles continues to challenge automation. Automated approaches can achieve above 90\u201395% accuracy, but only for the simplest of tasks$^{50}$. For example, authors report an accuracy of ~ 90% for the extraction of TDM (Task, Dataset, Metric, without Score) tuples from papers in machine learning$^{33}$. As another example, using a well-engineered set of prompts, a new conversational LLM approach to post-publ",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0048"
+        }
+      ]
+    },
+    {
+      "id": "csag:evidence/doi:10.1038/s41597-025-04905-0/E0005",
+      "evidence_type": "other",
+      "evidence_text": "Table 1 qualitative comparison: pre-publication production gets two-checkmark (best) scores for Accuracy, Richness, and Simplicity, but lags (X) on Scalability and Legacy versus automated post-publication extraction.",
+      "associated_artifacts": [
+        "csag:artifact/doi:10.1038/s41597-025-04905-0/AR0002"
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.92,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41597-025-04905-0",
+          "section_type": "table_caption",
+          "section_heading": "Table 1",
+          "start_char": 37917,
+          "end_char": 38857,
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0049"
+        }
+      ]
+    },
+    {
+      "id": "csag:evidence/doi:10.1038/s41597-025-04905-0/E0006",
+      "evidence_type": "observational_data",
+      "evidence_text": "A quick analysis of approximately 90K Zenodo records showed that about 5K (~5%) contain Python or R files and are interlinked in metadata to about 8K published articles, indicating that hundreds-to-thousands of articles could be interlinked with reborn data in the coming years.",
+      "origin": "author_stated",
+      "confidence_score": 0.88,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41597-025-04905-0",
+          "section_type": "discussion",
+          "section_heading": "Impact",
+          "start_char": 52213,
+          "end_char": 52800,
+          "exact_text": "www.nature.com/scientificdata/\n\nA quick analysis of approximately 90K Zenodo records showed that about 5K (~5%) contain either Python or R files and are interlinked (in metadata) to about 8K published articles. While 8K articles are a very small fraction of the millions of articles published each year\u2075\u2078, the Zenodo data does suggest that in the course of a few years, hundreds, and in the longer run thousands, of articles could be interlinked with machine-readable expressions of the research findings published therein, an important impact and impulse for the future of digital scholarship and the efficient reuse of scientific knowledge as FAIR research data.",
+          "origin": "author_stated",
+          "confidence_score": 0.92,
+          "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0050"
+        }
+      ]
+    },
+    {
+      "id": "csag:evidence/doi:10.1038/s41597-025-04905-0/E0007",
+      "evidence_type": "computational_model",
+      "evidence_text": "Listing 1 shows a working Python example that materializes ORKG template R12002 (Student's t-test) and writes a JSON-LD reborn data file with label, dependent variable, input dataset, and output p-value.",
+      "associated_artifacts": [
+        "csag:artifact/doi:10.1038/s41597-025-04905-0/AR0004"
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.92,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41597-025-04905-0",
+          "section_type": "other",
+          "section_heading": "Listing 1",
+          "start_char": 16736,
+          "end_char": 17800,
+          "origin": "author_stated",
+          "confidence_score": 0.93,
+          "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0051"
+        }
+      ]
+    },
+    {
+      "id": "csag:evidence/doi:10.1038/s41597-025-04905-0/E0008",
+      "evidence_type": "computational_model",
+      "evidence_text": "Architectural overview (Fig. 6) and Methods section describe a working distributed system: computing environment + ORKG Python/R library + ORKG template registry + TIB Leibniz Data Manager repository + ORKG aggregation system, with DataCite/Crossref DOI-metadata interlinking (Listings 2-4) and DOI/directory harvesting (Listing 5).",
+      "associated_artifacts": [
+        "csag:artifact/doi:10.1038/s41597-025-04905-0/AR0003"
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.93,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41597-025-04905-0",
+          "section_type": "methods",
+          "section_heading": "Methods",
+          "start_char": 58584,
+          "end_char": 62000,
+          "origin": "author_stated",
+          "confidence_score": 0.92,
+          "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0052"
+        }
+      ]
+    },
+    {
+      "id": "csag:evidence/doi:10.1038/s41597-025-04905-0/E0009",
+      "evidence_type": "expert_opinion",
+      "evidence_text": "Author-stated argument in the Limitations subsection: the approach has not been tested on qualitative knowledge, formulae, proofs, or arguments, and remains tied to scripting languages (R/Python) rather than commercial GUI-driven tools.",
+      "origin": "author_stated",
+      "confidence_score": 0.92,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41597-025-04905-0",
+          "section_type": "discussion",
+          "section_heading": "Limitations",
+          "start_char": 53331,
+          "end_char": 54750,
+          "origin": "author_stated",
+          "confidence_score": 0.93,
+          "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0053"
+        }
+      ]
+    },
+    {
+      "id": "csag:evidence/doi:10.1038/s41597-025-04905-0/E0010",
+      "evidence_type": "expert_opinion",
+      "evidence_text": "Author-stated argument that ORKG templates capture only syntax (no formal semantics), limiting interoperability and reasoning support, with mitigation via mappings to ontologies like STATO.",
+      "origin": "author_stated",
+      "confidence_score": 0.9,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41597-025-04905-0",
+          "section_type": "discussion",
+          "section_heading": "Limitations",
+          "start_char": 56500,
+          "end_char": 57864,
+          "origin": "author_stated",
+          "confidence_score": 0.92,
+          "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0054"
+        }
+      ]
+    },
+    {
+      "id": "csag:evidence/doi:10.1038/s41597-025-04905-0/E0011",
+      "evidence_type": "expert_opinion",
+      "evidence_text": "Author-stated argument that the system's coverage depends on authors choosing which findings to express in machine-readable form and may miss results authors deem trivial but others find important.",
+      "origin": "author_stated",
+      "confidence_score": 0.9,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41597-025-04905-0",
+          "section_type": "discussion",
+          "section_heading": "Limitations",
+          "start_char": 57864,
+          "end_char": 58550,
+          "origin": "author_stated",
+          "confidence_score": 0.92,
+          "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0055"
+        }
+      ]
+    }
+  ],
+  "evidence_links": [
+    {
+      "id": "csag:elink/doi:10.1038/s41597-025-04905-0/L0001",
+      "evidence_item": "csag:evidence/doi:10.1038/s41597-025-04905-0/E0001",
+      "assertion": "csag:assertion/doi:10.1038/s41597-025-04905-0/A0004",
+      "polarity": "supports",
+      "strength": "strong",
+      "rationale": "The soil science use case is one of the three concrete deployments and is described in detail (production, deposition, collection).",
+      "origin": "author_stated",
+      "confidence_score": 0.92
+    },
+    {
+      "id": "csag:elink/doi:10.1038/s41597-025-04905-0/L0002",
+      "evidence_item": "csag:evidence/doi:10.1038/s41597-025-04905-0/E0002",
+      "assertion": "csag:assertion/doi:10.1038/s41597-025-04905-0/A0004",
+      "polarity": "supports",
+      "strength": "strong",
+      "rationale": "The CS use case provides a second concrete deployment producing reborn TDMS data.",
+      "origin": "author_stated",
+      "confidence_score": 0.92
+    },
+    {
+      "id": "csag:elink/doi:10.1038/s41597-025-04905-0/L0003",
+      "evidence_item": "csag:evidence/doi:10.1038/s41597-025-04905-0/E0003",
+      "assertion": "csag:assertion/doi:10.1038/s41597-025-04905-0/A0004",
+      "polarity": "supports",
+      "strength": "strong",
+      "rationale": "The agroecology use case provides the third concrete deployment with retroactive reborn-data production.",
+      "origin": "author_stated",
+      "confidence_score": 0.91
+    },
+    {
+      "id": "csag:elink/doi:10.1038/s41597-025-04905-0/L0004",
+      "evidence_item": "csag:evidence/doi:10.1038/s41597-025-04905-0/E0001",
+      "assertion": "csag:assertion/doi:10.1038/s41597-025-04905-0/A0002",
+      "polarity": "supports",
+      "strength": "moderate",
+      "rationale": "Implementation of the soil science use case demonstrates that the reborn approach is implementable in R and produces reborn data.",
+      "origin": "author_stated",
+      "confidence_score": 0.88
+    },
+    {
+      "id": "csag:elink/doi:10.1038/s41597-025-04905-0/L0005",
+      "evidence_item": "csag:evidence/doi:10.1038/s41597-025-04905-0/E0007",
+      "assertion": "csag:assertion/doi:10.1038/s41597-025-04905-0/A0002",
+      "polarity": "supports",
+      "strength": "moderate",
+      "rationale": "Listing 1 supplies a working Python example of the proposed template-based production workflow.",
+      "origin": "author_stated",
+      "confidence_score": 0.88
+    },
+    {
+      "id": "csag:elink/doi:10.1038/s41597-025-04905-0/L0006",
+      "evidence_item": "csag:evidence/doi:10.1038/s41597-025-04905-0/E0008",
+      "assertion": "csag:assertion/doi:10.1038/s41597-025-04905-0/A0012",
+      "polarity": "supports",
+      "strength": "strong",
+      "rationale": "Methods section and Fig. 6 directly describe the components and interactions of the distributed system.",
+      "origin": "author_stated",
+      "confidence_score": 0.92
+    },
+    {
+      "id": "csag:elink/doi:10.1038/s41597-025-04905-0/L0007",
+      "evidence_item": "csag:evidence/doi:10.1038/s41597-025-04905-0/E0005",
+      "assertion": "csag:assertion/doi:10.1038/s41597-025-04905-0/A0003",
+      "polarity": "supports",
+      "strength": "moderate",
+      "rationale": "Table 1 makes the comparative claim explicit by scoring pre-publication production highest on Accuracy/Richness/Simplicity.",
+      "origin": "author_stated",
+      "confidence_score": 0.88
+    },
+    {
+      "id": "csag:elink/doi:10.1038/s41597-025-04905-0/L0008",
+      "evidence_item": "csag:evidence/doi:10.1038/s41597-025-04905-0/E0004",
+      "assertion": "csag:assertion/doi:10.1038/s41597-025-04905-0/A0005",
+      "polarity": "supports",
+      "strength": "strong",
+      "rationale": "The cited performance figures directly underpin the background claim about current automated-extraction accuracy.",
+      "origin": "author_stated",
+      "confidence_score": 0.93
+    },
+    {
+      "id": "csag:elink/doi:10.1038/s41597-025-04905-0/L0009",
+      "evidence_item": "csag:evidence/doi:10.1038/s41597-025-04905-0/E0004",
+      "assertion": "csag:assertion/doi:10.1038/s41597-025-04905-0/A0003",
+      "polarity": "supports",
+      "strength": "moderate",
+      "rationale": "Author-cited literature shows automated extraction lags on accuracy except on the simplest tasks, supporting the comparative superiority claim on accuracy.",
+      "origin": "author_stated",
+      "confidence_score": 0.85
+    },
+    {
+      "id": "csag:elink/doi:10.1038/s41597-025-04905-0/L0010",
+      "evidence_item": "csag:evidence/doi:10.1038/s41597-025-04905-0/E0005",
+      "assertion": "csag:assertion/doi:10.1038/s41597-025-04905-0/A0006",
+      "polarity": "supports",
+      "strength": "moderate",
+      "rationale": "Table 1 explicitly scores pre-publication production highest on Richness vs. both manual and automated post-publication extraction.",
+      "origin": "author_stated",
+      "confidence_score": 0.85
+    },
+    {
+      "id": "csag:elink/doi:10.1038/s41597-025-04905-0/L0011",
+      "evidence_item": "csag:evidence/doi:10.1038/s41597-025-04905-0/E0001",
+      "assertion": "csag:assertion/doi:10.1038/s41597-025-04905-0/A0007",
+      "polarity": "supports",
+      "strength": "weak",
+      "rationale": "The soil science use case demonstrates interlinked scripts/data that could be made available to reviewers, illustrating the peer-review benefit (though not formally evaluated).",
+      "origin": "extractor_inferred",
+      "confidence_score": 0.75
+    },
+    {
+      "id": "csag:elink/doi:10.1038/s41597-025-04905-0/L0012",
+      "evidence_item": "csag:evidence/doi:10.1038/s41597-025-04905-0/E0009",
+      "assertion": "csag:assertion/doi:10.1038/s41597-025-04905-0/A0008",
+      "polarity": "supports",
+      "strength": "strong",
+      "rationale": "The Limitations subsection states this scope restriction directly.",
+      "origin": "author_stated",
+      "confidence_score": 0.92
+    },
+    {
+      "id": "csag:elink/doi:10.1038/s41597-025-04905-0/L0013",
+      "evidence_item": "csag:evidence/doi:10.1038/s41597-025-04905-0/E0010",
+      "assertion": "csag:assertion/doi:10.1038/s41597-025-04905-0/A0009",
+      "polarity": "supports",
+      "strength": "strong",
+      "rationale": "The Limitations subsection states the syntax-only template limitation directly.",
+      "origin": "author_stated",
+      "confidence_score": 0.92
+    },
+    {
+      "id": "csag:elink/doi:10.1038/s41597-025-04905-0/L0014",
+      "evidence_item": "csag:evidence/doi:10.1038/s41597-025-04905-0/E0011",
+      "assertion": "csag:assertion/doi:10.1038/s41597-025-04905-0/A0010",
+      "polarity": "supports",
+      "strength": "strong",
+      "rationale": "The Limitations subsection states the author-reliance limitation directly.",
+      "origin": "author_stated",
+      "confidence_score": 0.92
+    },
+    {
+      "id": "csag:elink/doi:10.1038/s41597-025-04905-0/L0015",
+      "evidence_item": "csag:evidence/doi:10.1038/s41597-025-04905-0/E0006",
+      "assertion": "csag:assertion/doi:10.1038/s41597-025-04905-0/A0011",
+      "polarity": "supports",
+      "strength": "weak",
+      "rationale": "The Zenodo analysis is used to argue that adoption is plausible and growing, indirectly supporting the speculative impact claim.",
+      "origin": "author_stated",
+      "confidence_score": 0.75
+    },
+    {
+      "id": "csag:elink/doi:10.1038/s41597-025-04905-0/L0016",
+      "evidence_item": "csag:evidence/doi:10.1038/s41597-025-04905-0/E0009",
+      "assertion": "csag:assertion/doi:10.1038/s41597-025-04905-0/A0003",
+      "polarity": "inconclusive",
+      "strength": "moderate",
+      "rationale": "The acknowledged scope limitation (only statistical knowledge, only scripting languages) qualifies the claim that reborn is superior overall.",
+      "origin": "extractor_inferred",
+      "confidence_score": 0.8
+    },
+    {
+      "id": "csag:elink/doi:10.1038/s41597-025-04905-0/L0017",
+      "evidence_item": "csag:evidence/doi:10.1038/s41597-025-04905-0/E0011",
+      "assertion": "csag:assertion/doi:10.1038/s41597-025-04905-0/A0003",
+      "polarity": "inconclusive",
+      "strength": "weak",
+      "rationale": "Author-reliance limits coverage of reborn output, qualifying claims of overall superiority.",
+      "origin": "extractor_inferred",
+      "confidence_score": 0.72
+    }
+  ],
+  "inferences": [
+    {
+      "id": "csag:inference/doi:10.1038/s41597-025-04905-0/I0001",
+      "input_assertions": [
+        "csag:assertion/doi:10.1038/s41597-025-04905-0/A0004",
+        "csag:assertion/doi:10.1038/s41597-025-04905-0/A0005"
+      ],
+      "input_evidence_links": [
+        "csag:elink/doi:10.1038/s41597-025-04905-0/L0001",
+        "csag:elink/doi:10.1038/s41597-025-04905-0/L0002",
+        "csag:elink/doi:10.1038/s41597-025-04905-0/L0003",
+        "csag:elink/doi:10.1038/s41597-025-04905-0/L0007",
+        "csag:elink/doi:10.1038/s41597-025-04905-0/L0008"
+      ],
+      "output_assertion": "csag:assertion/doi:10.1038/s41597-025-04905-0/A0003",
+      "inference_method": "qualitative_interpretation",
+      "inference_rationale": "The authors combine three working use-case deployments (E0001-E0003) with cited limitations of automated post-publication extraction (E0004) and a qualitative pros/cons matrix (E0005) to argue overall superiority of reborn on accuracy/richness/simplicity.",
+      "assumptions": [
+        "csag:assertion/doi:10.1038/s41597-025-04905-0/A0012"
+      ],
+      "origin": "extractor_inferred",
+      "confidence_score": 0.82,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41597-025-04905-0",
+          "section_type": "discussion",
+          "start_char": 39400,
+          "end_char": 45200,
+          "origin": "author_stated",
+          "confidence_score": 0.88,
+          "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0056"
+        }
+      ]
+    },
+    {
+      "id": "csag:inference/doi:10.1038/s41597-025-04905-0/I0002",
+      "input_assertions": [
+        "csag:assertion/doi:10.1038/s41597-025-04905-0/A0006"
+      ],
+      "input_evidence_links": [
+        "csag:elink/doi:10.1038/s41597-025-04905-0/L0010",
+        "csag:elink/doi:10.1038/s41597-025-04905-0/L0007"
+      ],
+      "output_assertion": "csag:assertion/doi:10.1038/s41597-025-04905-0/A0011",
+      "inference_method": "analogy_or_prior_knowledge",
+      "inference_rationale": "The authors reason that, given growth rates of science and the richness advantage of reborn, pre-publication production will gradually displace post-publication extraction over the coming decades.",
+      "origin": "extractor_inferred",
+      "confidence_score": 0.7,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41597-025-04905-0",
+          "section_type": "discussion",
+          "section_heading": "Impact",
+          "start_char": 47524,
+          "end_char": 48700,
+          "origin": "author_stated",
+          "confidence_score": 0.88,
+          "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0057"
+        }
+      ]
+    }
+  ],
+  "assertion_relations": [
+    {
+      "id": "csag:arel/doi:10.1038/s41597-025-04905-0/RL0001",
+      "from_assertion": "csag:assertion/doi:10.1038/s41597-025-04905-0/A0008",
+      "to_assertion": "csag:assertion/doi:10.1038/s41597-025-04905-0/A0003",
+      "relation_type": "qualifies",
+      "relation_rationale": "Scope limitation (only quantitative/statistical knowledge, only R/Python) qualifies the global superiority claim by bounding its domain of validity.",
+      "origin": "extractor_inferred",
+      "confidence_score": 0.88,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41597-025-04905-0",
+          "section_type": "discussion",
+          "section_heading": "Limitations",
+          "start_char": 53331,
+          "end_char": 54750,
+          "origin": "author_stated",
+          "confidence_score": 0.92,
+          "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0058"
+        }
+      ]
+    },
+    {
+      "id": "csag:arel/doi:10.1038/s41597-025-04905-0/RL0002",
+      "from_assertion": "csag:assertion/doi:10.1038/s41597-025-04905-0/A0009",
+      "to_assertion": "csag:assertion/doi:10.1038/s41597-025-04905-0/A0003",
+      "relation_type": "qualifies",
+      "relation_rationale": "ORKG templates capture only data syntax (no formal semantics), so the FAIR interoperability portion of the superiority claim is qualified.",
+      "origin": "extractor_inferred",
+      "confidence_score": 0.85,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41597-025-04905-0",
+          "section_type": "discussion",
+          "section_heading": "Limitations",
+          "start_char": 56500,
+          "end_char": 57864,
+          "origin": "author_stated",
+          "confidence_score": 0.92,
+          "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0059"
+        }
+      ]
+    },
+    {
+      "id": "csag:arel/doi:10.1038/s41597-025-04905-0/RL0003",
+      "from_assertion": "csag:assertion/doi:10.1038/s41597-025-04905-0/A0010",
+      "to_assertion": "csag:assertion/doi:10.1038/s41597-025-04905-0/A0011",
+      "relation_type": "qualifies",
+      "relation_rationale": "Author-reliance limits adoption, which is the precondition for the predicted long-term decline of post-publication extraction.",
+      "origin": "extractor_inferred",
+      "confidence_score": 0.85,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41597-025-04905-0",
+          "section_type": "discussion",
+          "section_heading": "Limitations",
+          "start_char": 57864,
+          "end_char": 58550,
+          "origin": "author_stated",
+          "confidence_score": 0.9,
+          "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0060"
+        }
+      ]
+    }
+  ],
+  "critiques": [
+    {
+      "id": "csag:critique/doi:10.1038/s41597-025-04905-0/R0001",
+      "critique_type": "external_validity",
+      "risk_domain": "data_quality",
+      "severity": "moderate",
+      "impacted_assertions": [
+        "csag:assertion/doi:10.1038/s41597-025-04905-0/A0003",
+        "csag:assertion/doi:10.1038/s41597-025-04905-0/A0004",
+        "csag:assertion/doi:10.1038/s41597-025-04905-0/A0006"
+      ],
+      "impacted_evidence_items": [
+        "csag:evidence/doi:10.1038/s41597-025-04905-0/E0001",
+        "csag:evidence/doi:10.1038/s41597-025-04905-0/E0002",
+        "csag:evidence/doi:10.1038/s41597-025-04905-0/E0003"
+      ],
+      "mitigation_suggestions": [
+        "Evaluate reborn on a larger and more diverse sample of papers (different disciplines, statistical methods, and authoring environments) to test generalizability."
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.9,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41597-025-04905-0",
+          "section_type": "discussion",
+          "section_heading": "Limitations",
+          "start_char": 54957,
+          "end_char": 55400,
+          "exact_text": "Our evaluation is limited, both in number of cases as well as in diversity of research. While we aim to address this limitation in future work, the main objective of the present work is to introduce the approach and provide evidence for its viability.",
+          "origin": "author_stated",
+          "confidence_score": 0.93,
+          "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0061"
+        }
+      ]
+    },
+    {
+      "id": "csag:critique/doi:10.1038/s41597-025-04905-0/R0002",
+      "critique_type": "construct_validity",
+      "risk_domain": "other",
+      "severity": "moderate",
+      "impacted_assertions": [
+        "csag:assertion/doi:10.1038/s41597-025-04905-0/A0003",
+        "csag:assertion/doi:10.1038/s41597-025-04905-0/A0006"
+      ],
+      "impacted_evidence_items": [
+        "csag:evidence/doi:10.1038/s41597-025-04905-0/E0010"
+      ],
+      "mitigation_suggestions": [
+        "Map ORKG templates to ontology classes/properties (e.g. STATO) and translate reborn data into W3C-compliant semantic data so that formal interoperability and reasoning can be assessed."
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.88,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41597-025-04905-0",
+          "section_type": "discussion",
+          "section_heading": "Limitations",
+          "start_char": 56500,
+          "end_char": 57864,
+          "origin": "author_stated",
+          "confidence_score": 0.92,
+          "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0062"
+        }
+      ]
+    },
+    {
+      "id": "csag:critique/doi:10.1038/s41597-025-04905-0/R0003",
+      "critique_type": "external_validity",
+      "risk_domain": "selection_bias",
+      "severity": "moderate",
+      "impacted_assertions": [
+        "csag:assertion/doi:10.1038/s41597-025-04905-0/A0003",
+        "csag:assertion/doi:10.1038/s41597-025-04905-0/A0011"
+      ],
+      "impacted_evidence_items": [
+        "csag:evidence/doi:10.1038/s41597-025-04905-0/E0011"
+      ],
+      "mitigation_suggestions": [
+        "Develop infrastructure that automatically describes statistical-function outputs (e.g. t.test() in R) to reduce author burden and bias in which findings get reborn."
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.85,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41597-025-04905-0",
+          "section_type": "discussion",
+          "section_heading": "Limitations",
+          "start_char": 57864,
+          "end_char": 58550,
+          "origin": "author_stated",
+          "confidence_score": 0.9,
+          "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0063"
+        }
+      ]
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "id": "csag:gap/doi:10.1038/s41597-025-04905-0/G0001",
+      "gap_type": "generalizability",
+      "severity": "moderate",
+      "related_assertions": [
+        "csag:assertion/doi:10.1038/s41597-025-04905-0/A0008",
+        "csag:assertion/doi:10.1038/s41597-025-04905-0/A0003"
+      ],
+      "suggested_actions": [
+        "Extend and test reborn on qualitative scientific knowledge, formulae, proofs, and arguments.",
+        "Investigate integration with GUI-driven or commercial environments (SPSS, GraphPad Prism, Stata, Matlab, Julia)."
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.9,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41597-025-04905-0",
+          "section_type": "discussion",
+          "section_heading": "Limitations",
+          "start_char": 53331,
+          "end_char": 54750,
+          "origin": "author_stated",
+          "confidence_score": 0.92,
+          "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0064"
+        }
+      ]
+    },
+    {
+      "id": "csag:gap/doi:10.1038/s41597-025-04905-0/G0002",
+      "gap_type": "missing_mechanism",
+      "severity": "moderate",
+      "related_assertions": [
+        "csag:assertion/doi:10.1038/s41597-025-04905-0/A0009"
+      ],
+      "suggested_actions": [
+        "Align ORKG templates with ontology classes/properties (e.g. STATO mappings).",
+        "Translate reborn data into W3C-compliant semantic data and integrate with classical knowledge bases for reasoning support."
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.88,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41597-025-04905-0",
+          "section_type": "discussion",
+          "section_heading": "Limitations",
+          "start_char": 56500,
+          "end_char": 57864,
+          "origin": "author_stated",
+          "confidence_score": 0.92,
+          "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0065"
+        }
+      ]
+    },
+    {
+      "id": "csag:gap/doi:10.1038/s41597-025-04905-0/G0003",
+      "gap_type": "missing_experiment",
+      "severity": "moderate",
+      "related_assertions": [
+        "csag:assertion/doi:10.1038/s41597-025-04905-0/A0010",
+        "csag:assertion/doi:10.1038/s41597-025-04905-0/A0003"
+      ],
+      "suggested_actions": [
+        "Quantify the author-side overhead of using reborn and identify pain points for adoption.",
+        "Develop tooling (e.g. modified t.test() that auto-describes outputs) that reduces manual burden and broadens adoption."
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.85,
+      "text_spans": [
+        {
+          "document_id": "doi:10.1038/s41597-025-04905-0",
+          "section_type": "discussion",
+          "section_heading": "Limitations",
+          "start_char": 57864,
+          "end_char": 58550,
+          "origin": "author_stated",
+          "confidence_score": 0.9,
+          "id": "csag:span/doi:10.1038/s41597-025-04905-0/S0066"
+        }
+      ]
+    }
+  ],
+  "qa_items": [
+    {
+      "id": "csag:qa/doi:10.1038/s41597-025-04905-0/Q0001",
+      "question_text": "What is the evidence status for the claim: \"The reborn approach is superior to classical manual and semi-automated post-publication extraction in terms of knowledge accuracy, richness, reproducibility, and technological simplicity.\"?",
+      "query_assertion": "csag:assertion/doi:10.1038/s41597-025-04905-0/A0003",
+      "normalized_query": "CSAG_QA_01_STATUS",
+      "expected_answer_type": "categorical",
+      "answers": [
+        {
+          "id": "csag:answer/doi:10.1038/s41597-025-04905-0/ANS0001",
+          "answer_type": "categorical",
+          "answer_text": "mixed",
+          "supporting_assertions": [
+            "csag:assertion/doi:10.1038/s41597-025-04905-0/A0003",
+            "csag:assertion/doi:10.1038/s41597-025-04905-0/A0008",
+            "csag:assertion/doi:10.1038/s41597-025-04905-0/A0009"
+          ],
+          "supporting_evidence_links": [
+            "csag:elink/doi:10.1038/s41597-025-04905-0/L0007",
+            "csag:elink/doi:10.1038/s41597-025-04905-0/L0009",
+            "csag:elink/doi:10.1038/s41597-025-04905-0/L0016",
+            "csag:elink/doi:10.1038/s41597-025-04905-0/L0017"
+          ],
+          "answer_confidence": 0.82,
+          "origin": "extractor_inferred"
+        }
+      ],
+      "origin": "extractor_inferred",
+      "confidence_score": 0.82
+    },
+    {
+      "id": "csag:qa/doi:10.1038/s41597-025-04905-0/Q0002",
+      "question_text": "What evidence supports the claim: \"The reborn approach was applied to three use cases and produced machine-readable research findings in each, demonstrating practical viability.\"?",
+      "query_assertion": "csag:assertion/doi:10.1038/s41597-025-04905-0/A0004",
+      "normalized_query": "CSAG_QA_02_EVIDENCE_SUPPORT",
+      "expected_answer_type": "list",
+      "answers": [
+        {
+          "id": "csag:answer/doi:10.1038/s41597-025-04905-0/ANS0002",
+          "answer_type": "list",
+          "answer_text": "Three use-case deployments are reported: soil science (Gentsch et al., reborn data 10.48366/R664252), computer science (Thie\u00dfen et al., reborn data 10.48366/R661500), and agroecology (Perez-Alvarez et al., reborn data 10.48366/R689181).",
+          "supporting_assertions": [
+            "csag:assertion/doi:10.1038/s41597-025-04905-0/A0004"
+          ],
+          "supporting_evidence_links": [
+            "csag:elink/doi:10.1038/s41597-025-04905-0/L0001",
+            "csag:elink/doi:10.1038/s41597-025-04905-0/L0002",
+            "csag:elink/doi:10.1038/s41597-025-04905-0/L0003"
+          ],
+          "answer_confidence": 0.92,
+          "origin": "extractor_inferred"
+        }
+      ],
+      "origin": "extractor_inferred",
+      "confidence_score": 0.9
+    },
+    {
+      "id": "csag:qa/doi:10.1038/s41597-025-04905-0/Q0003",
+      "question_text": "What limitations or flaws could weaken the claim: \"The reborn approach is superior to classical manual and semi-automated post-publication extraction.\"?",
+      "query_assertion": "csag:assertion/doi:10.1038/s41597-025-04905-0/A0003",
+      "normalized_query": "CSAG_QA_10_LIMITATIONS",
+      "expected_answer_type": "list",
+      "answers": [
+        {
+          "id": "csag:answer/doi:10.1038/s41597-025-04905-0/ANS0003",
+          "answer_type": "list",
+          "answer_text": "Three author-stated limitations apply: (a) scope is currently restricted to quantitative/statistical knowledge in R/Python; (b) ORKG templates capture only data syntax (no formal semantics, no reasoning); (c) the system relies on authors to select which findings to express, limiting coverage. The evaluation also only spans three use cases, limiting external validity.",
+          "supporting_assertions": [
+            "csag:assertion/doi:10.1038/s41597-025-04905-0/A0008",
+            "csag:assertion/doi:10.1038/s41597-025-04905-0/A0009",
+            "csag:assertion/doi:10.1038/s41597-025-04905-0/A0010"
+          ],
+          "supporting_evidence_links": [
+            "csag:elink/doi:10.1038/s41597-025-04905-0/L0012",
+            "csag:elink/doi:10.1038/s41597-025-04905-0/L0013",
+            "csag:elink/doi:10.1038/s41597-025-04905-0/L0014"
+          ],
+          "answer_confidence": 0.9,
+          "origin": "extractor_inferred"
+        }
+      ],
+      "origin": "extractor_inferred",
+      "confidence_score": 0.9
+    },
+    {
+      "id": "csag:qa/doi:10.1038/s41597-025-04905-0/Q0004",
+      "question_text": "What knowledge gaps remain for the claim: \"Pre-publication production may make post-publication extraction largely obsolete in the second half of the century.\"?",
+      "query_assertion": "csag:assertion/doi:10.1038/s41597-025-04905-0/A0011",
+      "normalized_query": "CSAG_QA_11_GAPS",
+      "expected_answer_type": "list",
+      "answers": [
+        {
+          "id": "csag:answer/doi:10.1038/s41597-025-04905-0/ANS0004",
+          "answer_type": "list",
+          "answer_text": "Open gaps include: extending reborn to qualitative/formal knowledge types (G0001); adding formal semantics and ontology mappings to support reasoning (G0002); reducing author overhead to support broad adoption (G0003).",
+          "supporting_assertions": [
+            "csag:assertion/doi:10.1038/s41597-025-04905-0/A0008",
+            "csag:assertion/doi:10.1038/s41597-025-04905-0/A0009",
+            "csag:assertion/doi:10.1038/s41597-025-04905-0/A0010"
+          ],
+          "supporting_evidence_links": [
+            "csag:elink/doi:10.1038/s41597-025-04905-0/L0012",
+            "csag:elink/doi:10.1038/s41597-025-04905-0/L0013",
+            "csag:elink/doi:10.1038/s41597-025-04905-0/L0014",
+            "csag:elink/doi:10.1038/s41597-025-04905-0/L0015"
+          ],
+          "answer_confidence": 0.85,
+          "origin": "extractor_inferred"
+        }
+      ],
+      "origin": "extractor_inferred",
+      "confidence_score": 0.85
+    },
+    {
+      "id": "csag:qa/doi:10.1038/s41597-025-04905-0/Q0005",
+      "question_text": "Under what biological/research contexts is the claim \"The reborn approach is superior to post-publication extraction\" evaluated in this paper?",
+      "query_assertion": "csag:assertion/doi:10.1038/s41597-025-04905-0/A0003",
+      "normalized_query": "CSAG_QA_07_CONTEXT_LIST",
+      "expected_answer_type": "list",
+      "answers": [
+        {
+          "id": "csag:answer/doi:10.1038/s41597-025-04905-0/ANS0005",
+          "answer_type": "list",
+          "answer_text": "The claim is evaluated in three statistical-data-analysis contexts (soil science, computer science, agroecology) implemented in R and Python with ORKG templates, and compared along Accuracy, Richness, Simplicity, Scalability, Coverage, and Legacy.",
+          "supporting_assertions": [
+            "csag:assertion/doi:10.1038/s41597-025-04905-0/A0003",
+            "csag:assertion/doi:10.1038/s41597-025-04905-0/A0004",
+            "csag:assertion/doi:10.1038/s41597-025-04905-0/A0012"
+          ],
+          "supporting_evidence_links": [
+            "csag:elink/doi:10.1038/s41597-025-04905-0/L0001",
+            "csag:elink/doi:10.1038/s41597-025-04905-0/L0002",
+            "csag:elink/doi:10.1038/s41597-025-04905-0/L0003",
+            "csag:elink/doi:10.1038/s41597-025-04905-0/L0007"
+          ],
+          "answer_confidence": 0.88,
+          "origin": "extractor_inferred"
+        }
+      ],
+      "origin": "extractor_inferred",
+      "confidence_score": 0.88
+    },
+    {
+      "id": "csag:qa/doi:10.1038/s41597-025-04905-0/Q0006",
+      "question_text": "What mechanism is proposed to deliver superior accuracy and richness compared to post-publication extraction?",
+      "query_assertion": "csag:assertion/doi:10.1038/s41597-025-04905-0/A0006",
+      "normalized_query": "CSAG_QA_09_MECHANISM",
+      "expected_answer_type": "free_text",
+      "answers": [
+        {
+          "id": "csag:answer/doi:10.1038/s41597-025-04905-0/ANS0006",
+          "answer_type": "free_text",
+          "answer_text": "Embedding expressive data-type schemata (ORKG templates) into the data analysis itself lets the script produce machine-readable expressions of inputs/outputs (e.g. dataset, p-value) directly, avoiding copy/approximation errors and capturing richer structure than post-publication NLP/manual extraction. Listing 1 demonstrates this for a Student's t-test, and the three use cases instantiate it for LMMs, SEM, and TDMS data.",
+          "supporting_assertions": [
+            "csag:assertion/doi:10.1038/s41597-025-04905-0/A0002",
+            "csag:assertion/doi:10.1038/s41597-025-04905-0/A0006",
+            "csag:assertion/doi:10.1038/s41597-025-04905-0/A0012"
+          ],
+          "supporting_evidence_links": [
+            "csag:elink/doi:10.1038/s41597-025-04905-0/L0005",
+            "csag:elink/doi:10.1038/s41597-025-04905-0/L0006",
+            "csag:elink/doi:10.1038/s41597-025-04905-0/L0010"
+          ],
+          "answer_confidence": 0.85,
+          "origin": "extractor_inferred"
+        }
+      ],
+      "origin": "extractor_inferred",
+      "confidence_score": 0.85
+    }
+  ],
+  "schema_version": "1.0.0",
+  "validator_version": "1.0.0"
+}

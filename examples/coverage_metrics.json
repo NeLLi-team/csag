@@ -1,0 +1,728 @@
+{
+  "example_count": 7,
+  "examples": [
+    {
+      "example": "examples/jamy2026",
+      "extraction_id": "doi:10.1038/s41467-025-67401-4",
+      "counts": {
+        "artifacts": 4,
+        "datasets": 2,
+        "entities": 0,
+        "studies": 0,
+        "experiments": 0,
+        "assertions": 7,
+        "evidence_items": 9,
+        "evidence_links": 9,
+        "inferences": 1,
+        "assertion_relations": 3,
+        "critiques": 1,
+        "knowledge_gaps": 1,
+        "qa_items": 2,
+        "research_states": 0,
+        "next_actions": 0,
+        "executions": 0
+      },
+      "coverage": {
+        "assertions": 7,
+        "with_evidence_links": 7,
+        "without_evidence_links": 0,
+        "with_decisive_evidence": 7,
+        "assertions_with_context": 7,
+        "assertions_missing_context": 0,
+        "assertions_with_falsification_criteria": 7
+      },
+      "distributions": {
+        "claim_role": {
+          "background": 0,
+          "hypothesis": 0,
+          "research_question": 0,
+          "objective": 1,
+          "method_claim": 0,
+          "result_claim": 3,
+          "conclusion": 1,
+          "discovery": 1,
+          "speculation": 0,
+          "limitation": 1,
+          "future_work": 0
+        },
+        "criticality": {
+          "core": 2,
+          "major": 5,
+          "supporting": 0,
+          "background": 0
+        },
+        "normalization_status": {
+          "raw": 7,
+          "partially_normalized": 0,
+          "fully_normalized": 0
+        },
+        "evidence_polarity": {
+          "supports": 8,
+          "refutes": 0,
+          "mixed": 1,
+          "inconclusive": 0
+        },
+        "evidence_strength": {
+          "very_strong": 0,
+          "strong": 5,
+          "moderate": 4,
+          "weak": 0,
+          "very_weak": 0,
+          "unknown": 0
+        },
+        "research_state": {
+          "open": 0,
+          "supported": 0,
+          "rejected": 0,
+          "mixed": 0,
+          "needs_evidence": 0,
+          "needs_replication": 0,
+          "blocked": 0,
+          "merged": 0
+        }
+      },
+      "grounding": {
+        "assertions": {
+          "with_text_spans": 7,
+          "without_text_spans": 0
+        },
+        "evidence_items": {
+          "with_text_spans": 9,
+          "without_text_spans": 0
+        },
+        "evidence_links": {
+          "with_text_spans": 0,
+          "without_text_spans": 9
+        },
+        "text_spans_by_section": {
+          "figure_caption": 5,
+          "other": 2,
+          "introduction": 2,
+          "abstract": 1,
+          "results": 23,
+          "discussion": 15
+        }
+      },
+      "issues": []
+    },
+    {
+      "example": "examples/lite",
+      "extraction_id": "csag:doc/lite_claim_example",
+      "counts": {
+        "artifacts": 0,
+        "datasets": 0,
+        "entities": 0,
+        "studies": 0,
+        "experiments": 0,
+        "assertions": 1,
+        "evidence_items": 1,
+        "evidence_links": 1,
+        "inferences": 0,
+        "assertion_relations": 0,
+        "critiques": 0,
+        "knowledge_gaps": 0,
+        "qa_items": 0,
+        "research_states": 0,
+        "next_actions": 0,
+        "executions": 0
+      },
+      "coverage": {
+        "assertions": 1,
+        "with_evidence_links": 1,
+        "without_evidence_links": 0,
+        "with_decisive_evidence": 1,
+        "assertions_with_context": 1,
+        "assertions_missing_context": 0,
+        "assertions_with_falsification_criteria": 0
+      },
+      "distributions": {
+        "claim_role": {
+          "background": 0,
+          "hypothesis": 0,
+          "research_question": 0,
+          "objective": 0,
+          "method_claim": 0,
+          "result_claim": 1,
+          "conclusion": 0,
+          "discovery": 0,
+          "speculation": 0,
+          "limitation": 0,
+          "future_work": 0
+        },
+        "criticality": {
+          "core": 0,
+          "major": 0,
+          "supporting": 0,
+          "background": 0
+        },
+        "normalization_status": {
+          "raw": 1,
+          "partially_normalized": 0,
+          "fully_normalized": 0
+        },
+        "evidence_polarity": {
+          "supports": 1,
+          "refutes": 0,
+          "mixed": 0,
+          "inconclusive": 0
+        },
+        "evidence_strength": {
+          "very_strong": 0,
+          "strong": 0,
+          "moderate": 1,
+          "weak": 0,
+          "very_weak": 0,
+          "unknown": 0
+        },
+        "research_state": {
+          "open": 0,
+          "supported": 0,
+          "rejected": 0,
+          "mixed": 0,
+          "needs_evidence": 0,
+          "needs_replication": 0,
+          "blocked": 0,
+          "merged": 0
+        }
+      },
+      "grounding": {
+        "assertions": {
+          "with_text_spans": 1,
+          "without_text_spans": 0
+        },
+        "evidence_items": {
+          "with_text_spans": 1,
+          "without_text_spans": 0
+        },
+        "evidence_links": {
+          "with_text_spans": 0,
+          "without_text_spans": 1
+        },
+        "text_spans_by_section": {
+          "abstract": 1,
+          "results": 1
+        }
+      },
+      "issues": []
+    },
+    {
+      "example": "examples/pmid35150280",
+      "extraction_id": "pmid:35150280",
+      "counts": {
+        "artifacts": 0,
+        "datasets": 0,
+        "entities": 5,
+        "studies": 0,
+        "experiments": 0,
+        "assertions": 7,
+        "evidence_items": 7,
+        "evidence_links": 10,
+        "inferences": 2,
+        "assertion_relations": 1,
+        "critiques": 1,
+        "knowledge_gaps": 2,
+        "qa_items": 4,
+        "research_states": 0,
+        "next_actions": 0,
+        "executions": 0
+      },
+      "coverage": {
+        "assertions": 7,
+        "with_evidence_links": 6,
+        "without_evidence_links": 1,
+        "with_decisive_evidence": 6,
+        "assertions_with_context": 7,
+        "assertions_missing_context": 0,
+        "assertions_with_falsification_criteria": 0
+      },
+      "distributions": {
+        "claim_role": {
+          "background": 0,
+          "hypothesis": 1,
+          "research_question": 1,
+          "objective": 0,
+          "method_claim": 0,
+          "result_claim": 2,
+          "conclusion": 1,
+          "discovery": 1,
+          "speculation": 0,
+          "limitation": 1,
+          "future_work": 0
+        },
+        "criticality": {
+          "core": 0,
+          "major": 0,
+          "supporting": 0,
+          "background": 0
+        },
+        "normalization_status": {
+          "raw": 7,
+          "partially_normalized": 0,
+          "fully_normalized": 0
+        },
+        "evidence_polarity": {
+          "supports": 9,
+          "refutes": 0,
+          "mixed": 0,
+          "inconclusive": 1
+        },
+        "evidence_strength": {
+          "very_strong": 0,
+          "strong": 5,
+          "moderate": 4,
+          "weak": 1,
+          "very_weak": 0,
+          "unknown": 0
+        },
+        "research_state": {
+          "open": 0,
+          "supported": 0,
+          "rejected": 0,
+          "mixed": 0,
+          "needs_evidence": 0,
+          "needs_replication": 0,
+          "blocked": 0,
+          "merged": 0
+        }
+      },
+      "grounding": {
+        "assertions": {
+          "with_text_spans": 7,
+          "without_text_spans": 0
+        },
+        "evidence_items": {
+          "with_text_spans": 7,
+          "without_text_spans": 0
+        },
+        "evidence_links": {
+          "with_text_spans": 10,
+          "without_text_spans": 0
+        },
+        "text_spans_by_section": {
+          "other": 49
+        }
+      },
+      "issues": []
+    },
+    {
+      "example": "examples/prior-art/ciccarese2013_pav_ontology",
+      "extraction_id": "doi:10.1186/2041-1480-4-37",
+      "counts": {
+        "artifacts": 8,
+        "datasets": 4,
+        "entities": 12,
+        "studies": 0,
+        "experiments": 0,
+        "assertions": 11,
+        "evidence_items": 12,
+        "evidence_links": 18,
+        "inferences": 3,
+        "assertion_relations": 2,
+        "critiques": 2,
+        "knowledge_gaps": 2,
+        "qa_items": 6,
+        "research_states": 0,
+        "next_actions": 0,
+        "executions": 0
+      },
+      "coverage": {
+        "assertions": 11,
+        "with_evidence_links": 11,
+        "without_evidence_links": 0,
+        "with_decisive_evidence": 11,
+        "assertions_with_context": 11,
+        "assertions_missing_context": 0,
+        "assertions_with_falsification_criteria": 11
+      },
+      "distributions": {
+        "claim_role": {
+          "background": 0,
+          "hypothesis": 0,
+          "research_question": 1,
+          "objective": 1,
+          "method_claim": 0,
+          "result_claim": 5,
+          "conclusion": 1,
+          "discovery": 0,
+          "speculation": 0,
+          "limitation": 2,
+          "future_work": 1
+        },
+        "criticality": {
+          "core": 5,
+          "major": 2,
+          "supporting": 4,
+          "background": 0
+        },
+        "normalization_status": {
+          "raw": 7,
+          "partially_normalized": 4,
+          "fully_normalized": 0
+        },
+        "evidence_polarity": {
+          "supports": 17,
+          "refutes": 0,
+          "mixed": 1,
+          "inconclusive": 0
+        },
+        "evidence_strength": {
+          "very_strong": 0,
+          "strong": 11,
+          "moderate": 7,
+          "weak": 0,
+          "very_weak": 0,
+          "unknown": 0
+        },
+        "research_state": {
+          "open": 0,
+          "supported": 0,
+          "rejected": 0,
+          "mixed": 0,
+          "needs_evidence": 0,
+          "needs_replication": 0,
+          "blocked": 0,
+          "merged": 0
+        }
+      },
+      "grounding": {
+        "assertions": {
+          "with_text_spans": 11,
+          "without_text_spans": 0
+        },
+        "evidence_items": {
+          "with_text_spans": 12,
+          "without_text_spans": 0
+        },
+        "evidence_links": {
+          "with_text_spans": 0,
+          "without_text_spans": 18
+        },
+        "text_spans_by_section": {
+          "figure_caption": 3,
+          "table_caption": 5,
+          "introduction": 10,
+          "other": 3,
+          "abstract": 2,
+          "discussion": 9,
+          "results": 27,
+          "conclusion": 2
+        }
+      },
+      "issues": []
+    },
+    {
+      "example": "examples/prior-art/soilandreyes2022_rocrate",
+      "extraction_id": "doi:10.3233/DS-210053",
+      "counts": {
+        "artifacts": 5,
+        "datasets": 2,
+        "entities": 9,
+        "studies": 0,
+        "experiments": 0,
+        "assertions": 12,
+        "evidence_items": 11,
+        "evidence_links": 16,
+        "inferences": 2,
+        "assertion_relations": 2,
+        "critiques": 2,
+        "knowledge_gaps": 3,
+        "qa_items": 6,
+        "research_states": 0,
+        "next_actions": 0,
+        "executions": 0
+      },
+      "coverage": {
+        "assertions": 12,
+        "with_evidence_links": 10,
+        "without_evidence_links": 2,
+        "with_decisive_evidence": 10,
+        "assertions_with_context": 12,
+        "assertions_missing_context": 0,
+        "assertions_with_falsification_criteria": 11
+      },
+      "distributions": {
+        "claim_role": {
+          "background": 0,
+          "hypothesis": 0,
+          "research_question": 1,
+          "objective": 1,
+          "method_claim": 1,
+          "result_claim": 4,
+          "conclusion": 2,
+          "discovery": 0,
+          "speculation": 0,
+          "limitation": 2,
+          "future_work": 1
+        },
+        "criticality": {
+          "core": 2,
+          "major": 6,
+          "supporting": 4,
+          "background": 0
+        },
+        "normalization_status": {
+          "raw": 12,
+          "partially_normalized": 0,
+          "fully_normalized": 0
+        },
+        "evidence_polarity": {
+          "supports": 15,
+          "refutes": 0,
+          "mixed": 1,
+          "inconclusive": 0
+        },
+        "evidence_strength": {
+          "very_strong": 0,
+          "strong": 8,
+          "moderate": 8,
+          "weak": 0,
+          "very_weak": 0,
+          "unknown": 0
+        },
+        "research_state": {
+          "open": 0,
+          "supported": 0,
+          "rejected": 0,
+          "mixed": 0,
+          "needs_evidence": 0,
+          "needs_replication": 0,
+          "blocked": 0,
+          "merged": 0
+        }
+      },
+      "grounding": {
+        "assertions": {
+          "with_text_spans": 12,
+          "without_text_spans": 0
+        },
+        "evidence_items": {
+          "with_text_spans": 11,
+          "without_text_spans": 0
+        },
+        "evidence_links": {
+          "with_text_spans": 0,
+          "without_text_spans": 16
+        },
+        "text_spans_by_section": {
+          "figure_caption": 4,
+          "table_caption": 2,
+          "abstract": 6,
+          "other": 18,
+          "introduction": 3,
+          "discussion": 12,
+          "conclusion": 2,
+          "supplementary": 1
+        }
+      },
+      "issues": []
+    },
+    {
+      "example": "examples/prior-art/stocker2025_machine_readable",
+      "extraction_id": "doi:10.1038/s41597-025-04905-0",
+      "counts": {
+        "artifacts": 4,
+        "datasets": 5,
+        "entities": 7,
+        "studies": 0,
+        "experiments": 0,
+        "assertions": 12,
+        "evidence_items": 11,
+        "evidence_links": 17,
+        "inferences": 2,
+        "assertion_relations": 3,
+        "critiques": 3,
+        "knowledge_gaps": 3,
+        "qa_items": 6,
+        "research_states": 0,
+        "next_actions": 0,
+        "executions": 0
+      },
+      "coverage": {
+        "assertions": 12,
+        "with_evidence_links": 11,
+        "without_evidence_links": 1,
+        "with_decisive_evidence": 11,
+        "assertions_with_context": 12,
+        "assertions_missing_context": 0,
+        "assertions_with_falsification_criteria": 9
+      },
+      "distributions": {
+        "claim_role": {
+          "background": 1,
+          "hypothesis": 0,
+          "research_question": 1,
+          "objective": 1,
+          "method_claim": 1,
+          "result_claim": 1,
+          "conclusion": 2,
+          "discovery": 1,
+          "speculation": 1,
+          "limitation": 3,
+          "future_work": 0
+        },
+        "criticality": {
+          "core": 4,
+          "major": 5,
+          "supporting": 3,
+          "background": 0
+        },
+        "normalization_status": {
+          "raw": 11,
+          "partially_normalized": 1,
+          "fully_normalized": 0
+        },
+        "evidence_polarity": {
+          "supports": 15,
+          "refutes": 0,
+          "mixed": 0,
+          "inconclusive": 2
+        },
+        "evidence_strength": {
+          "very_strong": 0,
+          "strong": 8,
+          "moderate": 6,
+          "weak": 3,
+          "very_weak": 0,
+          "unknown": 0
+        },
+        "research_state": {
+          "open": 0,
+          "supported": 0,
+          "rejected": 0,
+          "mixed": 0,
+          "needs_evidence": 0,
+          "needs_replication": 0,
+          "blocked": 0,
+          "merged": 0
+        }
+      },
+      "grounding": {
+        "assertions": {
+          "with_text_spans": 12,
+          "without_text_spans": 0
+        },
+        "evidence_items": {
+          "with_text_spans": 11,
+          "without_text_spans": 0
+        },
+        "evidence_links": {
+          "with_text_spans": 0,
+          "without_text_spans": 17
+        },
+        "text_spans_by_section": {
+          "figure_caption": 2,
+          "table_caption": 2,
+          "other": 9,
+          "abstract": 5,
+          "introduction": 4,
+          "methods": 4,
+          "discussion": 31,
+          "results": 9
+        }
+      },
+      "issues": []
+    },
+    {
+      "example": "examples/toy",
+      "extraction_id": "csag:doc/toy_plastid_claim",
+      "counts": {
+        "artifacts": 0,
+        "datasets": 1,
+        "entities": 0,
+        "studies": 0,
+        "experiments": 0,
+        "assertions": 2,
+        "evidence_items": 2,
+        "evidence_links": 2,
+        "inferences": 1,
+        "assertion_relations": 0,
+        "critiques": 1,
+        "knowledge_gaps": 1,
+        "qa_items": 0,
+        "research_states": 0,
+        "next_actions": 0,
+        "executions": 0
+      },
+      "coverage": {
+        "assertions": 2,
+        "with_evidence_links": 2,
+        "without_evidence_links": 0,
+        "with_decisive_evidence": 2,
+        "assertions_with_context": 2,
+        "assertions_missing_context": 0,
+        "assertions_with_falsification_criteria": 2
+      },
+      "distributions": {
+        "claim_role": {
+          "background": 0,
+          "hypothesis": 0,
+          "research_question": 0,
+          "objective": 1,
+          "method_claim": 0,
+          "result_claim": 0,
+          "conclusion": 1,
+          "discovery": 0,
+          "speculation": 0,
+          "limitation": 0,
+          "future_work": 0
+        },
+        "criticality": {
+          "core": 1,
+          "major": 0,
+          "supporting": 1,
+          "background": 0
+        },
+        "normalization_status": {
+          "raw": 2,
+          "partially_normalized": 0,
+          "fully_normalized": 0
+        },
+        "evidence_polarity": {
+          "supports": 2,
+          "refutes": 0,
+          "mixed": 0,
+          "inconclusive": 0
+        },
+        "evidence_strength": {
+          "very_strong": 0,
+          "strong": 0,
+          "moderate": 2,
+          "weak": 0,
+          "very_weak": 0,
+          "unknown": 0
+        },
+        "research_state": {
+          "open": 0,
+          "supported": 0,
+          "rejected": 0,
+          "mixed": 0,
+          "needs_evidence": 0,
+          "needs_replication": 0,
+          "blocked": 0,
+          "merged": 0
+        }
+      },
+      "grounding": {
+        "assertions": {
+          "with_text_spans": 2,
+          "without_text_spans": 0
+        },
+        "evidence_items": {
+          "with_text_spans": 2,
+          "without_text_spans": 0
+        },
+        "evidence_links": {
+          "with_text_spans": 2,
+          "without_text_spans": 0
+        },
+        "text_spans_by_section": {
+          "other": 1,
+          "abstract": 3,
+          "discussion": 3,
+          "results": 2
+        }
+      },
+      "issues": []
+    }
+  ]
+}

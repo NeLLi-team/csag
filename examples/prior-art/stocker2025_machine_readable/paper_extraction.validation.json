@@ -1,0 +1,41 @@
+{
+  "ok": true,
+  "profile": "paper_local",
+  "strictness_profile": "paper_local",
+  "profile_modules": [
+    "core"
+  ],
+  "validator_version": "1.0.0",
+  "extraction_json": "paper_extraction.json",
+  "inputs": {
+    "extraction": {
+      "path": "paper_extraction.json",
+      "sha256": "d1b04bd289b95bb2690696e5017e4563e2af5c828e680cac857fca80454fab04",
+      "size_bytes": 91839
+    },
+    "source_markdown": {
+      "path": "stocker2025_machine_readable.md",
+      "sha256": "828dc5c71d74472bf0889321350f1af38d6c26b79135002e192a25f5a76fc6c4",
+      "size_bytes": 92683
+    },
+    "article_json": {
+      "path": "stocker2025_machine_readable.article.json",
+      "sha256": "eebbd9f7f31949f1b9694717da2ce42cae7d8bcd0822b2bff7987ad3efbd8ab6",
+      "size_bytes": 87425
+    }
+  },
+  "errors": [],
+  "structured_errors": [],
+  "error_summary": {},
+  "warnings": [],
+  "repair_actions": [],
+  "metrics": {
+    "assertions": 12,
+    "assertions_with_criticality": 12,
+    "assertions_with_falsification_criteria": 9,
+    "evidence_items": 11,
+    "evidence_links": 17,
+    "artifacts": 4,
+    "datasets": 5
+  }
+}

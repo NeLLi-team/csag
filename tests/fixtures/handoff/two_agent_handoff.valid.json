@@ -1,0 +1,223 @@
+{
+  "id": "csag:handoff/lite-blue-light",
+  "envelope_version": "1.0.0",
+  "revision": "csag:handoff/lite-blue-light/revision/R0003",
+  "parents": [
+    "csag:handoff/lite-blue-light/revision/R0002-agent-a",
+    "csag:handoff/lite-blue-light/revision/R0002-agent-b"
+  ],
+  "source_artifacts": [
+    {
+      "id": "csag:handoff/lite-blue-light/artifact/S0001",
+      "artifact_role": "paper_extraction",
+      "artifact_path": "source_snapshot.paper_extraction.json",
+      "sha256": "20c5d489f9032495572082bb76dc696888b153f81fbcccad8b0e7ca8c0c432c4",
+      "media_type": "application/json",
+      "byte_size": 2798
+    },
+    {
+      "id": "csag:handoff/lite-blue-light/artifact/S0002",
+      "artifact_role": "source_markdown",
+      "artifact_path": "source_snapshot.md",
+      "sha256": "8fae693c443754b61021752a50f35ec1adad2f2a65b75f3cd5244be5e4ffd02d",
+      "media_type": "text/markdown",
+      "byte_size": 164
+    },
+    {
+      "id": "csag:handoff/lite-blue-light/artifact/S0003",
+      "artifact_role": "article_metadata",
+      "artifact_path": "source_snapshot.article.json",
+      "sha256": "1d382fc796877b45ac3b8173b25ea9191fbb4c13807100b47e0fb212bbf0dd16",
+      "media_type": "application/json",
+      "byte_size": 325
+    }
+  ],
+  "assessments": [
+    {
+      "id": "csag:handoff/lite-blue-light/assessment/AS0001",
+      "assessment_status": "accepted",
+      "assessment_text": "The paper-local snapshot passes the Lite structural validation gate.",
+      "target_assertions": [
+        "csag:assertion/csag:doc/lite_claim_example/A0001"
+      ],
+      "basis_artifacts": [
+        "csag:handoff/lite-blue-light/artifact/S0001"
+      ],
+      "basis_executions": [
+        "csag:handoff/lite-blue-light/execution/EX0001"
+      ],
+      "created_on": "2026-07-09T19:10:00Z",
+      "created_by": "csag:agent/agent-a"
+    },
+    {
+      "id": "csag:handoff/lite-blue-light/assessment/AS0002",
+      "assessment_status": "accepted",
+      "assessment_text": "The handoff records the source and report digests needed to detect stale reuse.",
+      "basis_artifacts": [
+        "csag:handoff/lite-blue-light/artifact/S0001"
+      ],
+      "basis_executions": [
+        "csag:handoff/lite-blue-light/execution/EX0002"
+      ],
+      "created_on": "2026-07-09T19:18:00Z",
+      "created_by": "csag:agent/agent-b"
+    }
+  ],
+  "actions": [
+    {
+      "id": "csag:handoff/lite-blue-light/action/AC0001",
+      "action_type": "review",
+      "description": "Validate the source PaperExtraction with the Lite profile.",
+      "owner": "csag:agent/agent-a",
+      "action_status": "completed",
+      "acceptance_criteria": [
+        "The validator exits with status 0.",
+        "The validation report records the source SHA-256 digest."
+      ],
+      "target_assertions": [
+        "csag:assertion/csag:doc/lite_claim_example/A0001"
+      ],
+      "created_on": "2026-07-09T19:00:00Z",
+      "created_by": "csag:agent/agent-a"
+    },
+    {
+      "id": "csag:handoff/lite-blue-light/action/AC0002",
+      "action_type": "analysis",
+      "description": "Build the quality report from the validated snapshot.",
+      "owner": "csag:agent/agent-b",
+      "action_status": "completed",
+      "dependencies": [
+        "csag:handoff/lite-blue-light/action/AC0001"
+      ],
+      "acceptance_criteria": [
+        "The quality report command exits with status 0.",
+        "The execution records content hashes for its input and output."
+      ],
+      "target_assertions": [
+        "csag:assertion/csag:doc/lite_claim_example/A0001"
+      ],
+      "created_on": "2026-07-09T19:05:00Z",
+      "created_by": "csag:agent/agent-b"
+    }
+  ],
+  "executions": [
+    {
+      "id": "csag:handoff/lite-blue-light/execution/EX0001",
+      "action_ref": "csag:handoff/lite-blue-light/action/AC0001",
+      "execution_type": "csag validation",
+      "execution_status": "completed",
+      "command": "uv run csag validate source_snapshot.paper_extraction.json --source-markdown source_snapshot.md --article-json source_snapshot.article.json --profile lite --report-out source_snapshot.validation.json",
+      "inputs": [
+        {
+          "id": "csag:handoff/lite-blue-light/artifact/EX0001-IN0001",
+          "artifact_role": "paper_extraction",
+          "artifact_path": "source_snapshot.paper_extraction.json",
+          "sha256": "20c5d489f9032495572082bb76dc696888b153f81fbcccad8b0e7ca8c0c432c4",
+          "media_type": "application/json",
+          "byte_size": 2798
+        },
+        {
+          "id": "csag:handoff/lite-blue-light/artifact/EX0001-IN0002",
+          "artifact_role": "source_markdown",
+          "artifact_path": "source_snapshot.md",
+          "sha256": "8fae693c443754b61021752a50f35ec1adad2f2a65b75f3cd5244be5e4ffd02d",
+          "media_type": "text/markdown",
+          "byte_size": 164
+        },
+        {
+          "id": "csag:handoff/lite-blue-light/artifact/EX0001-IN0003",
+          "artifact_role": "article_metadata",
+          "artifact_path": "source_snapshot.article.json",
+          "sha256": "1d382fc796877b45ac3b8173b25ea9191fbb4c13807100b47e0fb212bbf0dd16",
+          "media_type": "application/json",
+          "byte_size": 325
+        }
+      ],
+      "outputs": [
+        {
+          "id": "csag:handoff/lite-blue-light/artifact/EX0001-OUT0001",
+          "artifact_role": "validation_report",
+          "artifact_path": "source_snapshot.validation.json",
+          "sha256": "8aad7f7128fd4d930dd2ffa2584ae0d4a79a9320afdb2f9a937d6bde59ee1dd4",
+          "media_type": "application/json",
+          "byte_size": 1095
+        }
+      ],
+      "environment": "environment.lock#sha256=07ba6f1a452e9bc70a2feb1af561087059d115e4b7cac140f43d479c8a0f02b9",
+      "code_commit": "uncommitted-tree-based-on:a7027ce96d6ac51ca138b1b8ac41a95d0b9c8daa",
+      "execution_outcome": "Validation completed with zero errors.",
+      "started_on": "2026-07-09T19:08:00Z",
+      "completed_on": "2026-07-09T19:09:00Z",
+      "created_by": "csag:agent/agent-a"
+    },
+    {
+      "id": "csag:handoff/lite-blue-light/execution/EX0002",
+      "action_ref": "csag:handoff/lite-blue-light/action/AC0002",
+      "execution_type": "quality report",
+      "execution_status": "completed",
+      "command": "uv run csag report source_snapshot.paper_extraction.json --source-markdown source_snapshot.md --article-json source_snapshot.article.json --document-scope lite --report-out source_snapshot.quality.json",
+      "inputs": [
+        {
+          "id": "csag:handoff/lite-blue-light/artifact/EX0002-IN0001",
+          "artifact_role": "paper_extraction",
+          "artifact_path": "source_snapshot.paper_extraction.json",
+          "sha256": "20c5d489f9032495572082bb76dc696888b153f81fbcccad8b0e7ca8c0c432c4",
+          "media_type": "application/json",
+          "byte_size": 2798
+        },
+        {
+          "id": "csag:handoff/lite-blue-light/artifact/EX0002-IN0002",
+          "artifact_role": "source_markdown",
+          "artifact_path": "source_snapshot.md",
+          "sha256": "8fae693c443754b61021752a50f35ec1adad2f2a65b75f3cd5244be5e4ffd02d",
+          "media_type": "text/markdown",
+          "byte_size": 164
+        },
+        {
+          "id": "csag:handoff/lite-blue-light/artifact/EX0002-IN0003",
+          "artifact_role": "article_metadata",
+          "artifact_path": "source_snapshot.article.json",
+          "sha256": "1d382fc796877b45ac3b8173b25ea9191fbb4c13807100b47e0fb212bbf0dd16",
+          "media_type": "application/json",
+          "byte_size": 325
+        }
+      ],
+      "outputs": [
+        {
+          "id": "csag:handoff/lite-blue-light/artifact/EX0002-OUT0001",
+          "artifact_role": "quality_report",
+          "artifact_path": "source_snapshot.quality.json",
+          "sha256": "c2644f2ffa3082a975b359429f567ac3c26bfda04a80540f18ea5a3f2427508b",
+          "media_type": "application/json",
+          "byte_size": 15990
+        }
+      ],
+      "environment": "environment.lock#sha256=07ba6f1a452e9bc70a2feb1af561087059d115e4b7cac140f43d479c8a0f02b9",
+      "code_commit": "uncommitted-tree-based-on:a7027ce96d6ac51ca138b1b8ac41a95d0b9c8daa",
+      "execution_outcome": "Quality report completed with no blocking issues.",
+      "started_on": "2026-07-09T19:15:00Z",
+      "completed_on": "2026-07-09T19:17:00Z",
+      "created_by": "csag:agent/agent-b"
+    }
+  ],
+  "conflicts": [
+    {
+      "id": "csag:handoff/lite-blue-light/conflict/CF0001",
+      "conflict_status": "resolved",
+      "description": "The two parent revisions assigned report generation before and after validation, respectively.",
+      "competing_heads": [
+        "csag:handoff/lite-blue-light/revision/R0002-agent-a",
+        "csag:handoff/lite-blue-light/revision/R0002-agent-b"
+      ],
+      "resolution": "Run validation first and make quality reporting depend on the validation action.",
+      "resolved_by_head": "csag:handoff/lite-blue-light/revision/R0003",
+      "created_on": "2026-07-09T19:20:00Z",
+      "created_by": "csag:agent/merger"
+    }
+  ],
+  "current_heads": [
+    "csag:handoff/lite-blue-light/revision/R0003"
+  ],
+  "created_on": "2026-07-09T19:21:00Z",
+  "created_by": "csag:agent/merger"
+}

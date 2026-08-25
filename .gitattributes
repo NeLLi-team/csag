@@ -1,0 +1,6 @@
+# Converted manuscript Markdown preserves source line-break spacing.
+examples/prior-art/**/*.md whitespace=-blank-at-eol
+examples/jamy2026/**/*.md whitespace=-blank-at-eol
+
+# Manuscript PDFs are distributed as binary source artifacts.
+*.pdf binary

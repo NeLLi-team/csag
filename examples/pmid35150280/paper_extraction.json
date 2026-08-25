@@ -1,0 +1,1124 @@
+{
+  "id": "pmid:35150280",
+  "title": "Giant Viruses Encode Actin-Related Proteins",
+  "abstract": "AbstractThe emergence of the eukaryotic cytoskeleton is a critical yet puzzling step of eukaryogenesis. Actin and actin-related proteins (ARPs) are ubiquitous components of this cytoskeleton. The gene repertoire of the Last Eukaryotic Common Ancestor (LECA) would have therefore harbored both actin and various ARPs. Here, we report the presence and expression of actin-related genes in viral genomes (viractins) of someImitervirales, a viral order encompassing the giantMimiviridae. Phylogenetic analyses suggest an early recruitment of an actin-related gene by viruses from ancient protoeukaryotic hosts before the emergence of modern eukaryotes, possibly followed by a back transfer that gave rise to eukaryotic actins. This supports a coevolutionary scenario between pre-LECA lineages and their viruses, which could have contributed to the emergence of the modern eukaryotic cytoskeleton.",
+  "pmid": "35150280",
+  "doi": "10.1093/molbev/msac022",
+  "journal": "Molecular Biology and Evolution",
+  "full_text_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8850707/",
+  "notes": "Full-paper extraction performed after discovery stage; extraction scope intentionally not restricted to topic mention hits.",
+  "extraction_activities": [
+    {
+      "id": "csag:activity/pmid35150280/ACT0001",
+      "activity_type": "structured_extraction",
+      "tool_name": "csag-extraction",
+      "tool_version": "1.0",
+      "run_id": "20260215T032840Z",
+      "run_datetime": "2026-02-15T03:28:40.718396+00:00",
+      "parameters": [
+        {
+          "key": "discovery_query",
+          "value": "Klosneuvirus|Klosneuvirinae"
+        },
+        {
+          "key": "target_pmid",
+          "value": "35150280"
+        },
+        {
+          "key": "include_full_text",
+          "value": "true"
+        },
+        {
+          "key": "extraction_scope",
+          "value": "full-paper"
+        },
+        {
+          "key": "doi_status",
+          "value": "resolved"
+        },
+        {
+          "key": "pmid_status",
+          "value": "resolved"
+        },
+        {
+          "key": "schema_version",
+          "value": "0.7.0"
+        },
+        {
+          "key": "validator_version",
+          "value": "0.7.0"
+        }
+      ],
+      "agent_uri": "local:csag-curator"
+    }
+  ],
+  "entities": [
+    {
+      "id": "csag:entity/pmid35150280/EN0001",
+      "label": "viractin",
+      "entity_category": "protein",
+      "origin": "author_stated",
+      "confidence_score": 0.95,
+      "text_spans": [
+        {
+          "document_id": "pmid:35150280",
+          "section_type": "other",
+          "start_char": 1792,
+          "end_char": 2130,
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/pmid:35150280/S0001"
+        }
+      ]
+    },
+    {
+      "id": "csag:entity/pmid35150280/EN0002",
+      "label": "Imitervirales",
+      "entity_category": "organism",
+      "origin": "author_stated",
+      "confidence_score": 0.93,
+      "text_spans": [
+        {
+          "document_id": "pmid:35150280",
+          "section_type": "other",
+          "start_char": 1792,
+          "end_char": 2130,
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/pmid:35150280/S0002"
+        }
+      ]
+    },
+    {
+      "id": "csag:entity/pmid35150280/EN0003",
+      "label": "actin/actin-related proteins (ARPs)",
+      "entity_category": "protein",
+      "origin": "author_stated",
+      "confidence_score": 0.9,
+      "text_spans": [
+        {
+          "document_id": "pmid:35150280",
+          "section_type": "other",
+          "start_char": 6855,
+          "end_char": 7243,
+          "origin": "author_stated",
+          "confidence_score": 0.93,
+          "id": "csag:span/pmid:35150280/S0003"
+        }
+      ]
+    },
+    {
+      "id": "csag:entity/pmid35150280/EN0004",
+      "label": "Nucleocytoviricota",
+      "entity_category": "organism",
+      "origin": "author_stated",
+      "confidence_score": 0.9,
+      "text_spans": [
+        {
+          "document_id": "pmid:35150280",
+          "section_type": "other",
+          "start_char": 18550,
+          "end_char": 18939,
+          "origin": "author_stated",
+          "confidence_score": 0.86,
+          "id": "csag:span/pmid:35150280/S0004"
+        }
+      ]
+    },
+    {
+      "id": "csag:entity/pmid35150280/EN0005",
+      "label": "protoeukaryotes",
+      "entity_category": "organism",
+      "origin": "author_stated",
+      "confidence_score": 0.86,
+      "text_spans": [
+        {
+          "document_id": "pmid:35150280",
+          "section_type": "other",
+          "start_char": 13738,
+          "end_char": 14117,
+          "origin": "author_stated",
+          "confidence_score": 0.88,
+          "id": "csag:span/pmid:35150280/S0005"
+        }
+      ]
+    }
+  ],
+  "assertions": [
+    {
+      "id": "csag:assertion/pmid35150280/A0001",
+      "assertion_text": "The evolutionary origin of the eukaryotic cytoskeleton/actin system remains unresolved.",
+      "claim_role": "research_question",
+      "assertion_type": "descriptive",
+      "normalization_status": "raw",
+      "contexts": [
+        {
+          "id": "csag:context/pmid:35150280/C0001",
+          "label": "eukaryogenesis context",
+          "context_facet": "model_system",
+          "origin": "extractor_inferred",
+          "confidence_score": 0.8,
+          "text_spans": [
+            {
+              "document_id": "pmid:35150280",
+              "section_type": "other",
+              "start_char": 17365,
+              "end_char": 17722,
+              "origin": "author_stated",
+              "confidence_score": 0.9,
+              "id": "csag:span/pmid:35150280/S0007"
+            }
+          ]
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.9,
+      "text_spans": [
+        {
+          "document_id": "pmid:35150280",
+          "section_type": "other",
+          "start_char": 17365,
+          "end_char": 17722,
+          "exact_text": "present in LECA ( Muller et al. 2005 ), is a major step of eukaryogenesis and yet remains obscure ( Ak l et al. 2021 ). The identification of viral actin-like genes sharing a common ancestry with eukaryotic conventional actins now brings a new piece to the puzzle. A few studies have previously emphasized a possible evolutionary relationship between the eu",
+          "origin": "author_stated",
+          "confidence_score": 0.9,
+          "id": "csag:span/pmid:35150280/S0006"
+        }
+      ]
+    },
+    {
+      "id": "csag:assertion/pmid35150280/A0002",
+      "assertion_text": "The study reports viractin (actin-related) genes in Imitervirales giant virus genomes.",
+      "claim_role": "discovery",
+      "assertion_type": "descriptive",
+      "normalization_status": "raw",
+      "contexts": [
+        {
+          "id": "csag:context/pmid:35150280/C0002",
+          "label": "giant virus genomic context",
+          "context_facet": "model_system",
+          "origin": "extractor_inferred",
+          "confidence_score": 0.8,
+          "text_spans": [
+            {
+              "document_id": "pmid:35150280",
+              "section_type": "other",
+              "start_char": 1792,
+              "end_char": 2130,
+              "origin": "author_stated",
+              "confidence_score": 0.95,
+              "id": "csag:span/pmid:35150280/S0009"
+            }
+          ]
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.95,
+      "text_spans": [
+        {
+          "document_id": "pmid:35150280",
+          "section_type": "other",
+          "start_char": 1792,
+          "end_char": 2130,
+          "exact_text": "ukaryotes ( Miller et al. 2007 ). Here, we report the discovery of actin genes ( 400 aa long) in the genomes of several viruses belonging to the Imitervirales , a viral order that is part of the Nucleocytoviricota ( Koonin et al. 2020 ) phylum, previously known as the NucleoCytoplasmic Large DNA virus assemblage (NCLDV) ( Koonin and Yut",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/pmid:35150280/S0008"
+        }
+      ]
+    },
+    {
+      "id": "csag:assertion/pmid35150280/A0003",
+      "assertion_text": "Additional viractins were detected in 18 marine/freshwater Nucleocytoviricota MAGs.",
+      "claim_role": "result_claim",
+      "assertion_type": "descriptive",
+      "normalization_status": "raw",
+      "contexts": [
+        {
+          "id": "csag:context/pmid:35150280/C0003",
+          "label": "environmental MAG context",
+          "context_facet": "model_system",
+          "origin": "extractor_inferred",
+          "confidence_score": 0.8,
+          "text_spans": [
+            {
+              "document_id": "pmid:35150280",
+              "section_type": "other",
+              "start_char": 2512,
+              "end_char": 2879,
+              "origin": "author_stated",
+              "confidence_score": 0.95,
+              "id": "csag:span/pmid:35150280/S0011"
+            }
+          ]
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.94,
+      "text_spans": [
+        {
+          "document_id": "pmid:35150280",
+          "section_type": "other",
+          "start_char": 2512,
+          "end_char": 2879,
+          "exact_text": "Yutin 2019 ; Guglielmini et al. 2019 ). We detected additional viractins in 18 metagenome-assembled genomes (MAGs) of marine and freshwater Nucleocytoviricota (16 published; Schulz et al. 2017 , 2020 ; Moniruzzaman, Martinez-Gutierrez, et al. 2020 ; and 2 that we reconstructed from the sunlit ocean survey of the Tara Oceans expeditions; Endo et al. 2020 ; see Suppl",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/pmid:35150280/S0010"
+        }
+      ]
+    },
+    {
+      "id": "csag:assertion/pmid35150280/A0004",
+      "assertion_text": "Predicted structures indicate viractins are close structural homologs of eukaryotic actin/ARPs.",
+      "claim_role": "result_claim",
+      "assertion_type": "mechanistic",
+      "normalization_status": "raw",
+      "contexts": [
+        {
+          "id": "csag:context/pmid:35150280/C0004",
+          "label": "comparative structural context",
+          "context_facet": "model_system",
+          "origin": "extractor_inferred",
+          "confidence_score": 0.8,
+          "text_spans": [
+            {
+              "document_id": "pmid:35150280",
+              "section_type": "other",
+              "start_char": 6855,
+              "end_char": 7243,
+              "origin": "author_stated",
+              "confidence_score": 0.93,
+              "id": "csag:span/pmid:35150280/S0013"
+            }
+          ]
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.92,
+      "text_spans": [
+        {
+          "document_id": "pmid:35150280",
+          "section_type": "other",
+          "start_char": 6855,
+          "end_char": 7243,
+          "exact_text": "son (see Supplementary Material online) supports that these viractins are close structural homologs of eukaryotic actin and ARPs ( fig. 1 and supplementary table S3, Supplementary Material online), suggesting similar biochemical functions and a common ancestry. Fig. 1. Viractins within the different ARPs and actin clades of our initial protein sequence data set. Maximum-likelihood phyl",
+          "origin": "author_stated",
+          "confidence_score": 0.93,
+          "id": "csag:span/pmid:35150280/S0012"
+        }
+      ]
+    },
+    {
+      "id": "csag:assertion/pmid35150280/A0005",
+      "assertion_text": "A proposed scenario is that conventional actin was recruited from an Imitervirales lineage into protoeukaryotes (back-transfer model).",
+      "claim_role": "hypothesis",
+      "assertion_type": "mechanistic",
+      "normalization_status": "raw",
+      "contexts": [
+        {
+          "id": "csag:context/pmid:35150280/C0005",
+          "label": "deep evolutionary context",
+          "context_facet": "model_system",
+          "origin": "extractor_inferred",
+          "confidence_score": 0.8,
+          "text_spans": [
+            {
+              "document_id": "pmid:35150280",
+              "section_type": "other",
+              "start_char": 13738,
+              "end_char": 14117,
+              "origin": "author_stated",
+              "confidence_score": 0.88,
+              "id": "csag:span/pmid:35150280/S0015"
+            }
+          ]
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.86,
+      "text_spans": [
+        {
+          "document_id": "pmid:35150280",
+          "section_type": "other",
+          "start_char": 13738,
+          "end_char": 14117,
+          "exact_text": "ional actins within viractins 01 to 03, a tempting hypothesis is that the ancestor of conventional actins was recruited by a protoeukaryotic ancestor of LECA from an Imitervirales ( fig. 2 , left model of the right panel), possibly following the integration of a viractin-encoding viral genome in the chromosome of its protoeukaryotic host. Recent observations have indicated tha",
+          "origin": "author_stated",
+          "confidence_score": 0.88,
+          "id": "csag:span/pmid:35150280/S0014"
+        }
+      ]
+    },
+    {
+      "id": "csag:assertion/pmid35150280/A0006",
+      "assertion_text": "The analyses support a coevolution scenario between Nucleocytoviricota and protoeukaryotes that may have contributed to modern eukaryotic cytoskeleton emergence.",
+      "claim_role": "conclusion",
+      "assertion_type": "mechanistic",
+      "normalization_status": "raw",
+      "contexts": [
+        {
+          "id": "csag:context/pmid:35150280/C0006",
+          "label": "coevolutionary interpretation context",
+          "context_facet": "model_system",
+          "origin": "extractor_inferred",
+          "confidence_score": 0.8,
+          "text_spans": [
+            {
+              "document_id": "pmid:35150280",
+              "section_type": "other",
+              "start_char": 18550,
+              "end_char": 18939,
+              "origin": "author_stated",
+              "confidence_score": 0.86,
+              "id": "csag:span/pmid:35150280/S0017"
+            }
+          ]
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.84,
+      "text_spans": [
+        {
+          "document_id": "pmid:35150280",
+          "section_type": "other",
+          "start_char": 18550,
+          "end_char": 18939,
+          "exact_text": "Ha et al. 2021 ; Kijima et al. 2021 ]), supporting the hypothesis of a coevolution between Nucleocytoviricota and protoeukaryotes that could have contributed in shaping the molecular components and functions of the modern eukaryotic cell. Supplementary Material Supplementary data are available at Molecular Biology and Evolution online. Supplementary Material msac022_Supplementary_Data C",
+          "origin": "author_stated",
+          "confidence_score": 0.86,
+          "id": "csag:span/pmid:35150280/S0016"
+        }
+      ]
+    },
+    {
+      "id": "csag:assertion/pmid35150280/A0007",
+      "assertion_text": "Alternative evolutionary explanations remain plausible because multiple independent transfer events cannot be excluded.",
+      "claim_role": "limitation",
+      "assertion_type": "other",
+      "normalization_status": "raw",
+      "contexts": [
+        {
+          "id": "csag:context/pmid:35150280/C0007",
+          "label": "phylogenetic uncertainty context",
+          "context_facet": "model_system",
+          "origin": "extractor_inferred",
+          "confidence_score": 0.8,
+          "text_spans": [
+            {
+              "document_id": "pmid:35150280",
+              "section_type": "other",
+              "start_char": 14426,
+              "end_char": 14813,
+              "origin": "author_stated",
+              "confidence_score": 0.9,
+              "id": "csag:span/pmid:35150280/S0019"
+            }
+          ]
+        }
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.9,
+      "text_spans": [
+        {
+          "document_id": "pmid:35150280",
+          "section_type": "other",
+          "start_char": 14426,
+          "end_char": 14813,
+          "exact_text": "single viractin clade instead of three, one cannot exclude three independent transfers from different protoeukaryotic ancestors to different lineages of Imitervirales that took place after the divergence between the ARP1/2 clade and conventional actin ( fig. 2 , right model of the right panel). In both cases, the distribution of viractin-encoding genomes among Imitervirales , with one",
+          "origin": "author_stated",
+          "confidence_score": 0.9,
+          "id": "csag:span/pmid:35150280/S0018"
+        }
+      ]
+    }
+  ],
+  "evidence_items": [
+    {
+      "id": "csag:evidence/pmid35150280/E0001",
+      "evidence_type": "observational_data",
+      "evidence_text": "Reported discovery of actin-like genes (viractins) in Imitervirales genomes.",
+      "origin": "author_stated",
+      "confidence_score": 0.95,
+      "text_spans": [
+        {
+          "document_id": "pmid:35150280",
+          "section_type": "other",
+          "start_char": 1792,
+          "end_char": 2130,
+          "exact_text": "ukaryotes ( Miller et al. 2007 ). Here, we report the discovery of actin genes ( 400 aa long) in the genomes of several viruses belonging to the Imitervirales , a viral order that is part of the Nucleocytoviricota ( Koonin et al. 2020 ) phylum, previously known as the NucleoCytoplasmic Large DNA virus assemblage (NCLDV) ( Koonin and Yut",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/pmid:35150280/S0020"
+        }
+      ]
+    },
+    {
+      "id": "csag:evidence/pmid35150280/E0002",
+      "evidence_type": "observational_data",
+      "evidence_text": "Detection of additional viractins in 18 marine/freshwater Nucleocytoviricota MAGs.",
+      "origin": "author_stated",
+      "confidence_score": 0.94,
+      "text_spans": [
+        {
+          "document_id": "pmid:35150280",
+          "section_type": "other",
+          "start_char": 2512,
+          "end_char": 2879,
+          "exact_text": "Yutin 2019 ; Guglielmini et al. 2019 ). We detected additional viractins in 18 metagenome-assembled genomes (MAGs) of marine and freshwater Nucleocytoviricota (16 published; Schulz et al. 2017 , 2020 ; Moniruzzaman, Martinez-Gutierrez, et al. 2020 ; and 2 that we reconstructed from the sunlit ocean survey of the Tara Oceans expeditions; Endo et al. 2020 ; see Suppl",
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/pmid:35150280/S0021"
+        }
+      ]
+    },
+    {
+      "id": "csag:evidence/pmid35150280/E0003",
+      "evidence_type": "computational_model",
+      "evidence_text": "Predicted protein structures place viractins as close structural homologs of eukaryotic actin/ARPs.",
+      "origin": "author_stated",
+      "confidence_score": 0.92,
+      "text_spans": [
+        {
+          "document_id": "pmid:35150280",
+          "section_type": "other",
+          "start_char": 6855,
+          "end_char": 7243,
+          "exact_text": "son (see Supplementary Material online) supports that these viractins are close structural homologs of eukaryotic actin and ARPs ( fig. 1 and supplementary table S3, Supplementary Material online), suggesting similar biochemical functions and a common ancestry. Fig. 1. Viractins within the different ARPs and actin clades of our initial protein sequence data set. Maximum-likelihood phyl",
+          "origin": "author_stated",
+          "confidence_score": 0.93,
+          "id": "csag:span/pmid:35150280/S0022"
+        }
+      ]
+    },
+    {
+      "id": "csag:evidence/pmid35150280/E0004",
+      "evidence_type": "observational_data",
+      "evidence_text": "Expression-related observations suggest viractins are expressed during infection.",
+      "origin": "author_stated",
+      "confidence_score": 0.88,
+      "text_spans": [
+        {
+          "document_id": "pmid:35150280",
+          "section_type": "other",
+          "start_char": 6616,
+          "end_char": 6978,
+          "exact_text": "tary Material online). This observation strongly suggests that viractins are expressed during infection, as suggested by a separate analysis conducted on one virus of the MVGL55 clade ( Ha et al. 2021 ). Predicted protein structure comparison (see Supplementary Material online) supports that these viractins are close structural homologs of eukaryotic actin and",
+          "origin": "author_stated",
+          "confidence_score": 0.9,
+          "id": "csag:span/pmid:35150280/S0023"
+        }
+      ]
+    },
+    {
+      "id": "csag:evidence/pmid35150280/E0005",
+      "evidence_type": "computational_model",
+      "evidence_text": "Phylogenetic placement motivates the recruitment/back-transfer hypothesis for conventional actin.",
+      "origin": "author_stated",
+      "confidence_score": 0.86,
+      "text_spans": [
+        {
+          "document_id": "pmid:35150280",
+          "section_type": "other",
+          "start_char": 13738,
+          "end_char": 14117,
+          "exact_text": "ional actins within viractins 01 to 03, a tempting hypothesis is that the ancestor of conventional actins was recruited by a protoeukaryotic ancestor of LECA from an Imitervirales ( fig. 2 , left model of the right panel), possibly following the integration of a viractin-encoding viral genome in the chromosome of its protoeukaryotic host. Recent observations have indicated tha",
+          "origin": "author_stated",
+          "confidence_score": 0.88,
+          "id": "csag:span/pmid:35150280/S0024"
+        }
+      ]
+    },
+    {
+      "id": "csag:evidence/pmid35150280/E0006",
+      "evidence_type": "computational_model",
+      "evidence_text": "Authors interpret combined analyses as supporting coevolution between giant viruses and protoeukaryotes.",
+      "origin": "author_stated",
+      "confidence_score": 0.84,
+      "text_spans": [
+        {
+          "document_id": "pmid:35150280",
+          "section_type": "other",
+          "start_char": 18550,
+          "end_char": 18939,
+          "exact_text": "Ha et al. 2021 ; Kijima et al. 2021 ]), supporting the hypothesis of a coevolution between Nucleocytoviricota and protoeukaryotes that could have contributed in shaping the molecular components and functions of the modern eukaryotic cell. Supplementary Material Supplementary data are available at Molecular Biology and Evolution online. Supplementary Material msac022_Supplementary_Data C",
+          "origin": "author_stated",
+          "confidence_score": 0.86,
+          "id": "csag:span/pmid:35150280/S0025"
+        }
+      ]
+    },
+    {
+      "id": "csag:evidence/pmid35150280/E0007",
+      "evidence_type": "computational_model",
+      "evidence_text": "Alternative multiple-transfer scenarios cannot be excluded, indicating uncertainty in directionality/history.",
+      "origin": "author_stated",
+      "confidence_score": 0.9,
+      "text_spans": [
+        {
+          "document_id": "pmid:35150280",
+          "section_type": "other",
+          "start_char": 14426,
+          "end_char": 14813,
+          "exact_text": "single viractin clade instead of three, one cannot exclude three independent transfers from different protoeukaryotic ancestors to different lineages of Imitervirales that took place after the divergence between the ARP1/2 clade and conventional actin ( fig. 2 , right model of the right panel). In both cases, the distribution of viractin-encoding genomes among Imitervirales , with one",
+          "origin": "author_stated",
+          "confidence_score": 0.9,
+          "id": "csag:span/pmid:35150280/S0026"
+        }
+      ]
+    }
+  ],
+  "evidence_links": [
+    {
+      "id": "csag:elink/pmid35150280/L0001",
+      "evidence_item": "csag:evidence/pmid35150280/E0001",
+      "assertion": "csag:assertion/pmid35150280/A0002",
+      "polarity": "supports",
+      "strength": "strong",
+      "rationale": "Direct statement of viractin discovery in Imitervirales genomes.",
+      "origin": "extractor_inferred",
+      "confidence_score": 0.9,
+      "text_spans": [
+        {
+          "document_id": "pmid:35150280",
+          "section_type": "other",
+          "start_char": 1792,
+          "end_char": 2130,
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/pmid:35150280/S0027"
+        }
+      ]
+    },
+    {
+      "id": "csag:elink/pmid35150280/L0002",
+      "evidence_item": "csag:evidence/pmid35150280/E0002",
+      "assertion": "csag:assertion/pmid35150280/A0002",
+      "polarity": "supports",
+      "strength": "strong",
+      "rationale": "Additional detections across MAGs reinforce that viractins are present in giant viruses.",
+      "origin": "extractor_inferred",
+      "confidence_score": 0.89,
+      "text_spans": [
+        {
+          "document_id": "pmid:35150280",
+          "section_type": "other",
+          "start_char": 2512,
+          "end_char": 2879,
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/pmid:35150280/S0028"
+        }
+      ]
+    },
+    {
+      "id": "csag:elink/pmid35150280/L0003",
+      "evidence_item": "csag:evidence/pmid35150280/E0002",
+      "assertion": "csag:assertion/pmid35150280/A0003",
+      "polarity": "supports",
+      "strength": "strong",
+      "rationale": "The MAG count directly supports the prevalence/result claim.",
+      "origin": "extractor_inferred",
+      "confidence_score": 0.9,
+      "text_spans": [
+        {
+          "document_id": "pmid:35150280",
+          "section_type": "other",
+          "start_char": 2512,
+          "end_char": 2879,
+          "origin": "author_stated",
+          "confidence_score": 0.95,
+          "id": "csag:span/pmid:35150280/S0029"
+        }
+      ]
+    },
+    {
+      "id": "csag:elink/pmid35150280/L0004",
+      "evidence_item": "csag:evidence/pmid35150280/E0003",
+      "assertion": "csag:assertion/pmid35150280/A0004",
+      "polarity": "supports",
+      "strength": "strong",
+      "rationale": "Structural comparison directly underpins homolog interpretation.",
+      "origin": "extractor_inferred",
+      "confidence_score": 0.88,
+      "text_spans": [
+        {
+          "document_id": "pmid:35150280",
+          "section_type": "other",
+          "start_char": 6855,
+          "end_char": 7243,
+          "origin": "author_stated",
+          "confidence_score": 0.93,
+          "id": "csag:span/pmid:35150280/S0030"
+        }
+      ]
+    },
+    {
+      "id": "csag:elink/pmid35150280/L0005",
+      "evidence_item": "csag:evidence/pmid35150280/E0004",
+      "assertion": "csag:assertion/pmid35150280/A0002",
+      "polarity": "supports",
+      "strength": "moderate",
+      "rationale": "Expression-related observation supports biological relevance of viractins.",
+      "origin": "extractor_inferred",
+      "confidence_score": 0.8,
+      "text_spans": [
+        {
+          "document_id": "pmid:35150280",
+          "section_type": "other",
+          "start_char": 6616,
+          "end_char": 6978,
+          "origin": "author_stated",
+          "confidence_score": 0.9,
+          "id": "csag:span/pmid:35150280/S0031"
+        }
+      ]
+    },
+    {
+      "id": "csag:elink/pmid35150280/L0006",
+      "evidence_item": "csag:evidence/pmid35150280/E0005",
+      "assertion": "csag:assertion/pmid35150280/A0005",
+      "polarity": "supports",
+      "strength": "moderate",
+      "rationale": "Phylogenetic placement evidence is used to justify the recruitment hypothesis.",
+      "origin": "extractor_inferred",
+      "confidence_score": 0.82,
+      "text_spans": [
+        {
+          "document_id": "pmid:35150280",
+          "section_type": "other",
+          "start_char": 13738,
+          "end_char": 14117,
+          "origin": "author_stated",
+          "confidence_score": 0.88,
+          "id": "csag:span/pmid:35150280/S0032"
+        }
+      ]
+    },
+    {
+      "id": "csag:elink/pmid35150280/L0007",
+      "evidence_item": "csag:evidence/pmid35150280/E0003",
+      "assertion": "csag:assertion/pmid35150280/A0005",
+      "polarity": "supports",
+      "strength": "moderate",
+      "rationale": "Homology evidence contributes to plausibility of the evolutionary transfer hypothesis.",
+      "origin": "extractor_inferred",
+      "confidence_score": 0.78,
+      "text_spans": [
+        {
+          "document_id": "pmid:35150280",
+          "section_type": "other",
+          "start_char": 6855,
+          "end_char": 7243,
+          "origin": "author_stated",
+          "confidence_score": 0.93,
+          "id": "csag:span/pmid:35150280/S0033"
+        }
+      ]
+    },
+    {
+      "id": "csag:elink/pmid35150280/L0008",
+      "evidence_item": "csag:evidence/pmid35150280/E0006",
+      "assertion": "csag:assertion/pmid35150280/A0006",
+      "polarity": "supports",
+      "strength": "moderate",
+      "rationale": "Author-stated integrative interpretation supports the coevolution conclusion.",
+      "origin": "extractor_inferred",
+      "confidence_score": 0.83,
+      "text_spans": [
+        {
+          "document_id": "pmid:35150280",
+          "section_type": "other",
+          "start_char": 18550,
+          "end_char": 18939,
+          "origin": "author_stated",
+          "confidence_score": 0.86,
+          "id": "csag:span/pmid:35150280/S0034"
+        }
+      ]
+    },
+    {
+      "id": "csag:elink/pmid35150280/L0009",
+      "evidence_item": "csag:evidence/pmid35150280/E0007",
+      "assertion": "csag:assertion/pmid35150280/A0006",
+      "polarity": "inconclusive",
+      "strength": "weak",
+      "rationale": "Alternative transfer scenarios weaken certainty of a single coevolutionary pathway.",
+      "origin": "extractor_inferred",
+      "confidence_score": 0.79,
+      "text_spans": [
+        {
+          "document_id": "pmid:35150280",
+          "section_type": "other",
+          "start_char": 14426,
+          "end_char": 14813,
+          "origin": "author_stated",
+          "confidence_score": 0.9,
+          "id": "csag:span/pmid:35150280/S0035"
+        }
+      ]
+    },
+    {
+      "id": "csag:elink/pmid35150280/L0010",
+      "evidence_item": "csag:evidence/pmid35150280/E0007",
+      "assertion": "csag:assertion/pmid35150280/A0007",
+      "polarity": "supports",
+      "strength": "strong",
+      "rationale": "Uncertainty statement directly supports the limitation assertion.",
+      "origin": "extractor_inferred",
+      "confidence_score": 0.9,
+      "text_spans": [
+        {
+          "document_id": "pmid:35150280",
+          "section_type": "other",
+          "start_char": 14426,
+          "end_char": 14813,
+          "origin": "author_stated",
+          "confidence_score": 0.9,
+          "id": "csag:span/pmid:35150280/S0036"
+        }
+      ]
+    }
+  ],
+  "inferences": [
+    {
+      "id": "csag:inference/pmid35150280/I0001",
+      "input_assertions": [
+        "csag:assertion/pmid35150280/A0002",
+        "csag:assertion/pmid35150280/A0004"
+      ],
+      "input_evidence_links": [
+        "csag:elink/pmid35150280/L0001",
+        "csag:elink/pmid35150280/L0004"
+      ],
+      "output_assertion": "csag:assertion/pmid35150280/A0005",
+      "inference_method": "mechanistic_reasoning",
+      "inference_rationale": "Presence of viractins plus structural homology motivates the proposed recruitment/back-transfer hypothesis.",
+      "origin": "extractor_inferred",
+      "confidence_score": 0.76,
+      "text_spans": [
+        {
+          "document_id": "pmid:35150280",
+          "section_type": "other",
+          "start_char": 13738,
+          "end_char": 14117,
+          "origin": "author_stated",
+          "confidence_score": 0.88,
+          "id": "csag:span/pmid:35150280/S0037"
+        }
+      ]
+    },
+    {
+      "id": "csag:inference/pmid35150280/I0002",
+      "input_assertions": [
+        "csag:assertion/pmid35150280/A0005",
+        "csag:assertion/pmid35150280/A0003"
+      ],
+      "input_evidence_links": [
+        "csag:elink/pmid35150280/L0006",
+        "csag:elink/pmid35150280/L0003"
+      ],
+      "output_assertion": "csag:assertion/pmid35150280/A0006",
+      "inference_method": "qualitative_interpretation",
+      "inference_rationale": "Broad viractin occurrence plus the evolutionary hypothesis are interpreted as supporting virus-host coevolution.",
+      "origin": "extractor_inferred",
+      "confidence_score": 0.72,
+      "text_spans": [
+        {
+          "document_id": "pmid:35150280",
+          "section_type": "other",
+          "start_char": 18550,
+          "end_char": 18939,
+          "origin": "author_stated",
+          "confidence_score": 0.86,
+          "id": "csag:span/pmid:35150280/S0038"
+        }
+      ]
+    }
+  ],
+  "assertion_relations": [
+    {
+      "id": "csag:arel/pmid35150280/RL0001",
+      "from_assertion": "csag:assertion/pmid35150280/A0007",
+      "to_assertion": "csag:assertion/pmid35150280/A0006",
+      "relation_type": "qualifies",
+      "relation_rationale": "The explicit alternative-transfer uncertainty qualifies confidence in the coevolution conclusion.",
+      "origin": "extractor_inferred",
+      "confidence_score": 0.86,
+      "text_spans": [
+        {
+          "document_id": "pmid:35150280",
+          "section_type": "other",
+          "start_char": 14426,
+          "end_char": 14813,
+          "origin": "author_stated",
+          "confidence_score": 0.9,
+          "id": "csag:span/pmid:35150280/S0039"
+        }
+      ]
+    }
+  ],
+  "critiques": [
+    {
+      "id": "csag:critique/pmid35150280/R0001",
+      "critique_type": "statistical_conclusion_validity",
+      "risk_domain": "data_quality",
+      "severity": "moderate",
+      "impacted_assertions": [
+        "csag:assertion/pmid35150280/A0005",
+        "csag:assertion/pmid35150280/A0006"
+      ],
+      "impacted_evidence_items": [
+        "csag:evidence/pmid35150280/E0005",
+        "csag:evidence/pmid35150280/E0007"
+      ],
+      "mitigation_suggestions": [
+        "Expand phylogenomic sampling across additional Imitervirales lineages to resolve transfer directionality."
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.86,
+      "text_spans": [
+        {
+          "document_id": "pmid:35150280",
+          "section_type": "other",
+          "start_char": 14426,
+          "end_char": 14813,
+          "origin": "author_stated",
+          "confidence_score": 0.9,
+          "id": "csag:span/pmid:35150280/S0040"
+        }
+      ]
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "id": "csag:gap/pmid35150280/G0001",
+      "gap_type": "missing_mechanism",
+      "severity": "moderate",
+      "related_assertions": [
+        "csag:assertion/pmid35150280/A0001",
+        "csag:assertion/pmid35150280/A0006"
+      ],
+      "suggested_actions": [
+        "Discriminate between viral-to-cell and cell-to-viral transfer scenarios with denser evolutionary modeling and sampling."
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.85,
+      "text_spans": [
+        {
+          "document_id": "pmid:35150280",
+          "section_type": "other",
+          "start_char": 17365,
+          "end_char": 17722,
+          "origin": "author_stated",
+          "confidence_score": 0.9,
+          "id": "csag:span/pmid:35150280/S0041"
+        }
+      ]
+    },
+    {
+      "id": "csag:gap/pmid35150280/G0002",
+      "gap_type": "unresolved_contradiction",
+      "severity": "moderate",
+      "related_assertions": [
+        "csag:assertion/pmid35150280/A0005",
+        "csag:assertion/pmid35150280/A0006",
+        "csag:assertion/pmid35150280/A0007"
+      ],
+      "suggested_actions": [
+        "Test whether a single ancestral transfer or multiple independent transfers better explains viractin clade distribution."
+      ],
+      "origin": "author_stated",
+      "confidence_score": 0.88,
+      "text_spans": [
+        {
+          "document_id": "pmid:35150280",
+          "section_type": "other",
+          "start_char": 14426,
+          "end_char": 14813,
+          "origin": "author_stated",
+          "confidence_score": 0.9,
+          "id": "csag:span/pmid:35150280/S0042"
+        }
+      ]
+    }
+  ],
+  "qa_items": [
+    {
+      "id": "csag:qa/pmid35150280/Q0001",
+      "question_text": "What evidence supports the claim that viractins occur in Imitervirales giant viruses?",
+      "query_assertion": "csag:assertion/pmid35150280/A0002",
+      "normalized_query": "CSAG_QA_02_EVIDENCE_SUPPORT",
+      "expected_answer_type": "list",
+      "answers": [
+        {
+          "id": "csag:answer/pmid35150280/ANS0001",
+          "answer_type": "list",
+          "answer_text": "Discovery report plus MAG detections and infection-expression signal support viractin occurrence.",
+          "supporting_assertions": [
+            "csag:assertion/pmid35150280/A0002",
+            "csag:assertion/pmid35150280/A0003"
+          ],
+          "supporting_evidence_links": [
+            "csag:elink/pmid35150280/L0001",
+            "csag:elink/pmid35150280/L0002",
+            "csag:elink/pmid35150280/L0005"
+          ],
+          "answer_confidence": 0.9,
+          "origin": "extractor_inferred",
+          "text_spans": [
+            {
+              "document_id": "pmid:35150280",
+              "section_type": "other",
+              "start_char": 1792,
+              "end_char": 2130,
+              "origin": "author_stated",
+              "confidence_score": 0.95,
+              "id": "csag:span/pmid:35150280/S0043"
+            },
+            {
+              "document_id": "pmid:35150280",
+              "section_type": "other",
+              "start_char": 2512,
+              "end_char": 2879,
+              "origin": "author_stated",
+              "confidence_score": 0.95,
+              "id": "csag:span/pmid:35150280/S0044"
+            }
+          ]
+        }
+      ],
+      "origin": "extractor_inferred",
+      "confidence_score": 0.9
+    },
+    {
+      "id": "csag:qa/pmid35150280/Q0002",
+      "question_text": "What mechanism is proposed to explain viractin-related actin evolution?",
+      "query_assertion": "csag:assertion/pmid35150280/A0006",
+      "normalized_query": "CSAG_QA_09_MECHANISM",
+      "expected_answer_type": "free_text",
+      "answers": [
+        {
+          "id": "csag:answer/pmid35150280/ANS0002",
+          "answer_type": "free_text",
+          "answer_text": "The paper proposes viral recruitment/back-transfer and broader virus-host coevolution as an explanation for modern actin-system emergence.",
+          "supporting_assertions": [
+            "csag:assertion/pmid35150280/A0005",
+            "csag:assertion/pmid35150280/A0006"
+          ],
+          "supporting_evidence_links": [
+            "csag:elink/pmid35150280/L0006",
+            "csag:elink/pmid35150280/L0008"
+          ],
+          "answer_confidence": 0.78,
+          "origin": "extractor_inferred",
+          "text_spans": [
+            {
+              "document_id": "pmid:35150280",
+              "section_type": "other",
+              "start_char": 13738,
+              "end_char": 14117,
+              "origin": "author_stated",
+              "confidence_score": 0.88,
+              "id": "csag:span/pmid:35150280/S0045"
+            },
+            {
+              "document_id": "pmid:35150280",
+              "section_type": "other",
+              "start_char": 18550,
+              "end_char": 18939,
+              "origin": "author_stated",
+              "confidence_score": 0.86,
+              "id": "csag:span/pmid:35150280/S0046"
+            }
+          ]
+        }
+      ],
+      "origin": "extractor_inferred",
+      "confidence_score": 0.8
+    },
+    {
+      "id": "csag:qa/pmid35150280/Q0003",
+      "question_text": "What limitations or flaws could weaken the coevolution conclusion?",
+      "query_assertion": "csag:assertion/pmid35150280/A0006",
+      "normalized_query": "CSAG_QA_10_LIMITATIONS",
+      "expected_answer_type": "list",
+      "answers": [
+        {
+          "id": "csag:answer/pmid35150280/ANS0003",
+          "answer_type": "list",
+          "answer_text": "Alternative independent-transfer explanations cannot be excluded with current representation.",
+          "supporting_assertions": [
+            "csag:assertion/pmid35150280/A0007"
+          ],
+          "supporting_evidence_links": [
+            "csag:elink/pmid35150280/L0010"
+          ],
+          "answer_confidence": 0.88,
+          "origin": "extractor_inferred",
+          "text_spans": [
+            {
+              "document_id": "pmid:35150280",
+              "section_type": "other",
+              "start_char": 14426,
+              "end_char": 14813,
+              "origin": "author_stated",
+              "confidence_score": 0.9,
+              "id": "csag:span/pmid:35150280/S0047"
+            }
+          ]
+        }
+      ],
+      "origin": "extractor_inferred",
+      "confidence_score": 0.87
+    },
+    {
+      "id": "csag:qa/pmid35150280/Q0004",
+      "question_text": "What knowledge gaps remain after this study?",
+      "query_assertion": "csag:assertion/pmid35150280/A0006",
+      "normalized_query": "CSAG_QA_11_GAPS",
+      "expected_answer_type": "list",
+      "answers": [
+        {
+          "id": "csag:answer/pmid35150280/ANS0004",
+          "answer_type": "list",
+          "answer_text": "Mechanistic directionality of actin transfer remains unresolved and requires expanded phylogenomic sampling.",
+          "supporting_assertions": [
+            "csag:assertion/pmid35150280/A0001",
+            "csag:assertion/pmid35150280/A0007"
+          ],
+          "supporting_evidence_links": [
+            "csag:elink/pmid35150280/L0009",
+            "csag:elink/pmid35150280/L0010"
+          ],
+          "answer_confidence": 0.86,
+          "origin": "extractor_inferred",
+          "text_spans": [
+            {
+              "document_id": "pmid:35150280",
+              "section_type": "other",
+              "start_char": 17365,
+              "end_char": 17722,
+              "origin": "author_stated",
+              "confidence_score": 0.9,
+              "id": "csag:span/pmid:35150280/S0048"
+            },
+            {
+              "document_id": "pmid:35150280",
+              "section_type": "other",
+              "start_char": 14426,
+              "end_char": 14813,
+              "origin": "author_stated",
+              "confidence_score": 0.9,
+              "id": "csag:span/pmid:35150280/S0049"
+            }
+          ]
+        }
+      ],
+      "origin": "extractor_inferred",
+      "confidence_score": 0.86
+    }
+  ],
+  "schema_version": "1.0.0",
+  "validator_version": "1.0.0"
+}

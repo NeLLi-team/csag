@@ -1,0 +1,4 @@
+# Handoff fixture environment identity
+python==3.12.13
+linkml==1.10.0
+jsonschema==4.26.0

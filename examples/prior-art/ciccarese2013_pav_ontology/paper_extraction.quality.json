@@ -1,0 +1,1071 @@
+{
+  "extraction_id": "doi:10.1186/2041-1480-4-37",
+  "title": "PAV ontology: provenance, authoring and versioning",
+  "doi": "10.1186/2041-1480-4-37",
+  "pmid": "24330769",
+  "counts": {
+    "artifacts": 8,
+    "datasets": 4,
+    "entities": 12,
+    "studies": 0,
+    "experiments": 0,
+    "assertions": 11,
+    "evidence_items": 12,
+    "evidence_links": 18,
+    "inferences": 3,
+    "assertion_relations": 2,
+    "critiques": 2,
+    "knowledge_gaps": 2,
+    "qa_items": 6,
+    "research_states": 0,
+    "next_actions": 0,
+    "executions": 0
+  },
+  "distributions": {
+    "claim_role": {
+      "background": 0,
+      "hypothesis": 0,
+      "research_question": 1,
+      "objective": 1,
+      "method_claim": 0,
+      "result_claim": 5,
+      "conclusion": 1,
+      "discovery": 0,
+      "speculation": 0,
+      "limitation": 2,
+      "future_work": 1
+    },
+    "criticality": {
+      "core": 5,
+      "major": 2,
+      "supporting": 4,
+      "background": 0
+    },
+    "normalization_status": {
+      "raw": 7,
+      "partially_normalized": 4,
+      "fully_normalized": 0
+    },
+    "evidence_polarity": {
+      "supports": 17,
+      "refutes": 0,
+      "mixed": 1,
+      "inconclusive": 0
+    },
+    "evidence_strength": {
+      "very_strong": 0,
+      "strong": 11,
+      "moderate": 7,
+      "weak": 0,
+      "very_weak": 0,
+      "unknown": 0
+    },
+    "research_state": {
+      "open": 0,
+      "supported": 0,
+      "rejected": 0,
+      "mixed": 0,
+      "needs_evidence": 0,
+      "needs_replication": 0,
+      "blocked": 0,
+      "merged": 0
+    }
+  },
+  "grounding": {
+    "assertions": {
+      "with_text_spans": 11,
+      "without_text_spans": 0
+    },
+    "evidence_items": {
+      "with_text_spans": 12,
+      "without_text_spans": 0
+    },
+    "evidence_links": {
+      "with_text_spans": 0,
+      "without_text_spans": 18
+    },
+    "text_spans_by_section": {
+      "figure_caption": 3,
+      "table_caption": 5,
+      "introduction": 10,
+      "other": 3,
+      "abstract": 2,
+      "discussion": 9,
+      "results": 27,
+      "conclusion": 2
+    }
+  },
+  "coverage": {
+    "assertions": 11,
+    "with_evidence_links": 11,
+    "without_evidence_links": 0,
+    "with_decisive_evidence": 11,
+    "assertions_with_context": 11,
+    "assertions_missing_context": 0,
+    "assertions_with_falsification_criteria": 11
+  },
+  "completeness": {
+    "document_scope": "full_article",
+    "requested_document_scope": "auto",
+    "source_word_count": 16678,
+    "score": 1.0,
+    "checks": [
+      {
+        "name": "objective_or_question_assertion",
+        "status": "pass",
+        "observed": 2,
+        "target": 1,
+        "reason": "hypothesis, research question, or objective assertion coverage",
+        "suggested_fix": "Add an objective/research-question assertion, or state in notes that the source lacks one."
+      },
+      {
+        "name": "result_or_conclusion_assertions",
+        "status": "pass",
+        "observed": 6,
+        "target": 2,
+        "reason": "result/conclusion claim coverage",
+        "suggested_fix": "Extract additional result or conclusion assertions from distinct manuscript sections when present."
+      },
+      {
+        "name": "evidence_items",
+        "status": "pass",
+        "observed": 12,
+        "target": 2,
+        "reason": "evidence item coverage",
+        "suggested_fix": "Add evidence items for the main analyses, observations, or cited support."
+      },
+      {
+        "name": "evidence_links",
+        "status": "pass",
+        "observed": 18,
+        "target": 2,
+        "reason": "claim-to-evidence linkage",
+        "suggested_fix": "Link each key assertion to supporting, refuting, mixed, or inconclusive evidence."
+      },
+      {
+        "name": "assertion_contexts",
+        "status": "pass",
+        "observed": 11,
+        "target": 11,
+        "reason": "every assertion needs at least one context",
+        "suggested_fix": "Attach a Context object to each assertion."
+      },
+      {
+        "name": "falsification_criteria",
+        "status": "pass",
+        "observed": 11,
+        "target": 2,
+        "reason": "core or major claims should say what would weaken them",
+        "suggested_fix": "Add falsification criteria to core and major assertions."
+      },
+      {
+        "name": "artifacts_from_captions",
+        "status": "pass",
+        "observed": 8,
+        "target": 1,
+        "reason": "figure/table captions in source should be represented as artifacts",
+        "suggested_fix": "Add Artifact objects for detected figures, tables, and supplements."
+      },
+      {
+        "name": "datasets_from_availability_signals",
+        "status": "pass",
+        "observed": 4,
+        "target": 1,
+        "reason": "data-availability or accession signals should be represented as datasets",
+        "suggested_fix": "Add Dataset objects for repository links, accessions, project IDs, and availability statements."
+      }
+    ]
+  },
+  "density": {
+    "document_scope": "full_article",
+    "requested_document_scope": "auto",
+    "source_word_count": 16678,
+    "context_count": 24,
+    "score": 0.833,
+    "checks": [
+      {
+        "name": "full_article_assertions",
+        "status": "pass",
+        "observed": 11,
+        "target": 5,
+        "strict_failure": true,
+        "reason": "Full research articles require richer extraction density than a toy/demo.",
+        "suggested_fix": "Extract objective, methods/results, conclusion, limitation, and other central claims."
+      },
+      {
+        "name": "full_article_contexts",
+        "status": "pass",
+        "observed": 24,
+        "target": 2,
+        "strict_failure": true,
+        "reason": "Full articles should include multiple contexts when claims span methods/results/discussion.",
+        "suggested_fix": "Add distinct Context objects for major claim scopes."
+      },
+      {
+        "name": "full_article_core_major_claims_with_evidence",
+        "status": "pass",
+        "observed": 7,
+        "target": 7,
+        "strict_failure": false,
+        "reason": "Every core/major claim should have at least one evidence link.",
+        "suggested_fix": "Add EvidenceLinks for each core/major assertion."
+      },
+      {
+        "name": "full_article_core_claims_with_two_evidence_links",
+        "status": "warn",
+        "observed": 3,
+        "target": 5,
+        "strict_failure": false,
+        "reason": "Core claims target at least two evidence links when source supports it.",
+        "suggested_fix": "Add a second independent EvidenceLink for core assertions when possible."
+      },
+      {
+        "name": "artifacts_from_captions",
+        "status": "pass",
+        "observed": 8,
+        "target": 1,
+        "strict_failure": true,
+        "reason": "Figure/table captions should be represented as artifacts.",
+        "suggested_fix": "Add Artifact objects for detected figures/tables."
+      },
+      {
+        "name": "datasets_from_availability_signals",
+        "status": "pass",
+        "observed": 4,
+        "target": 1,
+        "strict_failure": true,
+        "reason": "Data-availability/accession signals should be represented as datasets.",
+        "suggested_fix": "Add Dataset objects for source repository/accession signals."
+      }
+    ]
+  },
+  "conversion_quality": {
+    "overall_conversion_score": 0.971,
+    "band": "excellent",
+    "subscores": {
+      "structural_integrity": 1.0,
+      "grounding": 1.0,
+      "evidence_linkage": 1.0,
+      "density": 0.833,
+      "field_quality": 0.974,
+      "artifact_discipline": 1.0
+    },
+    "interpretation": "Measures conversion/extraction quality, not whether the source literature itself is scientifically correct."
+  },
+  "claim_readouts": [
+    {
+      "assertion_id": "csag:assertion/doi:10.1186/2041-1480-4-37/A0001",
+      "claim_role": "research_question",
+      "criticality": "core",
+      "assertion_text": "Existing general-purpose provenance vocabularies (DC Terms, PROV-O, OPM, PRV) do not, on their own, capture the role distinctions (author vs. curator vs. contributor vs. artifact creator) and the authoring/versioning lineage that scientific knowledge bases such as AlzSWAN require.",
+      "state": "supported",
+      "current_read": "Inferred from 2 evidence link(s): supported.",
+      "evidence_for": [
+        {
+          "evidence_link_id": "csag:elink/doi:10.1186/2041-1480-4-37/L0001",
+          "evidence_item": "csag:evidence/doi:10.1186/2041-1480-4-37/E0001",
+          "strength": "strong",
+          "rationale": "The authors' analytic argument directly motivates the research-gap claim that DC Terms/PROV-O do not, alone, capture the needed role distinctions.",
+          "evidence_text": "Authors' analysis that DC Terms conflates contributor/author/curator/representation-creator roles (e.g., HTML 3 -> HTML 5 converter could be either dct:creator or dct:contributor) and that PROV-O explicitly provides no such role distinctions.",
+          "associated_artifacts": [],
+          "results": []
+        },
+        {
+          "evidence_link_id": "csag:elink/doi:10.1186/2041-1480-4-37/L0002",
+          "evidence_item": "csag:evidence/doi:10.1186/2041-1480-4-37/E0002",
+          "strength": "strong",
+          "rationale": "The AlzSWAN use-case explicitly enumerates author/curator/artifact-creator/external-source roles whose distinctions are missing from the prior vocabularies.",
+          "evidence_text": "AlzSWAN use-case description in which the author of a paper, a curator who shapes hypotheses/claims, and an artifact creator who enters them into the platform are demonstrably distinct agents.",
+          "associated_artifacts": [],
+          "results": []
+        }
+      ],
+      "evidence_against": [],
+      "mixed_or_inconclusive": [],
+      "next_actions": [],
+      "research_state_records": []
+    },
+    {
+      "assertion_id": "csag:assertion/doi:10.1186/2041-1480-4-37/A0002",
+      "claim_role": "objective",
+      "criticality": "core",
+      "assertion_text": "The objective of PAV is to provide a lightweight, compact OWL vocabulary that captures 'just enough' provenance, authoring and versioning information for scientific digital resources, distinguishing contributors, authors and curators of content from creators of representations, plus the originating-resource lineage.",
+      "state": "supported",
+      "current_read": "Inferred from 1 evidence link(s): supported.",
+      "evidence_for": [
+        {
+          "evidence_link_id": "csag:elink/doi:10.1186/2041-1480-4-37/L0003",
+          "evidence_item": "csag:evidence/doi:10.1186/2041-1480-4-37/E0003",
+          "strength": "strong",
+          "rationale": "The published PAV 2.2 OWL release with its three subsections operationalizes the lightweight 'just enough' vocabulary objective.",
+          "evidence_text": "PAV 2.2 OWL release at http://purl.org/pav/2.2 with three subsections (Authoring, Provenance, Versioning) and explicit OWL-importable IRI; Tables 1-3 enumerate each property family and its semantics.",
+          "associated_artifacts": [
+            "csag:artifact/doi:10.1186/2041-1480-4-37/T0001",
+            "csag:artifact/doi:10.1186/2041-1480-4-37/T0002",
+            "csag:artifact/doi:10.1186/2041-1480-4-37/T0003"
+          ],
+          "results": []
+        }
+      ],
+      "evidence_against": [],
+      "mixed_or_inconclusive": [],
+      "next_actions": [],
+      "research_state_records": []
+    },
+    {
+      "assertion_id": "csag:assertion/doi:10.1186/2041-1480-4-37/A0003",
+      "claim_role": "result_claim",
+      "criticality": "core",
+      "assertion_text": "PAV defines three families of properties: authoring (pav:authoredBy, pav:curatedBy, pav:contributedBy with timestamp variants), provenance/creation (pav:createdBy, pav:createdWith, pav:retrievedFrom/By/On, pav:importedFrom/By/On, pav:sourceAccessedAt/By/On, pav:providedBy), and versioning (pav:version, pav:previousVersion, pav:derivedFrom, pav:lastUpdateOn).",
+      "state": "supported",
+      "current_read": "Inferred from 1 evidence link(s): supported.",
+      "evidence_for": [
+        {
+          "evidence_link_id": "csag:elink/doi:10.1186/2041-1480-4-37/L0004",
+          "evidence_item": "csag:evidence/doi:10.1186/2041-1480-4-37/E0003",
+          "strength": "strong",
+          "rationale": "Tables 1-3 in the released ontology enumerate exactly the three property families claimed.",
+          "evidence_text": "PAV 2.2 OWL release at http://purl.org/pav/2.2 with three subsections (Authoring, Provenance, Versioning) and explicit OWL-importable IRI; Tables 1-3 enumerate each property family and its semantics.",
+          "associated_artifacts": [
+            "csag:artifact/doi:10.1186/2041-1480-4-37/T0001",
+            "csag:artifact/doi:10.1186/2041-1480-4-37/T0002",
+            "csag:artifact/doi:10.1186/2041-1480-4-37/T0003"
+          ],
+          "results": []
+        }
+      ],
+      "evidence_against": [],
+      "mixed_or_inconclusive": [],
+      "next_actions": [],
+      "research_state_records": []
+    },
+    {
+      "assertion_id": "csag:assertion/doi:10.1186/2041-1480-4-37/A0004",
+      "claim_role": "result_claim",
+      "criticality": "core",
+      "assertion_text": "PAV makes a primary conceptual distinction between authoring knowledge content (pav:authoredBy / pav:curatedBy / pav:contributedBy) and creating the digital representation of that content (pav:createdBy), which DC Terms (e.g., dct:creator) conflates.",
+      "state": "supported",
+      "current_read": "Inferred from 2 evidence link(s): supported.",
+      "evidence_for": [
+        {
+          "evidence_link_id": "csag:elink/doi:10.1186/2041-1480-4-37/L0005",
+          "evidence_item": "csag:evidence/doi:10.1186/2041-1480-4-37/E0001",
+          "strength": "strong",
+          "rationale": "DC Terms is shown to conflate authoring of content with creation of representation, motivating PAV's explicit author/creator separation.",
+          "evidence_text": "Authors' analysis that DC Terms conflates contributor/author/curator/representation-creator roles (e.g., HTML 3 -> HTML 5 converter could be either dct:creator or dct:contributor) and that PROV-O explicitly provides no such role distinctions.",
+          "associated_artifacts": [],
+          "results": []
+        },
+        {
+          "evidence_link_id": "csag:elink/doi:10.1186/2041-1480-4-37/L0006",
+          "evidence_item": "csag:evidence/doi:10.1186/2041-1480-4-37/E0002",
+          "strength": "strong",
+          "rationale": "AlzSWAN's three-role workflow makes the author/curator/creator separation operationally necessary.",
+          "evidence_text": "AlzSWAN use-case description in which the author of a paper, a curator who shapes hypotheses/claims, and an artifact creator who enters them into the platform are demonstrably distinct agents.",
+          "associated_artifacts": [],
+          "results": []
+        }
+      ],
+      "evidence_against": [],
+      "mixed_or_inconclusive": [],
+      "next_actions": [],
+      "research_state_records": []
+    },
+    {
+      "assertion_id": "csag:assertion/doi:10.1186/2041-1480-4-37/A0005",
+      "claim_role": "result_claim",
+      "criticality": "major",
+      "assertion_text": "Starting from version 2.1, PAV defines a subproperty mapping to PROV-O so that PAV statements RDFS-imply compatible PROV-O statements (e.g., pav:authoredBy rdfs:subPropertyOf prov:wasAttributedTo), enabling PROV-aware tools to consume PAV provenance.",
+      "state": "mixed",
+      "current_read": "Inferred from 3 evidence link(s): mixed.",
+      "evidence_for": [
+        {
+          "evidence_link_id": "csag:elink/doi:10.1186/2041-1480-4-37/L0007",
+          "evidence_item": "csag:evidence/doi:10.1186/2041-1480-4-37/E0004",
+          "strength": "strong",
+          "rationale": "The Table 4 subproperty mapping concretely instantiates the PAV->PROV-O interoperability claim.",
+          "evidence_text": "Documented PAV->PROV-O subproperty mapping (Table 4) declaring pav:authoredBy/curatedBy/createdBy/createdWith/contributedBy/importedBy/retrievedBy as rdfs:subPropertyOf prov:wasAttributedTo; pav:importedFrom/retrievedFrom under prov:wasDerivedFrom & prov:alternateOf; pav:derivedFrom under prov:wasDerivedFrom; pav:previousVersion under prov:wasRevisionOf; pav:sourceAccessedAt under prov:wasInfluencedBy.",
+          "associated_artifacts": [
+            "csag:artifact/doi:10.1186/2041-1480-4-37/T0004"
+          ],
+          "results": []
+        },
+        {
+          "evidence_link_id": "csag:elink/doi:10.1186/2041-1480-4-37/L0008",
+          "evidence_item": "csag:evidence/doi:10.1186/2041-1480-4-37/E0005",
+          "strength": "moderate",
+          "rationale": "The Pellet+ProvToolbox workflow demonstrates that PROV-O statements are actually inferred from PAV inputs and consumed by a PROV-aware tool.",
+          "evidence_text": "Taverna workflow combining Pellet (OWL reasoner) and ProvToolbox materializes PROV-O statements from PAV-only inputs and renders them as an SVG provenance diagram (Figure 14, ChemSpider VoID example).",
+          "associated_artifacts": [
+            "csag:artifact/doi:10.1186/2041-1480-4-37/T0004"
+          ],
+          "results": []
+        }
+      ],
+      "evidence_against": [],
+      "mixed_or_inconclusive": [
+        {
+          "evidence_link_id": "csag:elink/doi:10.1186/2041-1480-4-37/L0018",
+          "evidence_item": "csag:evidence/doi:10.1186/2041-1480-4-37/E0011",
+          "strength": "moderate",
+          "rationale": "The subproperty mapping is operational, but the authors concede it loses some PAV-specific semantics during inference (mixed evidence for full interoperability).",
+          "evidence_text": "Authors' explicit note that information lost in PAV->PROV-O inference includes the author/curator distinction and the per-agent authoring-time association.",
+          "associated_artifacts": [],
+          "results": []
+        }
+      ],
+      "next_actions": [],
+      "research_state_records": []
+    },
+    {
+      "assertion_id": "csag:assertion/doi:10.1186/2041-1480-4-37/A0006",
+      "claim_role": "result_claim",
+      "criticality": "major",
+      "assertion_text": "PAV has been adopted by at least five communities/projects (SWAN/AlzSWAN, Annotation Ontology and Domeo, Nanopublications, Open PHACTS dataset descriptions, Wf4Ever Research Objects, and Elsevier Satellite), evidencing pragmatic usefulness.",
+      "state": "supported",
+      "current_read": "Inferred from 3 evidence link(s): supported.",
+      "evidence_for": [
+        {
+          "evidence_link_id": "csag:elink/doi:10.1186/2041-1480-4-37/L0009",
+          "evidence_item": "csag:evidence/doi:10.1186/2041-1480-4-37/E0006",
+          "strength": "strong",
+          "rationale": "The named projects list directly enumerates the adopters supporting the uptake claim.",
+          "evidence_text": "Enumeration of independent adopter projects/specifications that integrate PAV: SWAN/AlzSWAN, Annotation Ontology (AO), Domeo Annotation Tool, Nanopublications specification, Open PHACTS dataset descriptions, Wf4Ever Research Objects, and Elsevier Satellite annotation format.",
+          "associated_artifacts": [
+            "csag:artifact/doi:10.1186/2041-1480-4-37/F0007"
+          ],
+          "results": []
+        },
+        {
+          "evidence_link_id": "csag:elink/doi:10.1186/2041-1480-4-37/L0010",
+          "evidence_item": "csag:evidence/doi:10.1186/2041-1480-4-37/E0007",
+          "strength": "moderate",
+          "rationale": "Open PHACTS's published list of recommended PAV properties is concrete operational evidence of adoption beyond a name-check.",
+          "evidence_text": "Open PHACTS dataset specification (a VoID specialization) primarily recommends PAV properties (pav:version, pav:previousVersion, pav:retrievedFrom, pav:importedFrom, pav:importedOn, pav:importedBy, pav:derivedFrom, pav:createdOn, pav:createdBy, pav:createdWith, pav:authoredBy, pav:authoredOn, pav:lastRefreshedOn, pav:lastUpdateOn) for dataset provenance.",
+          "associated_artifacts": [],
+          "results": []
+        },
+        {
+          "evidence_link_id": "csag:elink/doi:10.1186/2041-1480-4-37/L0011",
+          "evidence_item": "csag:evidence/doi:10.1186/2041-1480-4-37/E0008",
+          "strength": "moderate",
+          "rationale": "Nanopublication specification's use of pav:authoredBy/createdBy/version operationalizes adoption.",
+          "evidence_text": "Nanopublication specification recommends PAV (pav:authoredBy, pav:createdBy, pav:version) to attribute scientific assertions and their RDF representations distinctly.",
+          "associated_artifacts": [],
+          "results": []
+        }
+      ],
+      "evidence_against": [],
+      "mixed_or_inconclusive": [],
+      "next_actions": [],
+      "research_state_records": []
+    },
+    {
+      "assertion_id": "csag:assertion/doi:10.1186/2041-1480-4-37/A0007",
+      "claim_role": "result_claim",
+      "criticality": "supporting",
+      "assertion_text": "Compared with the activity-chain style of Provenance Vocabulary (PRV), PAV's resource-centric attribution allows equivalent queries (e.g., 'which API, when, by whom') to be expressed with substantially less SPARQL graph-traversal.",
+      "state": "supported",
+      "current_read": "Inferred from 1 evidence link(s): supported.",
+      "evidence_for": [
+        {
+          "evidence_link_id": "csag:elink/doi:10.1186/2041-1480-4-37/L0012",
+          "evidence_item": "csag:evidence/doi:10.1186/2041-1480-4-37/E0009",
+          "strength": "moderate",
+          "rationale": "The author-reported PRV vs. PAV SPARQL contrast directly shows shorter traversal for the same query.",
+          "evidence_text": "Comparative SPARQL listings (Figures 17 vs. 18 vs. 19): the PRV query traverses prv:createdBy -> prv:usedData -> prv:retrievedBy -> prv:accessedResource chains, whereas the equivalent PAV query reads pav:importedFrom/importedAt/importedBy directly off the resource.",
+          "associated_artifacts": [],
+          "results": []
+        }
+      ],
+      "evidence_against": [],
+      "mixed_or_inconclusive": [],
+      "next_actions": [],
+      "research_state_records": []
+    },
+    {
+      "assertion_id": "csag:assertion/doi:10.1186/2041-1480-4-37/A0008",
+      "claim_role": "conclusion",
+      "criticality": "core",
+      "assertion_text": "The role-distinction primitives PAV introduces (author vs. curator vs. artifact creator, with provenance/versioning relations between artifacts and agents) are essential for attributing resources in curated knowledge bases and datasets.",
+      "state": "supported",
+      "current_read": "Inferred from 2 evidence link(s): supported.",
+      "evidence_for": [
+        {
+          "evidence_link_id": "csag:elink/doi:10.1186/2041-1480-4-37/L0013",
+          "evidence_item": "csag:evidence/doi:10.1186/2041-1480-4-37/E0001",
+          "strength": "strong",
+          "rationale": "The conflation argument supports the conclusion that role-distinction primitives are essential.",
+          "evidence_text": "Authors' analysis that DC Terms conflates contributor/author/curator/representation-creator roles (e.g., HTML 3 -> HTML 5 converter could be either dct:creator or dct:contributor) and that PROV-O explicitly provides no such role distinctions.",
+          "associated_artifacts": [],
+          "results": []
+        },
+        {
+          "evidence_link_id": "csag:elink/doi:10.1186/2041-1480-4-37/L0014",
+          "evidence_item": "csag:evidence/doi:10.1186/2041-1480-4-37/E0006",
+          "strength": "moderate",
+          "rationale": "Diverse adopters relying on the distinctions are author-cited as practical confirmation that they are essential.",
+          "evidence_text": "Enumeration of independent adopter projects/specifications that integrate PAV: SWAN/AlzSWAN, Annotation Ontology (AO), Domeo Annotation Tool, Nanopublications specification, Open PHACTS dataset descriptions, Wf4Ever Research Objects, and Elsevier Satellite annotation format.",
+          "associated_artifacts": [
+            "csag:artifact/doi:10.1186/2041-1480-4-37/F0007"
+          ],
+          "results": []
+        }
+      ],
+      "evidence_against": [],
+      "mixed_or_inconclusive": [],
+      "next_actions": [],
+      "research_state_records": []
+    },
+    {
+      "assertion_id": "csag:assertion/doi:10.1186/2041-1480-4-37/A0009",
+      "claim_role": "limitation",
+      "criticality": "supporting",
+      "assertion_text": "PAV's simplification of provenance to resource-attached relations is at the cost of not expressing per-activity details (e.g., when each individual API access happened when multiple imports occur), a trade-off the authors deem reasonable for common cases.",
+      "state": "supported",
+      "current_read": "Inferred from 1 evidence link(s): supported.",
+      "evidence_for": [
+        {
+          "evidence_link_id": "csag:elink/doi:10.1186/2041-1480-4-37/L0015",
+          "evidence_item": "csag:evidence/doi:10.1186/2041-1480-4-37/E0010",
+          "strength": "strong",
+          "rationale": "Authors explicitly state that PAV alone loses 'who accessed which source when' detail when multiple agents/sources/dates apply to a single resource.",
+          "evidence_text": "Authors' note that combinations of multiple agents/sources/dates on the same resource lose 'who accessed which source when' detail (acknowledged trade-off documented under Multiplicity).",
+          "associated_artifacts": [],
+          "results": []
+        }
+      ],
+      "evidence_against": [],
+      "mixed_or_inconclusive": [],
+      "next_actions": [],
+      "research_state_records": []
+    },
+    {
+      "assertion_id": "csag:assertion/doi:10.1186/2041-1480-4-37/A0010",
+      "claim_role": "limitation",
+      "criticality": "supporting",
+      "assertion_text": "Some information is lost in the PAV->PROV-O inference (notably the author-vs-curator distinction and the per-agent authoring-time pairing), because PAV statements are detangled into separate existential PROV-O variables.",
+      "state": "supported",
+      "current_read": "Inferred from 1 evidence link(s): supported.",
+      "evidence_for": [
+        {
+          "evidence_link_id": "csag:elink/doi:10.1186/2041-1480-4-37/L0016",
+          "evidence_item": "csag:evidence/doi:10.1186/2041-1480-4-37/E0011",
+          "strength": "strong",
+          "rationale": "The authors directly enumerate the information lost (author/curator distinction, paired authoring-time) in the PAV->PROV-O inference path.",
+          "evidence_text": "Authors' explicit note that information lost in PAV->PROV-O inference includes the author/curator distinction and the per-agent authoring-time association.",
+          "associated_artifacts": [],
+          "results": []
+        }
+      ],
+      "evidence_against": [],
+      "mixed_or_inconclusive": [],
+      "next_actions": [],
+      "research_state_records": []
+    },
+    {
+      "assertion_id": "csag:assertion/doi:10.1186/2041-1480-4-37/A0011",
+      "claim_role": "future_work",
+      "criticality": "supporting",
+      "assertion_text": "A more integrated PAV->PROV-O mapping that unrolls PAV statements into chains of PROV-O activities/entities (e.g., creating an :ImportActivity with prov:used / prov:wasAssociatedWith / prov:endedAtTime triples) is feasible but is work in progress and must balance logical correctness against usefulness.",
+      "state": "supported",
+      "current_read": "Inferred from 1 evidence link(s): supported.",
+      "evidence_for": [
+        {
+          "evidence_link_id": "csag:elink/doi:10.1186/2041-1480-4-37/L0017",
+          "evidence_item": "csag:evidence/doi:10.1186/2041-1480-4-37/E0012",
+          "strength": "moderate",
+          "rationale": "Authors state the integrated mapping is work in progress and identify the open issue (multiple imports / activity extent).",
+          "evidence_text": "Authors flag that a complete PAV->PROV-O unrolling is still 'work in progress' because, with multiple pav:importedFrom + pav:importedBy statements, the extent of a single import activity is uncertain.",
+          "associated_artifacts": [],
+          "results": []
+        }
+      ],
+      "evidence_against": [],
+      "mixed_or_inconclusive": [],
+      "next_actions": [],
+      "research_state_records": []
+    }
+  ],
+  "artifact_discipline": {
+    "empirical_evidence_items": 7,
+    "with_durable_output": 7,
+    "score": 1.0,
+    "checks": []
+  },
+  "literature_quality": {
+    "source": "none",
+    "available": false,
+    "summary": "No OpenAlex work metadata supplied.",
+    "metrics": {},
+    "signals": []
+  },
+  "missing_or_weak": [
+    {
+      "category": "extraction_density",
+      "severity": "warning",
+      "reason": "Core claims target at least two evidence links when source supports it.",
+      "observed": 3,
+      "target": 5,
+      "suggested_fix": "Add a second independent EvidenceLink for core assertions when possible."
+    },
+    {
+      "category": "field_quality",
+      "severity": "warning",
+      "field": "evidence_links",
+      "reason": "missing recommended fields: {'text_spans': 18}",
+      "suggested_fix": "Improve grounding, criticality, rationale, and provenance fields where the manuscript supports them."
+    },
+    {
+      "category": "field_quality",
+      "severity": "warning",
+      "field": "datasets",
+      "reason": "missing recommended fields: {'accession': 4}",
+      "suggested_fix": "Improve grounding, criticality, rationale, and provenance fields where the manuscript supports them."
+    }
+  ],
+  "field_quality": {
+    "overall_field_completeness_score": 0.974,
+    "missing_required_field_count": 0,
+    "missing_recommended_field_count": 22,
+    "weak_text_values": [],
+    "collections": {
+      "assertions": {
+        "object_count": 11,
+        "required_fields": [
+          "id",
+          "assertion_text",
+          "claim_role",
+          "normalization_status",
+          "contexts"
+        ],
+        "recommended_fields": [
+          "assertion_type",
+          "criticality",
+          "falsification_criteria",
+          "text_spans"
+        ],
+        "missing_required_by_field": {},
+        "missing_recommended_by_field": {},
+        "objects_with_missing_required": [],
+        "objects_with_missing_recommended": [],
+        "field_completeness_score": 1.0
+      },
+      "evidence_items": {
+        "object_count": 12,
+        "required_fields": [
+          "id",
+          "evidence_type"
+        ],
+        "recommended_fields": [
+          "evidence_text",
+          "contexts",
+          "text_spans"
+        ],
+        "missing_required_by_field": {},
+        "missing_recommended_by_field": {},
+        "objects_with_missing_required": [],
+        "objects_with_missing_recommended": [],
+        "field_completeness_score": 1.0
+      },
+      "evidence_links": {
+        "object_count": 18,
+        "required_fields": [
+          "id",
+          "evidence_item",
+          "assertion",
+          "polarity"
+        ],
+        "recommended_fields": [
+          "strength",
+          "rationale",
+          "text_spans"
+        ],
+        "missing_required_by_field": {},
+        "missing_recommended_by_field": {
+          "text_spans": 18
+        },
+        "objects_with_missing_required": [],
+        "objects_with_missing_recommended": [
+          {
+            "id": "csag:elink/doi:10.1186/2041-1480-4-37/L0001",
+            "missing_required": [],
+            "missing_recommended": [
+              "text_spans"
+            ]
+          },
+          {
+            "id": "csag:elink/doi:10.1186/2041-1480-4-37/L0002",
+            "missing_required": [],
+            "missing_recommended": [
+              "text_spans"
+            ]
+          },
+          {
+            "id": "csag:elink/doi:10.1186/2041-1480-4-37/L0003",
+            "missing_required": [],
+            "missing_recommended": [
+              "text_spans"
+            ]
+          },
+          {
+            "id": "csag:elink/doi:10.1186/2041-1480-4-37/L0004",
+            "missing_required": [],
+            "missing_recommended": [
+              "text_spans"
+            ]
+          },
+          {
+            "id": "csag:elink/doi:10.1186/2041-1480-4-37/L0005",
+            "missing_required": [],
+            "missing_recommended": [
+              "text_spans"
+            ]
+          },
+          {
+            "id": "csag:elink/doi:10.1186/2041-1480-4-37/L0006",
+            "missing_required": [],
+            "missing_recommended": [
+              "text_spans"
+            ]
+          },
+          {
+            "id": "csag:elink/doi:10.1186/2041-1480-4-37/L0007",
+            "missing_required": [],
+            "missing_recommended": [
+              "text_spans"
+            ]
+          },
+          {
+            "id": "csag:elink/doi:10.1186/2041-1480-4-37/L0008",
+            "missing_required": [],
+            "missing_recommended": [
+              "text_spans"
+            ]
+          },
+          {
+            "id": "csag:elink/doi:10.1186/2041-1480-4-37/L0009",
+            "missing_required": [],
+            "missing_recommended": [
+              "text_spans"
+            ]
+          },
+          {
+            "id": "csag:elink/doi:10.1186/2041-1480-4-37/L0010",
+            "missing_required": [],
+            "missing_recommended": [
+              "text_spans"
+            ]
+          },
+          {
+            "id": "csag:elink/doi:10.1186/2041-1480-4-37/L0011",
+            "missing_required": [],
+            "missing_recommended": [
+              "text_spans"
+            ]
+          },
+          {
+            "id": "csag:elink/doi:10.1186/2041-1480-4-37/L0012",
+            "missing_required": [],
+            "missing_recommended": [
+              "text_spans"
+            ]
+          },
+          {
+            "id": "csag:elink/doi:10.1186/2041-1480-4-37/L0013",
+            "missing_required": [],
+            "missing_recommended": [
+              "text_spans"
+            ]
+          },
+          {
+            "id": "csag:elink/doi:10.1186/2041-1480-4-37/L0014",
+            "missing_required": [],
+            "missing_recommended": [
+              "text_spans"
+            ]
+          },
+          {
+            "id": "csag:elink/doi:10.1186/2041-1480-4-37/L0015",
+            "missing_required": [],
+            "missing_recommended": [
+              "text_spans"
+            ]
+          },
+          {
+            "id": "csag:elink/doi:10.1186/2041-1480-4-37/L0016",
+            "missing_required": [],
+            "missing_recommended": [
+              "text_spans"
+            ]
+          },
+          {
+            "id": "csag:elink/doi:10.1186/2041-1480-4-37/L0017",
+            "missing_required": [],
+            "missing_recommended": [
+              "text_spans"
+            ]
+          },
+          {
+            "id": "csag:elink/doi:10.1186/2041-1480-4-37/L0018",
+            "missing_required": [],
+            "missing_recommended": [
+              "text_spans"
+            ]
+          }
+        ],
+        "field_completeness_score": 0.929
+      },
+      "inferences": {
+        "object_count": 3,
+        "required_fields": [
+          "id",
+          "output_assertion",
+          "inference_method"
+        ],
+        "recommended_fields": [
+          "input_assertions",
+          "input_evidence_links",
+          "inference_rationale",
+          "text_spans"
+        ],
+        "missing_required_by_field": {},
+        "missing_recommended_by_field": {},
+        "objects_with_missing_required": [],
+        "objects_with_missing_recommended": [],
+        "field_completeness_score": 1.0
+      },
+      "critiques": {
+        "object_count": 2,
+        "required_fields": [
+          "id"
+        ],
+        "recommended_fields": [
+          "critique_type",
+          "risk_domain",
+          "severity",
+          "impacted_assertions",
+          "text_spans"
+        ],
+        "missing_required_by_field": {},
+        "missing_recommended_by_field": {},
+        "objects_with_missing_required": [],
+        "objects_with_missing_recommended": [],
+        "field_completeness_score": 1.0
+      },
+      "knowledge_gaps": {
+        "object_count": 2,
+        "required_fields": [
+          "id"
+        ],
+        "recommended_fields": [
+          "gap_type",
+          "severity",
+          "related_assertions",
+          "suggested_actions",
+          "text_spans"
+        ],
+        "missing_required_by_field": {},
+        "missing_recommended_by_field": {},
+        "objects_with_missing_required": [],
+        "objects_with_missing_recommended": [],
+        "field_completeness_score": 1.0
+      },
+      "artifacts": {
+        "object_count": 8,
+        "required_fields": [
+          "id",
+          "artifact_type",
+          "artifact_label"
+        ],
+        "recommended_fields": [
+          "caption",
+          "text_spans"
+        ],
+        "missing_required_by_field": {},
+        "missing_recommended_by_field": {},
+        "objects_with_missing_required": [],
+        "objects_with_missing_recommended": [],
+        "field_completeness_score": 1.0
+      },
+      "datasets": {
+        "object_count": 4,
+        "required_fields": [
+          "id"
+        ],
+        "recommended_fields": [
+          "accession",
+          "repository",
+          "dataset_url",
+          "text_spans"
+        ],
+        "missing_required_by_field": {},
+        "missing_recommended_by_field": {
+          "accession": 4
+        },
+        "objects_with_missing_required": [],
+        "objects_with_missing_recommended": [
+          {
+            "id": "csag:dataset/doi:10.1186/2041-1480-4-37/D0001",
+            "missing_required": [],
+            "missing_recommended": [
+              "accession"
+            ]
+          },
+          {
+            "id": "csag:dataset/doi:10.1186/2041-1480-4-37/D0002",
+            "missing_required": [],
+            "missing_recommended": [
+              "accession"
+            ]
+          },
+          {
+            "id": "csag:dataset/doi:10.1186/2041-1480-4-37/D0003",
+            "missing_required": [],
+            "missing_recommended": [
+              "accession"
+            ]
+          },
+          {
+            "id": "csag:dataset/doi:10.1186/2041-1480-4-37/D0004",
+            "missing_required": [],
+            "missing_recommended": [
+              "accession"
+            ]
+          }
+        ],
+        "field_completeness_score": 0.9
+      },
+      "qa_items": {
+        "object_count": 6,
+        "required_fields": [
+          "id",
+          "question_text",
+          "expected_answer_type",
+          "answers"
+        ],
+        "recommended_fields": [
+          "query_assertion",
+          "normalized_query"
+        ],
+        "missing_required_by_field": {},
+        "missing_recommended_by_field": {},
+        "objects_with_missing_required": [],
+        "objects_with_missing_recommended": [],
+        "field_completeness_score": 1.0
+      },
+      "research_states": {
+        "object_count": 0,
+        "required_fields": [
+          "id",
+          "state"
+        ],
+        "recommended_fields": [
+          "target_assertions",
+          "current_read",
+          "rationale",
+          "recommended_next_actions"
+        ],
+        "missing_required_by_field": {},
+        "missing_recommended_by_field": {},
+        "objects_with_missing_required": [],
+        "objects_with_missing_recommended": [],
+        "field_completeness_score": 1.0
+      },
+      "next_actions": {
+        "object_count": 0,
+        "required_fields": [
+          "id",
+          "action_type",
+          "description"
+        ],
+        "recommended_fields": [
+          "target_assertions",
+          "target_knowledge_gaps",
+          "priority"
+        ],
+        "missing_required_by_field": {},
+        "missing_recommended_by_field": {},
+        "objects_with_missing_required": [],
+        "objects_with_missing_recommended": [],
+        "field_completeness_score": 1.0
+      },
+      "executions": {
+        "object_count": 0,
+        "required_fields": [
+          "id",
+          "execution_type",
+          "execution_status"
+        ],
+        "recommended_fields": [
+          "command",
+          "output_artifacts",
+          "generated_evidence_items",
+          "tested_assertions"
+        ],
+        "missing_required_by_field": {},
+        "missing_recommended_by_field": {},
+        "objects_with_missing_required": [],
+        "objects_with_missing_recommended": [],
+        "field_completeness_score": 1.0
+      }
+    }
+  },
+  "source_signals": {
+    "figure_or_table_caption_present": true,
+    "dataset_signal_present": true
+  },
+  "structural_issues": {
+    "evidence_links_with_unknown_assertion": 0,
+    "evidence_links_with_unknown_evidence_item": 0
+  },
+  "section_word_counts": {
+    "_preamble": 72,
+    "Abstract": 350,
+    "Background": 353,
+    "Original use case: SWAN platform": 687,
+    "Existing provenance vocabularies": 1085,
+    "Results": 50,
+    "PAV Ontology": 136,
+    "Authoring": 348,
+    "Table 1 PAV authoring properties": 642,
+    "Provenance": 367,
+    "Versioning and evolution": 92,
+    "Table 2 PAV provenance properties": 978,
+    "Table 2 PAV provenance properties (Continued)": 481,
+    "Multiplicity": 423,
+    "Table 3 PAV versioning properties": 307,
+    "Contribution roles": 192,
+    "Who is using PAV": 296,
+    "Annotation ontology and Domeo annotation tool": 191,
+    "Open PHACTS dataset descriptions": 242,
+    "Nanopublications": 375,
+    "Elsevier satellite": 128,
+    "Research objects": 1160,
+    "Table 4 Mapping from PAV to PROV-O": 931,
+    "Method": 457,
+    "Discussion": 35,
+    "Dublin core terms": 604,
+    "BIBFRAME": 311,
+    "Provenance vocabulary": 1546,
+    "Conclusions": 3839
+  },
+  "issues": [],
+  "inputs": {
+    "extraction": {
+      "path": "paper_extraction.json",
+      "sha256": "d2fec429bf28cd4096f576f161ba04ff1642873386c1dea0a84999b4b7ff7384",
+      "size_bytes": 102829
+    },
+    "source_markdown": {
+      "path": "ciccarese2013_pav_ontology.md",
+      "sha256": "8bf1ccedfc2ad6f7beba0b27a27226c5de4161aa8fbd389842d78234f5325b0f",
+      "size_bytes": 108364
+    },
+    "article_json": {
+      "path": "ciccarese2013_pav_ontology.article.json",
+      "sha256": "af75703c8bf2c0fa79c8df77f05ca3e5675656e17a66f8b02bbf5c49d71333bb",
+      "size_bytes": 105639
+    }
+  }
+}

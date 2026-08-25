@@ -1,0 +1,813 @@
+{
+  "markdown_path": "s41467-025-67401-4.md",
+  "line_count": 794,
+  "section_count": 67,
+  "title_index": 38,
+  "front_matter_end_index": 185,
+  "headings": [
+    {
+      "index": 0,
+      "level": 1,
+      "heading": "nature communications",
+      "normalized_heading": "nature communications",
+      "start_line": 1,
+      "end_line": 2,
+      "body_char_count": 0
+    },
+    {
+      "index": 1,
+      "level": 2,
+      "heading": "Article",
+      "normalized_heading": "article",
+      "start_line": 3,
+      "end_line": 26,
+      "body_char_count": 3615
+    },
+    {
+      "index": 2,
+      "level": 1,
+      "heading": "Article",
+      "normalized_heading": "article",
+      "start_line": 27,
+      "end_line": 36,
+      "body_char_count": 3735
+    },
+    {
+      "index": 3,
+      "level": 2,
+      "heading": "Results",
+      "normalized_heading": "results",
+      "start_line": 37,
+      "end_line": 38,
+      "body_char_count": 0
+    },
+    {
+      "index": 4,
+      "level": 3,
+      "heading": "A large resource of environmental plastid genomes from the sunlit ocean",
+      "normalized_heading": "large resource of environmental plastid genomes from the sunlit ocean",
+      "start_line": 39,
+      "end_line": 47,
+      "body_char_count": 4535
+    },
+    {
+      "index": 5,
+      "level": 1,
+      "heading": "Article",
+      "normalized_heading": "article",
+      "start_line": 48,
+      "end_line": 55,
+      "body_char_count": 1063
+    },
+    {
+      "index": 6,
+      "level": 2,
+      "heading": "Leptophytes: a new deep branching plastid group",
+      "normalized_heading": "leptophytes a new deep branching plastid group",
+      "start_line": 56,
+      "end_line": 63,
+      "body_char_count": 1063
+    },
+    {
+      "index": 7,
+      "level": 1,
+      "heading": "Article",
+      "normalized_heading": "article",
+      "start_line": 64,
+      "end_line": 73,
+      "body_char_count": 3632
+    },
+    {
+      "index": 8,
+      "level": 2,
+      "heading": "Leptophyte plastids have phylogenetic affinities with haptophytes and cryptophytes",
+      "normalized_heading": "leptophyte plastids have phylogenetic affinities with haptophytes and cryptophytes",
+      "start_line": 74,
+      "end_line": 82,
+      "body_char_count": 1747
+    },
+    {
+      "index": 9,
+      "level": 1,
+      "heading": "Article",
+      "normalized_heading": "article",
+      "start_line": 83,
+      "end_line": 86,
+      "body_char_count": 42
+    },
+    {
+      "index": 10,
+      "level": 2,
+      "heading": "Figure 3 | Phylogenomic analyses based on a reduced taxon-sampling.",
+      "normalized_heading": "figure 3 phylogenomic analyses based on a reduced taxon sampling",
+      "start_line": 87,
+      "end_line": 88,
+      "body_char_count": 0
+    },
+    {
+      "index": 11,
+      "level": 3,
+      "heading": "a Bayesian inference based on 20,292 amino acid sites across 107 taxa under the CAT + GTR + G4 model.",
+      "normalized_heading": "bayesian inference based on 20 292 amino acid sites across 107 taxa under the cat gtr g4 model",
+      "start_line": 89,
+      "end_line": 92,
+      "body_char_count": 329
+    },
+    {
+      "index": 12,
+      "level": 3,
+      "heading": "b Alignment of the rpl36 gene across corresponding taxa in the tree.",
+      "normalized_heading": "alignment of the rpl36 gene across corresponding taxa in the tree",
+      "start_line": 93,
+      "end_line": 94,
+      "body_char_count": 0
+    },
+    {
+      "index": 13,
+      "level": 3,
+      "heading": "c Maximum likelihood estimates under different models for alternate positions of leptophytes within the CHL clade.",
+      "normalized_heading": "maximum likelihood estimates under different models for alternate positions of leptophytes within the chl clade",
+      "start_line": 95,
+      "end_line": 171,
+      "body_char_count": 2643
+    },
+    {
+      "index": 14,
+      "level": 1,
+      "heading": "Article",
+      "normalized_heading": "article",
+      "start_line": 172,
+      "end_line": 177,
+      "body_char_count": 1136
+    },
+    {
+      "index": 15,
+      "level": 2,
+      "heading": "A mitochondrial genome places leptophytes as sister to haptophytes",
+      "normalized_heading": "mitochondrial genome places leptophytes as sister to haptophytes",
+      "start_line": 178,
+      "end_line": 185,
+      "body_char_count": 2532
+    },
+    {
+      "index": 16,
+      "level": 2,
+      "heading": "Discussion",
+      "normalized_heading": "discussion",
+      "start_line": 186,
+      "end_line": 201,
+      "body_char_count": 4404
+    },
+    {
+      "index": 17,
+      "level": 1,
+      "heading": "Article",
+      "normalized_heading": "article",
+      "start_line": 202,
+      "end_line": 205,
+      "body_char_count": 42
+    },
+    {
+      "index": 18,
+      "level": 2,
+      "heading": "Abundance correlation across Tara Oceans metagenomes",
+      "normalized_heading": "abundance correlation across tara oceans metagenomes",
+      "start_line": 206,
+      "end_line": 367,
+      "body_char_count": 4666
+    },
+    {
+      "index": 19,
+      "level": 1,
+      "heading": "Article",
+      "normalized_heading": "article",
+      "start_line": 368,
+      "end_line": 371,
+      "body_char_count": 42
+    },
+    {
+      "index": 20,
+      "level": 2,
+      "heading": "a. Plastid transfer from cryptophytes to ancestor of haptophytes and leptophytes",
+      "normalized_heading": "plastid transfer from cryptophytes to ancestor of haptophytes and leptophytes",
+      "start_line": 372,
+      "end_line": 375,
+      "body_char_count": 96
+    },
+    {
+      "index": 21,
+      "level": 2,
+      "heading": "b. Plastid transfer from haptophytes to cryptophytes",
+      "normalized_heading": "plastid transfer from haptophytes to cryptophytes",
+      "start_line": 376,
+      "end_line": 389,
+      "body_char_count": 4455
+    },
+    {
+      "index": 22,
+      "level": 1,
+      "heading": "Article",
+      "normalized_heading": "article",
+      "start_line": 390,
+      "end_line": 393,
+      "body_char_count": 42
+    },
+    {
+      "index": 23,
+      "level": 2,
+      "heading": "Methods",
+      "normalized_heading": "methods",
+      "start_line": 394,
+      "end_line": 395,
+      "body_char_count": 0
+    },
+    {
+      "index": 24,
+      "level": 3,
+      "heading": "Tara Oceans metagenomes",
+      "normalized_heading": "tara oceans metagenomes",
+      "start_line": 396,
+      "end_line": 399,
+      "body_char_count": 114
+    },
+    {
+      "index": 25,
+      "level": 3,
+      "heading": "Phylogeny-guided genome-resolved metagenomics for plastids",
+      "normalized_heading": "phylogeny guided genome resolved metagenomics for plastids",
+      "start_line": 400,
+      "end_line": 403,
+      "body_char_count": 1623
+    },
+    {
+      "index": 26,
+      "level": 3,
+      "heading": "Recovery of additional ptMAGs from the mOTU database",
+      "normalized_heading": "recovery of additional ptmags from the motu database",
+      "start_line": 404,
+      "end_line": 407,
+      "body_char_count": 1024
+    },
+    {
+      "index": 27,
+      "level": 3,
+      "heading": "Creation of a non-redundant plastid genomic database",
+      "normalized_heading": "creation of a non redundant plastid genomic database",
+      "start_line": 408,
+      "end_line": 413,
+      "body_char_count": 1465
+    },
+    {
+      "index": 28,
+      "level": 3,
+      "heading": "Biogeography of the GOEV database",
+      "normalized_heading": "biogeography of the goev database",
+      "start_line": 414,
+      "end_line": 417,
+      "body_char_count": 635
+    },
+    {
+      "index": 29,
+      "level": 3,
+      "heading": "Genome annotation of ptMAGs",
+      "normalized_heading": "genome annotation of ptmags",
+      "start_line": 418,
+      "end_line": 421,
+      "body_char_count": 1086
+    },
+    {
+      "index": 30,
+      "level": 3,
+      "heading": "Taxonomic annotation of ptMAGs",
+      "normalized_heading": "taxonomic annotation of ptmags",
+      "start_line": 422,
+      "end_line": 425,
+      "body_char_count": 196
+    },
+    {
+      "index": 31,
+      "level": 3,
+      "heading": "Phylogenomic plastid dataset assembly",
+      "normalized_heading": "phylogenomic plastid dataset assembly",
+      "start_line": 426,
+      "end_line": 434,
+      "body_char_count": 1221
+    },
+    {
+      "index": 32,
+      "level": 1,
+      "heading": "Article",
+      "normalized_heading": "article",
+      "start_line": 435,
+      "end_line": 444,
+      "body_char_count": 2184
+    },
+    {
+      "index": 33,
+      "level": 2,
+      "heading": "Phylogenomic analyses of plastid datasets",
+      "normalized_heading": "phylogenomic analyses of plastid datasets",
+      "start_line": 445,
+      "end_line": 446,
+      "body_char_count": 0
+    },
+    {
+      "index": 34,
+      "level": 3,
+      "heading": "Site-homogeneous models",
+      "normalized_heading": "site homogeneous models",
+      "start_line": 447,
+      "end_line": 450,
+      "body_char_count": 283
+    },
+    {
+      "index": 35,
+      "level": 3,
+      "heading": "Site-heterogeneous models",
+      "normalized_heading": "site heterogeneous models",
+      "start_line": 451,
+      "end_line": 458,
+      "body_char_count": 2455
+    },
+    {
+      "index": 36,
+      "level": 3,
+      "heading": "Derivatives of 107-taxon dataset",
+      "normalized_heading": "derivatives of 107 taxon dataset",
+      "start_line": 459,
+      "end_line": 462,
+      "body_char_count": 1070
+    },
+    {
+      "index": 37,
+      "level": 2,
+      "heading": "Assessing alternative topologies",
+      "normalized_heading": "assessing alternative topologies",
+      "start_line": 463,
+      "end_line": 464,
+      "body_char_count": 0
+    },
+    {
+      "index": 38,
+      "level": 3,
+      "heading": "Site-heterogeneous models",
+      "normalized_heading": "site heterogeneous models",
+      "start_line": 465,
+      "end_line": 472,
+      "body_char_count": 1835
+    },
+    {
+      "index": 39,
+      "level": 1,
+      "heading": "Article",
+      "normalized_heading": "article",
+      "start_line": 473,
+      "end_line": 476,
+      "body_char_count": 42
+    },
+    {
+      "index": 40,
+      "level": 2,
+      "heading": "GHOST and GF-mix models",
+      "normalized_heading": "ghost and gf mix models",
+      "start_line": 477,
+      "end_line": 482,
+      "body_char_count": 2386
+    },
+    {
+      "index": 41,
+      "level": 2,
+      "heading": "16S rDNA phylogeny",
+      "normalized_heading": "16s rdna phylogeny",
+      "start_line": 483,
+      "end_line": 486,
+      "body_char_count": 1197
+    },
+    {
+      "index": 42,
+      "level": 2,
+      "heading": "Rpl36 alignment and phylogeny",
+      "normalized_heading": "rpl36 alignment and phylogeny",
+      "start_line": 487,
+      "end_line": 490,
+      "body_char_count": 377
+    },
+    {
+      "index": 43,
+      "level": 2,
+      "heading": "Synteny analysis of leptophyte ptMAGs",
+      "normalized_heading": "synteny analysis of leptophyte ptmags",
+      "start_line": 491,
+      "end_line": 494,
+      "body_char_count": 341
+    },
+    {
+      "index": 44,
+      "level": 2,
+      "heading": "Comparative analysis of plastid gene content in leptophytes and related lineages",
+      "normalized_heading": "comparative analysis of plastid gene content in leptophytes and related lineages",
+      "start_line": 495,
+      "end_line": 498,
+      "body_char_count": 1334
+    },
+    {
+      "index": 45,
+      "level": 2,
+      "heading": "Leptophyte associations with environmental parameters",
+      "normalized_heading": "leptophyte associations with environmental parameters",
+      "start_line": 499,
+      "end_line": 504,
+      "body_char_count": 827
+    },
+    {
+      "index": 46,
+      "level": 2,
+      "heading": "Survey for putative nucleomorphs of leptophytes",
+      "normalized_heading": "survey for putative nucleomorphs of leptophytes",
+      "start_line": 505,
+      "end_line": 508,
+      "body_char_count": 476
+    },
+    {
+      "index": 47,
+      "level": 2,
+      "heading": "Survey for host nuclear sequences of leptophytes",
+      "normalized_heading": "survey for host nuclear sequences of leptophytes",
+      "start_line": 509,
+      "end_line": 510,
+      "body_char_count": 0
+    },
+    {
+      "index": 48,
+      "level": 3,
+      "heading": "Survey for leptophyte psbO sequences",
+      "normalized_heading": "survey for leptophyte psbo sequences",
+      "start_line": 511,
+      "end_line": 518,
+      "body_char_count": 471
+    },
+    {
+      "index": 49,
+      "level": 1,
+      "heading": "Article",
+      "normalized_heading": "article",
+      "start_line": 519,
+      "end_line": 524,
+      "body_char_count": 1622
+    },
+    {
+      "index": 50,
+      "level": 2,
+      "heading": "Survey for leptophyte 18S rDNA sequences.",
+      "normalized_heading": "survey for leptophyte 18s rdna sequences",
+      "start_line": 525,
+      "end_line": 530,
+      "body_char_count": 1640
+    },
+    {
+      "index": 51,
+      "level": 2,
+      "heading": "Survey for leptophyte mitochondrial sequences",
+      "normalized_heading": "survey for leptophyte mitochondrial sequences",
+      "start_line": 531,
+      "end_line": 532,
+      "body_char_count": 0
+    },
+    {
+      "index": 52,
+      "level": 3,
+      "heading": "Extracting mitochondrial contigs from targeted samples.",
+      "normalized_heading": "extracting mitochondrial contigs from targeted samples",
+      "start_line": 533,
+      "end_line": 540,
+      "body_char_count": 1750
+    },
+    {
+      "index": 53,
+      "level": 2,
+      "heading": "Abundance correlation analyses.",
+      "normalized_heading": "abundance correlation analyses",
+      "start_line": 541,
+      "end_line": 544,
+      "body_char_count": 798
+    },
+    {
+      "index": 54,
+      "level": 2,
+      "heading": "Phylogenetic inference.",
+      "normalized_heading": "phylogenetic inference",
+      "start_line": 545,
+      "end_line": 554,
+      "body_char_count": 2224
+    },
+    {
+      "index": 55,
+      "level": 1,
+      "heading": "Article",
+      "normalized_heading": "article",
+      "start_line": 555,
+      "end_line": 560,
+      "body_char_count": 297
+    },
+    {
+      "index": 56,
+      "level": 2,
+      "heading": "Reporting summary",
+      "normalized_heading": "reporting summary",
+      "start_line": 561,
+      "end_line": 564,
+      "body_char_count": 117
+    },
+    {
+      "index": 57,
+      "level": 2,
+      "heading": "Data availability",
+      "normalized_heading": "data availability",
+      "start_line": 565,
+      "end_line": 568,
+      "body_char_count": 821
+    },
+    {
+      "index": 58,
+      "level": 2,
+      "heading": "Code availability",
+      "normalized_heading": "code availability",
+      "start_line": 569,
+      "end_line": 572,
+      "body_char_count": 171
+    },
+    {
+      "index": 59,
+      "level": 2,
+      "heading": "References",
+      "normalized_heading": "references",
+      "start_line": 573,
+      "end_line": 652,
+      "body_char_count": 5691
+    },
+    {
+      "index": 60,
+      "level": 1,
+      "heading": "Article",
+      "normalized_heading": "article",
+      "start_line": 653,
+      "end_line": 746,
+      "body_char_count": 7346
+    },
+    {
+      "index": 61,
+      "level": 1,
+      "heading": "Article",
+      "normalized_heading": "article",
+      "start_line": 747,
+      "end_line": 756,
+      "body_char_count": 537
+    },
+    {
+      "index": 62,
+      "level": 2,
+      "heading": "Acknowledgements",
+      "normalized_heading": "acknowledgments",
+      "start_line": 757,
+      "end_line": 760,
+      "body_char_count": 1683
+    },
+    {
+      "index": 63,
+      "level": 2,
+      "heading": "Author contributions",
+      "normalized_heading": "author contributions",
+      "start_line": 761,
+      "end_line": 766,
+      "body_char_count": 427
+    },
+    {
+      "index": 64,
+      "level": 2,
+      "heading": "Funding",
+      "normalized_heading": "funding",
+      "start_line": 767,
+      "end_line": 770,
+      "body_char_count": 51
+    },
+    {
+      "index": 65,
+      "level": 2,
+      "heading": "Competing interests",
+      "normalized_heading": "competing interests",
+      "start_line": 771,
+      "end_line": 774,
+      "body_char_count": 43
+    },
+    {
+      "index": 66,
+      "level": 2,
+      "heading": "Additional information",
+      "normalized_heading": "additional information",
+      "start_line": 775,
+      "end_line": 794,
+      "body_char_count": 1568
+    }
+  ],
+  "front_matter": {
+    "authors_candidate": "multiple major groups, in particular filling critical evolutionary gaps with environmental genomic diversity for clades lacking reference genomes.",
+    "affiliations": [
+      "Fig. 1 | Global phylogenetic analysis of plastid genomes from the sunlit ocean. Maximum-Likelihood phylogeny inferred using 93 plastid-encoded genes and the LG + F + I + G4 model in IQ-TREE. The phylogeny contains 179 manually selected reference genomes (166 plastid and 13 cyanobacterial genomes) and 660 plastid MAGs (ptMAGs) from various algal groups; cyanobacteria (including the *Paulinella* plastid) were set as outgroup. Ring 1 around the phylogeny indicates algal groups; Ring 2 depicts whether the taxon is a reference sequence or a MAG; Ring 3 depicts the estimated size of each marine taxon as determined by metagenomic mapping of 937 *Tara* Ocean metagenomes to each genome (see Methods). Colpodellid branches have been shortened to 40% of their original length to improve visual clarity. The full phylogeny with taxon labels is shown in Supplementary Fig. 7."
+    ],
+    "correspondence": [
+      "To find a possible correspondence with the Lepto-01 ptMAG, mtMAGs needed to fulfil two complementary requirements. Most importantly, their read coverage should show strong correlation with the Lepto-01 ptMAG across the *Tara* Oceans metagenomes. Secondly, their phylogenetic position among reference mitochondrial genomes should not be placed within known major algal groups. Among the 34 mtMAGs, one genome (Lepto-01_mtMAG_004) showed highly significant read coverage correlation with the Lepto-01 ptMAG ($R^2 = 0.96$, p-value < 0.01) (Fig. 4, Supplementary Fig. 22). Most interestingly, Lepto-01_mtMAG_004 also corresponded to a novel deep-branching lineage firmly placed as sister to haptophyte mitochondrial genomes (Fig. 4; UFB = 100%, PP = 1.0). This mtMAG is 37,793 bp long and contains 37 protein coding genes as well as 22 tRNA genes (Supplementary Fig. 23), with the presence of various marker genes indicating that it is nearly complete. Based on both criteria of abundance and phylogeny, we infer that Lepto-01_mtMAG_004 and the Lepto-01 ptMAG are from the same novel host lineage related to haptophytes."
+    ],
+    "keywords": "",
+    "abstract_candidate": "To characterise the diversity of eukaryotic algae in the global sunlit ocean, we surveyed large *Tara* Oceans metagenomic co-assemblies (~12 million contigs >2.5 kb) covering plankton size fractions ranging from 0.8 \u00b5m to 2 mm (Supplementary Data 1). These co-assemblies, each deriving from samples from a particular oceanic basin, have been shown to improve the recovery of genomes that are too scarce to be assembled from individual samples. Briefly, we used a phylogeny-guided metagenomic approach based on the RNApolB (*rpoB*) gene, and complementary genomic and environmental information to characterise and manually curate an initial set of 1,448 plastid metagenome-resolved genomes (ptMAGs) with anvi (see Methods). Two additional single-contig ptMAGs related to the focal clade of our study (see subsequent sections) were subsequently added from mOTUs-db. After filtering for redundancy (ANI >98%), our final plastid genome database derived from all oceanic regions consisted of 660 new ptMAGs, as well as 166 reference plastid genomes (Supplementary Fig. 1, Supplementary Data 1). The occurrence of 44 single copy plastid core genes indicated that the ptMAGs are 62.9% complete on average, with low redundancy (average: 2.5%) (Supplementary Fig. 2). 126 ptMAGs contained at least 40 of the 44 core plastid genes and were thus deemed near complete. However, no ptMAG mapped as a circular sequence due to the absence of the ribosomal RNA operon which is often missing from MAGs. The ptMAGs had a median size of 65.7 kbp, with GC content ranging between 24.9% and 46.3%, and encoded up to 168 genes (Supplementary Data 1; Supplementary Figs. 3-5). The ptMAG abundance, as estimated by sequencing depth, varied by more than four orders of magnitude, ranging from a chlorophyte ptMAG with ~21,000\u00d7 coverage to a diatom ptMAG with only ~2\u00d7 coverage across all *Tara* Oceans metagenomes (Supplementary Data 1). Collectively, the ptMAGs were far more abundant in the sunlit oceans compared to selected culture representative genomes (82.5% of the total signal), in line with a previous comparison of nuclear genomes among the same metagenomes (Supplementary Fig. 6)."
+  },
+  "field_audit": {
+    "title": {
+      "expected": true,
+      "populated": true,
+      "source": "title_line",
+      "source_headings": [],
+      "char_count": 71,
+      "preview": "A large resource of environmental plastid genomes from the sunlit ocean",
+      "text": "A large resource of environmental plastid genomes from the sunlit ocean"
+    },
+    "authors": {
+      "expected": true,
+      "populated": true,
+      "source": "front_matter",
+      "source_headings": [],
+      "char_count": 146,
+      "preview": "multiple major groups, in particular filling critical evolutionary gaps with environmental genomic diversity for clades lacking reference genomes.",
+      "text": "multiple major groups, in particular filling critical evolutionary gaps with environmental genomic diversity for clades lacking reference genomes."
+    },
+    "affiliations": {
+      "expected": true,
+      "populated": true,
+      "source": "front_matter",
+      "source_headings": [],
+      "char_count": 871,
+      "preview": "Fig. 1 | Global phylogenetic analysis of plastid genomes from the sunlit ocean. Maximum-Likelihood phylogeny inferred using 93 plastid-encoded genes and the LG + F + I + G4 model in IQ-TREE. The phylogeny contains 179 manually selected reference genomes (166 plastid and 13 cyanobacterial genomes) and 660 plastid MAGs (ptMAGs) from various algal groups; cyanobacteria (including the *Paulinella* pla",
+      "text": "Fig. 1 | Global phylogenetic analysis of plastid genomes from the sunlit ocean. Maximum-Likelihood phylogeny inferred using 93 plastid-encoded genes and the LG + F + I + G4 model in IQ-TREE. The phylogeny contains 179 manually selected reference genomes (166 plastid and 13 cyanobacterial genomes) and 660 plastid MAGs (ptMAGs) from various algal groups; cyanobacteria (including the *Paulinella* plastid) were set as outgroup. Ring 1 around the phylogeny indicates algal groups; Ring 2 depicts whether the taxon is a reference sequence or a MAG; Ring 3 depicts the estimated size of each marine taxon as determined by metagenomic mapping of 937 *Tara* Ocean metagenomes to each genome (see Methods). Colpodellid branches have been shortened to 40% of their original length to improve visual clarity. The full phylogeny with taxon labels is shown in Supplementary Fig. 7."
+    },
+    "abstract": {
+      "expected": true,
+      "populated": true,
+      "source": "front_matter",
+      "source_headings": [],
+      "char_count": 2167,
+      "preview": "To characterise the diversity of eukaryotic algae in the global sunlit ocean, we surveyed large *Tara* Oceans metagenomic co-assemblies (~12 million contigs >2.5 kb) covering plankton size fractions ranging from 0.8 \u00b5m to 2 mm (Supplementary Data 1). These co-assemblies, each deriving from samples from a particular oceanic basin, have been shown to improve the recovery of genomes that are too scar",
+      "text": "To characterise the diversity of eukaryotic algae in the global sunlit ocean, we surveyed large *Tara* Oceans metagenomic co-assemblies (~12 million contigs >2.5 kb) covering plankton size fractions ranging from 0.8 \u00b5m to 2 mm (Supplementary Data 1). These co-assemblies, each deriving from samples from a particular oceanic basin, have been shown to improve the recovery of genomes that are too scarce to be assembled from individual samples. Briefly, we used a phylogeny-guided metagenomic approach based on the RNApolB (*rpoB*) gene, and complementary genomic and environmental information to characterise and manually curate an initial set of 1,448 plastid metagenome-resolved genomes (ptMAGs) with anvi (see Methods). Two additional single-contig ptMAGs related to the focal clade of our study (see subsequent sections) were subsequently added from mOTUs-db. After filtering for redundancy (ANI >98%), our final plastid genome database derived from all oceanic regions consisted of 660 new ptMAGs, as well as 166 reference plastid genomes (Supplementary Fig. 1, Supplementary Data 1). The occurrence of 44 single copy plastid core genes indicated that the ptMAGs are 62.9% complete on average, with low redundancy (average: 2.5%) (Supplementary Fig. 2). 126 ptMAGs contained at least 40 of the 44 core plastid genes and were thus deemed near complete. However, no ptMAG mapped as a circular sequence due to the absence of the ribosomal RNA operon which is often missing from MAGs. The ptMAGs had a median size of 65.7 kbp, with GC content ranging between 24.9% and 46.3%, and encoded up to 168 genes (Supplementary Data 1; Supplementary Figs. 3-5). The ptMAG abundance, as estimated by sequencing depth, varied by more than four orders of magnitude, ranging from a chlorophyte ptMAG with ~21,000\u00d7 coverage to a diatom ptMAG with only ~2\u00d7 coverage across all *Tara* Oceans metagenomes (Supplementary Data 1). Collectively, the ptMAGs were far more abundant in the sunlit oceans compared to selected culture representative genomes (82.5% of the total signal), in line with a previous comparison of nuclear genomes among the same metagenomes (Supplementary Fig. 6)."
+    },
+    "methods": {
+      "expected": true,
+      "populated": true,
+      "source": "section_run",
+      "source_headings": [
+        "Methods",
+        "Tara Oceans metagenomes",
+        "Phylogeny-guided genome-resolved metagenomics for plastids",
+        "Recovery of additional ptMAGs from the mOTU database",
+        "Creation of a non-redundant plastid genomic database",
+        "Biogeography of the GOEV database",
+        "Genome annotation of ptMAGs",
+        "Taxonomic annotation of ptMAGs",
+        "Phylogenomic plastid dataset assembly"
+      ],
+      "char_count": 7742,
+      "preview": "## Methods\n\n## Tara Oceans metagenomes\n\nThe 937 metagenomes from *Tara* Oceans used in the study are publicly available at the EBI under project PRJEB402.\n\n## Phylogeny-guided genome-resolved metagenomics for plastids\n\nWe used two complementary datasets (metagenomic assemblies and evolutionary-informative proteins) to characterise ptMAGs. On the one side, we used 11 large metagenomic co-assemblies",
+      "text": "## Methods\n\n## Tara Oceans metagenomes\n\nThe 937 metagenomes from *Tara* Oceans used in the study are publicly available at the EBI under project PRJEB402.\n\n## Phylogeny-guided genome-resolved metagenomics for plastids\n\nWe used two complementary datasets (metagenomic assemblies and evolutionary-informative proteins) to characterise ptMAGs. On the one side, we used 11 large metagenomic co-assemblies from *Tara* Oceans (~12 million contigs from 798 eukaryote-enriched metagenomes) which were organised into 2550 metabins using constrained automatic binning and processed with anvi'o v7 for manual binning purposes. On the other side, we used proteins corresponding to the DNA-dependent RNA polymerase B subunit (RNApolB) and found in those *Tara* Oceans metabins, in the context of a phylogeny of representative sequences (amino acid level with sequence similarity <90%). Until now, the two datasets had only been used to characterise genomes corresponding to RNApolB clades of giant viruses and mirusviruses. Here, we focused on a large plastid RNApolB clade most closely related to that of Cyanobacteria and used this signal as guidance for genome-resolved metagenomics using the anvi'o interactive interface. Briefly, we mainly used sequence composition and differential coverage across metagenomes of the corresponding co-assembly to characterise and manually curate 1448 ptMAGs in the corresponding metabins. The strong correlation between initial signal (number of plastid RNApolB genes) and outcome (number of characterised ptMAGs) across metabins (Supplementary Fig. 1) demonstrated the effectiveness of this method to survey the environmental genomics of plastids in complex marine metagenomes. Preliminary phylogenies (see sections below) with 32 genes indicated a deep-branching lineage (the leptophytes) composed of three ptMAGs.\n\n## Recovery of additional ptMAGs from the mOTU database\n\nTo broaden the scope of our survey, we exploited 85,123 metagenomic assemblies from the mOTU global metagenomic resource covering a wide range of environmental samples. A total of 1,969,342 RNApolA genes were previously characterised from this resource. Note that RNApolA displays a very similar evolutionary signal compared to RNApolB. Here, we identified 6954 contigs >50 kbp that contained a RNApolA gene with relatively high sequence similarity to that of our characterised ptMAGs (DIAMOND blast, with percent identify >70% at the amino acid level). Based on preliminary phylogenies, we found one contig characterised from a *Tara* Oceans metagenome and corresponding to a leptophyte (contig ID Lepto-01_REFM_CHLORO_00001 with a length of 104,203 nt). In addition, we also found one contig (also characterised from a *Tara* Oceans metagenome) and corresponding to a deep-branching clade of haptophytes (contig ID REFM_CHLORO_00002 with a length of 84,869 nt). We integrated these two contigs into our database of ptMAGs.\n\n## Creation of a non-redundant plastid genomic database\n\nWe collected all the manually curated *Tara* Oceans ptMAGs as well as the two ptMAGs from mOTUS-db and included 166 manually selected reference plastid genomes from cultured organisms. We determined the average nucleotide identity (ANI) of each pair of genomes using skani v0.2.1. Genomes were considered redundant when their ANI was >98% (minimum alignment of >25% of the smaller genome in each comparison). For genomes found to be redundant, reference chloroplast genomes were selected over ptMAGs, and in most cases where only MAGs were redundant, the longest one was selected. We estimated the completeness and redundancy of each genome based on the occurrence of 44 core-plastid genes (Supplementary Table 3), and removed ptMAGs with a redundancy level higher than 15%. This analysis provided a non-redundant database containing the 166 reference plastid genomes and 660 ptMAGs.\n\nTo assess potential mitochondrial contamination, all ptMAGs were screened for the presence of 25 canonical mitochondrial genes (Supplementary Table 4), as listed in ref. 52. Five non-redundant ptMAGs were found to contain genes annotated as typical mitochondrial genes, which were confirmed by BLAST searches. Further manual inspection indicated that these instances of contamination were not due to chimeric misassemblies. Instead, they resulted from inadvertent co-binning of mitochondrial and plastid contigs. The contaminated contigs were removed from their respective ptMAGs.\n\n## Biogeography of the GOEV database\n\nWe performed a mapping of 937 metagenomes from *Tara* Oceans to calculate the mean coverage (vertical coverage) and detection (horizontal coverage) of each genome in the non-redundant plastid genomic database. Briefly, we used BWA v0.7.15 (minimum identity of 95%) and a FASTA file containing all contigs from the database to recruit short reads from each metagenome. We considered a genome to be detected in a metagenome when >25% of its length was covered by reads. The number of recruited reads below this cut-off was set to 0 before determining the mean coverage of genomes, as an effort to minimise non-specific read recruitments.\n\n## Genome annotation of ptMAGs\n\nPlastid annotation was done with MFannot v1.3.6 using the genetic code 11. The resulting ASN format files were converted to GenBank format using the *asn2gb* utility (https://ftp.ncbi.nlm.nih.gov/asn1-converters/by_program/asn2gb/) from the NCBI toolkit. We then extracted all annotated proteins from the GenBank files using the script *gb_to_prot.py* (available at https://github.com/burki-lab/ptMAGs/blob/main/src/gb_to_prot.py). For the leptophyte ptMAGs, intron prediction was carried out using RNAweasel (https://megasun.bch.umontreal.ca/apps/rnaweasel/), the 5S rRNA gene was detected with Infernal Cmscan (https://www.ebi.ac.uk/jdispatcher/rna/infernal_cmscan), and maps were generated using OGDraw version 1.3.1 (https://chlorobox.mpimp-golm.mpg.de/OGDraw.html). Downstream analyses with OrthoFinder (see *Comparative analysis of plastid gene content in leptophytes and related lineages*) revealed that MFannot did not detect the *rpl22* gene, labelling it as a \u201chypothetical protein\u201d instead. The annotations of the leptophyte ptMAGs were manually updated to include this gene.\n\n## Taxonomic annotation of ptMAGs\n\nWe manually determined the taxonomy of ptMAGs based on the global phylogenetic analysis (see section *Phylogenomic analyses of plastid dataset*), using guidance from the reference plastid genomes.\n\n## Phylogenomic plastid dataset assembly\n\nWe began by using the two plastid gene sets originally defined by Janou\u0161kovec et al 2010: a larger set of 68 plastid genes, and a more conserved subset of 34 genes. These served as the foundation for constructing preliminary phylogenies. During dataset assembly (see below), two genes were excluded: *acsF* due to low taxon occupancy, and *psbH* due to anomalously long branches in its single-gene tree. This reduced the gene sets to 32 and 66 genes, respectively. The resulting preliminary phylogenies identified leptophytes as a novel clade, but could not confidently resolve their position using maximum-likelihood analyses (Supplementary Figs. 25\u201326). Therefore, we attempted to increase the phylogenetic signal, by including additional genes used in Ponce-Toledo et al 2017 and Pietluch et al 2024, provided they were also present in leptophytes, resulting in a final set of 93 genes (Supplementary Data 4).\n\nWe first built a dataset of 93 protein-coding genes from the 179 reference taxa (166 plastid genomes and 13 cyanobacterial genomes). This was done as follows: (1) Homologous sequences from all reference taxa were retrieved with BLASTP v2.15.0 searches using sequences\n\nNature Communications | (2026)17:662 9"
+    },
+    "main": {
+      "expected": true,
+      "populated": true,
+      "source": "section_runs",
+      "source_headings": [
+        "Article",
+        "Leptophytes: a new deep branching plastid group",
+        "Article",
+        "Leptophyte plastids have phylogenetic affinities with haptophytes and cryptophytes",
+        "Article",
+        "a Bayesian inference based on 20,292 amino acid sites across 107 taxa under the CAT + GTR + G4 model.",
+        "c Maximum likelihood estimates under different models for alternate positions of leptophytes within the CHL clade.",
+        "Article",
+        "A mitochondrial genome places leptophytes as sister to haptophytes",
+        "Discussion",
+        "Article",
+        "Abundance correlation across Tara Oceans metagenomes",
+        "Article",
+        "a. Plastid transfer from cryptophytes to ancestor of haptophytes and leptophytes",
+        "b. Plastid transfer from haptophytes to cryptophytes",
+        "Article",
+        "Article",
+        "Site-homogeneous models",
+        "Site-heterogeneous models",
+        "Derivatives of 107-taxon dataset",
+        "Site-heterogeneous models",
+        "Article",
+        "GHOST and GF-mix models",
+        "16S rDNA phylogeny",
+        "Rpl36 alignment and phylogeny",
+        "Synteny analysis of leptophyte ptMAGs",
+        "Comparative analysis of plastid gene content in leptophytes and related lineages",
+        "Leptophyte associations with environmental parameters",
+        "Survey for putative nucleomorphs of leptophytes",
+        "Survey for leptophyte psbO sequences",
+        "Article",
+        "Survey for leptophyte 18S rDNA sequences.",
+        "Extracting mitochondrial contigs from targeted samples.",
+        "Abundance correlation analyses.",
+        "Phylogenetic inference.",
+        "Article",
+        "Reporting summary",
+        "Code availability",
+        "Article",
+        "Article",
+        "Author contributions",
+        "Additional information"
+      ],
+      "char_count": 63338,
+      "preview": "## Article\n\nhttps://doi.org/10.1038/s41467-025-67401-4\n\nFig. 1 | Global phylogenetic analysis of plastid genomes from the sunlit ocean. Maximum-Likelihood phylogeny inferred using 93 plastid-encoded genes and the LG + F + I + G4 model in IQ-TREE. The phylogeny contains 179 manually selected reference genomes (166 plastid and 13 cyanobacterial genomes) and 660 plastid MAGs (ptMAGs) from various alg",
+      "text": "## Article\n\nhttps://doi.org/10.1038/s41467-025-67401-4\n\nFig. 1 | Global phylogenetic analysis of plastid genomes from the sunlit ocean. Maximum-Likelihood phylogeny inferred using 93 plastid-encoded genes and the LG + F + I + G4 model in IQ-TREE. The phylogeny contains 179 manually selected reference genomes (166 plastid and 13 cyanobacterial genomes) and 660 plastid MAGs (ptMAGs) from various algal groups; cyanobacteria (including the *Paulinella* plastid) were set as outgroup. Ring 1 around the phylogeny indicates algal groups; Ring 2 depicts whether the taxon is a reference sequence or a MAG; Ring 3 depicts the estimated size of each marine taxon as determined by metagenomic mapping of 937 *Tara* Ocean metagenomes to each genome (see Methods). Colpodellid branches have been shortened to 40% of their original length to improve visual clarity. The full phylogeny with taxon labels is shown in Supplementary Fig. 7.\n\nmultiple major groups, in particular filling critical evolutionary gaps with environmental genomic diversity for clades lacking reference genomes.\n\n## Leptophytes: a new deep branching plastid group\n\nAside from the extended genomic diversity within clearly defined plastid groups, we also recovered a fully supported deep-branching clade formed by four red algal-derived ptMAGs that is related to, but distinct from all major groups with complex red plastids, i.e., haptophytes, cryptophytes, ochrophytes, and myzozoans (Fig. 1). To facilitate discussion, we propose the informal name leptophytes for this new group of plastid genomes. The name refers to the putative small size (*lepto-* indicates something small) of the corresponding algal cells, which we infer to be below 5 \u00b5m based on genomic size fraction distributions across the *Tara* Oceans metagenomes (Supplementary Fig. 10). Leptophytes were collectively detected in the surface waters of most oceanic basins (Supplementary Fig. 11). At the level of individual genomes, Lepto-01 and Lepto-02 were only detected in the Arctic Ocean characterised by cooler, less saline, and more nutrient-rich waters, while Lepto-03 and Lepto-04 showed a broader and non-polar\n\nNature Communications | (2026)17:662\n\n3\n\n## Article\n\nhttps://doi.org/10.1038/s41467-025-67401-4\n\nFig. 2 | Distribution patterns of plastid-encoded genes across algae with red plastids. A binary heatmap and dendrograms of genes and taxa generated using the UPGMA algorithm, based on the presence or absence of 237 plastid protein-coding genes. Blue and grey boxes represent gene presence and absence, respectively. For leptophytes, present genes are highlighted in red for improved clarity. A larger version of this figure, including gene names, is presented in Supplementary Fig. 17.\n\ndistribution associated with warmer, more saline, and nutrient-poor waters (Supplementary Figs. 12-13). Although leptophyte genomes were usually found in relatively low abundance (representing 0.14% of the total plastid signal, and detected in 104 out of 147 *Tara* stations with a median cumulative coverage of 2.3\u00d7), Lepto-01 stood out as one of the most detected plastid genomes in two Arctic stations (up to 124x mean coverage in the 0.8-2000 \u00b5m size fraction), providing evidence that leptophytes can experience localised increases in abundance under certain conditions (Supplementary Table 1). Interestingly, two 16S rDNA gene fragments were recovered in Lepto-01 and Lepto-04, respectively, which revealed that leptophytes are most similar to a few amplicon sequences of the enigmatic DPL2 plastid group. The 16S rDNA of Lepto-04 was 100% similar to DPL2, while Lepto-01 shared 91% similarity to DPL2. The relatedness of DPL2 to leptophytes was confirmed by 16S rDNA phylogeny, which also showed a weak affinity of the group to haptophytes (Supplementary Fig. 14). The reported subtropical distribution and pico-size of DPL2 largely overlap with Lepto-03 and Lepto-04 but not with the Arctic preference of Lepto-01 and Lepto-02, thus altogether indicating that leptophytes form a more diverse and widespread group than the narrower DPL2 lineage.\n\nLepto-01 is the best representative genome for the group. This assembly had the highest coverage (detected in 20 stations with an average mean coverage of 6.3\u00d7) but it was also near complete and contiguous with a single contig of 104,203 bp. This ptMAG contained 144 genes with 118 proteins (no detectable introns) and 24 tRNAs (Supplementary Fig. 15). Interestingly, leptophyte plastid genomes seem to lack inverted repeats commonly found in plastid genomes, although whether they instead contain direct repeats such as in some haptophytes, or lack repeat regions altogether remains unresolved (Supplementary Fig. 15). The functional repertoire of Lepto-01 shows that it is a photosynthetic plastid genome, retaining genes for the core components of both photosystem I and II (*psa*- and *psb*-genes), carbon fixation (*rbcL* and *rbcS*), cytochrome b6/f complex (*pet*-genes), ATP synthase (*atp*-genes), and chlorophyll biosynthesis (*chlI*) (Fig. 2, Supplementary Fig. 15). While less complete and more fragmented, the three other leptophyte ptMAGs are largely syntenic with Lepto-01 and support these functional trends (Supplementary Fig. 16). The near complete assembly of Lepto-01 allowed us to compare its gene content with that of red algae and red algal-derived plastids. UPGMA-clustering of homologous gene occurrence showed that the gene content of leptophytes is most similar to that of haptophytes (Fig. 2). In particular, leptophytes are lacking ten genes (including *dnaB*, *ftsh*, *petF*, *psbW*, *rpl4*, *rpl18*, *rpl29*, *rpl35*, *sufC*, *ycf33*) that are among the 18 genes almost completely absent in haptophytes, but mostly present in all other algal groups with plastids of red-algal origin (Fig. 2, Supplementary Fig. 17).\n\n## Leptophyte plastids have phylogenetic affinities with haptophytes and cryptophytes\n\nTo gain further insight into the position of leptophytes in the plastid tree, we reconstructed and evaluated phylogenies using several complex site-heterogeneous mixture models in Bayesian and ML implementations. These models, which consider site-specific amino-acid frequencies, have been shown to generally improve tree estimations but they come at heavier computational costs. We thus produced a reduced dataset based on the same 93 genes as in the full phylogeny but containing 107 plastid genomes to speed up the analyses while maintaining the phylogenetic breadth for red algae and red algal plastid-containing lineages. Due to overall higher completeness, reference genomes were preferred over ptMAGs when possible, and the least complete leptophyte ptMAG (Lepto-02) was excluded. The battery of advanced phylogenetic analyses all unambiguously confirmed that leptophytes form a novel group of plastid genomes related to haptophytes and cryptophytes (Fig. 3a). This affinity is also supported by a shared rare bacterial gene replacement by horizontal transfer of the ribosomal protein gene *rpl36* into the plastid genomes of all three groups (Fig. 3b). We will refer to this group as the *Cryptophytes-Haptophytes-Leptophytes* (CHL) group.\n\nLeptophytes were recovered as sister to both haptophytes and cryptophytes (HC-sister topology) with the Bayesian model CAT + GTR + G4 (PP = 0.99), as well as the ML models GTR + CAT-PMSF + G4 (BS = 88) and LG + MEOW80 + G4 (UFB = 61) in which site profiles are estimated directly from the data. The same position for leptophytes was recovered with the empirical mixture model cpREV+C60 + G4 model and in an analysis that removed the 10 fastest-evolving taxa\n\nNature Communications | (2026) 17:662 4\n\n## Article\n\nhttps://doi.org/10.1038/s41467-025-67401-4\n\n## Bayesian inference based on 20,292 amino acid sites across 107 taxa under the CAT + GTR + G4 model.\n\nBranch support values are given in the following order: Bayesian posterior probabilities (PPs), non-parametric bootstrap support (BS; 100 replicates) under the GTR + CAT-PMSF model, and ultrafast bootstrap support (UFB; 1000 replicates) under the LG + MEOW80 + G4 model. The inset shows the alternative topology of the CHL clade.\n\n## Maximum likelihood estimates under different models for alternate positions of leptophytes within the CHL clade.\n\nLikelihoods in bold text represent the highest scoring topology. Difference in log-likelihood scores between each topology and the best-scoring topology is shown by data bars in blue. A single asterisk indicates topologies rejected by the Bonferroni-corrected chi-squared test, while two asterisks indicate topologies also rejected by an Approximately Unbiased (AU) test. See also Supplementary Table 2 and Supplementary Data 2 for corresponding p-values and degrees of freedom.\n\n(Supplementary Figs. 18\u201319). Because of the relatively modest bootstrap support for the position of leptophytes in ML inferences, we compared the likelihood of the three possible topologies within the CHL group, enforced as topological constraints but letting other branches and parameters to be optimised by ML. Under the GTR + CAT-PMSF model, both alternative topologies were rejected by a likelihood chi-squared test with a Bonferroni correction for multiple comparisons, and the sister position to cryptophytes was additionally rejected by an AU test (Fig. 3c). The likelihood values under the LG + MEOW80 + G4 model had less than four points difference across the three topologies, and none were statistically rejected (Fig. 3c).\n\nWe then evaluated whether the position of leptophytes was influenced by two common types of systematic errors in phylogenetic reconstruction: heterotachy of evolutionary rates, and compositional heterogeneity across tree branches. To do this, we calculated the likelihoods of the three alternate phylogenies as fixed topologies under newly developed complex models as additional parameters to the LG + MEOW80 + G4 model. Heterotachy was modelled with GHOST, while compositional heterogeneity was accounted for with the GFmix model. The GHOST model continued to favour the HC-sister topology, but the best topology under the GFmix model changed to support the monophyly of leptophytes and haptophytes\n\nDataset ML analyses using fixed topology trees\n\nUntreated LG-MEOW80 LG-MEOW80 + GHOST (8 cat) LG-MEOW80 + GF-MIX\u2020 Stationary trimmed LG-MEOW80\n\nModel GTR-CAT-PMSF LG-MEOW80 + GHOST (8 cat) LG-MEOW80 + GF-MIX\u2020\n\nTopology\n\nLeptophytes sister to haptophytes and cryptophytes -031909.236 -1056271.087 -1045458.696 -1055620.569 * -592787.090\n\nLeptophytes sister to haptophytes -031920.074 * -1056274.766 -1045464.078 * -1055586.193 -592793.164 *\n\nLeptophytes sister to cryptophytes -031924.826 -1056273.024 -1045463.152 * -1055602.069 * -592795.016 *\n\n* Rejected by Bonferroni corrected \u03c72 test\n\nRejected by Bonferroni corrected \u03c72 test and AU test\n\n\u2020 AU test not possible under GF-MIX model\n\nNature Communications | (2026)17:662\n\n5\n\n## Article\n\nhttps://doi.org/10.1038/s41467-025-67401-4\n\n(H-sister topology) (Fig. 3a, c). With both models, the alternative tested topologies were rejected by the Bonferroni-corrected likelihood chi-squared test (Fig. 3c). Given the observation that compositional bias may have impacted our phylogenetic reconstructions, we attempted to minimise this artefact by recoding the 20 amino acids to a reduced 4-class alphabet (SR4 recoding), and by removing the most heterogeneous sites (~25% of positions in the alignment) with a stationary-based trimmer. In agreement with the GFmix model, the recoded dataset recovered the H-sister topology, albeit with low support (PP = 0.75; Supplementary Fig 20). However, the stationary-trimmed alignment recovered the HC-sister topology, also strong support under the CAT + GTR + G model (PP = 0.99, but low support with the LG + MEOW80 + G model (UFB = 72) (Supplementary Fig. 21). Overall, these results indicate that resolving the topology of the CHL group in general and placement of leptophytes in particular is not trivial, as both HC-sister and H-sister topologies remain credible (Supplementary Note 1).\n\n## mitochondrial genome places leptophytes as sister to haptophytes\n\nPlastid genomes do not necessarily mirror the long-term evolutionary trajectory of their host cell because of the complex history of endosymbioses. In an effort to identify potential nuclear-encoded sequences for leptophytes, we searched the Arctic stations data\u2014where the leptophyte abundance was the highest\u2014for *psbO* and 18S rDNA candidate genes (see Methods). The *psbO* gene is essential for photosynthesis, it is always host-encoded and never found in non-photosynthetic organisms. Although it is derived from the endosymbiont and thus would not be a good phylogenetic marker for the host, our rationale was that it could pinpoint to host contigs that may contain additional genes. These analyses did not provide promising candidates for either gene.\n\nWe then turned to mitochondria, as mitochondrial genomes have the double advantage of typically being multi-copy and in theory mirroring the evolution of the host as this organelle traces back to the origin of eukaryotes. From the six Arctic samples where the Lepto-01 ptMAG was the most abundant, we performed a targeted metagenomic co-assembly (total of 2.54 billion metagenomic reads providing a cumulative coverage of 299\u00d7 for the Lepto-01 ptMAG) that produced 56,103 contigs larger than five kb. Functional annotations based on reference mitochondrial genomes resulted in the identification of 34 mitochondrial contigs (mtMAGs, Supplementary Data 3).\n\nTo find a possible correspondence with the Lepto-01 ptMAG, mtMAGs needed to fulfil two complementary requirements. Most importantly, their read coverage should show strong correlation with the Lepto-01 ptMAG across the *Tara* Oceans metagenomes. Secondly, their phylogenetic position among reference mitochondrial genomes should not be placed within known major algal groups. Among the 34 mtMAGs, one genome (Lepto-01_mtMAG_004) showed highly significant read coverage correlation with the Lepto-01 ptMAG ($R^2 = 0.96$, p-value < 0.01) (Fig. 4, Supplementary Fig. 22). Most interestingly, Lepto-01_mtMAG_004 also corresponded to a novel deep-branching lineage firmly placed as sister to haptophyte mitochondrial genomes (Fig. 4; UFB = 100%, PP = 1.0). This mtMAG is 37,793 bp long and contains 37 protein coding genes as well as 22 tRNA genes (Supplementary Fig. 23), with the presence of various marker genes indicating that it is nearly complete. Based on both criteria of abundance and phylogeny, we infer that Lepto-01_mtMAG_004 and the Lepto-01 ptMAG are from the same novel host lineage related to haptophytes.\n\n## Discussion\n\nThe vast majority of organellar genomic knowledge has been gained from cultured organisms. We demonstrate that plastid and mitochondrial genomes can readily be recovered from large metagenomic assemblies using phylogeny-guided genome-resolved metagenomics. This study represents the first global-scale survey of environmental plastid genomes (ptMAGs), providing a culture-independent view of the diversity, functioning and evolutionary history of plastid genomes occurring in marine surface water. ptMAGs better represent the diversity and abundance of planktonic algae than reference genomes, spanning most major marine phytoplanktonic groups and often filling in evolutionary gaps in areas of the tree poorly represented by references.\n\nOne very interesting new group of plastid genomes are the leptophytes, a globally distributed and generally rare deep-branching lineage formed by four ptMAGs in our data. Novel plastid diversity at this taxonomic depth is very rarely reported. Currently, only the environmental plastid lineages DPL1 and especially DPL2 are still considered possible deep-branching phytoplankton lineages outside of eukaryotic supergroups. Based on 16S rDNA data recovered from the ptMAGs and biogeographical comparison, we show not only that one of the leptophytes (Lepto-04) corresponds to DPL2, thus representing the first genomic data available for this enigmatic group, but also that leptophytes form a more diverse, widespread, and abundant group than previously known. Part of our findings have now been independently recapitulated, with the notable recovery of the Lepto-01 ptMAG from a different metagenomic dataset.\n\nThe plastids of leptophytes are evolutionarily related to cryptophytes and haptophytes, indicating that they possess red-algal derived plastids. This is firmly supported by phylogenetic analyses as well as gene content comparison and the exclusive presence of the c-type paralog of the ribosomal protein gene *rpl36* in cryptophytes, haptophytes and leptophytes (the CHL group). The exact phylogenetic position of leptophyte plastids within the CHL group remains ambiguous in spite of the use of a dense taxon-sampling, 93 genes, and a range of sophisticated evolutionary models and data treatments. Taking into account this phylogenetic uncertainty, we propose two competing hypotheses for the evolutionary origin of leptophyte plastids: 1) the HC-sister topology (leptophytes are sister to both cryptophytes and haptophytes), which was favoured by all site-heterogeneous models, or 2) the H-sister topology (leptophytes are sister to haptophytes, to the exclusion of cryptophytes), which was favoured only after specifically taking into consideration amino acid compositional heterogeneity across taxa, and also by the 16S rDNA phylogeny.\n\nIn contrast to the robust support for most bipartitions in the plastid tree (Fig. 3a), the ambiguity in the placement of leptophytes likely resulted from weak stochastic phylogenetic signals due to the ancient origin of the plastids and closely spaced speciation events early in the CHL group. Although a precise timeframe for the origin of the CHL plastids is unavailable, it has been suggested that both cryptophytes and haptophytes acquired their plastids more than 1 billion years ago. Based on the phylogenetic position of leptophytes, it is reasonable to assume that this timeframe represents a minimum age estimate for the divergence of this group. This ancient age, combined with the extremely short internal branch uniting haptophytes and cryptophytes (Fig. 3) and the limited phylogenetic signal in plastid genomes, means that it is probably not possible with our current phylogenetic models and data to better resolve this part of the plastid tree.\n\nUnlike the unsettled phylogenetic position of the leptophyte plastids, we retrieved a near complete mitochondrial contig that we have assigned to leptophytes based on highly significant abundance correlation and well supported sister relationship to haptophytes. This is particularly interesting because unlike plastids, mitochondria have been vertically transmitted throughout the evolution of eukaryotes and thus show the history of the hosts. This phylogenetic position bears important implications on our understanding of the origin and spread of complex red plastids across the eukaryotic tree. To explain\n\nNature Communications | (2026) 17:662\n\n6\n\n## Article\n\nhttps://doi.org/10.1038/s41467-025-67401-4\n\n## Abundance correlation across Tara Oceans metagenomes\n\n$R^2 = 0.96, P < 0.001$\n\n<!-- Image: Phylogenetic tree with metagenome categories and abundance correlation graph -->\n\n- Haptophytes\n\n- mtMAG_010\n\n- mtMAG_028\n\n- mtMAG_033\n\n- mtMAG_013\n\n- Chrysomulina parva\n\n- Phaeocystis antarctica\n\n- Gephyrocapsa huxleyi\n\n- Paviomulina revunculiformis\n\n- Diacronema viridis\n\n- Diacronema lutheri\n\n- Lepto-01\n\n- mtMAG_004\n\n- mtMAG_016\n\n- mtMAG_010\n\n- mtMAG_002\n\n- mtMAG_008\n\n- mtMAG_012\n\n- mtMAG_019\n\n- mtMAG_017\n\n- mtMAG_007\n\n- mtMAG_009\n\n- Ectocarpus siliculosus\n\n- Phytophthora parasitica\n\n- MAST3 sp. S11\n\n- mtMAG_001\n\n- MAST1 sp. S18\n\n- mtMAG_026\n\n- mtMAG_023\n\n- mtMAG_024\n\n- mtMAG_003\n\n- Ochrophytes\n\n- Other Stramenopiles\n\n- Cryptophytes\n\n- Teleautus amphioxela\n\n- mtMAG_031\n\n- mtMAG_029\n\n- Proteomonas sulcata\n\n- Rhodomonas salina\n\n- Guillardia theta\n\n- Cryptomonas curvata\n\n- Hemiselinis andersani\n\n- Neptunogonomonas avonlea\n\n- Kathablepharidae sp. K4\n\n- Palpitomonas bilix\n\n- Microheliella marc\n\n- Picozoa sp. MS584-11\n\n- Pharyngomonas kirbyi\n\n- Naegleria gruberi\n\n- Hematodinium sp.\n\n- Tetrahymena thermophila\n\n- Hemimastix kukwesijk\n\n- Toxoplasma gondii\n\n- Goniomonads, Other Pancryptista\n\n- Spironema ct. multiciliatum\n\n- Tsukubamonas globosa\n\n- Cafeteria roenbergensis\n\n- Acanthamoeba castellanii\n\n- Vermamoeba vermiformis\n\n- Rhodelphis marinus\n\n- Dictyostelium discoideum\n\n- Ancyromonas sigmoides\n\n- Fabomonas tropica\n\n- Rhodophytes\n\n- Chondrus crepus\n\n- Compsopogon coeruleus\n\n- Cyanidioschyzon merolae\n\n- mtMAG_021\n\n- Cynothecomonas sp.\n\n- Bigelowiella natans\n\n- Plasmodiophora brassicae\n\n- Gloeochaete wittoriiana\n\n- Cyanophora paradova\n\n- mtMAG_006\n\n- mtMAG_014\n\n- Chroenolispellata sp. C15\n\n- mtMAG_005\n\n- Monosiga brevicollis\n\n- mtMAG_027\n\n- mtMAG_025\n\n- Homo sapiens\n\n- Capsaspora owczarzaki\n\n- Allomyces macrogynus\n\n- Thecamonas trahens\n\n- Gelfonella okellyi\n\n- Malawimonas jakobiformis\n\n- Mantamonas sphyrenae\n\n- Marophrys sp.\n\n- Acanthocystis sp.\n\n- Raineriophrys erinaceoides\n\n- Hetera sporidica\n\n- Colloctyion sp.\n\n- mtMAG_022\n\n- mtMAG_030\n\n- mtMAG_032\n\n- Telenemea sp. T12\n\n- Telenemea sp. T11\n\n- Telenemea sp. T11\n\n- mtMAG_030\n\n- Micromonas commoda\n\n- mtMAG_015\n\n- mtMAG_034\n\n- Physcominium patens\n\n- Mescostigma viride\n\n- Ancoracysta twista\n\n- Reclinomonas americana\n\n- Andalucia gedyi\n\n- Alveolates, Discobans, Hemimastigotes\n\n- Amoebozoans\n\n- Ancyromonads\n\n- Rhizarians\n\n- Glaucophytes\n\n- Opisthokonts\n\n- Malawimonads\n\n- Centrohelids\n\n- Telonemids\n\n- Green algae\n\n- Discobans\n\n- PP = 1\n\n- UFB = 100\n\n- PP \u2265 0.95\n\n- UFB \u2265 85\n\n- PP < 0.95\n\n- UFB < 85\n\n- 1.0\n\nFig. 4 | Phylogeny and abundance patterns of a putative leptophyte mitochondrial genome. Maximum-Likelihood phylogeny inferred using 28 mitochondrial genes in IQ-TREE. Support values on branches indicate Bayesian posterior probabilities (PPs) under the CAT + GTR + G model and ultrafast bootstrap support (UFB; 1000 replicates) under the LG + C60 + G4 model. The phylogeny contains 34 mitochondrial MAGs (mtMAGs, highlighted in bold) recovered from a coassembled metagenomic dataset of the six Tara Oceans samples with the highest Lepto-01 abundance, and 68 manually selected reference genomes. The phylogeny was arbitrarily rooted with jakobids (discobans). The inset shows the abundance correlation between the putative Lepto-01 mtMAG and the Lepto-01 ptMAG across Tara Oceans metagenomes from the 0.22\u20133 \u00b5m size fraction. The p-value ( $p = 2.1 \\times 10 ) was calculated from a two-sided t-test of the regression slope ( $H_0$ : slope = 0). No correction for multiple comparisons was applied. Source data is provided in the associated code repository .\n\nthe patchy distribution of these plastids in the tree, the existing models of serial endosymbiosis all identify cryptophytes as the unique recipient of secondary red plastids (plastids derived directly from red algae), mostly because cryptophytes are the only known algae that have retained a red algal nucleomorph . Most models also specifically propose a plastid transfer between cryptophytes and haptophytes to take into account the rare *rpl36* gene replacement into their plastid genomes and affinities of both groups in several plastid phylogenies . Our new plastid and mitochondrial phylogenies are consistent with available data, but adding leptophytes allows us to make new predictions on the relative timing of events and possible direction of plastid transfer.\n\nReconciling our two hypotheses for the placement of leptophytes in the plastid phylogeny with the best current estimate of eukaryotic phylogeny , we propose two models for the evolution of complex red plastids, focusing here on the CHL group for clarity (Fig. 5). Both\n\nNature Communications | (2026) 17:662\n\n7\n\n## Article\n\nhttps://doi.org/10.1038/s41467-025-67401-4\n\n## Plastid transfer from cryptophytes to ancestor of haptophytes and leptophytes\n\n<!-- Image: a. Plastid transfer from cryptophytes to ancestor of haptophytes and leptophytes -->\n\n## Plastid transfer from haptophytes to cryptophytes\n\n<!-- Image: b. Plastid transfer from haptophytes to cryptophytes -->\n\nFig. 5 | Main proposed models for evolution of complex red plastids. a Scenario of endosymbiosis events if leptophyte plastids are sister to those of haptophytes, and b scenario if leptophyte plastids are sister to both haptophyte and cryptophytes plastids. The main trees depict hypothetical host relationships with red algae, cryptophytes, haptophytes, and leptophytes highlighted. Numbers on the tree represent the level of endosymbiosis events. Inset phylogenies show the corresponding plastid phylogenies. Plastid transfers to ochrophytes and myzozoans are not depicted for clarity. Illustrations of algae are from ref. 83.\n\nmodels assume a sister relationship of leptophytes to haptophytes in the eukaryote tree based on our mitochondrial phylogeny. Whether this means that haptophytes should be expanded to include leptophytes as a new deeply diverging class, or that leptophytes is a distinct but related lineage, will require detailed morphological information (such as the presence of a haptonema) not available at the moment. The first model presumes that leptophytes are sister to haptophytes (H-sister) in the plastid phylogeny as well (Fig. 5a). Leptophytes would have inherited their plastids, including the *rpl36-c* paralog, in a common ancestor with haptophytes by tertiary endosymbiosis from cryptophytes and would lack a nucleomorph. The second model reconciles the HC-sister plastid topology with the position of leptophytes as sister to haptophytes in the host phylogeny (Fig. 5b). In this scenario, the secondary plastid from red algae was established in the common ancestor of leptophytes and haptophytes, where the ancestral *rpl36-p* gene was replaced, before passing that plastid further to cryptophytes from a stem haptophyte. To our knowledge, this model is the first to propose the haptophyte ancestor as the host of the secondary endosymbiosis with red algae, and is in line with the general older origin of haptophytes over cryptophytes inferred by molecular clock analysis. The model places the loss of nucleomorph in haptophytes subsequent to the tertiary transfer to cryptophytes, but leaves open the possibility that leptophytes have also retained this organelle. To weigh in on both models, we searched for evidence of red algal nucleomorph in the same metagenomic data used to reconstruct the ptMACs. While we found ample evidence of cryptophyte nucleomorphs, we found no evidence of putative leptophyte nucleomorphs (see Methods). Without a more conclusive plastid phylogeny, or other supporting evidence, it is currently not possible to decide which model, if any, is correct. However, we note that the H-sister model is more parsimonious as it requires fewer parallel gene losses based on our plastid gene content comparison (5 vs 33; Supplementary Fig. 24), and it is also more consistent with phylogenies of the SELMA proteins involved in protein translocation from the cytoplasm to the plastid. More generally, our advanced phylogenetic analyses and broad taxon sampling continue to recover\u2014albeit with only moderate support\u2014the monophyly of all red algal-derived plastids, unlike in a recent proposal that argues for a separate secondary plastid acquisition in ochrophytes. The origin of the ochrophyte plastid is a pressing issue to address in the future.\n\nUltimately, deciding between the origin of the leptophyte plastid and order of transfer to or from cryptophytes and haptophytes will rest on characterising the nuclear and putative nucleomorph genomes of leptophytes, ideally in the context of cultivation, in order to determine their specific position in the eukaryotic tree and investigate their cell biology. This will be challenging, as our data suggest that leptophytes are generally rare and it remains unclear if they occur in easily accessible coastal regions. Despite the fundamental importance of algae with complex red plastid as marine primary producers, we still understand little of how this great diversity of algae came to be. Our data show that players still hidden in the rare biosphere hold important clues that could bring new critical evidence. We demonstrated that organellar genome-resolved metagenomics allows access to this hidden diversity and should be considered in the future as a valuable approach to survey not only plastids but also mitochondria across biomes.\n\nNature Communications | (2026)17:662\n\n8\n\n## Article\n\nhttps://doi.org/10.1038/s41467-025-67401-4\n\n## Article\n\nhttps://doi.org/10.1038/s41467-025-67401-4\n\nfrom *Fucus vesiculosus* (which has a well-annotated plastid genome; NC_016735) as queries (e-value: 1e-02), (2) For each gene, sequences were aligned with MAFFT v.7.407 using the -auto option, and then trimmed with trimAL v1.4.1 using a gap threshold of 0.8, (3) Single-gene trees were inferred with raxml-ng v.1.2.0 using the LG4X model and 100 rapid bootstrap searches, (4) Gene trees were manually parsed to identify duplicates and extremely long branches corresponding to sequences from another gene, which were then removed from the dataset.\n\nWe then proceeded to construct a dataset initially including the 1448 ptMAGs identified (including redundant ptMAGs). Using reference sequences from the previous step as queries, we retrieved homologous sequences from the ptMAGs using BLASTP (e-value: 1e-02) and the gene annotation from MFannot. The 93 single-gene dataset was aligned individually using MAFFT-G-INS-I (using the --unalign 0.6 option to avoid over-alignment), and gently trimmed with trimAL (gap threshold: 0.9). Single-gene trees were inferred with IQ-TREE v2.2.2.6 using the best fitting model as determined by ModelFinder Plus . We manually parsed the single gene trees to check for putative chimeras and generated our final dataset comprising 93 genes and 839 taxa (660 ptMAGs and 179 references) with > 4% data.\n\nThe concatenated alignment was generated as follows: for each curated gene, we first used Prequal v1.02 to filter sequence stretches with no clear homology using a posterior probability threshold of 0.95, then aligned with MAFFT-G-INS-I (--unalign 0.6), and subsequently trimmed with BMGE v1.12 (BLOSUM35 matrix, gap threshold: 0.8). After concatenating, we obtained a supermatrix (839-taxon dataset) with 19,242 aligned amino acid sites, which was used for broad-scale phylogenetic analyses. Finally, we also generated a smaller, 107-taxon dataset to enable analyses under more complex and computationally demanding models. For this dataset, raw sequences for the 93 genes were again filtered, aligned, trimmed and concatenated as previously described, yielding a supermatrix with 20,292 amino acid sites.\n\n## Site-homogeneous models\n\nTo assess the phylogenetic diversity of the ptMAGs, the full 839-taxon supermatrix was used to compute a maximum-likelihood tree using the best-fitting site-homogeneous model, LG + F + I + G4 in IQ-TREE v.2.2.2.6. Branch support was assessed with 1000 ultrafast bootstrap replicates.\n\n## Site-heterogeneous models\n\nWe used the smaller, 107-taxon dataset to perform analyses with the more complex, site-heterogeneous models in order to determine the position of leptophytes in the plastid tree. An initial tree was inferred using the best-fitting cpREV+C60 + G4 model in IQ-TREE with 1000 ultrafast bootstrap replicates. This phylogeny was used as a guide tree to compute custom site-profiles directly from the input alignment using the programme MEOW (-ri -p R -C 5 -f H -I; custom version of MEOW used is provided at https://github.com/burki-lab/ptMAGs/blob/main/src/meow_custom.R), an approach which often outperforms generic mixture models (such as the C-series) . MEOW (MAMMaL Extension On Whole alignments) extends the MAMMaL approach by using all variable sites in the alignment to estimate custom site-profile classes. Following Williamson et al. , we estimated three sets of profile classes using varying proportions of high- and low rate classes respectively: (1) MEOW(80,0) indicates 80 classes from high rate sites and none from low rate sites, (2) MEOW(60,20) represents 60 classes from high rate sites and 20 classes from low rate sites, and (3) MEOW(40,40) corresponds to 40 classes each from the two partitions. We inferred a maximum likelihood phylogeny under the best fitting model based on the BIC criterion, LG + MEOW(60,20) + G4, with 1000 UFBOOT replicates, and for brevity, we refer to this model as LG + MEOW80 + G throughout the manuscript.\n\nAnother Maximum-likelihood phylogeny was inferred with the 107-taxon dataset with the CAT-PMSF approach . Briefly, a phylogeny inferred under the site-homogeneous LG + G model in IQ-TREE was used as a fixed tree for analysis with the CAT + GTR + G model in PhyloBayes-MPI v1.8. Two Markov Chain Monte Carlo (MCMC) chains were run for more than 5000 cycles until the effective sample sizes of nearly all parameters (seven out of eight) were above 100 (Supplementary Table 5). The posterior mean exchangeabilities and the custom site-frequency profiles were extracted for analysis in IQ-TREE and support was assessed with 100 non-parametric bootstrap replicates.\n\nFinally, we also analysed the 107-taxon dataset in PhyloBayes under the CAT + GTR + G model via three independent MCMC chains. The chains were run for almost 9000 cycles each. After discarding the first 2000 cycles as burn-in, convergence was assessed (with maxdiff reaching 0.047) and consensus trees were generated using the bpcomp command.\n\n## Derivatives of 107-taxon dataset\n\nFirst, we tested the impact of fast-evolving taxa in our dataset by removing 10 taxa (all ochrophytes) with the largest root to tip distances, generating a 97-taxon dataset. Second, we dealt with possible compositional heterogeneity across taxa by using BMGE\u2019s stationary-based trimmer to remove sites based on Stuart\u2019s test of marginal homogeneity (BMGE -s FAST -h 0:1 -g 1; 4752 out of 20,292 sites = 23.4% sites removed). Finally, we dealt with possible compositional heterogeneity and sequence saturation by recoding the dataset into SR4 categories . Both the non-recoded datasets were analysed in IQ-TREE with the LG + MEOW80 + G model with 1000 ultrafast bootstraps. Additionally, the stationary-trimmed alignment was analysed in PhyloBayes using the CAT + GTR + G model, with three MCMC chains runs for 7000 cycles after a burn-in of 5000 cycles, achieving a maxdiff of 0.104. The SR4 recoded dataset was also analysed under the CAT + GTR + G model in PhyloBayes, using three MCMC chains run for 22,000 cycles, with a burn-in of 4000, reaching a maxdiff of 0.101.\n\n## Site-heterogeneous models\n\nTo assess alternate positions of leptophytes, we performed constrained tree searches in IQ-TREE. We considered three possible positions in the algal tree: (1) sister to haptophytes and cryptophytes (HC-sister), (2) sister to haptophytes (H-sister), and (3) sister to cryptophytes (C-sister). For each of these three positions, we considered two topologies; one in which the complex plastids are monophyletic, and the other where the complex plastids are non-monophyletic (as recently recovered by ref. 46), bringing the total number of tested topologies to six. Constrained topologies were inferred with IQ-TREE under the GTR + CAT-PMSF + G and LG + MEOW80 + G models for the 107-taxon dataset, and the xmC60SR4 model for the SR4 recoded dataset, with all parameters optimised freely. In the case of the LG + MEOW80 + G model, ten independent runs in IQ-TREE were conducted for each constraint to avoid likelihood scores from searches stuck in local optima . In all cases, the topologies were evaluated with the Approximately Unbiased (AU) test implemented in IQ-TREE. Additionally, the best scoring topology under each model was compared with alternative topologies using the Bonferroni-corrected chi-squared test . Briefly, the likelihood ratio test statistic (LRS; two times the difference between the maximised log-likelihood of the two topologies under consideration) is first calculated. The p-value for the chi-squared test (p) is calculated as the probability that a chi-squared random variable would be larger than the LRS with the degrees of freedom defined as the number of branches collapsed in the strict consensus tree of the two trees. The Bonferroni-corrected p-value is calculated as $(1 - \\{1 - p\\}^A)$ where $A$ is the set of trees compatible with the strict consensus tree.\n\nNature Communications | (2026)17:662\n\n10\n\n## Article\n\nhttps://doi.org/10.1038/s41467-025-67401-4\n\n## GHOST and GF-mix models\n\nWe additionally tested the six alternative topologies under GHOST and GFmix as additional parameters to the LG + MEOW80 base model. For GHOST, the log-likelihood scores of the six topologies (inferred under the LG + MEOW80 + G model) were calculated under the LG + MEOW80 + H8 model in IQ-TREE, using the topologies as fixed trees. The LG + MEOW80 + H8 indicates a model with eight linked heterotachy classes and was the best fit model using the BIC criterion when compared to models with four or six heterotachy classes. Topologies were tested using the AU test and the Bonferroni-corrected chi-squared test as described in the previous section.\n\nThe GFmix model models compositional heterogeneity by modifying the vector of amino acid frequencies in a branch-specific manner to account for shifts in the relative frequencies of amino acids in different branches of the tree. While prior studies using this model have divided their alignment into multiple partitions to account for varying compositional heterogeneity in mitochondrial and nuclear encoded genes (e.g., refs. 31,32), we opted to use a single partition. This is because we do not expect substantial discrepancy in compositional heterogeneity between the only plastid-encoded genes considered in this study. With no a priori knowledge of how taxa might be compositionally biased, we first estimated the groups of amino acids that are depleted and enriched in different lineages from our data as done in ref. 31. Briefly, we used a custom R script (C. McCarthy, Dalhousie University, Canada, available at https://github.com/burki-lab/ptMAGs/blob/main/src/quickBinomial.R) to carry out the following steps: (1) tabulate the counts of all 20 amino acids for each taxon, (2) perform a chi-squared test on these counts and use the Pearson\u2019s residuals to construct a UPGMA tree of taxa, (3) separate taxa into two groups based on the UPGMA tree, (4) conduct a binomial test for each amino acid and calculate a score reflecting the differences in counts between the two groups, and (5) classify amino acids into \u201cenriched,\u201d \u201cdepleted,\u201d or \u201cother\u201d categories based on their scores (Supplementary Note 1). The enriched and depleted classes of amino acids were used by GFmix v1.2 to compute the log-likelihoods of the six alternative topologies, which were inferred using the LG + MEOW80 + G model and provided as fixed input trees.\n\n## 16S rDNA phylogeny\n\nBarrnap v0.9 (https://github.com/tseemann/barrnap) was used to detect 859 bp and 808 bp fragments of the 16S rDNA gene in the Lepto-01 and Lepto-04 ptMAGs respectively. A BLAST search of the Lepto-01 16S rDNA sequence revealed that it was most similar to the DPL2 group with ~91% sequence similarity (accession numbers EF574856 and KX935025). However, the Lepto-04 16S rDNA sequence best BLAST hits included DPL2 as well as cyanobacteria. Manually BLASTing fragments of the Lepto-04 16S rDNA sequence against nt indicated that it was likely chimeric, with the first ~440 bp corresponding to DPL2 (100% similarity), and the latter half originating from cyanobacteria. We therefore trimmed the Lepto-04 16S rDNA sequence to only the first 440 bp. To confirm the association of leptophytes with DPL2, we constructed a 16S rDNA dataset including Lepto-01, Lepto-04, DPL2, and representatives of each eukaryotic algal clade. The 65-taxon dataset was aligned with MAFFT-L-INS-I, and trimmed with trimAL (-gt 0.1) to get an alignment with 1496 sites. A Maximum-Likelihood phylogeny was inferred with raxml-ng with 20 ML searches and non-parametric bootstrapping until convergence using the GTR + G model.\n\n## Rpl36 alignment and phylogeny\n\nTo investigate whether leptophytes possessed the *rpl36-p* type or *rpl36-c* type gene, we extracted the L36 amino acid sequences from the 107 taxa in the subset phylogeny when available. The sequences were aligned with MAFFT-L-INS-I, trailing ends trimmed manually, and the alignment was visualised alongside the 93-gene PhyloBayes phylogeny using the R package ggtree v3.6.2.\n\n## Synteny analysis of leptophyte ptMAGs\n\nSynteny analysis of the leptophyte ptMAGs was performed using the GenBank files generated during genome annotation using PyGenomeViz v1.0.0 via the PyGenomeViz Streamlit Web Application (https://pygenomeviz.streamlit.app/). Sequence similarity of protein coding genes was estimated using MMseqs2 v15-6f452 for reciprocal best-hit CDS search.\n\n## Comparative analysis of plastid gene content in leptophytes and related lineages\n\nTo gain insights into the evolutionary dynamics and functional capabilities of the leptophyte plastid, we compared its gene content with that of red algae and other red algal-derived plastids. As ptMAGs can have missing genes due to incompleteness, we opted to use only reference plastid genomes where possible. For this analysis, we selected 15 rhodophyte, seven haptophyte, eight cryptophyte and 21 ochrophyte reference plastomes from our plastid genomic database. Similarly, we used the Lepto-01 ptMAG, the only near-complete leptophyte ptMAG, as the sole representative of leptophytes. We extracted amino-acid sequences from all selected plastid genomes and used OrthoFinder v2.5.5 with default settings to detect homologous proteins. This analysis yielded 281 phylogenetic hierarchical orthogroups (HOGs) containing 7,648 protein-coding genes (98.5% of the total). However, as no orthology-predictor is perfect, we manually refined the HOGs by inspecting gene annotations, single-gene trees, and performing BLAST and InterProScan searches (Supplementary Data 5). This step yielded 237 HOGs containing sequences from at least three taxa. Heatmaps depicting gene presence/absence were plotted using the R package pheatmap v1.0.12 (https://github.com/raivokolde/pheatmap), and species and orthologs clustered using UPGMA clustering.\n\n## Leptophyte associations with environmental parameters\n\nWe assessed correlations between leptophyte abundance and eight physiochemical parameters: sea surface temperature, salinity, dissolved silica, nitrate, phosphate, iron, and seasonality indices of nitrate and sea surface temperature. These parameters were obtained from Delmont et al 2022, representing data pulled from climatology and biogeochemical modelling data (World Ocean Atlas 2013 and PISCES v2) to account for missing physio-chemical samples in the Tara Oceans in-situ dataset. Seasonality indices were defined as the range of the nitrate and temperature in one grid cell divided by the total range of that variable across all Tara sampling stations.\n\nWe calculated Pearson\u2019s correlation coefficients between the abundance of each leptophyte ptMAG and the environmental parameters using the R package, corrgram v1.14.\n\n## Survey for putative nucleomorphs of leptophytes\n\nWe searched for genomic signal corresponding to red-algal nucleomorphs associated with leptophytes across the 11 Tara Oceans metagenomic co-assemblies. Specifically, we surveyed the assembled RNApolB genes, following the protocol used to characterise ptMAGs but this time using publicly available cryptophyte nucleomorph RNApolB genes as a reference. With this approach, we did not identify any nucleomorph-affiliated RNApolB genes co-occurring with the ptMAGs of leptophytes.\n\n## Survey for leptophyte psbO sequences\n\nWe considered the *psbO* gene as a good candidate to attempt finding contigs corresponding to the nuclear genome of leptophytes, as it is encoded by all photosynthetic eukaryotes, usually, in a single copy, in their nuclear genome, and is absent from non-photosynthetic eukaryotes. We identified *psbO* sequences in the Arctic metagenomic co-assembly (available at: https://www.genoscope.cns.fr/tara/; where Lepto-01 is abundant)\n\nNature Communications | (2026)17:662\n\n11\n\n## Article\n\nhttps://doi.org/10.1038/s41467-025-67401-4\n\nthrough an HMM search based on the PFAM accession PF01716, carried out using HMMER v3.4 as implemented in anvi\u2019o v8. A total of 51 hits were detected which were added to 346 reference *psbO* sequences from different algal groups. Sequences were aligned (MAFFT-L-INS-I), trimmed (trimAL, -gt 0.1), and then used to infer a tree with raxml-ng (20 searches, non-parametric bootstrapping until convergence) to determine the phylogenetic affiliation of the 51 *psbO* sequences. However, all *psbO* candidates fell within established algal groups, and no putative *psbO* sequence corresponding to leptophytes could be identified. We hypothesised that this result could be due to low coverage of the leptophyte nuclear genome. We investigated this by focusing on the two filters (both belonging to station 194) where Lepto-01 was among the most abundant eukaryotic plastids (124\u00d7 and 70\u00d7 coverage; Supplementary Data 1). We extracted the top 50 most abundant *psbO* sequences in these two filters from the recently assembled *psbO* database. We generated an alignment and inferred a phylogeny as before, but again, did not identify any strong candidates for leptophytes. Most *psbO* sequences had only a small number of metagenomic reads mapping to them per sample (median number of mapped reads = 3), except for those from highly abundant chlorophytes and ochrophytes. This suggests that nuclear genomes generally have substantially lower coverage than the plastid genomes, making it challenging to retrieve nuclear genomic sequences from eukaryotes other than the most abundant ones.\n\n## Survey for leptophyte 18S rDNA sequences.\n\nWe reasoned that a putative leptophyte 18S rDNA sequence would branch outside known algal lineages, and would correlate in abundance with the ptMAG abundance. We started with a targeted approach by generating a co-assembly of the six samples where Lepto-01 was most abundant using Megahit v1.2.9. We then extracted 18S sequences from the co-assembly using Barrnap (length cutoff: 0.2) with the aim of getting a small, manageable pool of candidate sequences for further investigation. These 18S sequences were BLASTed (e-value: 1e-10) against PR2 v5.0.0 and the nt database to identify them, however, all sequences were linked to well established clades and no candidate leptophyte 18S sequence could be identified.\n\nWe then turned to metabarcoding data from the top 15 filters where Lepto-01 was most abundant. We attempted to match the 18S-V9 ASVs ($n = 5336$) to Lepto-01 based on correlation of abundances following the workflow established by Zavadska et al 2024. Briefly, we estimated a correlation coefficient (Spearman\u2019s correlation) between ASV relative abundance and the relative, and absolute abundance of the Lepto-01 ptMAG. We identified 13 and seven candidate ASVs, respectively, that showed a Spearman\u2019s correlation coefficient greater than 0.7. These ASVs were further analysed by performing BLAST searches against the PR2 database and nt database. However, none of the candidates matched leptophytes and the top hits were to cercozoan sequences in each case. This may be due to variation in plastid genome copy number under different conditions, leading to an inconsistent ratio between plastid and nuclear genome abundance.\n\n## Extracting mitochondrial contigs from targeted samples.\n\nWe first identified core mitochondrial marker genes by functionally annotating a set of seven publicly available haptophyte and cryptist mitochondrial genomes in anvi\u2019o (*anvi-run-ncbi-cogs*). The following mitogenomes were used: NC_005332.1 (*Gephyrocapsa huxleyi*), OL703630.1 (*Gephyrocapsa oceanica*), OL703631.1 (*Gephyrocapsa muellerae*), AB930144.1 (*Chrysochromulina sp. NIES-1333*), AF288090.1 (*Rhodomonas salina*), NC_010637.1 (*Hemiselmis andersenii*), and NC_031832.1 (*Palpitomonas bilix*). This step revealed 13 core genes present in these mitochondrial genomes that were functionally annotated as: Cytochrome c oxidase subunit III, Cytochrome c and quinol oxidase polypeptide I, Cytochrome c oxidase subunit II (periplasmic domain)\n\nCytochrome $b/b_o$, Proton-conducting membrane transporter, NADH-ubiquinone/plastoquinone oxidoreductase chain 4 L, NADH-ubiquinone/plastoquinone oxidoreductase chain 6, NADH-ubiquinone/plastoquinone oxidoreductase chain 3, ATP synthase subunit a, ATP synthase subunit c, Ribosomal protein L16p/L10e, Ribosomal protein S12/S23, ATP synthase F$_o$ subunit.\n\nWe then turned to the co-assembly of the six filters where Lepto-01 was most abundant and extracted all mitochondrial contigs that were at least 5 kbp long. To do so, we first searched for contigs containing the *cox3* gene which encodes the cytochrome c oxidase subunit III enzyme, using an HMM search (based on the PFAM accession PF00510) in anvi\u2019o v8, and functionally annotated the contigs as before (*anvi-run-ncbi-cogs*). We then selected contigs containing at least six of the 13 core genes present in the reference genomes, which yielded a total of 34 contigs representing partial mitochondrial genomes or mtMAGs (Supplementary Data 3).\n\n## Abundance correlation analyses.\n\nWe expected the putative mtMAG of Lepto-01 to show a correlated abundance pattern with the Lepto-01 ptMAG. To test this, we mapped all 34 mtMAGs against 937 metagenomes from Tara Oceans, using the same approach applied to the plastid genomes (see Biogeography of the GOEV database. Abundance between each mtMAG and the Lepto-01 ptMAG was compared and plotted in R using the ggplot2 v3.5.1 and ggpmisc 0.6.0 packages. Abundance correlations were tested using two ways (1) applying a detection threshold where at least 25% of a genome\u2019s length had to be covered by reads for it to be considered present in a metagenome, and (2) without applying this threshold. Both approaches produced highly consistent results, thus, only results from the analyses without the coverage threshold are presented here.\n\n## Phylogenetic inference.\n\nWe reasoned that a putative leptophyte mitochondrial genome would be expected to form a distinct branch from established clades in a mitochondrial phylogeny. To assemble a mitochondrial phylogenetic dataset, we used the publicly available dataset of Williamson et al 2025 with 93 protein-coding genes and 100 taxa as a starting point. We subset this dataset to retain 50 eukaryotic taxa and the genes present in their corresponding mitochondrial genomes (40 protein-coding genes). To this dataset, we added our 34 mtMAGs and 18 additional reference genomes from various sources to increase the taxon sampling of cryptophytes and haptophytes as well as under-represented lineages such as Picozoa (Supplementary Data 6). This was done as follows: (1) the tool Codetta v2.0 was used to determine the genetic code of all mtMAGs and additional reference genomes, (2) mtMAGs and additional reference genomes were annotated MFannot using the standard or mould mitochondrial genetic code as appropriate, (3) The resulting ASN files were converted to GenBank format using the *asn2gb* tool, and all amino acid sequences were extracted using the custom script *gb_to_prot.py* (available at https://github.com/burki-lab/ptMAGs/blob/main/src/gb_to_prot.py), (4) Homologous sequences from mtMAGs and additional references were retrieved by BLASTP searches using the 40 genes as queries, (5) Sequences for each gene were aligned using MAFFT-L-INS-I, and trimmed with trimAL using a gap threshold of 0.8, (6) Single-gene-trees were inferred with IQ-TREE using the best-fitting model, (7) Gene trees manually parsed to check for problematic sequences. 12 genes were excluded from the dataset at this point due to low taxon occupancy, and the final dataset comprised 28 protein-coding genes (Supplementary Table 6).\n\nTo generate the concatenated alignment, we aligned each gene with MAFFT-G-INS-I (--unalign 0.6), and gently trimmed alignments with BMGE (BLOSUM30 matrix, gap threshold: 0.8). We concatenated the genes to obtain an alignment with 102 taxa, 28 genes, and 6,302 sites. The dataset was used for ML analysis in IQ-TREE using the site-heterogeneous LG + C60 + G model with 1000 ultrafast\n\nNature Communications | (2026)17:662\n\n12\n\n## Article\n\nhttps://doi.org/10.1038/s41467-025-67401-4\n\nbootstraps. Additionally, we analysed the dataset in a Bayesian framework with PhyloBayes under the CAT + GTR + G model. Three independent MCMC chains were run for 15,000 cycles each, with a burn-in of 4500 cycles, and achieving a maxdiff value of 0.23.\n\n## Reporting summary\n\nFurther information on research design is available in the Nature Portfolio Reporting Summary linked to this article.\n\n## Code availability\n\nAll scripts used for genome annotation and phylogenetic analyses are available on GitHub: https://github.com/burki-lab/ptMAGs with the identifier: 10.5281/zenodo.17635604.\n\n## Article\n\nhttps://doi.org/10.1038/s41467-025-67401-4\n\n38. Shrestha, B. et al. Global metagenomics reveals plastid diversity and unexplored algal lineages. bioRxiv 2025.03644651 https://doi.org/10.1101/2025.03.28.644651 (2025).\n\n39. Strassert, J. F. H., Irisarri, I., Williams, T. A. & Burki, F. A molecular timescale for eukaryote evolution with implications for the origin of red algal-derived plastids. Nat. Commun. 12, 1879 (2021).\n\n40. McFadden, G. I. The cryptomonad nucleomorph. Protoplasma 254, 1903\u20131907 (2017).\n\n41. Tanifuji, G. et al. Complete Nucleomorph Genome Sequence of the Nonphotosynthetic Alga Cryptomonas paramecium Reveals a Core Nucleomorph Gene Set. Genome Biol. Evol. 3, 44\u201354 (2011).\n\n42. Rice, D. W. & Palmer, J. D. An exceptional horizontal gene transfer in plastids: gene replacement by a distant bacterial paralog and evidence that haptophyte and cryptophyte plastids are sisters. BMC Biol 4, 31 (2006).\n\n43. Khan, H. et al. Plastid genome sequence of the cryptophyte alga Rhodomonas salina CCMP1319: lateral transfer of putative DNA replication machinery and a test of chromist plastid phylogeny. Mol. Biol. Evol. 24, 1832\u20131842 (2007).\n\n44. Burki, F., Roger, A. J., Brown, M. W. & Simpson, A. G. B. The new tree of eukaryotes. Trends Ecol. Evol. 35, 43\u201355 (2020).\n\n45. Ponce-Toledo, R. I., Moreira, D., L\u00f3pez-Garcia, P. & Deschamps, P. Molecular phylogeny of the SELMA translocation machinery recounts the evolution of complex photosynthetic eukaryotes. Mol. Biol. Evol. msaf167 https://doi.org/10.1093/molbev/msaf167 (2025).\n\n46. Pietluch, F., Mackiewicz, P., Ludwig, K. & Gagat, P. A new model and dating for the evolution of complex plastids of red alga origin. Genome Biol. Evol. 16, evae192 (2024).\n\n47. Gaia, M. et al. Mirusviruses link herpesviruses to giant viruses. Nature 616, 783\u2013789 (2023).\n\n48. Gaia, M. et al. Closest relatives of poxviruses are spread in the gut of humans and animals worldwide: the egoviruses. 2024.03.23.586382 Preprint at https://doi.org/10.1101/2024.03.23.586382 (2025).\n\n49. Martinez-Gutierrez, C. A. & Aylward, F. O. Phylogenetic signal, congruence, and uncertainty across bacteria and archaea. Mol. Biol. Evol. 38, 5514\u20135527 (2021).\n\n50. Shaw, J. & Yu, Y. W. Fast and robust metagenomic sequence comparison through sparse chaining with skani. Nat. Methods 20, 1661\u20131665 (2023).\n\n51. Puerta, M. V. S., Bachvaroff, T. R. & Delwiche, C. F. The complete plastid genome sequence of the haptophyte emiliania huxleyi: a comparison to other plastid genomes. DNA Res 12, 151\u2013156 (2005).\n\n52. Butenko, A., Luke\u0161, J., Speijer, D. & Wideman, J. G. Mitochondrial genomes revisited: why do different lineages retain different genes? BMC Biol. 22, 15 (2024).\n\n53. Li, H. & Durbin, R. Fast and accurate short read alignment with Burrows\u2013Wheeler transform. Bioinformatics 25, 1754\u20131760 (2009).\n\n54. Lang, B. F. et al. Mitochondrial genome annotation with MFannot: a critical analysis of gene identification and gene model prediction. Front. Plant Sci. 14, 1222186 (2023).\n\n55. Greiner, S., Lehwar, P. & Bock, R. OrganellarGenomeDRAW (OGDRAW) version 1.3.1: expanded toolkit for the graphical visualization of organellar genomes. Nucleic Acids Res. 47, W59\u2013W64 (2019).\n\n56. Janou\u0161kovec, J., Hor\u00e1k, A., Obornik, M., Luke\u0161, J. & Keeling, P. J. A common red algal origin of the apicomplexan, dinoflagellate, and heterokont plastids. Proc. Natl. Acad. Sci. USA 107, 10949\u201310954 (2010).\n\n57. Ponce-Toledo, R. I. et al. An Early-Branching Freshwater Cyanobacterium at the Origin of Plastids. Curr. Biol. 27, 386\u2013391 (2017).\n\n58. Altschul, S. F., Gish, W., Miller, W., Myers, E. W. & Lipman, D. J. Basic local alignment search tool. J. Mol. Biol. 215, 403\u2013410 (1990).\n\n59. Katoh, K. & Standley, D. M. MAFFT multiple sequence alignment software version 7: improvements in performance and usability. Mol. Biol. Evol. 30, 772\u2013780 (2013).\n\n60. Capella-Guti\u00e9rrez, S., Silla-Mart\u00ednez, J. M. & Gabald\u00f3n, T. trimAl: a tool for automated alignment trimming in large-scale phylogenetic analyses. Bioinformatics 25, 1972\u20131973 (2009).\n\n61. Kozlov, A., Darriba, D., Flouri, T., Morel, B. & Stamatakis, A. RAxML-NG: a fast, scalable and user-friendly tool for maximum likelihood phylogenetic inference. Bioinformatics 35, 4453\u20134455 (2019).\n\n62. Minh, B. Q. et al. IQ-TREE 2: new models and efficient methods for phylogenetic inference in the genomic era. Mol. Biol. Evol. 37, 1530\u20131534 (2020).\n\n63. Kalyaanamoorthy, S., Minh, B. Q., Wong, T. K. F., von Haeseler, A. & Jermiin, L. S. ModelFinder: fast model selection for accurate phylogenetic estimates. Nat. Methods 14, 587\u2013589 (2017).\n\n64. Whelan, S., Irisarri, I. & Burki, F. PREQUAL: detecting non-homologous characters in sets of unaligned homologous sequences. Bioinformatics 34, 3929\u20133930 (2018).\n\n65. Susko, E., Lincker, L. & Roger, A. J. Accelerated estimation of frequency classes in site-heterogeneous profile mixture models. Mol. Biol. Evol. 35, 1266\u20131283 (2018).\n\n66. Lartillot, N., Rodrigue, N., Stubbs, D. & Richer, J. PhyloBayes MPI: phylogenetic reconstruction with infinite mixtures of profiles in a parallel environment. Syst. Biol. 62, 611\u2013615 (2013).\n\n67. Liu, C. et al. The influence of the number of tree searches on maximum likelihood inference in phylogenomics. Syst. Biol. 73, 807\u2013822 (2024).\n\n68. Shimodaira, H. An approximately unbiased test of phylogenetic tree selection. Syst. Biol. 51, 492\u2013508 (2002).\n\n69. Yu, G. Using GGTREE to visualize data on tree-like structures. Curr Protoc Bioinform 69, e96 (2020).\n\n70. Steinegger, M. & S\u00f6ding, J. MMseqs2 enables sensitive protein sequence searching for the analysis of massive data sets. Nat. Biotechnol. 35, 1026\u20131028 (2017).\n\n71. Emms, D. M. & Kelly, S. OrthoFinder: phylogenetic orthology inference for comparative genomics. Genome Biol 20, 238 (2019).\n\n72. Boyer, T. P. et al. World ocean database 2013. National Oceanographic Data Center (U.S.), Ocean Climate Laboratory https://doi.org/10.7289/V5NZ85MT (2013).\n\n73. Aumont, O., Eth\u00e9, C., Tagliabue, A., Bopp, L. & Gehlen, M. PISCES-v2: an ocean biogeochemical model for carbon and ecosystem studies. Geosci. Model Dev. 8, 2465\u20132513 (2015).\n\n74. Li, D., Liu, C.-M., Luo, R., Sadakane, K. & Lam, T.-W. MEGAHIT: an ultra-fast single-node solution for large and complex metagenomics assembly via succinct de Bruijn graph. Bioinformatics 31, 1674\u20131676 (2015).\n\n75. Guillou, L. et al. The Protist Ribosomal Reference database (PR2): a catalog of unicellular eukaryote Small Sub-Unit rRNA sequences with curated taxonomy. Nucleic Acids Res. 41, D597\u2013D604 (2013).\n\n76. Mah\u00e9, F., Henry, N., de Vargas, C., Tara Oceans Consortium, C. & Tara Oceans Expedition, P. rDNA 18S V9 metabarcoding tables (Swarm) for Tara Oceans Expedition (2009-2013), including Tara Polar Circle Expedition (2013). Zenodo (2022).\n\n77. Zavadsk\u00e1, D., Henry, N., Auladell, A., Berney, C. & Richter, D. J. Diverse patterns of correspondence between protist metabarcodes and protist metagenome-assembled genomes. PLOS ONE 19, e0303697 (2024).\n\n78. Wickham, H. Ggplot2: Elegant Graphics for Data Analysis. (Springer-Verlag, 2016).\n\n79. Aphalo, P. ggpmisc: Miscellaneous Extensions to \u2018ggplot2\u2019. (Springer, 2025).\n\n80. Shulgina, Y. & Eddy, S. R. Codetta: predicting the genetic code from nucleotide sequence. Bioinformatics 39, btac802 (2022).\n\nNature Communications | (2026)17:662\n\n14\n\n## Article\n\nhttps://doi.org/10.1038/s41467-025-67401-4\n\n81. Jamy, M. Data for \u2018Identification of a deep-branching lineage of algae using environmental plastid genomes\u2019. figshare https://doi.org/10.17044/scilifelab.28212173 (2025).\n\n82. Jamy, M. Code for \u2018Identification of a deep-branching lineage of algae using environmental plastid genomes\u2019. Zenodo https://doi.org/10.5281/zenodo.17635604 (2025).\n\n83. Keeling, P. J. & Eglit, Y. Openly available illustrations as tools to describe eukaryotic microbial diversity. *PLoS Biol.* 21, e3002395 (2023).\n\n## Author contributions\n\nF.B. and T.O.D. conceived the project. T.O.D. characterised the ptMAGs. M.J., F.B. and T.H., performed phylogenetic analyses. T.A., E.P. and T.O.D. created the plastid genomic database and performed surveys for nucleomorphs. H.J.R. and L.P. retrieved relevant data from mOTUs. M.J. and T.H. annotated the ptMAGs, and E.P. performed mapping analyses.\n\nF.B., M.J., and T.O.D. wrote the manuscript with input from all the authors.\n\n## Additional information\n\nSupplementary information The online version contains supplementary material available at https://doi.org/10.1038/s41467-025-67401-4.\n\nCorrespondence and requests for materials should be addressed to Tom O. Delmont or Fabien Burki.\n\nPeer review information *Nature Communications* thanks John Archibald and the other anonymous, reviewer(s) for their contribution to the peer review of this work. A peer review file is available.\n\nReprints and permissions information is available at http://www.nature.com/reprints\n\nPublisher\u2019s note Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.\n\nOpen Access This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or other third party material in this article are included in the article\u2019s Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article\u2019s Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit http://creativecommons.org/licenses/by/4.0/.\n\n\u00a9 The Author(s) 2025\n\n*Nature Communications* | (2026)17:662\n\n15"
+    },
+    "figure_legends": {
+      "expected": false,
+      "populated": false,
+      "source": "caption_scan",
+      "source_headings": [],
+      "count": 0,
+      "preview": [],
+      "entries": []
+    },
+    "figure_interpretation": {
+      "expected": false,
+      "populated": false,
+      "source": "figure_review_required",
+      "source_headings": [],
+      "char_count": 0,
+      "preview": "",
+      "text": ""
+    },
+    "references": {
+      "expected": true,
+      "populated": true,
+      "source": "section_run",
+      "source_headings": [
+        "References"
+      ],
+      "count": 37,
+      "preview": [
+        "1. Andersen, R. A. Diversity of eukaryotic algae. *Biodivers. Conserv.* 1, 267\u2013292 (1992).",
+        "2. Archibald, J. M. The puzzle of plastid evolution. *Curr. Biol.* 19, R81\u2013R88 (2009).",
+        "3. Irisarri, I., Strassert, J. F. H. & Burki, F. Phylogenomic insights into the origin of primary plastids. *Syst. Biol.* 71, 105\u2013120 (2022)."
+      ],
+      "entries": [
+        "1. Andersen, R. A. Diversity of eukaryotic algae. *Biodivers. Conserv.* 1, 267\u2013292 (1992).",
+        "2. Archibald, J. M. The puzzle of plastid evolution. *Curr. Biol.* 19, R81\u2013R88 (2009).",
+        "3. Irisarri, I., Strassert, J. F. H. & Burki, F. Phylogenomic insights into the origin of primary plastids. *Syst. Biol.* 71, 105\u2013120 (2022).",
+        "4. Keeling, P. J. The endosymbiotic origin, diversification and fate of plastids. *Philos. Trans. R. Soc. B Biol. Sci.* 365, 729\u2013748 (2010).",
+        "5. Penot, M., Dacks, J. B., Read, B. & Dorrell, R. G. Genomic and metagenomic insights into the functions, diversity and global distribution of haptophyte algae. *Appl. Phycol.* 3, 340\u2013359 (2022).",
+        "6. Malviya, S. et al. Insights into global diatom distribution and diversity in the world\u2019s ocean. *Proc. Natl. Acad. Sci. USA* 113, E1516\u2013E1525 (2016).",
+        "7. Dorrell, R. G. et al. Chimeric origins of ochrophytes and haptophytes revealed through an ancient plastid proteome. *eLife* 6, e23717 (2017).",
+        "8. Stiller, J. W. et al. The evolution of photosynthesis in chromist algae through serial endosymbioses. *Nat. Commun.* 5, 5764 (2014).",
+        "9. \u0160ev\u010d\u00edkov\u00e1, T. et al. Updating algal evolutionary relationships through plastid genome sequencing: did alveolate plastids emerge through endosymbiosis of an ochrophyte? *Sci. Rep.* 5, 10134 (2015).",
+        "10. Keeling, P. J. et al. The marine microbial eukaryote transcriptome sequencing project (MMETSP): illuminating the functional diversity of eukaryotic life in the oceans through transcriptome sequencing. *PLOS Biol* 12, e1001889 (2014).",
+        "11. Moreira, D. & L\u00f3pez-Garc\u00eda, P. The rise and fall of Picobiliphytes: how assumed autotrophs turned out to be heterotrophs. *BioEssays* 36, 468\u2013474 (2014).",
+        "12. Kawachi, M. et al. Rappemonads are haptophyte phytoplankton. *Curr. Biol.* 31, 2395\u20132403 (2021).",
+        "13. Choi, C. J. et al. Newly discovered deep-branching marine plastid lineages are numerically rare but globally distributed. *Curr. Biol.* 27, R15\u2013R16 (2017).",
+        "14. Sch\u00f6n, M. E. et al. Single cell genomics reveals plastid-lacking Picozoa are close relatives of red algae. *Nat. Commun.* 12, 6651 (2021).",
+        "15. Sunagawa, S. et al. Tara Oceans: towards global ocean ecosystems biology. *Nat. Rev. Microbiol.* 18, 428\u2013445 (2020).",
+        "16. Delmont, T. O. et al. Functional repertoire convergence of distantly related eukaryotic plankton lineages abundant in the sunlit ocean. *Cell Genomics* 2, 100123 (2022).",
+        "17. Ruscheweyh, H.-J. et al. Cultivation-independent genomes greatly expand taxonomic-profiling capabilities of mOTUs across various environments. *Microbiome* 10, 212 (2022).",
+        "18. Dmitrijeva, M. et al. The mOTUs online database provides web-accessible genomic context to taxonomic profiling of microbial communities. *Nucleic Acids Res.* 53, D797\u2013D805 (2025).",
+        "19. Delmont, T. O. et al. Nitrogen-fixing populations of Planctomycetes and Proteobacteria are abundant in surface ocean metagenomes. *Nat. Microbiol.* 3, 804\u2013813 (2018).",
+        "20. Eren, A. M. et al. Anvi\u2019o: an advanced analysis and visualization platform for\u2019omics data. *PeerJ* 3, e1319 (2015).",
+        "21. Eren, A. M. et al. Community-led, integrated, reproducible multiomics with anvi\u2019o. *Nat. Microbiol.* 6, 3\u20136 (2021).",
+        "22. Kim, J. I. et al. Evolutionary dynamics of cryptophyte plastid genomes. *Genome Biol. Evol.* 9, 1859\u20131872 (2017).",
+        "23. de Vargas, C. et al. Eukaryotic plankton diversity in the sunlit ocean. *Science* 348, 1261605 (2015).",
+        "24. Mu\u00f1oz-G\u00f3mez, S. A. & Slamovits, C. H. Plastid Genomes in the Myzozoa. in *Advances in Botanical Research* (eds Chaw, S.-M. & Jansen, R. K.) vol. 85 55\u201394 (Academic Press, 2018).",
+        "25. Matsuo, E. et al. Comparative plastid genomics of green-colored dinoflagellates unveils parallel genome compaction and RNA editing. *Front. Plant Sci.* 13, 918543 (2022).",
+        "26. Kamikawa, R. et al. Plastid genome-based phylogeny pinpointed the origin of the green-colored plastid in the dinoflagellate *Lepidodinium chlorophorum*. *Genome Biol. Evol.* 7, 1133\u20131140 (2015).",
+        "27. de Vries, J. & Archibald, J. M. Plastid genomes. *Curr. Biol.* 28, R336\u2013R337 (2018).",
+        "28. Ha, J.-S. et al. Plastid genome evolution of two colony-forming benthic *Ochrosphaera neapolitana* Strains (Coccolithales, Haptophyta). *Int. J. Mol. Sci.* 24, 10485 (2023).",
+        "29. Ba\u00f1os, H., Susko, E. & Roger, A. J. Is Over-parameterization a problem for profile mixture models? *Syst. Biol.* 73, 53\u201375 (2024).",
+        "30. Sz\u00e1nth\u00f3, L. L., Lartillot, N., Sz\u0151ll\u0151si, G. J. & Schrempf, D. Compositionally constrained sites drive long-branch attraction. *Syst. Biol.* 72, 767\u2013780 (2023).",
+        "31. Williamson, K. et al. A robustly rooted tree of eukaryotes reveals their excavate ancestry. *Nature* 640, 974\u2013981 (2025).",
+        "32. Mu\u00f1oz-G\u00f3mez, S. A. et al. Site-and-branch-heterogeneous analyses of an expanded dataset favour mitochondria as sister to known Alphaproteobacteria. *Nat. Ecol. Evol.* 6, 253\u2013262 (2022).",
+        "33. Crotty, S. M. et al. GHOST: recovering historical signal from heterotachously evolved sequence alignments. *Syst. Biol.* 69, 249\u2013264 (2020).",
+        "34. Susko, E. & Roger, A. J. On reduced amino acid alphabets for phylogenetic inference. *Mol. Biol. Evol.* 24, 2139\u20132150 (2007).",
+        "35. Criscuolo, A. & Gribaldo, S. BMGE (Block Mapping and Gathering with Entropy): a new software for selection of phylogenetic informative regions from multiple sequence alignments. *BMC Evol. Biol.* 10, 210 (2010).",
+        "36. Pierella Karlusich, J. J. et al. A robust approach to estimate relative phytoplankton cell abundances from metagenomes. *Mol. Ecol. Resour.* 23, 16\u201340 (2023).",
+        "37. Hirakawa, Y. & Ishida, K.-I. Polyploidy of endosymbiotically derived genomes in complex algae. *Genome Biol. Evol.* 6, 974\u2013980 (2014). Nature Communications | (2026)17:662 13"
+      ]
+    }
+  },
+  "expected_fields": [
+    "title",
+    "authors",
+    "affiliations",
+    "abstract",
+    "methods",
+    "main",
+    "references"
+  ],
+  "missing_expected_fields": []
+}
