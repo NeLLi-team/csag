@@ -1,5 +1,10 @@
 # CSAG
 
+<p align="center">
+  <img src="https://img.shields.io/badge/version-1.0.0-blue.svg" alt="Version">
+  <img src="https://img.shields.io/badge/license-non--commercial-orange.svg" alt="License: non-commercial use only">
+</p>
+
 A Conditional Scientific Argumentation Graph (CSAG) is a machine-readable
 representation of the argumentation structure of a scientific manuscript. It
 records the manuscript's claims as assertions, each scoped by at least one
