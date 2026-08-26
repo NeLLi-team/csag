@@ -7,7 +7,7 @@ description: >-
   LiteParse v2 locally when it is not. For any non-paper PDF, defer to a fast,
   local, no-API-key LiteParse v2 conversion. Use when turning a PDF or manuscript
   into Markdown, extracting article structure, or preparing input for csag-extraction.
-license: BSD-3-Clause
+license: LicenseRef-LBNL-NonCommercial
 metadata:
   version: "1.0.0"
 ---

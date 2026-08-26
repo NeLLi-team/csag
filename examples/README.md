@@ -8,8 +8,8 @@ manifest; the repository README gives the full command.
 
 | Directory | Source and license | Included files |
 |---|---|---|
-| `toy/` | Synthetic minimal manuscript. Repository license (BSD 3-Clause). | Markdown, `toy_measurements.tsv`, section audit, article sidecar, CSAG, validation report, quality report. |
-| `lite/` | Synthetic CSAG Lite example validated with the `lite` profile. Repository license (BSD 3-Clause). | Markdown, article sidecar, CSAG, validation report, quality report. |
+| `toy/` | Synthetic minimal manuscript. Repository license. | Markdown, `toy_measurements.tsv`, section audit, article sidecar, CSAG, validation report, quality report. |
+| `lite/` | Synthetic CSAG Lite example validated with the `lite` profile. Repository license. | Markdown, article sidecar, CSAG, validation report, quality report. |
 | `pmid35150280/` | "Giant Viruses Encode Actin-Related Proteins", Molecular Biology and Evolution, DOI 10.1093/molbev/msac022. CC BY-NC 4.0. | CSAG, validation report, quality report. The Markdown and sidecars are not included. |
 | `jamy2026/` | Jamy 2026, Nature Communications, DOI 10.1038/s41467-025-67401-4. CC BY 4.0. | Source PDF, Markdown, section audit, article sidecar, CSAG, validation report, quality report. |
 | `prior-art/ciccarese2013_pav_ontology/` | Ciccarese 2013, PAV ontology, DOI 10.1186/2041-1480-4-37. CC BY 2.0. | Source PDF, Markdown, section audit, article sidecar, CSAG, validation report, quality report. |

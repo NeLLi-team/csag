@@ -5,7 +5,7 @@ description: >-
   argumentation spine (Assertions, EvidenceItems, EvidenceLinks, and optional InferenceSteps) while enforcing
   CSAG conditionality (no assertion without at least one Context). Also generates paper-grounded
   Q&A items using bundled QA templates.
-license: BSD-3-Clause
+license: LicenseRef-LBNL-NonCommercial
 metadata:
   version: "1.0.0"
 ---

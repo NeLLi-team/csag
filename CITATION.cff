@@ -12,7 +12,7 @@ identifiers:
   - type: doi
     value: "pending-zenodo-doi"
     description: "Zenodo archive DOI (placeholder until the release is archived)."
-license: BSD-3-Clause
+license-url: "https://github.com/NeLLi-team/csag/blob/main/LICENSE"
 abstract: "Schema, validator, command-line tools, and worked examples for Conditional Scientific Argumentation Graphs (CSAG), a machine-readable representation of the argumentation structure of a scientific manuscript."
 preferred-citation:
   type: article

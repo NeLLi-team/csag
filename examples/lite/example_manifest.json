@@ -3,8 +3,8 @@
   "title": "Lite Claim Example",
   "source_record_url": "local:examples/lite/lite.md",
   "origin": "Synthetic CSAG Lite example.",
-  "license": "BSD 3-Clause License",
-  "license_url": "https://opensource.org/license/bsd-3-clause",
+  "license": "Lawrence Berkeley National Laboratory non-commercial use only license",
+  "license_url": "https://github.com/NeLLi-team/csag/blob/main/LICENSE",
   "license_evidence_url": "local:LICENSE",
   "included_sources": [
     "lite.md"

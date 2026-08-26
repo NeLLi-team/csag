@@ -314,8 +314,11 @@ in the release metadata with the archive DOI.
 
 ## License
 
-The schema, scripts, documentation, and examples are released under the BSD
-3-Clause License (`LICENSE`). `NOTICE` carries the Berkeley Lab copyright
-notice and the U.S. Department of Energy contract notice. Source manuscripts
-and third-party PDFs keep their own licenses, recorded in each example manifest
-and in [docs/license-policy.md](docs/license-policy.md).
+The schema, scripts, documentation, and examples are released under the
+Lawrence Berkeley National Laboratory non-commercial use only license
+(`LICENSE`), which also carries the Berkeley Lab copyright notice and the U.S.
+Department of Energy contract notice. Use is limited to non-commercial
+purposes; for commercial use, contact Berkeley Lab's Intellectual Property
+Office at IPO@lbl.gov. Source manuscripts and third-party PDFs keep their own
+licenses, recorded in each example manifest and in
+[docs/license-policy.md](docs/license-policy.md).

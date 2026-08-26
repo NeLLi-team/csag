@@ -1,15 +1,17 @@
 # License policy
 
 The repository releases its schema, scripts, documentation, examples, and
-generated CSAG artifacts under the BSD 3-Clause License unless a file or source
-manuscript states a different license. `LICENSE` holds the license text, and
-`NOTICE` holds the Berkeley Lab copyright notice and the U.S. Department of
-Energy contract notice.
+generated CSAG artifacts under the Lawrence Berkeley National Laboratory
+non-commercial use only license unless a file or source manuscript states a
+different license. `LICENSE` holds the license text, the Berkeley Lab
+copyright notice, and the U.S. Department of Energy contract notice. Use is
+limited to non-commercial purposes; for commercial use, contact Berkeley Lab's
+Intellectual Property Office at IPO@lbl.gov.
 
 | Exception | License policy |
 |-----------|----------------|
 | Source manuscripts and third-party PDFs | Keep their original licenses. Redistribute them only when the source license permits it. |
-| Generated CSAG artifacts derived from a source manuscript | BSD 3-Clause License unless the source manuscript license restricts redistribution. |
+| Generated CSAG artifacts derived from a source manuscript | Repository license unless the source manuscript license restricts redistribution. |
 
 Prior-art fixtures listed in `examples/prior-art/candidate_manifest.json` are
 released only with documented open licenses. Each released fixture records

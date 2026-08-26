@@ -10,7 +10,7 @@ description: >
   every Assertion includes at least one Context object (even if coarse). Conditions are represented
   as first-class entities and can be phased in later.
 
-license: https://opensource.org/license/bsd-3-clause
+license: https://github.com/NeLLi-team/csag/blob/main/LICENSE
 
 prefixes:
   csag: https://w3id.org/csag/
