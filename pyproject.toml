@@ -51,6 +51,7 @@ packages = ["csag"]
 [tool.hatch.build.targets.wheel.force-include]
 "LICENSE" = "csag/data/LICENSE"
 "README.md" = "csag/data/README.md"
+"NOTICE" = "csag/data/NOTICE"
 "examples" = "csag/data/examples"
 "scripts" = "csag/data/scripts"
 "skills" = "csag/data/skills"

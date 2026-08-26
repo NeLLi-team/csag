@@ -2,8 +2,9 @@
 
 The repository releases its schema, scripts, documentation, examples, and
 generated CSAG artifacts under the BSD 3-Clause License unless a file or source
-manuscript states a different license. `LICENSE` holds the license text and
-the Berkeley Lab copyright notice.
+manuscript states a different license. `LICENSE` holds the license text, and
+`NOTICE` holds the Berkeley Lab copyright notice and the U.S. Department of
+Energy contract notice.
 
 | Exception | License policy |
 |-----------|----------------|

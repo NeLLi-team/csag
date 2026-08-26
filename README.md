@@ -315,8 +315,7 @@ in the release metadata with the archive DOI.
 ## License
 
 The schema, scripts, documentation, and examples are released under the BSD
-3-Clause License; `LICENSE` holds the license text and the Berkeley Lab
-copyright notice (Copyright (c) 2026, The Regents of the University of
-California, through Lawrence Berkeley National Laboratory). Source manuscripts
+3-Clause License (`LICENSE`). `NOTICE` carries the Berkeley Lab copyright
+notice and the U.S. Department of Energy contract notice. Source manuscripts
 and third-party PDFs keep their own licenses, recorded in each example manifest
 and in [docs/license-policy.md](docs/license-policy.md).
