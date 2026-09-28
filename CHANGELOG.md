@@ -1,5 +1,16 @@
 # Changelog
 
+## Unreleased
+
+- `paper_local` validation accepts a Dataset without an accession, repository,
+  or URL when its own TextSpan quotes a positive statement that the data are
+  available on request.
+- The quality report gives each claim readout a `qa_status`: the
+  `CSAG_QA_01_STATUS` answer computed from the strength-weighted evidence
+  links.
+- The `csag-extraction` skill states where `SKILL_DIR` points for an installed
+  copy.
+
 ## 1.0.0 - 2026-08-25
 
 First public release. It contains:

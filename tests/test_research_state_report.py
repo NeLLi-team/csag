@@ -5,8 +5,9 @@ import json
 from copy import deepcopy
 from pathlib import Path
 
-import csag.cli as cli
+import pytest
 
+from csag import cli
 
 ROOT = cli.ROOT
 LITE = ROOT / "examples" / "lite" / "paper_extraction.json"
@@ -209,3 +210,74 @@ def test_claim_readout_treats_refuting_and_mixed_evidence_as_mixed(tmp_path: Pat
     assert report["claim_readouts"][0]["state"] == "mixed"
     assert len(report["claim_readouts"][0]["evidence_against"]) == 1
     assert len(report["claim_readouts"][0]["mixed_or_inconclusive"]) == 1
+
+
+def _quality_report(extraction: dict, tmp_path: Path) -> dict:
+    extraction_path = tmp_path / "paper_extraction.json"
+    extraction_path.write_text(
+        json.dumps(extraction, indent=2) + "\n", encoding="utf-8"
+    )
+    report_out = tmp_path / "quality.json"
+    args = argparse.Namespace(
+        extraction_json=extraction_path,
+        source_markdown=LITE_MD,
+        article_json=LITE_ARTICLE,
+        openalex_json=None,
+        analysis_year=None,
+        report_out=report_out,
+        strict=False,
+        document_scope="lite",
+    )
+    assert cli.cmd_report(args) == 0
+    return _read(report_out)
+
+
+def _with_links(extraction: dict, links: list[tuple[str, str | None]]) -> dict:
+    """Replace the first assertion's evidence links with (polarity, strength) pairs."""
+    doc_id = extraction["id"]
+    assertion_id = extraction["assertions"][0]["id"]
+    evidence_item = extraction["evidence_links"][0]["evidence_item"]
+    kept = [
+        link
+        for link in extraction["evidence_links"]
+        if link.get("assertion") != assertion_id
+    ]
+    added = [
+        {
+            "id": f"csag:elink/{doc_id}/L9{number:03d}",
+            "evidence_item": evidence_item,
+            "assertion": assertion_id,
+            "polarity": polarity,
+            **({"strength": strength} if strength else {}),
+        }
+        for number, (polarity, strength) in enumerate(links, start=1)
+    ]
+    extraction["evidence_links"] = kept + added
+    extraction["research_states"] = []
+    return extraction
+
+
+@pytest.mark.parametrize(
+    ("links", "expected"),
+    [
+        ([("supports", "strong"), ("refutes", "weak")], "supports"),
+        ([("supports", "weak"), ("refutes", "strong")], "refutes"),
+        ([("supports", "moderate"), ("refutes", "moderate")], "mixed"),
+        ([("supports", "unknown"), ("refutes", "unknown")], "inconclusive"),
+        ([("supports", "weak")], "mixed"),
+        ([("supports", "moderate")], "supports"),
+        ([("supports", "very_strong"), ("refutes", "strong")], "supports"),
+        ([("supports", "strong"), ("refutes", "very_strong")], "refutes"),
+        ([("supports", "weak"), ("supports", "weak")], "supports"),
+        ([("supports", None)], "inconclusive"),
+        ([("mixed", "strong"), ("inconclusive", "strong")], "inconclusive"),
+    ],
+)
+def test_claim_readout_qa_status_weights_link_strength(
+    tmp_path: Path, links: list[tuple[str, str | None]], expected: str
+) -> None:
+    extraction = _with_links(deepcopy(_read(LITE)), links)
+
+    report = _quality_report(extraction, tmp_path)
+
+    assert report["claim_readouts"][0]["qa_status"] == expected

@@ -212,6 +212,7 @@
       "criticality": "supporting",
       "assertion_text": "The toy manuscript evaluates whether blue light increases plastid pigment accumulation in toy algae.",
       "state": "supported",
+      "qa_status": "supports",
       "current_read": "Inferred from 1 evidence link(s): supported.",
       "evidence_for": [
         {
@@ -235,6 +236,7 @@
       "criticality": "core",
       "assertion_text": "Blue light increases plastid pigment accumulation in the toy algal system.",
       "state": "supported",
+      "qa_status": "supports",
       "current_read": "Inferred from 1 evidence link(s): supported.",
       "evidence_for": [
         {

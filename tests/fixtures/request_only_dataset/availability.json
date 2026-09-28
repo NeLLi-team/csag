@@ -1,0 +1,5 @@
+{
+  "source_pmid": "36740641",
+  "source_statement": "The datasets analysed during the current study are available from the corresponding author on reasonable request.",
+  "notes": "The source provides data on request without a repository, accession or dataset URL. The regression embeds this real statement in the bundled toy extraction to isolate availability validation."
+}

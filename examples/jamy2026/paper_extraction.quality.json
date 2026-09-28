@@ -257,6 +257,7 @@
       "criticality": "major",
       "assertion_text": "The study uses Tara Oceans genome-resolved metagenomics to assemble and curate a large environmental plastid genome resource.",
       "state": "supported",
+      "qa_status": "supports",
       "current_read": "Inferred from 1 evidence link(s): supported.",
       "evidence_for": [
         {
@@ -280,6 +281,7 @@
       "criticality": "core",
       "assertion_text": "The survey produced 660 new non-redundant environmental plastid genomes that expand known marine algal plastid diversity.",
       "state": "supported",
+      "qa_status": "supports",
       "current_read": "Inferred from 2 evidence link(s): supported.",
       "evidence_for": [
         {
@@ -314,6 +316,7 @@
       "criticality": "core",
       "assertion_text": "Jamy et al. recover leptophytes as a rare, widespread, deep-branching group of red-algal-derived plastid genomes that includes the DPL2 lineage.",
       "state": "supported",
+      "qa_status": "supports",
       "current_read": "Inferred from 2 evidence link(s): supported.",
       "evidence_for": [
         {
@@ -348,6 +351,7 @@
       "criticality": "major",
       "assertion_text": "Leptophyte plastids are related to haptophyte and cryptophyte plastids, with HC-sister and H-sister placements both remaining credible under different phylogenetic treatments.",
       "state": "mixed",
+      "qa_status": "inconclusive",
       "current_read": "Inferred from 1 evidence link(s): mixed.",
       "evidence_for": [],
       "evidence_against": [],
@@ -373,6 +377,7 @@
       "criticality": "major",
       "assertion_text": "A near-complete mitochondrial MAG associated with Lepto-01 places the leptophyte host lineage as sister to haptophytes.",
       "state": "supported",
+      "qa_status": "supports",
       "current_read": "Inferred from 1 evidence link(s): supported.",
       "evidence_for": [
         {
@@ -398,6 +403,7 @@
       "criticality": "major",
       "assertion_text": "The order of plastid transfer among leptophytes, cryptophytes, and haptophytes remains unresolved and requires nuclear or nucleomorph genome information, ideally from cultivation.",
       "state": "supported",
+      "qa_status": "supports",
       "current_read": "Inferred from 1 evidence link(s): supported.",
       "evidence_for": [
         {
@@ -421,6 +427,7 @@
       "criticality": "major",
       "assertion_text": "Jamy et al. recover moderate support for monophyly of red-algal-derived plastids rather than a separate secondary plastid acquisition in ochrophytes.",
       "state": "supported",
+      "qa_status": "supports",
       "current_read": "Inferred from 1 evidence link(s): supported.",
       "evidence_for": [
         {

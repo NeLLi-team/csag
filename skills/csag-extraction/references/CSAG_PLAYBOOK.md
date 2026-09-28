@@ -223,6 +223,21 @@ or used. Slots: `accession`, `repository` (for example GEO, SRA, PRIDE,
 Zenodo), `dataset_url`, and `dataset_license`. Only `id` is required for
 either class.
 
+When the source Markdown shows a data-availability signal (such as a data
+availability section, an accession, or a repository name), `paper_local`
+validation requires at least one Dataset, and each Dataset needs an accession,
+repository, or URL from the source, or its own TextSpan that quotes a positive
+statement that the data are available on request. The span holds the complete
+sentence; only an unqualified label such as `Data availability:` may precede
+it, and its document ID and character offsets reproduce the quoted source.
+Leave the identifier fields empty and say in `notes` that the source gives
+none. A negated, conditional, or future request clause does not pass, and
+neither does a request statement grounded on another object; a negation that
+limits only public access ("not publicly available but available on request")
+does not count against the statement. The check matches common phrasings. If a
+genuine request-only statement still fails, keep the Dataset without
+identifiers and report the validation issue; never invent an identifier.
+
 ## Studies and experiments
 
 A `Study` groups the experiments of the manuscript. Slots: `study_type` (an
@@ -340,14 +355,12 @@ value: `boolean`, `numeric`, `categorical`, `entity`, `relation`,
 `answer_confidence`. Prefer one answer per item; when the evidence is mixed,
 use the categorical value `mixed`.
 
-Compute the evidence status of an assertion from its evidence links. Weight
-each link by strength: `very_strong` 3, `strong` 2, `moderate` 1, `weak` 0.5,
-`very_weak` 0.25, `unknown` 0. Sum the weights of the `supports` links into a
-support score and the weights of the `refutes` links into a refute score. The
-status is `inconclusive` when both scores are 0; `supports` when the support
-score is at least 1 and at least 1.5 times the refute score; `refutes` when
-the refute score is at least 1 and at least 1.5 times the support score;
-otherwise `mixed`.
+The quality report gives each assertion's evidence status as
+`claim_readouts[].qa_status`; use it as the `CSAG_QA_01_STATUS` answer. The
+report weights each `supports` and `refutes` link by strength (`very_strong` 3,
+`strong` 2, `moderate` 1, `weak` 0.5, `very_weak` 0.25, `unknown` 0). A side
+wins when it scores at least 1 and at least 1.5 times the other side; the
+status is `inconclusive` when neither side has weight and `mixed` otherwise.
 
 The table lists the templates in `assets/csag_qa_templates.yaml`. Create
 `CSAG_QA_01_STATUS` for every assertion that has an evidence link, and

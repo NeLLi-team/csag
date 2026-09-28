@@ -21,12 +21,13 @@ against the LinkML (Linked Data Modeling Language) schema in
 polarity only in evidence links, reasoning chains only in inference steps),
 and conditional (every assertion carries at least one context).
 
-`SKILL_DIR` is the directory that contains this `SKILL.md`; in the CSAG
-repository it is `skills/csag-extraction`. Set it once, then run every script
-as `uv run "$SKILL_DIR/scripts/<name>"`:
+`SKILL_DIR` is the directory that contains this `SKILL.md`:
+`skills/csag-extraction` in the CSAG repository, or the directory of an
+installed copy, such as `~/.agents/skills/csag-extraction`. Set it once, then
+run every script as `uv run "$SKILL_DIR/scripts/<name>"`:
 
 ```bash
-SKILL_DIR=skills/csag-extraction
+SKILL_DIR=skills/csag-extraction   # or the installed copy's directory
 ```
 
 The validator scripts import the `jsonschema` package. The CSAG project
@@ -85,6 +86,11 @@ those terms.
    captions.
 3. Extract datasets when the manuscript exposes data-availability text,
    repository links, accessions, or project identifiers.
+   When the source offers data only on request, keep a Dataset without
+   identifier fields: give it a TextSpan that quotes the complete availability
+   sentence at its exact offsets in the current document, and say in `notes`
+   that the source gives no public identifier. Negated, conditional, or future
+   availability does not count. Never invent an identifier.
 4. Extract entities, with ontology annotations when possible.
 5. Extract assertions (hypotheses, result claims, conclusions). Each one has
    `contexts` (at least one) and `normalization_status`. Set `criticality`
@@ -309,6 +315,7 @@ as `qa_items`:
 
 Use `assets/csag_qa_templates.yaml` to instantiate `QAItem` and `Answer`
 objects. Every answer cites `supporting_assertions`,
-`supporting_evidence_links`, or both.
+`supporting_evidence_links`, or both. Answer `CSAG_QA_01_STATUS` with the
+assertion's `qa_status` from the quality report's `claim_readouts`.
 
 For edge cases and scoring guidance, see `references/CSAG_PLAYBOOK.md`.

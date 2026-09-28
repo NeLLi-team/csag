@@ -26,8 +26,44 @@ def enum_values(name: str) -> set[str]:
 DOI_RE = re.compile(r"\b10\.\d{4,9}/[-._;()/:A-Z0-9]+\b", re.IGNORECASE)
 PMID_RE = re.compile(r"\bPMID[:\s]+(\d{6,9})\b", re.IGNORECASE)
 DATASET_SIGNAL_RE = re.compile(
-    r"\b(data availability|accession|project id|repository|zenodo|img/m|data portal|sra|geo|pride|available at|downloaded at)\b",
+    r"\b(data availability|availability of data|accession|project id|repository"
+    r"|zenodo|img/m|data portal|sra|geo|pride|available at|downloaded at)\b",
     re.IGNORECASE,
+)
+REQUEST_AVAILABILITY_RE = re.compile(
+    r"[^.!?;]*?\b(?:data|datasets?)\b[^.!?;]*?"
+    r"\b(?:(?:(?:are|is)\s+)?(?:available|obtainable)"
+    r"|can\s+be\s+(?:obtained|requested|accessed))\b"
+    r"[^.!?;]*?\b(?:on|upon)\s+(?:reasonable\s+)?request\b[^.!?;]*\.",
+    re.IGNORECASE,
+)
+# Each alternative names a construction that negates availability, makes it
+# conditional or future, or only recommends it; bare words such as "no" or
+# "after" also occur in unqualified statements ("at no cost").
+QUALIFIED_REQUEST_RE = re.compile(
+    r"\b(?:not|never|neither|nor|none|cannot|unavailable|unobtainable)\b|n't\b"
+    r"|\bno\s+(?:[\w-]+\s+){0,3}(?:data|datasets?)\b"
+    r"|\b(?:if|unless|until|once|when|starting)\b|\bprovided\s+that\b|\bsubject\s+to\b"
+    r"|\bonly\s+(?:with|after|if|when|to|for)\b"
+    r"|\b(?:will|would|should|could|may|might)\b|\bnext\s+(?:year|month)\b"
+    r"|\bin\s+the\s+future\b|\brecommend\w*|\bpropos\w*"
+    # Access conditions and start dates count only after the availability
+    # phrase, so that "data collected with informed consent" stays unqualified.
+    r"|\b(?:available|obtainable|obtained|requested|accessed|request)\b[^.!?;]*?"
+    r"(?:\b(?:approval|permission|consent|agreement|embargo)\b"
+    r"|\bafter\s+(?:[\w-]+\s+){0,2}(?:publication|acceptance)\b"
+    r"|\b(?:after|from|beginning)\s+(?:(?:January|February|March|April|May|June"
+    r"|July|August|September|October|November|December)\b|\d{4}\b))",
+    re.IGNORECASE,
+)
+# A negation before "but" ("not publicly available but ... on request") limits
+# public access, not access on request.
+CONTRAST_RE = re.compile(r"\b(?:but|however|whereas)\b", re.IGNORECASE)
+# Title periods never end a sentence; the others end one only at the end of the
+# quote.
+ABBREVIATION_RE = re.compile(
+    r"\b(?:Dr|Prof|Mr|Mrs|Ms|St|Fig|No)\."
+    r"|(?:\bet al|\bInc|\bLtd|\bCo|\bvs|\be\.g|\bi\.e)\.(?=\s*\S)"
 )
 FIGURE_SIGNAL_RE = re.compile(
     r"^\s*(fig(?:ure)?\.?|table|supplementary figure|supplementary table)\b",
@@ -423,6 +459,76 @@ def nonempty_string_list(value: object) -> bool:
 
 def has_text_spans(item: dict | None) -> bool:
     return bool(isinstance(item, dict) and isinstance(item.get("text_spans"), list) and item.get("text_spans"))
+
+
+def has_request_availability(
+    dataset: dict[str, object], document_id: str, source: str
+) -> bool:
+    """Recognize an explicit request-only Dataset through its own grounded spans."""
+    spans = dataset.get("text_spans")
+    if not isinstance(spans, list):
+        return False
+    return any(
+        isinstance(span, dict) and is_grounded_request_span(span, document_id, source)
+        for span in spans
+    )
+
+
+def is_grounded_request_span(
+    span: dict[str, object], document_id: str, source: str
+) -> bool:
+    """Accept a complete, positive availability sentence in the current source."""
+    start, end, quote = (
+        span.get("start_char"),
+        span.get("end_char"),
+        span.get("exact_text"),
+    )
+    if not (
+        type(start) is int
+        and type(end) is int
+        and isinstance(quote, str)
+        and 0 <= start < end <= len(source)
+        and span.get("document_id") == document_id
+        and source[start:end] == quote
+    ):
+        return False
+    # A cropped clause must not omit a preceding negation or condition; only an
+    # unqualified label such as "Data availability:" may precede the span.
+    lead_in = sentence_lead_in(source, start)
+    if lead_in and (not lead_in.endswith(":") or QUALIFIED_REQUEST_RE.search(lead_in)):
+        return False
+    # A span that stops inside a sentence ("... et al. after approval") is cropped.
+    tail = source[end:].split("\n\n", 1)[0].lstrip(" \t\n*_)")
+    if tail[:1].islower():
+        return False
+    sentence = ABBREVIATION_RE.sub(
+        lambda match: match.group(0).replace(".", ""), " ".join(quote.split())
+    )
+    return bool(
+        REQUEST_AVAILABILITY_RE.fullmatch(sentence)
+        and not QUALIFIED_REQUEST_RE.search(request_clause_onward(sentence))
+    )
+
+
+def request_clause_onward(sentence: str) -> str:
+    """Return `sentence` from the start of the clause that mentions the request."""
+    request_at = sentence.lower().index("request")
+    clause_starts = [
+        match.end()
+        for match in CONTRAST_RE.finditer(sentence)
+        if match.end() <= request_at
+    ]
+    return sentence[max(clause_starts, default=0) :]
+
+
+def sentence_lead_in(source: str, start: int) -> str:
+    """Return the text between the start of the sentence and `start`.
+
+    The sentence starts after the last sentence terminator in the paragraph;
+    Markdown emphasis markers around a label are ignored.
+    """
+    paragraph = source[:start].rsplit("\n\n", 1)[-1]
+    return re.split(r"[.!?]", paragraph)[-1].strip(" \t\n*_")
 
 
 def collect_ids(extraction: dict, errors: list[str]) -> dict[str, set[str]]:
@@ -1168,8 +1274,18 @@ def main() -> int:
                 dataset_id = dataset.get("id")
                 expect(bool(dataset_id), issue(dataset_id, "datasets[].id", "dataset ID is missing", "Assign a deterministic Dataset ID."), errors)
                 expect(
-                    bool(dataset.get("accession")) or bool(dataset.get("repository")) or bool(dataset.get("dataset_url")),
-                    issue(dataset_id, "datasets[].accession", "missing accession, repository, or dataset URL", "Populate accession, repository, or dataset_url from the source data-availability statement."),
+                    bool(dataset.get("accession"))
+                    or bool(dataset.get("repository"))
+                    or bool(dataset.get("dataset_url"))
+                    or has_request_availability(dataset, root_id, source_markdown),
+                    issue(
+                        dataset_id,
+                        "datasets[].accession",
+                        "missing accession, repository, or dataset URL",
+                        "Populate a source-provided identifier, or ground explicit "
+                        "request-only availability in a Dataset TextSpan with "
+                        "current document ID and exact offsets.",
+                    ),
                     errors,
                 )
 

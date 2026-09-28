@@ -259,6 +259,7 @@
       "criticality": "major",
       "assertion_text": "Traditional scientific articles are ambiguous, incomplete, and difficult for automated systems to process, motivating a machine-readable approach for packaging research artefacts and their metadata.",
       "state": "supported",
+      "qa_status": "supports",
       "current_read": "Inferred from 1 evidence link(s): supported.",
       "evidence_for": [
         {
@@ -282,6 +283,7 @@
       "criticality": "core",
       "assertion_text": "RO-Crate is introduced as an open, community-driven, lightweight approach to packaging research artefacts and their metadata in a machine-readable manner using Schema.org annotations in JSON-LD.",
       "state": "supported",
+      "qa_status": "supports",
       "current_read": "Inferred from 2 evidence link(s): supported.",
       "evidence_for": [
         {
@@ -314,6 +316,7 @@
       "criticality": "major",
       "assertion_text": "RO-Crate is designed around four explicit principles: conceptual simplicity for developers, strong easy tooling, an opinionated guide of current best practices, and adoption of de-facto Web standards.",
       "state": "supported",
+      "qa_status": "supports",
       "current_read": "Inferred from 1 evidence link(s): supported.",
       "evidence_for": [
         {
@@ -337,6 +340,7 @@
       "criticality": "supporting",
       "assertion_text": "RO-Crate's underlying data structure, although conceptually a graph, is representable as a depth-limited tree, and this boundedness separates Data Entities (hasPart) from external Contextual Entities (mentions).",
       "state": "supported",
+      "qa_status": "supports",
       "current_read": "Inferred from 1 evidence link(s): supported.",
       "evidence_for": [
         {
@@ -360,6 +364,7 @@
       "criticality": "core",
       "assertion_text": "RO-Crate has been adopted across diverse domains - bioinformatics workflows (WorkflowHub), regulatory science (BCO RO-Crate), cultural heritage (Modern PARADISEC), data management plans, and institutional repositories (Harvard Data Commons) - through domain-specific profiles.",
       "state": "supported",
+      "qa_status": "supports",
       "current_read": "Inferred from 5 evidence link(s): supported.",
       "evidence_for": [
         {
@@ -425,6 +430,7 @@
       "criticality": "major",
       "assertion_text": "WorkflowHub adopted RO-Crate as the packaging mechanism for cross-domain workflows, marking up workflow language and constituent files, and this co-development helped shape both the Bioschemas Computational Workflow profile and the RO-Crate 1.1 workflows specification.",
       "state": "supported",
+      "qa_status": "supports",
       "current_read": "Inferred from 1 evidence link(s): supported.",
       "evidence_for": [
         {
@@ -448,6 +454,7 @@
       "criticality": "major",
       "assertion_text": "The Modern PARADISEC demonstrator uses RO-Crate to capture metadata of more than 500,000 endangered-language items in a portable, platform-independent way that supports long-term preservation and SPARQL-queryable corpora.",
       "state": "supported",
+      "qa_status": "supports",
       "current_read": "Inferred from 1 evidence link(s): supported.",
       "evidence_for": [
         {
@@ -471,6 +478,7 @@
       "criticality": "major",
       "assertion_text": "RO-Crate can serve as a Metadata FDO and provide a predictable, extensible serialisation of structured metadata for FAIR Digital Object ecosystems.",
       "state": "mixed",
+      "qa_status": "supports",
       "current_read": "Inferred from 2 evidence link(s): mixed.",
       "evidence_for": [
         {
@@ -504,6 +512,7 @@
       "criticality": "major",
       "assertion_text": "RO-Crate is not merely a packaging container but functions as a multimodal scholarly knowledge graph that helps FAIRify and combine metadata of existing resources.",
       "state": "supported",
+      "qa_status": "supports",
       "current_read": "Inferred from 1 evidence link(s): supported.",
       "evidence_for": [
         {
@@ -527,6 +536,7 @@
       "criticality": "supporting",
       "assertion_text": "There is an unresolved tradeoff between flexibility (richness/applicability) and strictness (ease of producing and consuming) of metadata models, and RO-Crate addresses this by combining a flexible core with domain-specific profiles.",
       "state": "needs_evidence",
+      "qa_status": "inconclusive",
       "current_read": "No evidence link is attached; the claim needs evidence.",
       "evidence_for": [],
       "evidence_against": [],
@@ -540,6 +550,7 @@
       "criticality": "supporting",
       "assertion_text": "Most current RO-Crate tools are still in Beta (or earlier) stages, but their maturity is increasing now that the RO-Crate 1.1 specification has stabilised.",
       "state": "supported",
+      "qa_status": "supports",
       "current_read": "Inferred from 1 evidence link(s): supported.",
       "evidence_for": [
         {
@@ -565,6 +576,7 @@
       "criticality": "supporting",
       "assertion_text": "Future RO-Crate work, governed by the community, will include profile formalisation in version 1.2, training material, exploration of new entity types (workflow runs, containers, software packages), and alignment with related efforts (CodeMeta, Science-on-Schema.org, FDO).",
       "state": "needs_evidence",
+      "qa_status": "inconclusive",
       "current_read": "No evidence link is attached; the claim needs evidence.",
       "evidence_for": [],
       "evidence_against": [],

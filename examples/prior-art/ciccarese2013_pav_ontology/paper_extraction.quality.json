@@ -259,6 +259,7 @@
       "criticality": "core",
       "assertion_text": "Existing general-purpose provenance vocabularies (DC Terms, PROV-O, OPM, PRV) do not, on their own, capture the role distinctions (author vs. curator vs. contributor vs. artifact creator) and the authoring/versioning lineage that scientific knowledge bases such as AlzSWAN require.",
       "state": "supported",
+      "qa_status": "supports",
       "current_read": "Inferred from 2 evidence link(s): supported.",
       "evidence_for": [
         {
@@ -291,6 +292,7 @@
       "criticality": "core",
       "assertion_text": "The objective of PAV is to provide a lightweight, compact OWL vocabulary that captures 'just enough' provenance, authoring and versioning information for scientific digital resources, distinguishing contributors, authors and curators of content from creators of representations, plus the originating-resource lineage.",
       "state": "supported",
+      "qa_status": "supports",
       "current_read": "Inferred from 1 evidence link(s): supported.",
       "evidence_for": [
         {
@@ -318,6 +320,7 @@
       "criticality": "core",
       "assertion_text": "PAV defines three families of properties: authoring (pav:authoredBy, pav:curatedBy, pav:contributedBy with timestamp variants), provenance/creation (pav:createdBy, pav:createdWith, pav:retrievedFrom/By/On, pav:importedFrom/By/On, pav:sourceAccessedAt/By/On, pav:providedBy), and versioning (pav:version, pav:previousVersion, pav:derivedFrom, pav:lastUpdateOn).",
       "state": "supported",
+      "qa_status": "supports",
       "current_read": "Inferred from 1 evidence link(s): supported.",
       "evidence_for": [
         {
@@ -345,6 +348,7 @@
       "criticality": "core",
       "assertion_text": "PAV makes a primary conceptual distinction between authoring knowledge content (pav:authoredBy / pav:curatedBy / pav:contributedBy) and creating the digital representation of that content (pav:createdBy), which DC Terms (e.g., dct:creator) conflates.",
       "state": "supported",
+      "qa_status": "supports",
       "current_read": "Inferred from 2 evidence link(s): supported.",
       "evidence_for": [
         {
@@ -377,6 +381,7 @@
       "criticality": "major",
       "assertion_text": "Starting from version 2.1, PAV defines a subproperty mapping to PROV-O so that PAV statements RDFS-imply compatible PROV-O statements (e.g., pav:authoredBy rdfs:subPropertyOf prov:wasAttributedTo), enabling PROV-aware tools to consume PAV provenance.",
       "state": "mixed",
+      "qa_status": "supports",
       "current_read": "Inferred from 3 evidence link(s): mixed.",
       "evidence_for": [
         {
@@ -423,6 +428,7 @@
       "criticality": "major",
       "assertion_text": "PAV has been adopted by at least five communities/projects (SWAN/AlzSWAN, Annotation Ontology and Domeo, Nanopublications, Open PHACTS dataset descriptions, Wf4Ever Research Objects, and Elsevier Satellite), evidencing pragmatic usefulness.",
       "state": "supported",
+      "qa_status": "supports",
       "current_read": "Inferred from 3 evidence link(s): supported.",
       "evidence_for": [
         {
@@ -466,6 +472,7 @@
       "criticality": "supporting",
       "assertion_text": "Compared with the activity-chain style of Provenance Vocabulary (PRV), PAV's resource-centric attribution allows equivalent queries (e.g., 'which API, when, by whom') to be expressed with substantially less SPARQL graph-traversal.",
       "state": "supported",
+      "qa_status": "supports",
       "current_read": "Inferred from 1 evidence link(s): supported.",
       "evidence_for": [
         {
@@ -489,6 +496,7 @@
       "criticality": "core",
       "assertion_text": "The role-distinction primitives PAV introduces (author vs. curator vs. artifact creator, with provenance/versioning relations between artifacts and agents) are essential for attributing resources in curated knowledge bases and datasets.",
       "state": "supported",
+      "qa_status": "supports",
       "current_read": "Inferred from 2 evidence link(s): supported.",
       "evidence_for": [
         {
@@ -523,6 +531,7 @@
       "criticality": "supporting",
       "assertion_text": "PAV's simplification of provenance to resource-attached relations is at the cost of not expressing per-activity details (e.g., when each individual API access happened when multiple imports occur), a trade-off the authors deem reasonable for common cases.",
       "state": "supported",
+      "qa_status": "supports",
       "current_read": "Inferred from 1 evidence link(s): supported.",
       "evidence_for": [
         {
@@ -546,6 +555,7 @@
       "criticality": "supporting",
       "assertion_text": "Some information is lost in the PAV->PROV-O inference (notably the author-vs-curator distinction and the per-agent authoring-time pairing), because PAV statements are detangled into separate existential PROV-O variables.",
       "state": "supported",
+      "qa_status": "supports",
       "current_read": "Inferred from 1 evidence link(s): supported.",
       "evidence_for": [
         {
@@ -569,6 +579,7 @@
       "criticality": "supporting",
       "assertion_text": "A more integrated PAV->PROV-O mapping that unrolls PAV statements into chains of PROV-O activities/entities (e.g., creating an :ImportActivity with prov:used / prov:wasAssociatedWith / prov:endedAtTime triples) is feasible but is work in progress and must balance logical correctness against usefulness.",
       "state": "supported",
+      "qa_status": "supports",
       "current_read": "Inferred from 1 evidence link(s): supported.",
       "evidence_for": [
         {

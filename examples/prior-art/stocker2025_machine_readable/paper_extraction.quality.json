@@ -259,6 +259,7 @@
       "criticality": "core",
       "assertion_text": "How can we support the production of machine-readable expressions of research findings in the data analysis phase of the research lifecycle?",
       "state": "needs_evidence",
+      "qa_status": "inconclusive",
       "current_read": "No evidence link is attached; the claim needs evidence.",
       "evidence_for": [],
       "evidence_against": [],
@@ -272,6 +273,7 @@
       "criticality": "core",
       "assertion_text": "The authors propose a pre-publication approach (reborn) that produces machine-readable expressions of research findings during data analysis, using ORKG templates to specify formal data syntax for statistical findings.",
       "state": "supported",
+      "qa_status": "supports",
       "current_read": "Inferred from 2 evidence link(s): supported.",
       "evidence_for": [
         {
@@ -308,6 +310,7 @@
       "criticality": "core",
       "assertion_text": "The reborn approach is superior to classical manual and semi-automated post-publication extraction in terms of knowledge accuracy, richness, reproducibility, and technological simplicity.",
       "state": "supported",
+      "qa_status": "supports",
       "current_read": "Inferred from 4 evidence link(s): supported.",
       "evidence_for": [
         {
@@ -361,6 +364,7 @@
       "criticality": "major",
       "assertion_text": "The reborn approach was applied to three use cases (soil science by Gentsch et al., computer science by Thie\u00dfen et al., agroecology by Perez-Alvarez et al.) and produced machine-readable research findings in each, demonstrating practical viability.",
       "state": "supported",
+      "qa_status": "supports",
       "current_read": "Inferred from 3 evidence link(s): supported.",
       "evidence_for": [
         {
@@ -408,6 +412,7 @@
       "criticality": "supporting",
       "assertion_text": "Automated post-publication extraction of scientific knowledge currently achieves high accuracy (above 90-95%) only for the simplest tasks (e.g. TDM tuples, ~90%), and accuracy drops substantially (60% keyphrase identification, 40% classification, 30% relation extraction) for more general tasks.",
       "state": "supported",
+      "qa_status": "supports",
       "current_read": "Inferred from 1 evidence link(s): supported.",
       "evidence_for": [
         {
@@ -431,6 +436,7 @@
       "criticality": "major",
       "assertion_text": "By embedding expressive data type schemata into data analysis, the reborn approach delivers richer, more granular machine-readable expressions of scientific knowledge than either manual or automated post-publication extraction can.",
       "state": "supported",
+      "qa_status": "supports",
       "current_read": "Inferred from 1 evidence link(s): supported.",
       "evidence_for": [
         {
@@ -456,6 +462,7 @@
       "criticality": "supporting",
       "assertion_text": "Reborn data can strengthen the peer-review process by giving reviewers structured, finer-grained access to research findings and by enabling verification of figures and reproducibility of scripts.",
       "state": "supported",
+      "qa_status": "mixed",
       "current_read": "Inferred from 1 evidence link(s): supported.",
       "evidence_for": [
         {
@@ -481,6 +488,7 @@
       "criticality": "major",
       "assertion_text": "The reborn approach has been developed and evaluated only for statistical/quantitative knowledge in R and Python computing environments; it has not been tested on qualitative or other knowledge types (formulae, proofs, arguments), nor on commercial environments without scripting (SPSS, GraphPad, Stata).",
       "state": "supported",
+      "qa_status": "supports",
       "current_read": "Inferred from 1 evidence link(s): supported.",
       "evidence_for": [
         {
@@ -504,6 +512,7 @@
       "criticality": "major",
       "assertion_text": "ORKG templates specify only data syntax and do not encode formal semantics, so reborn data cannot currently support reasoning and only partially meet the FAIR interoperability sub-principles.",
       "state": "supported",
+      "qa_status": "supports",
       "current_read": "Inferred from 1 evidence link(s): supported.",
       "evidence_for": [
         {
@@ -527,6 +536,7 @@
       "criticality": "major",
       "assertion_text": "The reborn approach inherits an adoption/scalability limitation: it relies on authors to apply it during the research lifecycle, so coverage depends on researcher uptake and on which results authors choose to express.",
       "state": "supported",
+      "qa_status": "supports",
       "current_read": "Inferred from 1 evidence link(s): supported.",
       "evidence_for": [
         {
@@ -550,6 +560,7 @@
       "criticality": "supporting",
       "assertion_text": "If pre-publication production approaches such as reborn are adopted, reliance on post-publication extraction is predicted to decline in the coming decades and may become largely obsolete in the second half of the century.",
       "state": "supported",
+      "qa_status": "mixed",
       "current_read": "Inferred from 1 evidence link(s): supported.",
       "evidence_for": [
         {
@@ -573,6 +584,7 @@
       "criticality": "core",
       "assertion_text": "The proposed distributed system uses a (statistical) Computing Environment plus Library, a Data Type Registry of templates (implemented in ORKG), a Publisher and Data Repository for reborn data, and Aggregation Systems (e.g. ORKG) that discover reborn data via DOI metadata.",
       "state": "supported",
+      "qa_status": "supports",
       "current_read": "Inferred from 1 evidence link(s): supported.",
       "evidence_for": [
         {

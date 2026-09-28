@@ -38,7 +38,7 @@ stage is one subcommand.
 | `csag scaffold` | Writes a draft Lite `paper_extraction.json` from the Markdown and the article sidecar. |
 | `csag inspect` | Reads a work directory, reports which files are present and fresh, and prints the next command. |
 | `csag validate` | Validates a `PaperExtraction` or `HandoffEnvelope` file against a profile and writes a validation report. |
-| `csag report` | Builds the quality report: coverage, completeness, grounding, field-level information quality, per-claim readouts, and conversion-quality scores. With `--openalex-json` (a saved OpenAlex Work response) and `--analysis-year`, it adds age-normalized citation context. |
+| `csag report` | Builds the quality report: coverage, completeness, grounding, field-level information quality, per-claim readouts with the QA evidence status (`qa_status`), and conversion-quality scores. With `--openalex-json` (a saved OpenAlex Work response) and `--analysis-year`, it adds age-normalized citation context. |
 | `csag lint` | Checks stable IDs, grounding, and source document consistency and writes a lint report. |
 | `csag export` | Writes the extraction as JSON, JSON-LD (JSON for Linking Data), RDF (Resource Description Framework), GraphML, a TSV table, or an RO-Crate (Research Object Crate). |
 

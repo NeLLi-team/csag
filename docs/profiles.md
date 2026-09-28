@@ -76,7 +76,10 @@ lists what `lite` requires. Move to `paper_local`, `promoted_claim`, or
 contexts, evidence-link polarity, DOI and PMID resolution status, artifact
 consistency with figure and table captions, and dataset consistency with
 data-availability signals. Use it when the graph is close to author wording
-and claims do not yet carry curated criticality or falsification criteria.
+and claims do not yet carry curated criticality or falsification criteria. A
+Dataset passes the dataset check with an accession, repository, or URL from the
+source, or with its own TextSpan that quotes a positive statement that the data
+are available on request.
 
 ```bash
 uv run csag validate paper_extraction.json \

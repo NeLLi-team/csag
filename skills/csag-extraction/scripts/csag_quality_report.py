@@ -24,7 +24,8 @@ from csag_provenance import input_records
 
 WORD_RE = re.compile(r"\w+", re.UNICODE)
 DATASET_SIGNAL_RE = re.compile(
-    r"\b(data availability|accession|project id|repository|zenodo|img/m|data portal|sra|geo|pride|available at|downloaded at)\b",
+    r"\b(data availability|availability of data|accession|project id|repository"
+    r"|zenodo|img/m|data portal|sra|geo|pride|available at|downloaded at)\b",
     re.IGNORECASE,
 )
 FIGURE_SIGNAL_RE = re.compile(
@@ -49,6 +50,14 @@ CLAIM_ROLES = (
 NORMALIZATION_STATUSES = ("raw", "partially_normalized", "fully_normalized")
 POLARITIES = ("supports", "refutes", "mixed", "inconclusive")
 STRENGTHS = ("very_strong", "strong", "moderate", "weak", "very_weak", "unknown")
+STRENGTH_WEIGHTS = {
+    "very_strong": 3.0,
+    "strong": 2.0,
+    "moderate": 1.0,
+    "weak": 0.5,
+    "very_weak": 0.25,
+    "unknown": 0.0,
+}
 SECTION_TYPES = (
     "title",
     "abstract",
@@ -604,6 +613,28 @@ def infer_claim_state(links: list[dict]) -> str:
     return "open"
 
 
+def qa_evidence_status(links: list[dict]) -> str:
+    """Return the `CSAG_QA_01_STATUS` answer for an assertion's evidence links.
+
+    Each `supports` or `refutes` link adds its strength weight to that side's
+    score. A side wins with a score of at least 1 and at least 1.5 times the
+    other side; no weight on either side is `inconclusive`, anything else is
+    `mixed`.
+    """
+    scores = {"supports": 0.0, "refutes": 0.0}
+    for link in links:
+        if link.get("polarity") in scores:
+            scores[link["polarity"]] += STRENGTH_WEIGHTS.get(link.get("strength"), 0.0)
+    support, refute = scores["supports"], scores["refutes"]
+    if support == 0 and refute == 0:
+        return "inconclusive"
+    if support >= 1 and support >= 1.5 * refute:
+        return "supports"
+    if refute >= 1 and refute >= 1.5 * support:
+        return "refutes"
+    return "mixed"
+
+
 def build_claim_readouts(extraction: dict) -> list[dict]:
     evidence_by_id = {
         evidence.get("id"): evidence
@@ -648,9 +679,18 @@ def build_claim_readouts(extraction: dict) -> list[dict]:
                 "criticality": assertion.get("criticality", ""),
                 "assertion_text": assertion.get("assertion_text", ""),
                 "state": current_state,
+                "qa_status": qa_evidence_status(links),
                 "current_read": current_read,
-                "evidence_for": [link_summary(link) for link in links if link.get("polarity") == "supports"],
-                "evidence_against": [link_summary(link) for link in links if link.get("polarity") == "refutes"],
+                "evidence_for": [
+                    link_summary(link)
+                    for link in links
+                    if link.get("polarity") == "supports"
+                ],
+                "evidence_against": [
+                    link_summary(link)
+                    for link in links
+                    if link.get("polarity") == "refutes"
+                ],
                 "mixed_or_inconclusive": [
                     link_summary(link)
                     for link in links
@@ -665,7 +705,9 @@ def build_claim_readouts(extraction: dict) -> list[dict]:
                     }
                     for action in actions
                 ],
-                "research_state_records": [state.get("id") for state in states if state.get("id")],
+                "research_state_records": [
+                    state.get("id") for state in states if state.get("id")
+                ],
             }
         )
     return readouts
@@ -1150,7 +1192,10 @@ def render_text(report: dict) -> str:
     lines.append("Claim readouts:")
     if claim_readouts:
         for item in claim_readouts[:10]:
-            lines.append(f"  - {item.get('assertion_id')}: {item.get('state')} | {item.get('assertion_text')}")
+            lines.append(
+                f"  - {item.get('assertion_id')}: {item.get('state')} "
+                f"(qa_status {item.get('qa_status')}) | {item.get('assertion_text')}"
+            )
             lines.append(f"    current_read: {item.get('current_read')}")
             lines.append(
                 "    evidence: "
