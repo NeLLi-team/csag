@@ -27,7 +27,8 @@ DOI_RE = re.compile(r"\b10\.\d{4,9}/[-._;()/:A-Z0-9]+\b", re.IGNORECASE)
 PMID_RE = re.compile(r"\bPMID[:\s]+(\d{6,9})\b", re.IGNORECASE)
 DATASET_SIGNAL_RE = re.compile(
     r"\b(data availability|availability of data|accession|project id|repository"
-    r"|zenodo|img/m|data portal|sra|geo|pride|available at|downloaded at)\b",
+    r"|zenodo|img/m|data portal|sra|geo|pride"
+    r"|available at(?!\s+a given time in terms of\b)|downloaded at)\b",
     re.IGNORECASE,
 )
 REQUEST_AVAILABILITY_RE = re.compile(

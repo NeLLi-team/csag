@@ -25,7 +25,8 @@ from csag_provenance import input_records
 WORD_RE = re.compile(r"\w+", re.UNICODE)
 DATASET_SIGNAL_RE = re.compile(
     r"\b(data availability|availability of data|accession|project id|repository"
-    r"|zenodo|img/m|data portal|sra|geo|pride|available at|downloaded at)\b",
+    r"|zenodo|img/m|data portal|sra|geo|pride"
+    r"|available at(?!\s+a given time in terms of\b)|downloaded at)\b",
     re.IGNORECASE,
 )
 FIGURE_SIGNAL_RE = re.compile(

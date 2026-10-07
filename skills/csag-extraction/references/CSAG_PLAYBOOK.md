@@ -223,9 +223,25 @@ or used. Slots: `accession`, `repository` (for example GEO, SRA, PRIDE,
 Zenodo), `dataset_url`, and `dataset_license`. Only `id` is required for
 either class.
 
-When the source Markdown shows a data-availability signal (such as a data
-availability section, an accession, or a repository name), `paper_local`
-validation requires at least one Dataset, and each Dataset needs an accession,
+Dataset signals include data-availability headings, accessions, project IDs,
+repository names, `data portal`, `downloaded at`, and `available at` followed
+by a named location or an address. A URL is not required: synthetic statements
+such as "Data are available at the European Genome-phenome Archive" and
+"Data are available at the Time of Flight Data Centre" count, as does
+"Data are available at present.org/data". These examples illustrate signal
+detection; they do not establish that a deposit exists.
+
+The temporal construction "available at a given time in terms of" does not
+by itself signal a dataset. Matching is case-insensitive. Other signals in
+the same source still count, including a data-availability heading or an
+accession. This exception does not exclude other temporal phrasings.
+`paper_local` validation checks the source Markdown. The quality report
+checks both source Markdown and article JSON; outside `lite` scope, a dataset
+signal requires a Dataset in its completeness and density checks, and a
+missing Dataset fails `--strict`.
+
+When the source Markdown shows a dataset signal, `paper_local` validation
+requires at least one Dataset, and each Dataset needs an accession,
 repository, or URL from the source, or its own TextSpan that quotes a positive
 statement that the data are available on request. The span holds the complete
 sentence; only an unqualified label such as `Data availability:` may precede
