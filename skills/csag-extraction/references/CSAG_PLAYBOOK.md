@@ -223,36 +223,24 @@ or used. Slots: `accession`, `repository` (for example GEO, SRA, PRIDE,
 Zenodo), `dataset_url`, and `dataset_license`. Only `id` is required for
 either class.
 
-Dataset signals include data-availability headings, accessions, project IDs,
-repository names, `data portal`, `downloaded at`, and `available at` followed
-by a named location or an address. A URL is not required: synthetic statements
-such as "Data are available at the European Genome-phenome Archive" and
-"Data are available at the Time of Flight Data Centre" count, as does
-"Data are available at present.org/data". These examples illustrate signal
-detection; they do not establish that a deposit exists.
+Extract datasets identified by the manuscript. Keywords, repository names,
+bibliographic links, and data-availability headings alone do not establish a
+dataset. Validation and quality reports do not infer a minimum Dataset count
+from these terms.
 
-The temporal construction "available at a given time in terms of" does not
-by itself signal a dataset. Matching is case-insensitive. Other signals in
-the same source still count, including a data-availability heading or an
-accession. This exception does not exclude other temporal phrasings.
-`paper_local` validation checks the source Markdown. The quality report
-checks both source Markdown and article JSON; outside `lite` scope, a dataset
-signal requires a Dataset in its completeness and density checks, and a
-missing Dataset fails `--strict`.
+Repository names, accessions, and URLs are optional. Include them when the
+source supplies them. Article tables, supplementary files, and data available
+on request can be represented without an external identifier; record the
+absence in `notes` and ground the Dataset in the source.
 
-When the source Markdown shows a dataset signal, `paper_local` validation
-requires at least one Dataset, and each Dataset needs an accession,
-repository, or URL from the source, or its own TextSpan that quotes a positive
-statement that the data are available on request. The span holds the complete
-sentence; only an unqualified label such as `Data availability:` may precede
-it, and its document ID and character offsets reproduce the quoted source.
-Leave the identifier fields empty and say in `notes` that the source gives
-none. A negated, conditional, or future request clause does not pass, and
-neither does a request statement grounded on another object; a negation that
-limits only public access ("not publicly available but available on request")
-does not count against the statement. The check matches common phrasings. If a
-genuine request-only statement still fails, keep the Dataset without
-identifiers and report the validation issue; never invent an identifier.
+With source Markdown, `paper_local` validation checks each supplied Dataset
+span against the current document and its character offsets. If `exact_text`
+is supplied, it must match that source slice. Scientific review checks that the
+span supports the Dataset description and that availability conditions remain
+explicit. A primer-sequence offer describes sequence information; an offer of
+physical primers alone does not. Negated, conditional, and future statements
+must not be presented as unqualified access. Never invent an identifier to
+make an extraction pass.
 
 ## Studies and experiments
 

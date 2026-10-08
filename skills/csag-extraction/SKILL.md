@@ -84,13 +84,16 @@ those terms.
    `extraction_activities[].parameters`.
 2. Extract artifacts when the manuscript exposes figure, table, or supplement
    captions.
-3. Extract datasets when the manuscript exposes data-availability text,
-   repository links, accessions, or project identifiers.
-   When the source offers data only on request, keep a Dataset without
-   identifier fields: give it a TextSpan that quotes the complete availability
-   sentence at its exact offsets in the current document, and say in `notes`
-   that the source gives no public identifier. Negated, conditional, or future
-   availability does not count. Never invent an identifier.
+3. Extract datasets that the manuscript identifies through repository links,
+   accessions, project identifiers, or explicit availability statements.
+   Keywords and headings alone do not establish a dataset, and validation
+   does not require Dataset objects from source keywords.
+   Identifier fields are optional. Keep source-grounded article tables,
+   supplementary data, and request-only data without inventing a repository,
+   accession, or URL. Quote availability statements at their exact offsets,
+   retain conditions and limitations, and note missing public identifiers.
+   Scientific review must distinguish available data from negated, conditional,
+   or future availability.
 4. Extract entities, with ontology annotations when possible.
 5. Extract assertions (hypotheses, result claims, conclusions). Each one has
    `contexts` (at least one) and `normalization_status`. Set `criticality`
@@ -131,8 +134,8 @@ with little content, target:
   derived claim
 - at least 1 critique or knowledge gap when the authors discuss one
 - at least 1 artifact when the source has figure or table captions
-- at least 1 dataset when the source has data-availability text, accessions,
-  or repository links
+- datasets that the source identifies; source keywords do not set a minimum
+  Dataset count in validation or quality reports
 
 When a category is absent from the manuscript, say so in `notes` for the
 extraction or the assertion instead of omitting it silently.
@@ -238,8 +241,8 @@ Before you finish, confirm:
 - `doi` and `pmid` are resolved when recoverable, or `doi_status` and
   `pmid_status` parameters are present in `extraction_activities`.
 - `artifacts` are present when the source has figure or table captions.
-- `datasets` are present when the source has data-availability text,
-  accessions, or repository links.
+- Datasets reflect the source, preserve availability limits, and include public
+  identifiers when the source supplies them.
 
 ## Profiles
 

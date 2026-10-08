@@ -163,14 +163,6 @@
         "target": 1,
         "reason": "figure/table captions in source should be represented as artifacts",
         "suggested_fix": "Add Artifact objects for detected figures, tables, and supplements."
-      },
-      {
-        "name": "datasets_from_availability_signals",
-        "status": "pass",
-        "observed": 2,
-        "target": 1,
-        "reason": "data-availability or accession signals should be represented as datasets",
-        "suggested_fix": "Add Dataset objects for repository links, accessions, project IDs, and availability statements."
       }
     ]
   },
@@ -225,15 +217,6 @@
         "strict_failure": true,
         "reason": "Figure/table captions should be represented as artifacts.",
         "suggested_fix": "Add Artifact objects for detected figures/tables."
-      },
-      {
-        "name": "datasets_from_availability_signals",
-        "status": "pass",
-        "observed": 2,
-        "target": 1,
-        "strict_failure": true,
-        "reason": "Data-availability/accession signals should be represented as datasets.",
-        "suggested_fix": "Add Dataset objects for source repository/accession signals."
       }
     ]
   },
@@ -798,8 +781,7 @@
     }
   },
   "source_signals": {
-    "figure_or_table_caption_present": true,
-    "dataset_signal_present": true
+    "figure_or_table_caption_present": true
   },
   "structural_issues": {
     "evidence_links_with_unknown_assertion": 0,

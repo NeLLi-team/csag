@@ -528,8 +528,7 @@
     }
   },
   "source_signals": {
-    "figure_or_table_caption_present": false,
-    "dataset_signal_present": false
+    "figure_or_table_caption_present": false
   },
   "structural_issues": {
     "evidence_links_with_unknown_assertion": 0,

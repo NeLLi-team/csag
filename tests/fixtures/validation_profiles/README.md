@@ -9,7 +9,6 @@ because they report module intent and warning-level enrichment checks.
 | `paper_local.valid.json` | pass | Baseline local paper extraction. |
 | `paper_local.invalid_missing_context.json` | fail | Enforces the assertion context invariant. |
 | `paper_local.invalid_misplaced_semantics.json` | fail | Enforces placement of polarity, relation, and reasoning fields. |
-| `paper_local.invalid_missing_dataset.json` | fail | Enforces dataset extraction when data-availability signals are present. |
 | `paper_local.invalid_missing_artifact.json` | fail | Enforces artifact extraction when figure/table captions are present. |
 | `promoted_claim.valid.json` | pass | Checks curation fields, evidence rationale, and grounding. |
 | `promoted_claim.invalid_missing_rationale.json` | fail | Enforces promoted evidence-link rationale. |

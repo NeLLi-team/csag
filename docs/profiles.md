@@ -74,12 +74,14 @@ lists what `lite` requires. Move to `paper_local`, `promoted_claim`, or
 
 `paper_local` checks structural validity, resolvable references, assertion
 contexts, evidence-link polarity, DOI and PMID resolution status, artifact
-consistency with figure and table captions, and dataset consistency with
-data-availability signals. Use it when the graph is close to author wording
-and claims do not yet carry curated criticality or falsification criteria. A
-Dataset passes the dataset check with an accession, repository, or URL from the
-source, or with its own TextSpan that quotes a positive statement that the data
-are available on request.
+consistency with figure and table captions, and supplied Dataset source spans.
+Source keywords do not require Dataset objects. Dataset accessions,
+repositories, and URLs are optional; include them when the source supplies
+them. With source Markdown, each supplied Dataset span must refer to the current
+document at valid offsets and reproduce its `exact_text` when present.
+Scientific review assesses dataset coverage and availability claims. Use this
+profile when the graph is close to author wording and claims do not yet carry
+curated criticality or falsification criteria.
 
 ```bash
 uv run csag validate paper_extraction.json \

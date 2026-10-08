@@ -1,4 +1,4 @@
-"""Distinguish temporal prose from deposits through the public CSAG APIs."""
+"""Source keywords do not impose Dataset counts through the public CSAG APIs."""
 
 import json
 from pathlib import Path
@@ -8,32 +8,10 @@ import pytest
 
 from csag import build_quality_report, validate_extraction
 
-TEMPORAL = [
-    "Resources are available at a given time in terms of measured capacity.",
-    "Resources are AVAILABLE AT\t A GIVEN TIME IN TERMS OF measured capacity.",
-]
-DEPOSITS = [
-    "Data are available at the European Genome-phenome Archive.",
-    "Data are available at the Wellcome Sanger Institute.",
-    "Data are available at the Time of Flight Data Centre.",
-    "Data are available at present.org/data.",
-    "Data are available at https://example.org/data.",
-]
-STRONG_SIGNALS = [
-    "Resources are available at the time of publication.",
-    "We describe data availability.",
-    "We describe availability of data.",
-    "The accession is SYN001.",
-    "The project id is SYN001.",
-    "We used a repository.",
-    "We used Zenodo.",
-    "We used IMG/M.",
-    "We used a data portal.",
-    "We used SRA.",
-    "We used GEO.",
-    "We used PRIDE.",
-    "Records were downloaded at the institute.",
-    "Resources are available at a given time in terms of capacity. We used SRA.",
+SOURCE_STATEMENTS = [
+    "Pride et al. measured viral abundance.",
+    "References: Available at https://example.org/article.",
+    "Data availability: No datasets were generated or analyzed during this study.",
 ]
 
 
@@ -45,9 +23,9 @@ class SourceCase(NamedTuple):
     article_json: Path
 
 
-@pytest.mark.parametrize("statement", TEMPORAL)
-def test_temporal_prose_passes_paper_local(tmp_path: Path, statement: str) -> None:
-    """A time qualifier alone does not require a Dataset."""
+@pytest.mark.parametrize("statement", SOURCE_STATEMENTS)
+def test_source_keywords_do_not_require_dataset(tmp_path: Path, statement: str) -> None:
+    """Dataset coverage requires manuscript review, not keyword counts."""
     case = _write_case(tmp_path, statement)
 
     validation = validate_extraction(
@@ -58,15 +36,14 @@ def test_temporal_prose_passes_paper_local(tmp_path: Path, statement: str) -> No
     assert validation.ok is True
     assert validation.data is not None
     assert validation.data["errors"] == []
-    assert "extraction.datasets is empty" not in validation.stdout
 
 
-@pytest.mark.parametrize("statement", TEMPORAL)
+@pytest.mark.parametrize("statement", SOURCE_STATEMENTS)
 @pytest.mark.parametrize("source_kind", ["source_markdown", "article_json"])
-def test_temporal_prose_passes_strict_quality(
+def test_source_keywords_pass_strict_quality(
     tmp_path: Path, statement: str, source_kind: str
 ) -> None:
-    """Temporal prose passes full-article quality in either source format."""
+    """Keywords do not fail full-article quality in either source format."""
     case = _write_case(tmp_path, statement)
 
     quality = build_quality_report(
@@ -79,100 +56,39 @@ def test_temporal_prose_passes_strict_quality(
     assert quality.exit_code == 0, quality.stdout + quality.stderr
     assert quality.ok is True
     assert quality.data is not None
-    assert quality.data["source_signals"]["dataset_signal_present"] is False
     assert quality.data["issues"] == []
-    assert _dataset_status(quality.data, "completeness") == "pass"
-    assert _dataset_status(quality.data, "density") == "pass"
 
 
-@pytest.mark.parametrize("statement", DEPOSITS + STRONG_SIGNALS)
-def test_deposit_signals_require_dataset(tmp_path: Path, statement: str) -> None:
-    """Each isolated signal still requires a Dataset through both APIs."""
-    case = _write_case(tmp_path, statement)
-
-    validation = validate_extraction(
-        case.graph, source_markdown=case.source_markdown, profile="paper_local"
-    )
-    quality = build_quality_report(
-        case.graph,
-        source_markdown=case.source_markdown,
-        strict=True,
-        document_scope="full_article",
-    )
-
-    assert validation.exit_code == 1
-    assert validation.ok is False
-    assert validation.data is not None
-    assert len(validation.data["errors"]) == 1
-    assert "extraction.datasets is empty" in validation.stdout
-    assert quality.exit_code == 1
-    assert quality.ok is False
-    assert quality.data is not None
-    assert quality.data["source_signals"]["dataset_signal_present"] is True
-    assert _dataset_status(quality.data, "completeness") == "fail"
-    assert _dataset_status(quality.data, "density") == "warn"
-
-
-@pytest.mark.parametrize("statement", DEPOSITS)
-def test_article_only_deposit_requires_dataset(tmp_path: Path, statement: str) -> None:
-    """Sidecar-only deposits retain both quality requirements."""
-    case = _write_case(tmp_path, statement)
-
-    quality = build_quality_report(
-        case.graph,
-        article_json=case.article_json,
-        strict=True,
-        document_scope="full_article",
-    )
-
-    assert quality.exit_code == 1
-    assert quality.ok is False
-    assert quality.data is not None
-    assert quality.data["source_signals"]["dataset_signal_present"] is True
-    assert _dataset_status(quality.data, "completeness") == "fail"
-    assert _dataset_status(quality.data, "density") == "warn"
-
-
-def test_represented_deposit_passes(tmp_path: Path) -> None:
-    """A repository Dataset satisfies validation and full-article quality."""
-    case = _write_case(
-        tmp_path,
-        "Data are available at the European Genome-phenome Archive.",
-        datasets=[
+@pytest.mark.parametrize(
+    ("dataset", "expected_ok"),
+    [
+        ({"id": "csag:dataset/synthetic/D1", "repository": "Archive"}, True),
+        ({"id": "csag:dataset/synthetic/D1", "accession": "SYN001"}, True),
+        (
             {
                 "id": "csag:dataset/synthetic/D1",
-                "repository": "European Genome-phenome Archive",
-            }
-        ],
+                "dataset_url": "https://example.org/data",
+            },
+            True,
+        ),
+        ({"id": "csag:dataset/synthetic/D1"}, True),
+        ({"repository": "Archive"}, False),
+    ],
+)
+def test_provided_dataset_is_checked_without_source_keywords(
+    tmp_path: Path, dataset: dict[str, str], expected_ok: bool
+) -> None:
+    """Every supplied Dataset needs an ID; external identifiers are optional."""
+    case = _write_case(
+        tmp_path,
+        "We measured viral abundance.",
+        datasets=[dataset],
     )
 
     validation = validate_extraction(
         case.graph, source_markdown=case.source_markdown, profile="paper_local"
     )
-    quality = build_quality_report(
-        case.graph,
-        source_markdown=case.source_markdown,
-        strict=True,
-        document_scope="full_article",
-    )
-
-    assert validation.exit_code == 0, validation.stdout + validation.stderr
-    assert validation.ok is True
-    assert quality.exit_code == 0, quality.stdout + quality.stderr
-    assert quality.ok is True
-    assert quality.data is not None
-    assert quality.data["source_signals"]["dataset_signal_present"] is True
-    assert quality.data["issues"] == []
-    assert _dataset_status(quality.data, "completeness") == "pass"
-    assert _dataset_status(quality.data, "density") == "pass"
-
-
-def _dataset_status(report: dict, section: str) -> str:
-    return next(
-        check["status"]
-        for check in report[section]["checks"]
-        if check["name"] == "datasets_from_availability_signals"
-    )
+    assert validation.ok is expected_ok, validation.stdout + validation.stderr
 
 
 def _write_case(

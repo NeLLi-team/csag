@@ -121,20 +121,13 @@ def test_export_formats_produce_non_empty_file(export_format: str, tmp_path: Pat
     assert output.stat().st_size > 0
 
 
-# Validation-profile fixtures keyed to the profile they exercise. Two
-# paper_local "invalid" fixtures only violate their invariant when the source
-# signals (markdown / article json) are supplied; that mapping mirrors
+# Validation-profile fixtures keyed to the profile they exercise. The missing
+# artifact fixture needs source captions; that mapping mirrors
 # scripts/check_validation_profile_reports.py.
 _PROFILE_CASES = [
     ("paper_local.valid.json", "paper_local", True, {}),
     ("paper_local.invalid_missing_context.json", "paper_local", False, {}),
     ("paper_local.invalid_misplaced_semantics.json", "paper_local", False, {}),
-    (
-        "paper_local.invalid_missing_dataset.json",
-        "paper_local",
-        False,
-        {"source_markdown": TOY_MARKDOWN, "article_json": TOY_ARTICLE},
-    ),
     (
         "paper_local.invalid_missing_artifact.json",
         "paper_local",

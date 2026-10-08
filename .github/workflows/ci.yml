@@ -72,12 +72,6 @@ jobs:
             --profile paper_local \
             --report-out /tmp/invalid-semantics.validation.json
       - run: |
-          ! uv run csag validate tests/fixtures/validation_profiles/paper_local.invalid_missing_dataset.json \
-            --source-markdown examples/toy/toy.md \
-            --article-json examples/toy/toy.article.json \
-            --profile paper_local \
-            --report-out /tmp/invalid-dataset.validation.json
-      - run: |
           ! uv run csag validate tests/fixtures/validation_profiles/paper_local.invalid_missing_artifact.json \
             --article-json tests/fixtures/validation_profiles/article_with_figure.json \
             --profile paper_local \

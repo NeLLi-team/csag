@@ -23,12 +23,6 @@ from typing import Any
 from csag_provenance import input_records
 
 WORD_RE = re.compile(r"\w+", re.UNICODE)
-DATASET_SIGNAL_RE = re.compile(
-    r"\b(data availability|availability of data|accession|project id|repository"
-    r"|zenodo|img/m|data portal|sra|geo|pride"
-    r"|available at(?!\s+a given time in terms of\b)|downloaded at)\b",
-    re.IGNORECASE,
-)
 FIGURE_SIGNAL_RE = re.compile(
     r"^\s*(fig(?:ure)?\.?|table|supplementary figure|supplementary table)\b",
     re.IGNORECASE | re.MULTILINE,
@@ -229,7 +223,6 @@ def article_signals(article_json: dict | None, source_markdown: str | None) -> d
             figure_legend_count += len([item for item in tables if has_value(item)])
     return {
         "figure_or_table_caption_present": bool(figure_legend_count or FIGURE_SIGNAL_RE.search(combined)),
-        "dataset_signal_present": bool(DATASET_SIGNAL_RE.search(combined)),
     }
 
 
@@ -449,14 +442,6 @@ def completeness_report(
                     "target": 1 if signals["figure_or_table_caption_present"] else 0,
                     "reason": "figure/table captions in source should be represented as artifacts",
                     "suggested_fix": "Add Artifact objects for detected figures, tables, and supplements.",
-                },
-                {
-                    "name": "datasets_from_availability_signals",
-                    "status": "pass" if not signals["dataset_signal_present"] or counts["datasets"] > 0 else "fail",
-                    "observed": counts["datasets"],
-                    "target": 1 if signals["dataset_signal_present"] else 0,
-                    "reason": "data-availability or accession signals should be represented as datasets",
-                    "suggested_fix": "Add Dataset objects for repository links, accessions, project IDs, and availability statements.",
                 },
             ]
         )
@@ -954,7 +939,6 @@ def density_report(extraction: dict, counts: dict, coverage: dict, signals: dict
 
     if resolved_scope != "lite":
         add("artifacts_from_captions", counts["artifacts"], 1 if signals["figure_or_table_caption_present"] else 0, reason="Figure/table captions should be represented as artifacts.", suggested_fix="Add Artifact objects for detected figures/tables.")
-        add("datasets_from_availability_signals", counts["datasets"], 1 if signals["dataset_signal_present"] else 0, reason="Data-availability/accession signals should be represented as datasets.", suggested_fix="Add Dataset objects for source repository/accession signals.")
 
     passed = sum(1 for item in checks if item["status"] == "pass")
     return {"document_scope": resolved_scope, "requested_document_scope": document_scope, "source_word_count": total_words, "context_count": context_count, "score": round(passed / len(checks), 3) if checks else 1.0, "checks": checks}

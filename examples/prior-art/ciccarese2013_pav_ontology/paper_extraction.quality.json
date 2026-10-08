@@ -165,14 +165,6 @@
         "target": 1,
         "reason": "figure/table captions in source should be represented as artifacts",
         "suggested_fix": "Add Artifact objects for detected figures, tables, and supplements."
-      },
-      {
-        "name": "datasets_from_availability_signals",
-        "status": "pass",
-        "observed": 4,
-        "target": 1,
-        "reason": "data-availability or accession signals should be represented as datasets",
-        "suggested_fix": "Add Dataset objects for repository links, accessions, project IDs, and availability statements."
       }
     ]
   },
@@ -181,7 +173,7 @@
     "requested_document_scope": "auto",
     "source_word_count": 16678,
     "context_count": 24,
-    "score": 0.833,
+    "score": 0.8,
     "checks": [
       {
         "name": "full_article_assertions",
@@ -227,26 +219,17 @@
         "strict_failure": true,
         "reason": "Figure/table captions should be represented as artifacts.",
         "suggested_fix": "Add Artifact objects for detected figures/tables."
-      },
-      {
-        "name": "datasets_from_availability_signals",
-        "status": "pass",
-        "observed": 4,
-        "target": 1,
-        "strict_failure": true,
-        "reason": "Data-availability/accession signals should be represented as datasets.",
-        "suggested_fix": "Add Dataset objects for source repository/accession signals."
       }
     ]
   },
   "conversion_quality": {
-    "overall_conversion_score": 0.971,
+    "overall_conversion_score": 0.966,
     "band": "excellent",
     "subscores": {
       "structural_integrity": 1.0,
       "grounding": 1.0,
       "evidence_linkage": 1.0,
-      "density": 0.833,
+      "density": 0.8,
       "field_quality": 0.974,
       "artifact_discipline": 1.0
     },
@@ -1023,8 +1006,7 @@
     }
   },
   "source_signals": {
-    "figure_or_table_caption_present": true,
-    "dataset_signal_present": true
+    "figure_or_table_caption_present": true
   },
   "structural_issues": {
     "evidence_links_with_unknown_assertion": 0,

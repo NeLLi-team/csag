@@ -29,10 +29,9 @@ def test_lite_scope_passes_small_example(tmp_path: Path) -> None:
     assert all(item["status"] == "pass" for item in report["density"]["checks"])
 
 
-def test_lite_scope_ignores_full_article_artifact_dataset_expectations(tmp_path: Path) -> None:
+def test_lite_scope_ignores_full_article_artifact_expectations(tmp_path: Path) -> None:
     article = json.loads(LITE_ARTICLE.read_text(encoding="utf-8"))
     article["figure_legends"] = ["Figure 1. Pigment response under blue light."]
-    article["data_availability"] = "Data availability: raw reads are available from the SRA repository."
     article_path = tmp_path / "lite_with_full_article_signals.article.json"
     article_path.write_text(json.dumps(article, indent=2) + "\n", encoding="utf-8")
 
@@ -41,9 +40,7 @@ def test_lite_scope_ignores_full_article_artifact_dataset_expectations(tmp_path:
 
     assert code == 0
     assert report["source_signals"]["figure_or_table_caption_present"] is True
-    assert report["source_signals"]["dataset_signal_present"] is True
     assert "artifacts_from_captions" not in check_names
-    assert "datasets_from_availability_signals" not in check_names
 
 
 def test_sparse_full_article_warns_by_default_and_fails_strict(tmp_path: Path) -> None:

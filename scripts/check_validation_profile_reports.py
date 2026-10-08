@@ -23,12 +23,6 @@ FIXTURES = [
     {"name": "paper_local.invalid_missing_context.json", "profile": "paper_local"},
     {"name": "paper_local.invalid_misplaced_semantics.json", "profile": "paper_local"},
     {
-        "name": "paper_local.invalid_missing_dataset.json",
-        "profile": "paper_local",
-        "source_markdown": "examples/toy/toy.md",
-        "article_json": "examples/toy/toy.article.json",
-    },
-    {
         "name": "paper_local.invalid_missing_artifact.json",
         "profile": "paper_local",
         "article_json": "tests/fixtures/validation_profiles/article_with_figure.json",

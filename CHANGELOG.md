@@ -2,9 +2,9 @@
 
 ## Unreleased
 
-- `paper_local` validation accepts a Dataset without an accession, repository,
-  or URL when its own TextSpan quotes a positive statement that the data are
-  available on request.
+- Source keywords do not impose Dataset count requirements. Dataset accessions,
+  repositories, and URLs are optional. Outside `lite`, validation checks supplied
+  Dataset spans against source Markdown when it is available.
 - The quality report gives each claim readout a `qa_status`: the
   `CSAG_QA_01_STATUS` answer computed from the strength-weighted evidence
   links.

@@ -11,15 +11,15 @@ quality report shows what is missing.
 | Document scope | Assertions | Evidence links | Contexts | Artifacts | Datasets |
 | --- | --- | --- | --- | --- | --- |
 | `lite` | at least 1 | at least 1 | at least 1 | optional | optional |
-| `short_note` | at least 2 | at least 2 | at least 1 | if captions are present | if data-availability signals are present |
-| `full_article` | at least 5 | at least 1 per core or major assertion; target 2 per core assertion | at least 2 | if captions are present | if data-availability signals are present |
-| `benchmark_key` | all answer-key assertions | decisive (`supports`, `refutes`, or `mixed`) evidence for answer-key assertions | one per assertion | if captions are present | if data-availability signals are present |
+| `short_note` | at least 2 | at least 2 | at least 1 | if captions are present | no count target |
+| `full_article` | at least 5 | at least 1 per core or major assertion; target 2 per core assertion | at least 2 | if captions are present | no count target |
+| `benchmark_key` | all answer-key assertions | decisive (`supports`, `refutes`, or `mixed`) evidence for answer-key assertions | one per assertion | if captions are present | no count target |
 
-Artifact and dataset targets depend on signals in the source. For every scope
-except `lite`, the artifact check expects `Artifact` objects only when the
-source shows figure or table captions, and the dataset check expects `Dataset`
-objects only when the source shows data-availability or accession signals. A
-short note with no figures and no accessions is not asked for either.
+For every scope except `lite`, the artifact check expects `Artifact` objects
+when the source shows figure or table captions. Dataset coverage is assessed
+from the manuscript during extraction; source keywords do not impose a count
+target. Dataset identifiers are optional. Outside `lite`, the validator checks
+supplied Dataset spans against the source Markdown when it is available.
 
 ## Document scopes
 

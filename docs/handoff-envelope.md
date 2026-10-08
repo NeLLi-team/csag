@@ -123,3 +123,8 @@ two agent-owned actions and executions, a two-parent merge revision, and a
 resolved conflict. The fixture directory is self-contained. It includes the
 source extraction, Markdown, article sidecar, validation report, quality
 report, and environment lockfile that the envelope references.
+
+These files are historical snapshots of the fixture's recorded executions.
+The quality report retains the checks from that execution, including the
+Dataset signal field. It is not an expected-output fixture for the current
+quality-report command; handoff tests verify its recorded content hashes.
