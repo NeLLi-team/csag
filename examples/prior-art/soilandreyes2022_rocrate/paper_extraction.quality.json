@@ -1026,7 +1026,7 @@
   "inputs": {
     "extraction": {
       "path": "paper_extraction.json",
-      "sha256": "68a1a6da6da4cd8ecb0c1c8b073a62ce8142727713efca7426cf6f276f8a7b66",
+      "sha256": "1d77c91af6f9a06d17d3585ff86334f8ee4a152955d6ca70a5da30dedf9e3dad",
       "size_bytes": 76607
     },
     "source_markdown": {
